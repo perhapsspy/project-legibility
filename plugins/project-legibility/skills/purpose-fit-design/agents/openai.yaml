@@ -1,0 +1,4 @@
+interface:
+  display_name: "Purpose-Fit Design"
+  short_description: "Check design fit to purpose and evidence"
+  default_prompt: "Use $purpose-fit-design to check whether this design direction fits the purpose, constraints, evidence, and verification target before implementation."

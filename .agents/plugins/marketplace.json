@@ -1,0 +1,20 @@
+{
+  "name": "project-legibility",
+  "interface": {
+    "displayName": "Project Legibility"
+  },
+  "plugins": [
+    {
+      "name": "project-legibility",
+      "source": {
+        "source": "local",
+        "path": "./plugins/project-legibility"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

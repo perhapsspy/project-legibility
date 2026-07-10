@@ -1,0 +1,137 @@
+{
+  "lockVersion": 1,
+  "sources": [
+    {
+      "id": "agents-md-editor",
+      "repository": "https://github.com/perhapsspy/agents-md-editor.git",
+      "commit": "53637729acba3c9d588764056d565477939aa904",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "agents-md-editor",
+          "sourcePath": "skills/agents-md-editor",
+          "targetPath": "skills/agents-md-editor",
+          "integrity": "sha256:3314161dcc51abf875952f2d291b5426f58b4b43efb8b58b3dd6fd0eb5a81ea1"
+        }
+      ]
+    },
+    {
+      "id": "codex-token-discipline",
+      "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
+      "commit": "32a03eed5e8e8d9c9c7eeeba8d2bac90c1db05ab",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "codex-token-discipline",
+          "sourcePath": "skills/codex-token-discipline",
+          "targetPath": "skills/codex-token-discipline",
+          "integrity": "sha256:f7458f3e4a20dca8cb6786695d27e050643ad66ada253319e2a03097a0f04dc3"
+        }
+      ]
+    },
+    {
+      "id": "interactive-state-flow",
+      "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
+      "commit": "f03a575f8e2206c69c41f286562e5d6ee7ea73ad",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "interactive-state-flow",
+          "sourcePath": "skills/interactive-state-flow",
+          "targetPath": "skills/interactive-state-flow",
+          "integrity": "sha256:5da8316cf8dc428bda8f100e2e2b47c3bd4db324cdcb75bc07473b18d219422c"
+        }
+      ]
+    },
+    {
+      "id": "project-context",
+      "repository": "https://github.com/perhapsspy/project-context.git",
+      "commit": "b63f5efd457f1a28d3e6f0856e3f4e430c90de19",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "project-context",
+          "sourcePath": "skills/project-context",
+          "targetPath": "skills/project-context",
+          "integrity": "sha256:733ddb7752c41c96f54f707cc5c931a8aea39afa946daa36fcab4a934c1aeac2"
+        },
+        {
+          "id": "project-context-migration",
+          "sourcePath": "skills/project-context-migration",
+          "targetPath": "skills/project-context-migration",
+          "integrity": "sha256:a167482ac0496b7e27adf16987ce500d2bad9e6662e726f9205cc18bc7998529"
+        }
+      ]
+    },
+    {
+      "id": "purpose-fit-design",
+      "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
+      "commit": "5af314ee04187fdc5b7d2657aad3934c2698fc86",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "purpose-fit-design",
+          "sourcePath": "skills/purpose-fit-design",
+          "targetPath": "skills/purpose-fit-design",
+          "integrity": "sha256:c466287f2366c2aca357af69d22888c4404adea42340f0a1bef76f0988e53876"
+        }
+      ]
+    },
+    {
+      "id": "semantic-boundary-design",
+      "repository": "https://github.com/perhapsspy/semantic-boundary-design.git",
+      "commit": "2f5b079735645962da00c1598eac161e854fa930",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "semantic-boundary-design",
+          "sourcePath": "skills/semantic-boundary-design",
+          "targetPath": "skills/semantic-boundary-design",
+          "integrity": "sha256:d0eb342e4b397b2aa8229de81f1fb97459f22e0ed4015c04a8848ba069476cc0"
+        }
+      ]
+    },
+    {
+      "id": "source-owner-audit",
+      "repository": "https://github.com/perhapsspy/source-owner-audit.git",
+      "commit": "24fce39d186fc9fbfad12c9cce7eff1268f675ec",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "source-owner-audit",
+          "sourcePath": "skills/source-owner-audit",
+          "targetPath": "skills/source-owner-audit",
+          "integrity": "sha256:7b2fd6d77a3c80900dc3b7745c1f33fc23710a97dbc1f1518919c909642e00dc"
+        }
+      ]
+    },
+    {
+      "id": "structure-first",
+      "repository": "https://github.com/perhapsspy/structure-first.git",
+      "commit": "8deb1a25dd60cff7bc057a3f301db553d0bfb87a",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "structure-first",
+          "sourcePath": "skills/structure-first",
+          "targetPath": "skills/structure-first",
+          "integrity": "sha256:ab69bc76a9306ee86b55442525d61860b4747207af5752d2bf87791ed254950c"
+        }
+      ]
+    },
+    {
+      "id": "tighten-docs",
+      "repository": "https://github.com/perhapsspy/tighten-docs.git",
+      "commit": "faaddf207fb5910da6dacdd9da39f208768171d7",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "tighten-docs",
+          "sourcePath": "skills/tighten-docs",
+          "targetPath": "skills/tighten-docs",
+          "integrity": "sha256:1be311b9810aeca5a0c51828d24a0030bb5c511710a5dbd416918095ed892b5d"
+        }
+      ]
+    }
+  ]
+}

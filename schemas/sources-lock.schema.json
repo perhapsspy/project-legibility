@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/perhapsspy/project-legibility/blob/main/schemas/sources-lock.schema.json",
+  "title": "Project Legibility source lock",
+  "description": "Pins the canonical repositories and skill directories bundled by the Project Legibility plugin.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lockVersion",
+    "sources"
+  ],
+  "properties": {
+    "lockVersion": {
+      "const": 1
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*//)[^\\\\]+(?<!/)$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "repository",
+        "commit",
+        "license",
+        "skills"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://[^/?#]+/[^?#]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "license": {
+          "const": "MIT"
+        },
+        "skills": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/skill"
+          }
+        }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sourcePath",
+        "targetPath",
+        "integrity"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "sourcePath": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "targetPath": {
+          "type": "string",
+          "pattern": "^skills/[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "integrity": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

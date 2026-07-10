@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "agents-md-editor-repository-instructions",
+      "skill": "agents-md-editor",
+      "prompt": "Review AGENTS.md and keep its always-read repository instructions small, durable, and actionable.",
+      "expected": "select",
+      "rationale": "The request directly targets an always-read repository instruction file."
+    },
+    {
+      "id": "codex-token-discipline-long-audit",
+      "skill": "codex-token-discipline",
+      "prompt": "Run a long multi-repository audit while keeping reads, subagents, and resume state within a strict context budget.",
+      "expected": "select",
+      "rationale": "The work has explicit long-session, broad-read, and delegation risks."
+    },
+    {
+      "id": "interactive-state-flow-stale-search",
+      "skill": "interactive-state-flow",
+      "prompt": "Fix search results that become stale when the user types quickly and older requests finish last.",
+      "expected": "select",
+      "rationale": "User intent, asynchronous work, and freshness ownership are mixed."
+    },
+    {
+      "id": "project-context-resume-long-task",
+      "skill": "project-context",
+      "prompt": "Resume this long-running repository task from its durable brief and leave a verified next restart point.",
+      "expected": "select",
+      "rationale": "The request needs durable continuation state across work sessions."
+    },
+    {
+      "id": "project-context-migration-scattered-notes",
+      "skill": "project-context-migration",
+      "prompt": "Audit scattered planning notes and migrate only current working context into the project-context layout.",
+      "expected": "select",
+      "rationale": "The request is specifically an adoption migration from scattered context."
+    },
+    {
+      "id": "purpose-fit-design-reuse-decision",
+      "skill": "purpose-fit-design",
+      "prompt": "Before coding, decide whether reusing the existing admin workflow fits the new end-user purpose and constraints.",
+      "expected": "select",
+      "rationale": "An early reuse decision could steer implementation away from the stated purpose."
+    },
+    {
+      "id": "semantic-boundary-design-status-owner",
+      "skill": "semantic-boundary-design",
+      "prompt": "Unify status meaning that is currently decided differently by the API, UI, and realtime adapter.",
+      "expected": "select",
+      "rationale": "One domain meaning is drifting across several representations."
+    },
+    {
+      "id": "source-owner-audit-canonical-config",
+      "skill": "source-owner-audit",
+      "prompt": "Determine which config, API contract, or current behavior is the authoritative source for this port.",
+      "expected": "select",
+      "rationale": "The task is a read-only source-of-truth audit."
+    },
+    {
+      "id": "structure-first-feature-flow",
+      "skill": "structure-first",
+      "prompt": "Implement this feature with a readable primary flow, minimal boundaries, and contract-focused tests.",
+      "expected": "select",
+      "rationale": "The request is non-trivial implementation work whose code shape affects maintainability."
+    },
+    {
+      "id": "tighten-docs-current-stale-routes",
+      "skill": "tighten-docs",
+      "prompt": "Tighten this selected documentation package so current decisions, stale material, and reader routes are unambiguous.",
+      "expected": "select",
+      "rationale": "The request is final document-level cleanup within an already selected package."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+plugins/project-legibility/skills/** linguist-generated=true whitespace=-blank-at-eof
+plugins/project-legibility/THIRD_PARTY_NOTICES.md linguist-generated=true

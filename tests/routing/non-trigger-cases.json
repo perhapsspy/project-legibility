@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "agents-md-editor-ordinary-readme",
+      "skill": "agents-md-editor",
+      "prompt": "Correct a typo in an ordinary README paragraph.",
+      "expected": "do-not-select",
+      "rationale": "The target is not an always-read repository instruction file."
+    },
+    {
+      "id": "codex-token-discipline-tiny-edit",
+      "skill": "codex-token-discipline",
+      "prompt": "Rename one local variable and run its focused unit test.",
+      "expected": "do-not-select",
+      "rationale": "The task has no long-session, broad-read, or context-budget risk."
+    },
+    {
+      "id": "interactive-state-flow-sync-formatter",
+      "skill": "interactive-state-flow",
+      "prompt": "Fix a pure synchronous formatter that returns the wrong punctuation.",
+      "expected": "do-not-select",
+      "rationale": "No asynchronous freshness, intent, or presentation-state boundary is involved."
+    },
+    {
+      "id": "project-context-one-shot-explanation",
+      "skill": "project-context",
+      "prompt": "Explain what this single function does in one response.",
+      "expected": "do-not-select",
+      "rationale": "A one-shot read-only explanation does not need durable task state."
+    },
+    {
+      "id": "project-context-migration-new-task",
+      "skill": "project-context-migration",
+      "prompt": "Start a new project-context task in a repository that has no scattered legacy notes.",
+      "expected": "do-not-select",
+      "rationale": "New task creation is not a migration from existing context."
+    },
+    {
+      "id": "purpose-fit-design-settled-copy",
+      "skill": "purpose-fit-design",
+      "prompt": "Apply the already-approved one-word copy correction.",
+      "expected": "do-not-select",
+      "rationale": "The direction is settled and the change is mechanical."
+    },
+    {
+      "id": "semantic-boundary-design-local-style",
+      "skill": "semantic-boundary-design",
+      "prompt": "Adjust spacing in one component without changing state or domain meaning.",
+      "expected": "do-not-select",
+      "rationale": "No user or domain meaning crosses representation boundaries."
+    },
+    {
+      "id": "source-owner-audit-owner-confirmed",
+      "skill": "source-owner-audit",
+      "prompt": "Implement the change using the API contract already confirmed as authoritative.",
+      "expected": "do-not-select",
+      "rationale": "Source ownership is already proven and the task has moved to implementation."
+    },
+    {
+      "id": "structure-first-generated-value",
+      "skill": "structure-first",
+      "prompt": "Mechanically update one generated version value with no logic change.",
+      "expected": "do-not-select",
+      "rationale": "The edit is purely mechanical and does not justify structural intervention."
+    },
+    {
+      "id": "tighten-docs-new-spec",
+      "skill": "tighten-docs",
+      "prompt": "Create a new architecture specification from an unresolved product idea.",
+      "expected": "do-not-select",
+      "rationale": "New specification design is not final cleanup of a selected document package."
+    }
+  ]
+}

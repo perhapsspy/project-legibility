@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Project Legibility</title>
+  <desc id="desc">Three clear project layers connected by one continuous path.</desc>
+  <rect width="64" height="64" rx="14" fill="#0F172A"/>
+  <path d="M18 14h-4a4 4 0 0 0-4 4v28a4 4 0 0 0 4 4h4M46 14h4a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4h-4" fill="none" stroke="#A5B4FC" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 20h20M22 32h20M22 44h20" fill="none" stroke="#F8FAFC" stroke-width="4" stroke-linecap="round"/>
+  <path d="M24 20c8 0 8 12 16 12s8 12 0 12" fill="none" stroke="#5EEAD4" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="20" r="3" fill="#5EEAD4"/>
+  <circle cx="40" cy="32" r="3" fill="#5EEAD4"/>
+  <circle cx="40" cy="44" r="3" fill="#5EEAD4"/>
+</svg>

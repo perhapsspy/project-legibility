@@ -1,0 +1,56 @@
+name: Bug report
+description: 설치, discovery, routing, bundle 또는 업데이트 문제를 보고합니다.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: 문제를 재현할 수 있는 최소 정보만 공유해 주세요. 비밀값이나 사적인 저장소 내용은 제거해 주세요.
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Project Legibility version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex version and surface
+      placeholder: codex-cli 0.139.0 / Codex desktop
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installation or update
+        - Skill discovery or routing
+        - Skill behavior
+        - Source lock or generated bundle
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: 실행한 명령이나 prompt와 재현 순서를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and evidence
+      description: 오류 메시지나 관련 log를 포함하되 민감한 정보는 제거해 주세요.
+    validations:
+      required: true

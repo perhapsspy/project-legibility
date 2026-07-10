@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Boundary Design"
+  short_description: "Own route, payload, status rules once"
+  default_prompt: "Use $semantic-boundary-design to assign one owner for route/query grammar, command payloads, status/permission rules, or compatibility behavior."

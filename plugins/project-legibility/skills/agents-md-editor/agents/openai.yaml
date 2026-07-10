@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agents MD Editor"
+  short_description: "Review always-read agent instruction files"
+  default_prompt: "Use $agents-md-editor to review this always-read instruction file, classify questionable lines, and propose a concise edit before saving."

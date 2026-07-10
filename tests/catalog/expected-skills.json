@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    "agents-md-editor",
+    "codex-token-discipline",
+    "interactive-state-flow",
+    "project-context",
+    "project-context-migration",
+    "purpose-fit-design",
+    "semantic-boundary-design",
+    "source-owner-audit",
+    "structure-first",
+    "tighten-docs"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "project-legibility",
+  "version": "0.1.0",
+  "description": "Shape, build, verify, and resume projects without losing intent, structure, or context.",
+  "author": {
+    "name": "perhapsspy",
+    "url": "https://github.com/perhapsspy"
+  },
+  "homepage": "https://github.com/perhapsspy/project-legibility#readme",
+  "repository": "https://github.com/perhapsspy/project-legibility",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "project-context",
+    "software-development",
+    "maintainability",
+    "documentation",
+    "verification"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Project Legibility",
+    "shortDescription": "Keep project intent, structure, and context legible.",
+    "longDescription": "A project-centered Codex workflow for grounding intent, making structured changes, verifying outcomes, and leaving work easy to resume.",
+    "developerName": "perhapsspy",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/perhapsspy/project-legibility",
+    "defaultPrompt": [
+      "Resume this project and implement the next verified change.",
+      "Review this repository for context, structure, meaning, and documentation drift.",
+      "Leave this project verified and easy for the next agent to resume."
+    ],
+    "brandColor": "#4F46E5",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}

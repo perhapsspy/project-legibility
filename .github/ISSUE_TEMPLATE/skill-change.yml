@@ -1,0 +1,34 @@
+name: Skill or bundle proposal
+description: 스킬 추가·제거·책임 변경이나 plugin-level 개선을 제안합니다.
+title: "[Proposal] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Project-level problem
+      description: 사용자가 어떤 프로젝트 작업에서 무엇을 이해하거나 수행하기 어려운지 설명해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: owner
+    attributes:
+      label: Proposed responsibility owner
+      description: 기존 canonical skill, 새 독립 skill, plugin metadata 중 어디가 이 책임을 가져야 하는지와 이유를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Trigger and non-trigger boundary
+      description: 언제 선택되어야 하고 언제 선택되면 안 되는지 예시를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and compatibility impact
+      description: 실제 실패 사례, 대안, 기존 사용자나 source repo에 미치는 영향을 적어 주세요.
+    validations:
+      required: true

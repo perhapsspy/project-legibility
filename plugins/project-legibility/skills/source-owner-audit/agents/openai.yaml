@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Owner Audit"
+  short_description: "Find what to follow, what differs, and who decides"
+  default_prompt: "Use $source-owner-audit to identify what this should follow, what differs, and what still needs a decision without editing files."
