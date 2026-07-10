@@ -12,8 +12,10 @@
 - `source-owner-audit`에 남아 있던 `work-board` 활성 문구를 정본에서 제거하고 설치본까지 갱신했다.
 - plugin scaffold와 기본 manifest, marketplace, visual asset을 생성했다.
 - 9개 full SHA와 skill별 integrity를 고정하고 10개 generated snapshot을 조립했다.
-- local·remote source check, offline integrity, 공식 plugin·skill validator와 27개 unit test가 통과했다.
+- local·remote source check, offline integrity, 공식 plugin·skill validator와 32개 unit test가 통과했다.
 - local marketplace에서 install → cachebuster update → remove round trip을 통과했다.
+- 공개 `perhapsspy/project-legibility` 저장소, 성공한 CI, immutable `v0.1.0` tag와 GitHub Release를 발행했다.
+- tag rollback 설치와 main 설치가 모두 성공했고, 새 ephemeral Codex 실행에서 `project-legibility:` namespace의 10개 스킬을 확인했다.
 
 ## 완료 조건
 
@@ -33,4 +35,4 @@
 
 ## 다음 행동
 
-전체 diff를 검토해 initial commit과 `v0.1.0`을 push한 뒤 GitHub marketplace source에서 install하고 release 상태를 확인한다.
+현재 task는 완료됐다. 후속 스킬 변경은 canonical 저장소에서 먼저 검증·push한 뒤 contribution runbook에 따라 새 plugin version으로 가져온다.
