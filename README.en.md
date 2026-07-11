@@ -13,8 +13,8 @@ Project Legibility installs the 10 skills I use when working with Codex on the s
 ## Install
 
 ```bash
-codex plugin marketplace add perhapsspy/project-legibility
-codex plugin add project-legibility@project-legibility
+codex plugin marketplace add perhapsspy/codex-plugins
+codex plugin add project-legibility@perhapsspy
 ```
 
 Start a new task after installation. Ask for the work as usual; Codex will pick the relevant skills.
@@ -54,14 +54,14 @@ This plugin installs skill instructions only. It does not connect to external se
 
 ```bash
 # Update
-codex plugin marketplace upgrade project-legibility
-codex plugin add project-legibility@project-legibility
+codex plugin marketplace upgrade perhapsspy
+codex plugin add project-legibility@perhapsspy
 
 # Remove the plugin
-codex plugin remove project-legibility@project-legibility
+codex plugin remove project-legibility@perhapsspy
 ```
 
-To remove the marketplace registration as well, remove the plugin first and then run `codex plugin marketplace remove project-legibility`.
+To remove the marketplace registration as well, remove every installed perhapsspy plugin first and then run `codex plugin marketplace remove perhapsspy`.
 
 ## Development
 
@@ -70,6 +70,7 @@ Each skill is maintained in the repository linked above. This repository pins on
 - [Plugin structure and validation](docs/ARCHITECTURE.en.md)
 - [Skill updates and releases](CONTRIBUTING.en.md)
 - [Included commits](plugins/project-legibility/sources.lock.json)
+- [perhapsspy plugin catalog](https://github.com/perhapsspy/codex-plugins)
 
 ## License
 

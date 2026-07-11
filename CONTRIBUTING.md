@@ -69,6 +69,7 @@ python3 -m unittest discover -s tests -v
 6. 아래 version 규칙에 따라 plugin manifest의 SemVer와 [CHANGELOG](CHANGELOG.md)를 갱신합니다.
 7. test와 plugin validation을 포함한 전체 CI를 통과시킵니다.
 8. review와 merge 뒤 동일 commit에 `v<version>` tag를 만들고 push합니다.
+9. GitHub release가 성공하면 [`perhapsspy/codex-plugins`](https://github.com/perhapsspy/codex-plugins)의 `project-legibility` source SHA를 release commit으로 갱신합니다.
 
 한 canonical 저장소가 여러 스킬을 제공할 수 있습니다. 현재 `project-context`와 `project-context-migration`은 같은 repository SHA를 함께 사용하므로 둘 중 하나를 갱신할 때 두 snapshot의 diff를 모두 확인합니다.
 
@@ -91,31 +92,41 @@ python3 -m unittest discover -s tests -v
 - core 역할이나 스킬 책임 경계의 변경
 - trigger 동작의 의미 있는 확대·축소
 - starter prompt나 제품 수준의 요청 흐름 변경
-- lock, snapshot 또는 marketplace 구조의 호환 가능한 확장
+- lock 또는 snapshot 구조의 호환 가능한 확장
 
-설치 식별자나 source contract를 깨는 변경은 major 후보입니다. major release가 필요하면 먼저 architecture와 migration 경로를 명시합니다.
+Plugin source contract를 깨는 변경은 major 후보입니다. major release가 필요하면 먼저 architecture와 migration 경로를 명시합니다. Marketplace 이름과 공개 plugin 목록은 publisher catalog가 소유합니다.
 
 ## Release gate
 
 Release commit은 다음 조건을 모두 만족해야 합니다.
 
-- manifest와 marketplace metadata의 plugin 이름·경로가 일치하고, manifest version은 CHANGELOG·Git tag와 일치합니다.
+- manifest의 plugin 이름·경로가 유효하고, manifest version은 CHANGELOG·Git tag와 일치합니다.
 - 10개 skill validator와 plugin validator가 통과합니다.
 - full SHA lock이 canonical Git source와 일치합니다.
 - 생성 snapshot이 lock의 source tree와 byte-for-byte 일치합니다.
 - snapshot 내부 상대 링크와 companion 관계가 유효합니다.
 - `work-board`, `structure-first-docs`, `justified-change` 같은 폐기 스킬이 catalog, lock과 snapshot에 없습니다.
 - sync test와 catalog trigger/non-trigger 회귀 test가 통과합니다.
-- install → 새 task → update → remove round trip이 통과합니다.
 - release commit과 Git tag가 같은 검증 결과를 가리킵니다.
+
+## Publisher catalog에 공개하기
+
+Plugin release와 marketplace 공개는 서로 다른 commit으로 관리합니다.
+
+1. 이 저장소의 release workflow와 GitHub Release가 성공했는지 확인합니다.
+2. `perhapsspy/codex-plugins`에서 `project-legibility` entry의 full SHA만 새 release commit으로 바꿉니다.
+3. Catalog test, offline validation과 remote manifest 검증을 실행합니다.
+4. Catalog 변경을 push하고 CI가 성공한 뒤 remote marketplace에서 install round trip을 확인합니다.
+
+Catalog는 plugin tree를 복사하지 않습니다. Release 전 commit이나 움직이는 branch를 source로 배포하지 않습니다.
 
 ## Rollback
 
 배포 후 문제가 생기면 문제가 있는 version을 덮어쓰거나 기존 tag를 이동하지 않습니다.
 
-1. 마지막으로 검증된 tag를 확인합니다. 최초 기준점은 `v0.1.0`입니다.
-2. 사용자에게 [README의 rollback 명령](README.md#업데이트-제거-rollback)을 안내합니다.
+1. 마지막으로 검증된 Project Legibility release commit을 확인합니다.
+2. Publisher catalog의 `project-legibility` SHA를 그 commit으로 되돌리고 catalog CI를 통과시킵니다.
 3. canonical source 또는 assembly 문제를 원래 owner에서 수정합니다.
-4. patch 또는 minor version으로 새 release를 냅니다.
+4. patch 또는 minor version으로 새 release를 낸 뒤 catalog pin을 다시 전진시킵니다.
 
 Tag는 immutable release 기준점입니다. 같은 version의 snapshot이나 manifest를 바꾸지 않습니다.

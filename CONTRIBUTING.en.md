@@ -69,6 +69,7 @@ python3 -m unittest discover -s tests -v
 6. Update the plugin manifest SemVer and [CHANGELOG](CHANGELOG.md) according to the rules below.
 7. Pass the full CI suite, including tests and plugin validation.
 8. After review and merge, create and push a `v<version>` tag on that exact commit.
+9. Once the GitHub release succeeds, update the `project-legibility` source SHA in [`perhapsspy/codex-plugins`](https://github.com/perhapsspy/codex-plugins) to the release commit.
 
 One canonical repository may provide more than one skill. `project-context` and `project-context-migration` currently share one repository SHA, so inspect both snapshot diffs whenever either changes.
 
@@ -91,31 +92,41 @@ Use a minor when the composition or user-visible behavior changes meaningfully, 
 - changing a core role or skill responsibility boundary;
 - materially broadening or narrowing trigger behavior;
 - changing starter prompts or the product-level request flow; or
-- compatibly extending the lock, snapshot, or marketplace structure.
+- compatibly extending the lock or snapshot structure.
 
-A change that breaks the installation identity or source contract is a major-version candidate. Define the architecture and migration path before making that release.
+A change that breaks the plugin source contract is a major-version candidate. Define the architecture and migration path before making that release. The publisher catalog owns the marketplace name and public plugin list.
 
 ## Release gates
 
 Every release commit must satisfy all of these conditions:
 
-- The manifest and marketplace metadata agree on plugin name and path, while the manifest version agrees with the CHANGELOG and Git tag.
+- The manifest plugin name and paths are valid, while its version agrees with the CHANGELOG and Git tag.
 - All 10 skill validators and the plugin validator pass.
 - The full-SHA lock matches the canonical Git sources.
 - The generated snapshot matches the locked source trees byte for byte.
 - Snapshot-relative links and companion relationships are valid.
 - Retired skills such as `work-board`, `structure-first-docs`, and `justified-change` are absent from the catalog, lock, and snapshot.
 - Sync tests and catalog trigger/non-trigger regression tests pass.
-- The install → new task → update → remove round trip passes.
 - The release commit and Git tag point to the same verified result.
+
+## Publish through the publisher catalog
+
+The plugin release and marketplace publication use separate commits.
+
+1. Confirm that this repository's release workflow and GitHub Release succeeded.
+2. In `perhapsspy/codex-plugins`, change only the full SHA for the `project-legibility` entry to the new release commit.
+3. Run the catalog tests, offline validation, and remote manifest verification.
+4. Push the catalog change, wait for CI, and verify an install round trip from the remote marketplace.
+
+The catalog does not copy the plugin tree. Never publish an unreleased commit or moving branch as the source.
 
 ## Rollback
 
 Do not overwrite a faulty release or move an existing tag.
 
-1. Identify the last verified tag. The initial baseline is `v0.1.0`.
-2. Direct users to the [README rollback commands](README.en.md#update-remove-and-roll-back).
+1. Identify the last verified Project Legibility release commit.
+2. Move the publisher catalog's `project-legibility` SHA back to that commit and pass catalog CI.
 3. Fix the canonical source or assembly problem at its owner.
-4. Publish a new patch or minor release.
+4. Publish a new patch or minor release, then advance the catalog pin again.
 
 Tags are immutable release checkpoints. Never change the snapshot or manifest under an existing version.

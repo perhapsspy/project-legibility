@@ -4,6 +4,18 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-11
+
+### Changed
+
+- 공개 설치 좌표를 publisher marketplace의 `project-legibility@perhapsspy`로 변경했습니다.
+- Plugin 카드 설명과 starter prompt를 구체적인 사용 문장으로 다시 썼습니다.
+- Project Legibility release와 publisher catalog의 검증·공개 절차를 분리했습니다.
+
+### Removed
+
+- 제품 저장소가 직접 소유하던 단일 plugin marketplace를 제거했습니다.
+
 ## [0.1.0] - 2026-07-11
 
 ### Added
@@ -20,5 +32,6 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.0
 [0.1.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.1.0

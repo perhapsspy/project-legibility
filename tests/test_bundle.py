@@ -70,28 +70,6 @@ def build_valid_repo(root: Path) -> None:
             },
         },
     )
-    write_json(
-        root / bundle.MARKETPLACE_REL,
-        {
-            "name": bundle.PLUGIN_NAME,
-            "interface": {"displayName": "Project Legibility"},
-            "plugins": [
-                {
-                    "name": bundle.PLUGIN_NAME,
-                    "source": {
-                        "source": "local",
-                        "path": "./plugins/project-legibility",
-                    },
-                    "policy": {
-                        "installation": "AVAILABLE",
-                        "authentication": "ON_INSTALL",
-                    },
-                    "category": "Developer Tools",
-                }
-            ],
-        },
-    )
-
     for skill_id in bundle.EXPECTED_SKILLS:
         skill_dir = skills_root / skill_id
         skill_dir.mkdir(parents=True, exist_ok=True)
@@ -234,20 +212,6 @@ class BundleValidatorTests(unittest.TestCase):
         errors = self.errors()
         self.assertTrue(any("must omit 'mcpServers'" in error for error in errors))
         self.assertTrue(any("must omit 'apps'" in error for error in errors))
-
-    def test_marketplace_source_and_category_are_exact(self) -> None:
-        marketplace_path = self.repo_root / bundle.MARKETPLACE_REL
-        marketplace = read_json(marketplace_path)
-        assert isinstance(marketplace, dict)
-        entry = marketplace["plugins"][0]
-        entry["source"]["path"] = "./"
-        entry["category"] = "Productivity"
-        write_json(marketplace_path, marketplace)
-        errors = self.errors()
-        self.assertTrue(any("source must be exactly" in error for error in errors))
-        self.assertTrue(
-            any("category must be 'Developer Tools'" in error for error in errors)
-        )
 
     def test_expected_catalog_must_remain_exact(self) -> None:
         catalog_path = self.repo_root / bundle.EXPECTED_CATALOG_REL
@@ -503,7 +467,7 @@ class BundleValidatorTests(unittest.TestCase):
         )
 
     def test_cli_aggregates_errors_and_returns_one(self) -> None:
-        (self.repo_root / bundle.MARKETPLACE_REL).unlink()
+        (self.repo_root / bundle.MANIFEST_REL).unlink()
         result = subprocess.run(
             [
                 sys.executable,

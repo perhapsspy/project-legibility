@@ -24,7 +24,6 @@ PLUGIN_NAME = "project-legibility"
 PLUGIN_ROOT_REL = Path("plugins") / PLUGIN_NAME
 MANIFEST_REL = PLUGIN_ROOT_REL / ".codex-plugin" / "plugin.json"
 LOCK_REL = PLUGIN_ROOT_REL / "sources.lock.json"
-MARKETPLACE_REL = Path(".agents") / "plugins" / "marketplace.json"
 CHANGELOG_REL = Path("CHANGELOG.md")
 
 EXPECTED_SKILLS = (
@@ -101,7 +100,6 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
     skills_root = plugin_root / "skills"
 
     manifest = load_json(repo_root / MANIFEST_REL, errors)
-    marketplace = load_json(repo_root / MARKETPLACE_REL, errors)
     lock = load_json(repo_root / LOCK_REL, errors)
     expected_catalog = load_json(repo_root / EXPECTED_CATALOG_REL, errors)
     forbidden_catalog = load_json(repo_root / FORBIDDEN_CATALOG_REL, errors)
@@ -110,7 +108,6 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
 
     validate_no_symlinks(plugin_root, repo_root, errors)
     validate_manifest(manifest, plugin_root, MANIFEST_REL, release_tag, errors)
-    validate_marketplace(marketplace, MARKETPLACE_REL, errors)
     validate_catalog(
         expected_catalog,
         EXPECTED_CATALOG_REL,
@@ -358,80 +355,6 @@ def validate_release_changelog(
         is None
     ):
         errors.add(CHANGELOG_REL, f"missing release heading for [{match.group(1)}]")
-
-
-def validate_marketplace(
-    marketplace: Any,
-    marketplace_path: Path,
-    errors: ValidationErrors,
-) -> None:
-    if not isinstance(marketplace, dict):
-        if marketplace is not None:
-            errors.add(marketplace_path, "marketplace root must be a JSON object")
-        return
-
-    require_exact(marketplace, "name", PLUGIN_NAME, marketplace_path, errors)
-    interface = marketplace.get("interface")
-    if not isinstance(interface, dict):
-        errors.add(marketplace_path, "interface must be an object")
-    else:
-        require_exact(
-            interface,
-            "displayName",
-            "Project Legibility",
-            marketplace_path,
-            errors,
-            prefix="interface.",
-        )
-
-    plugins = marketplace.get("plugins")
-    if not isinstance(plugins, list) or len(plugins) != 1:
-        errors.add(marketplace_path, "plugins must contain exactly one entry")
-        return
-    entry = plugins[0]
-    if not isinstance(entry, dict):
-        errors.add(marketplace_path, "plugins[0] must be an object")
-        return
-
-    require_exact(entry, "name", PLUGIN_NAME, marketplace_path, errors, "plugins[0].")
-    require_exact(
-        entry,
-        "category",
-        "Developer Tools",
-        marketplace_path,
-        errors,
-        "plugins[0].",
-    )
-    expected_source = {
-        "source": "local",
-        "path": "./plugins/project-legibility",
-    }
-    if entry.get("source") != expected_source:
-        errors.add(
-            marketplace_path,
-            "plugins[0].source must be exactly local ./plugins/project-legibility",
-        )
-
-    policy = entry.get("policy")
-    if not isinstance(policy, dict):
-        errors.add(marketplace_path, "plugins[0].policy must be an object")
-    else:
-        require_exact(
-            policy,
-            "installation",
-            "AVAILABLE",
-            marketplace_path,
-            errors,
-            "plugins[0].policy.",
-        )
-        require_exact(
-            policy,
-            "authentication",
-            "ON_INSTALL",
-            marketplace_path,
-            errors,
-            "plugins[0].policy.",
-        )
 
 
 def validate_catalog(
@@ -1081,7 +1004,6 @@ def validate_removed_names(
     active_paths.extend(
         repo_root / relative_path
         for relative_path in (
-            MARKETPLACE_REL,
             EXPECTED_CATALOG_REL,
             TRIGGER_CASES_REL,
             NON_TRIGGER_CASES_REL,
@@ -1249,7 +1171,7 @@ def main(argv: list[str] | None = None) -> int:
     print(
         "Bundle validation passed: "
         f"{len(EXPECTED_SOURCE_SKILLS)} sources, {len(EXPECTED_SKILLS)} skills, "
-        "manifest, marketplace, and fixtures."
+        "manifest and fixtures."
     )
     return 0
 

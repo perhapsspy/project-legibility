@@ -1,7 +1,7 @@
 {
   "name": "project-legibility",
-  "version": "0.1.0",
-  "description": "Shape, build, verify, and resume projects without losing intent, structure, or context.",
+  "version": "0.2.0",
+  "description": "Ten Codex skills for repository work that continues across tasks.",
   "author": {
     "name": "perhapsspy",
     "url": "https://github.com/perhapsspy"
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Project Legibility",
-    "shortDescription": "Keep project intent, structure, and context legible.",
-    "longDescription": "A project-centered Codex workflow for grounding intent, making structured changes, verifying outcomes, and leaving work easy to resume.",
+    "shortDescription": "Ten skills for repository work that spans tasks.",
+    "longDescription": "Resume project context, check source decisions, structure code changes, and keep repository documentation current.",
     "developerName": "perhapsspy",
     "category": "Developer Tools",
     "capabilities": [
@@ -30,9 +30,9 @@
     ],
     "websiteURL": "https://github.com/perhapsspy/project-legibility",
     "defaultPrompt": [
-      "Resume this project and implement the next verified change.",
-      "Review this repository for context, structure, meaning, and documentation drift.",
-      "Leave this project verified and easy for the next agent to resume."
+      "Read this repository's latest project notes and continue the implementation.",
+      "Compare this port with its source repository and list where it diverges.",
+      "Verify this change and leave a note so work can resume in the next task."
     ],
     "brandColor": "#4F46E5",
     "composerIcon": "./assets/icon.svg",
