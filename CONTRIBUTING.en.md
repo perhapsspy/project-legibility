@@ -71,11 +71,11 @@ python3 -m unittest discover -s tests -v
 8. After review and merge, create and push a `v<version>` tag on that exact commit.
 9. Once the GitHub release succeeds, update the `project-legibility` source SHA in [`perhapsspy/codex-plugins`](https://github.com/perhapsspy/codex-plugins) to the release commit.
 
-One canonical repository may provide more than one skill. `project-context` and `project-context-migration` currently share one repository SHA, so inspect both snapshot diffs whenever either changes.
+When one canonical repository provides multiple skills, inspect every snapshot diff attached to that source entry. `sources.lock.json` owns the current relationship.
 
 ## Version rules
 
-### Patch (`0.1.x`)
+### Patch
 
 Use a patch when the existing product promise and install composition remain compatible, including:
 
@@ -84,7 +84,7 @@ Use a patch when the existing product promise and install composition remain com
 - a compatible assembly or validation-tool fix; or
 - a factual or procedural correction in public documentation.
 
-### Minor (`0.x.0`)
+### Minor
 
 Use a minor when the composition or user-visible behavior changes meaningfully, including:
 
@@ -101,7 +101,7 @@ A change that breaks the plugin source contract is a major-version candidate. De
 Every release commit must satisfy all of these conditions:
 
 - The manifest plugin name and paths are valid, while its version agrees with the CHANGELOG and Git tag.
-- All 10 skill validators and the plugin validator pass.
+- Every bundled skill validator and the plugin validator pass.
 - The full-SHA lock matches the canonical Git sources.
 - The generated snapshot matches the locked source trees byte for byte.
 - Snapshot-relative links and companion relationships are valid.

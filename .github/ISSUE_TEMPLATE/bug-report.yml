@@ -1,6 +1,6 @@
-name: Bug report
-description: 설치, discovery, routing, bundle 또는 업데이트 문제를 보고합니다.
-title: "[Bug] "
+name: 버그 신고
+description: 설치, 스킬 발견·선택, bundle 또는 업데이트 문제를 신고합니다.
+title: "[버그] "
 labels:
   - bug
 body:
@@ -10,47 +10,47 @@ body:
   - type: input
     id: plugin-version
     attributes:
-      label: Project Legibility version
-      placeholder: 0.2.0
+      label: Project Legibility 버전
+      placeholder: 설치된 manifest의 version 값
     validations:
       required: true
   - type: input
     id: codex-version
     attributes:
-      label: Codex version and surface
-      placeholder: codex-cli 0.139.0 / Codex desktop
+      label: Codex 버전과 사용 환경
+      placeholder: codex-cli <version> / Codex desktop
     validations:
       required: true
   - type: dropdown
     id: area
     attributes:
-      label: Affected area
+      label: 영향 범위
       options:
-        - Installation or update
-        - Skill discovery or routing
-        - Skill behavior
-        - Source lock or generated bundle
-        - Documentation
-        - Other
+        - 설치 또는 업데이트
+        - 스킬 발견 또는 선택
+        - 스킬 동작
+        - source lock 또는 생성된 bundle
+        - 문서
+        - 기타
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Minimal reproduction
-      description: 실행한 명령이나 prompt와 재현 순서를 적어 주세요.
+      label: 최소 재현
+      description: 실행한 명령이나 prompt, 재현 순서를 적어 주세요.
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: 기대 동작
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Actual behavior and evidence
+      label: 실제 동작과 근거
       description: 오류 메시지나 관련 log를 포함하되 민감한 정보는 제거해 주세요.
     validations:
       required: true

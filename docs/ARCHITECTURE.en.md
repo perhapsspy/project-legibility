@@ -6,7 +6,7 @@ This document owns Project Legibility's source boundaries, plugin assembly, lock
 
 ## Design goals
 
-Project Legibility distributes 10 skills as one reproducible Codex plugin while preserving 9 independent canonical repositories.
+Project Legibility distributes a reviewed skill bundle as a reproducible Codex plugin while preserving independently maintained canonical skill repositories.
 
 - Skill authors can continue to develop, validate, and release in the existing repositories.
 - The installed plugin does not depend on network access or a developer checkout.
@@ -25,7 +25,7 @@ Project Legibility distributes 10 skills as one reproducible Codex plugin while 
 | [`perhapsspy` marketplace](https://github.com/perhapsspy/codex-plugins) | Marketplace name, published plugin list, and selected plugin release commit | Plugin content, version, or skill meaning |
 | `scripts/sync_skills.py` | Lock generation, source materialization, snapshot assembly, and drift detection | Resolving semantic conflicts between skills, redesigning triggers, or approving a release |
 
-The `project-context` repository owns both `project-context` and `project-context-migration`. Ten skills are therefore pinned through nine repository commits.
+One canonical repository may provide more than one skill. `sources.lock.json` records the relationship between source commits and individual skill paths.
 
 ## Assembly flow
 
@@ -79,7 +79,7 @@ Submodules expose repository relationships but require extra init and fetch stat
 
 ### Remote assembly during installation
 
-Fetching nine repositories during installation or runtime would put network availability, moving branches, authentication, and source outages on the user's execution path. The release commits a generated snapshot, while remote verification finishes in CI and release gates.
+Fetching each canonical repository during installation or runtime would put network availability, moving branches, authentication, and source outages on the user's execution path. The release commits a generated snapshot, while remote verification finishes in CI and release gates.
 
 ### An umbrella skill
 
@@ -91,6 +91,6 @@ A release requires all three kinds of evidence:
 
 1. **Package:** the manifest and plugin tree are valid, and the manifest version matches the CHANGELOG and Git tag.
 2. **Source:** every full SHA exists in the remote canonical source, and the lock, source tree, and snapshot agree.
-3. **Skill:** all 10 skill validators, relative links, companion relationships, and catalog regressions pass.
+3. **Skill:** every bundled skill validator, relative links, companion relationships, and catalog regressions pass.
 
 Release tags are immutable `v<version>` checkpoints that match the manifest version. Publisher-catalog publication finishes only after it pins that commit and passes a remote install round trip. Fix a faulty release with a new patch or minor version; never move its tag.

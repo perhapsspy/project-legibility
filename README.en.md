@@ -6,7 +6,7 @@
 
 [한국어](README.md)
 
-Project Legibility installs the 10 skills I use when working with Codex on the same repository across multiple tasks.
+Project Legibility is a bundle of Codex skills for repository work that continues across tasks.
 
 `project-context` records the current state so work can resume in the next task. `structure-first` gives code changes a clear main flow and verification criteria. The other skills help when a port has no clear source, IDs or statuses disagree between UI and API, late search results overwrite the current screen, or documentation and `AGENTS.md` have gone stale.
 

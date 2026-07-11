@@ -1,7 +1,7 @@
 {
   "name": "project-legibility",
-  "version": "0.2.0",
-  "description": "Ten Codex skills for repository work that continues across tasks.",
+  "version": "0.2.1",
+  "description": "Codex skills for repository work that continues across tasks.",
   "author": {
     "name": "perhapsspy",
     "url": "https://github.com/perhapsspy"
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Project Legibility",
-    "shortDescription": "Ten skills for repository work that spans tasks.",
-    "longDescription": "Resume project context, check source decisions, structure code changes, and keep repository documentation current.",
+    "shortDescription": "Keep repository work resumable and changes verifiable.",
+    "longDescription": "Resume project context, check source decisions, structure code changes, and keep repository guidance current.",
     "developerName": "perhapsspy",
     "category": "Developer Tools",
     "capabilities": [

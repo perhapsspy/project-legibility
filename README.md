@@ -6,7 +6,7 @@
 
 [English](README.en.md)
 
-Project Legibility는 제가 Codex로 저장소를 오래 다룰 때 쓰는 10개 스킬을 한 번에 설치하는 플러그인입니다.
+Project Legibility는 Codex로 저장소 작업을 여러 세션에 걸쳐 이어갈 때 쓰는 스킬 묶음입니다.
 
 `project-context`는 중단한 곳부터 다시 시작할 수 있게 현재 상태를 기록하고, `structure-first`는 코드 변경의 주 흐름과 검증 기준을 잡습니다. 그 밖의 스킬은 포팅 기준이 모호할 때, UI와 API의 ID·상태·권한이 어긋날 때, 늦게 도착한 검색 결과가 현재 화면을 덮을 때, 문서와 `AGENTS.md`가 낡았을 때 사용합니다.
 
