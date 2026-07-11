@@ -19,14 +19,12 @@
 ## 현재 상태
 
 - 공개 문서와 metadata 정리를 마쳤다.
-- bundle, offline·remote source, repository test와 공식 plugin validation이 통과했다.
-- 사용자에게 보이는 manifest 변경을 v0.2.1 patch release로 배포한다.
+- v0.2.1 release와 publisher catalog 공개가 완료됐다.
+- 로컬 marketplace와 설치된 plugin이 v0.2.1 release SHA를 가리킨다.
 
 ## 다음 행동
 
-1. v0.2.1 release를 push한다.
-2. catalog pin과 공개 설명을 갱신한다.
-3. 로컬 plugin 설치를 새 release로 맞춘다.
+- 없음. 이후 구성 변경에서도 일반 설명은 개수를 복제하지 않고 포함 스킬 표와 lock을 따른다.
 
 ## 작업 경계
 
