@@ -19,13 +19,14 @@
 
 ## 현재 상태
 
-- canonical README와 UI 카드 변경을 각 저장소 main에 push했다.
-- Project Legibility v0.2.2 snapshot, plugin-level 설명과 사용자 양식을 갱신했다.
+- canonical README와 UI 카드 변경을 각 저장소 main에 반영했다.
+- Project Legibility v0.2.2와 publisher catalog 공개가 완료됐다.
+- 전역 canonical skills와 설치된 plugin이 새 문구와 release SHA를 가리킨다.
 - trigger 의미와 스킬 구성은 바뀌지 않았다.
 
 ## 다음 행동
 
-- remote source 검증 뒤 v0.2.2 release와 publisher catalog를 공개한다.
+- 없음. 이후 개별 스킬 설명은 canonical 저장소에서만 고치고 meta 저장소는 링크만 유지한다.
 
 ## 작업 경계
 
