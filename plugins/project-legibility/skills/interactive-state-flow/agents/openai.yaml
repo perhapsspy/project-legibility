@@ -1,4 +1,4 @@
 interface:
   display_name: "Interactive State Flow"
-  short_description: "Fix laggy or stale interactive flows"
-  default_prompt: "Use $interactive-state-flow to refactor this laggy or stale interaction so source state, deferred presentation, and async freshness are handled clearly."
+  short_description: "Keep interactions responsive and stale results out"
+  default_prompt: "Use $interactive-state-flow to make this interaction respond promptly and ignore results that no longer belong."

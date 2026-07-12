@@ -4,6 +4,14 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-07-12
+
+### Changed
+
+- 플러그인과 canonical 스킬 설명을 내부 구조보다 사용자가 얻는 결과가 먼저 보이도록 다시 썼습니다.
+- bundle과 marketplace가 개별 스킬 목적을 재서술하지 않고 canonical 저장소로 안내하도록 설명 소유권을 정리했습니다.
+- 개선 제안과 버그 양식에서 maintainer용 용어와 판단 항목을 제거했습니다.
+
 ## [0.2.1] - 2026-07-11
 
 ### Changed
@@ -38,7 +46,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.2
 [0.2.1]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.1
 [0.2.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.0
 [0.1.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.1.0

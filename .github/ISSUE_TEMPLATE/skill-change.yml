@@ -1,5 +1,5 @@
-name: 스킬 또는 bundle 제안
-description: 스킬 추가·제거·책임 변경이나 plugin 수준의 개선을 제안합니다.
+name: 개선 제안
+description: 사용 중 불편한 점이나 더 나아졌으면 하는 동작을 제안합니다.
 title: "[제안] "
 labels:
   - enhancement
@@ -12,23 +12,16 @@ body:
     validations:
       required: true
   - type: textarea
-    id: owner
+    id: example
     attributes:
-      label: 책임을 둘 위치
-      description: 기존 canonical skill, 새 독립 skill, plugin metadata 중 어디가 이 책임을 가져야 하는지와 이유를 적어 주세요.
+      label: 실제 예시
+      description: 어떤 요청을 했고 어떤 결과가 나왔는지 적어 주세요.
     validations:
       required: true
   - type: textarea
-    id: boundary
+    id: expected
     attributes:
-      label: 선택·비선택 경계
-      description: 언제 선택되어야 하고 언제 선택되면 안 되는지 예시를 적어 주세요.
-    validations:
-      required: true
-  - type: textarea
-    id: evidence
-    attributes:
-      label: 근거와 호환성 영향
-      description: 실제 실패 사례, 대안, 기존 사용자나 source repo에 미치는 영향을 적어 주세요.
+      label: 기대하는 결과
+      description: 같은 상황에서 어떻게 동작하면 더 유용할지 적어 주세요.
     validations:
       required: true

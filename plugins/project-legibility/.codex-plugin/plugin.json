@@ -1,7 +1,7 @@
 {
   "name": "project-legibility",
-  "version": "0.2.1",
-  "description": "Codex skills for repository work that continues across tasks.",
+  "version": "0.2.2",
+  "description": "Keep long-running repository work coherent, verifiable, and easy to resume.",
   "author": {
     "name": "perhapsspy",
     "url": "https://github.com/perhapsspy"
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Project Legibility",
-    "shortDescription": "Keep repository work resumable and changes verifiable.",
-    "longDescription": "Resume project context, check source decisions, structure code changes, and keep repository guidance current.",
+    "shortDescription": "Keep long-running repository work coherent and easy to resume.",
+    "longDescription": "Carry context across tasks, check the right behavior before editing, and leave code and documentation easier to understand.",
     "developerName": "perhapsspy",
     "category": "Developer Tools",
     "capabilities": [
@@ -30,9 +30,9 @@
     ],
     "websiteURL": "https://github.com/perhapsspy/project-legibility",
     "defaultPrompt": [
-      "Read this repository's latest project notes and continue the implementation.",
-      "Compare this port with its source repository and list where it diverges.",
-      "Verify this change and leave a note so work can resume in the next task."
+      "Find where work last stopped in this repository and continue safely.",
+      "Before editing, check which existing behavior and constraints this change should preserve.",
+      "Implement and verify this so the next task can understand and continue the work."
     ],
     "brandColor": "#4F46E5",
     "composerIcon": "./assets/icon.svg",

@@ -1,5 +1,5 @@
 name: 버그 신고
-description: 설치, 스킬 발견·선택, bundle 또는 업데이트 문제를 신고합니다.
+description: 설치·업데이트 또는 사용 중 발생한 문제를 신고합니다.
 title: "[버그] "
 labels:
   - bug
@@ -11,7 +11,7 @@ body:
     id: plugin-version
     attributes:
       label: Project Legibility 버전
-      placeholder: 설치된 manifest의 version 값
+      placeholder: codex plugin list에서 확인한 version
     validations:
       required: true
   - type: input
@@ -27,9 +27,8 @@ body:
       label: 영향 범위
       options:
         - 설치 또는 업데이트
-        - 스킬 발견 또는 선택
-        - 스킬 동작
-        - source lock 또는 생성된 bundle
+        - 필요한 스킬이 선택되지 않음
+        - 결과가 기대와 다름
         - 문서
         - 기타
     validations:
@@ -37,8 +36,8 @@ body:
   - type: textarea
     id: reproduction
     attributes:
-      label: 최소 재현
-      description: 실행한 명령이나 prompt, 재현 순서를 적어 주세요.
+      label: 재현 방법
+      description: 어떤 요청이나 명령을 사용했고 무엇이 일어났는지 순서대로 적어 주세요.
     validations:
       required: true
   - type: textarea
@@ -50,7 +49,7 @@ body:
   - type: textarea
     id: actual
     attributes:
-      label: 실제 동작과 근거
+      label: 실제로 일어난 일
       description: 오류 메시지나 관련 log를 포함하되 민감한 정보는 제거해 주세요.
     validations:
       required: true

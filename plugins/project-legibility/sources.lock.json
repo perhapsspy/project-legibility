@@ -4,132 +4,132 @@
     {
       "id": "agents-md-editor",
       "repository": "https://github.com/perhapsspy/agents-md-editor.git",
-      "commit": "53637729acba3c9d588764056d565477939aa904",
+      "commit": "ef2a11d350b8d5bb70a7fe14bf889f14a8fe07b3",
       "license": "MIT",
       "skills": [
         {
           "id": "agents-md-editor",
           "sourcePath": "skills/agents-md-editor",
           "targetPath": "skills/agents-md-editor",
-          "integrity": "sha256:3314161dcc51abf875952f2d291b5426f58b4b43efb8b58b3dd6fd0eb5a81ea1"
+          "integrity": "sha256:907c88a6f96b0e94b504a5426d8cd89aaad2f421772f7a4fed9d0c3594360262"
         }
       ]
     },
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "32a03eed5e8e8d9c9c7eeeba8d2bac90c1db05ab",
+      "commit": "40f73e7cc4827b0a642431f730ee7a972ff65041",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:f7458f3e4a20dca8cb6786695d27e050643ad66ada253319e2a03097a0f04dc3"
+          "integrity": "sha256:b9ac1437e25f7293f429eec0fd6efb3a77b2370919c8bdaab4ae85c28c9ff6ca"
         }
       ]
     },
     {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
-      "commit": "f03a575f8e2206c69c41f286562e5d6ee7ea73ad",
+      "commit": "887bb294ab03482d4ef36d33e43359f45c728792",
       "license": "MIT",
       "skills": [
         {
           "id": "interactive-state-flow",
           "sourcePath": "skills/interactive-state-flow",
           "targetPath": "skills/interactive-state-flow",
-          "integrity": "sha256:5da8316cf8dc428bda8f100e2e2b47c3bd4db324cdcb75bc07473b18d219422c"
+          "integrity": "sha256:7377fd592a8cae1133dad8b4dd8add86ac5566f050082ab9c727215bae16929f"
         }
       ]
     },
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "b63f5efd457f1a28d3e6f0856e3f4e430c90de19",
+      "commit": "2416f24d067c3383cfede92611a8627806f8a905",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:733ddb7752c41c96f54f707cc5c931a8aea39afa946daa36fcab4a934c1aeac2"
+          "integrity": "sha256:c5413b01a4cb079459d9d7ec8caa5681fa5b0f4ff10d884fd735ac6baba055b4"
         },
         {
           "id": "project-context-migration",
           "sourcePath": "skills/project-context-migration",
           "targetPath": "skills/project-context-migration",
-          "integrity": "sha256:a167482ac0496b7e27adf16987ce500d2bad9e6662e726f9205cc18bc7998529"
+          "integrity": "sha256:e2e68529350887123458ee73c2025aa2e5049e0b864b3b8c9a73561ef63a0bf7"
         }
       ]
     },
     {
       "id": "purpose-fit-design",
       "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "5af314ee04187fdc5b7d2657aad3934c2698fc86",
+      "commit": "2a11f902fd303e4871e6e4c1f3363f991504836f",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-fit-design",
           "sourcePath": "skills/purpose-fit-design",
           "targetPath": "skills/purpose-fit-design",
-          "integrity": "sha256:c466287f2366c2aca357af69d22888c4404adea42340f0a1bef76f0988e53876"
+          "integrity": "sha256:ab5d13e5cebf7b563da19066ca37605082f49977f3465e1507d968a489c80316"
         }
       ]
     },
     {
       "id": "semantic-boundary-design",
       "repository": "https://github.com/perhapsspy/semantic-boundary-design.git",
-      "commit": "2f5b079735645962da00c1598eac161e854fa930",
+      "commit": "1daa2969d52c514aa6924837d970df8c1d03366e",
       "license": "MIT",
       "skills": [
         {
           "id": "semantic-boundary-design",
           "sourcePath": "skills/semantic-boundary-design",
           "targetPath": "skills/semantic-boundary-design",
-          "integrity": "sha256:d0eb342e4b397b2aa8229de81f1fb97459f22e0ed4015c04a8848ba069476cc0"
+          "integrity": "sha256:e626cb529625944ee07ff9c9d986789c3f3d34efef20d9ced8af45891d59a15c"
         }
       ]
     },
     {
       "id": "source-owner-audit",
       "repository": "https://github.com/perhapsspy/source-owner-audit.git",
-      "commit": "24fce39d186fc9fbfad12c9cce7eff1268f675ec",
+      "commit": "0b2cd629163af33d623bdd20654a5e62dd9d0d41",
       "license": "MIT",
       "skills": [
         {
           "id": "source-owner-audit",
           "sourcePath": "skills/source-owner-audit",
           "targetPath": "skills/source-owner-audit",
-          "integrity": "sha256:7b2fd6d77a3c80900dc3b7745c1f33fc23710a97dbc1f1518919c909642e00dc"
+          "integrity": "sha256:bfad3ee3a6a906fcf10568f0b15f56b3c7ae8a916cb7c9da261b8e266c669b01"
         }
       ]
     },
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "8deb1a25dd60cff7bc057a3f301db553d0bfb87a",
+      "commit": "0da4beaac025eaffe05fc33ad5d0d1dd2b12f745",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:ab69bc76a9306ee86b55442525d61860b4747207af5752d2bf87791ed254950c"
+          "integrity": "sha256:aafe73761e0ab22884b74578643ada5a99d1989af4f64a821f12154d1369005c"
         }
       ]
     },
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "faaddf207fb5910da6dacdd9da39f208768171d7",
+      "commit": "073d5e3e4caf2d886de2b7f4343629ad4d16679f",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:1be311b9810aeca5a0c51828d24a0030bb5c511710a5dbd416918095ed892b5d"
+          "integrity": "sha256:07e667850bf0fb9871cc73e114f64ad0872c59400b40860fffd038362642f2ea"
         }
       ]
     }

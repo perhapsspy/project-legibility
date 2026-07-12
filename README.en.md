@@ -6,9 +6,9 @@
 
 [한국어](README.md)
 
-Project Legibility is a bundle of Codex skills for repository work that continues across tasks.
+Project Legibility keeps long-running repository work from losing context or direction and helps leave changes that are easy to understand and resume later.
 
-`project-context` records the current state so work can resume in the next task. `structure-first` gives code changes a clear main flow and verification criteria. The other skills help when a port has no clear source, IDs or statuses disagree between UI and API, late search results overwrite the current screen, or documentation and `AGENTS.md` have gone stale.
+The included skills pick up interrupted work, check what a change should follow, and keep complex code and documentation readable.
 
 ## Install
 
@@ -17,14 +17,14 @@ codex plugin marketplace add perhapsspy/codex-plugins
 codex plugin add project-legibility@perhapsspy
 ```
 
-Start a new task after installation. Ask for the work as usual; Codex will pick the relevant skills.
+Start a new task after installation. Ask for the work as usual; the relevant skills are selected automatically.
 
 ```text
-Read the latest project notes in this repository and continue the implementation.
+Find where work last stopped in this repository and continue safely.
 
-Compare this port with the source repository and find where it diverges.
+Before editing, check which existing behavior and constraints this change should preserve.
 
-Verify this change and leave a note so work can resume from here in the next task.
+Implement and verify this so the next task can understand and continue the work.
 ```
 
 You can also name a skill directly.
@@ -35,18 +35,17 @@ $source-owner-audit compare this code with the current source of truth.
 
 ## Included skills
 
-| Skill | Use it when |
-|---|---|
-| [`project-context`](https://github.com/perhapsspy/project-context) | Work continues across sessions or agents |
-| [`project-context-migration`](https://github.com/perhapsspy/project-context) | Existing notes need to move into the `project-context` layout |
-| [`structure-first`](https://github.com/perhapsspy/structure-first) | A feature, fix, or refactor needs a clear main flow and verification |
-| [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit) | A port or migration needs an explicit source to follow |
-| [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design) | A proposed design needs checking against user needs and constraints before coding |
-| [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design) | IDs, statuses, or permissions mean different things in UI, API, and storage |
-| [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow) | A slow search or streaming response overwrites newer screen state |
-| [`tighten-docs`](https://github.com/perhapsspy/tighten-docs) | Documents overlap, go stale, or give readers no clear place to start |
-| [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor) | Always-read files such as `AGENTS.md` become long or repetitive |
-| [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline) | A long task is drowning in files, logs, or tool output |
+See each canonical repository for the skill's purpose, usage guidance, and examples.
+
+- [`project-context`, `project-context-migration`](https://github.com/perhapsspy/project-context)
+- [`structure-first`](https://github.com/perhapsspy/structure-first)
+- [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit)
+- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design)
+- [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design)
+- [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow)
+- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs)
+- [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor)
+- [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline)
 
 This plugin installs skill instructions only. It does not connect to external services or start background work.
 
