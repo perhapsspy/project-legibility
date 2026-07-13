@@ -35,7 +35,7 @@ $source-owner-audit 현재 기준 구현과 이 코드의 차이를 확인해줘
 
 ## 포함된 스킬
 
-각 스킬의 자세한 목적, 사용 시점과 예시는 연결된 canonical 저장소에서 확인할 수 있습니다.
+각 스킬의 자세한 목적, 사용 시점과 예시는 연결된 원본 저장소에서 확인할 수 있습니다.
 
 - [`project-context`, `project-context-migration`](https://github.com/perhapsspy/project-context)
 - [`structure-first`](https://github.com/perhapsspy/structure-first)
@@ -64,8 +64,9 @@ codex plugin remove project-legibility@perhapsspy
 
 ## 개발
 
-각 스킬은 위 표에 연결된 저장소에서 따로 관리합니다. 이 저장소는 함께 배포할 커밋만 고정합니다.
+각 스킬은 위 목록에 연결된 저장소에서 따로 관리합니다. 이 저장소는 함께 배포할 커밋만 고정합니다.
 
+- [변경 내역](CHANGELOG.md)
 - [플러그인 구성과 검증](docs/ARCHITECTURE.md)
 - [스킬 갱신과 릴리스](CONTRIBUTING.md)
 - [현재 포함된 커밋](plugins/project-legibility/sources.lock.json)

@@ -4,35 +4,35 @@
     {
       "id": "agents-md-editor",
       "repository": "https://github.com/perhapsspy/agents-md-editor.git",
-      "commit": "ef2a11d350b8d5bb70a7fe14bf889f14a8fe07b3",
+      "commit": "183cb4b7a5b6fa100e6531787574b0cfc1aa2a0a",
       "license": "MIT",
       "skills": [
         {
           "id": "agents-md-editor",
           "sourcePath": "skills/agents-md-editor",
           "targetPath": "skills/agents-md-editor",
-          "integrity": "sha256:907c88a6f96b0e94b504a5426d8cd89aaad2f421772f7a4fed9d0c3594360262"
+          "integrity": "sha256:b5d9b4b6720c56b603c5536c0e317608da68a06cbd3e954b02ec61f8d9cb4abe"
         }
       ]
     },
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "40f73e7cc4827b0a642431f730ee7a972ff65041",
+      "commit": "bef71aebc8e106f4ddb2cdf7e1d68202afa25e3b",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:b9ac1437e25f7293f429eec0fd6efb3a77b2370919c8bdaab4ae85c28c9ff6ca"
+          "integrity": "sha256:3dfd6e4bdaa87dcf74bad49a96dc782f0e4d61f6504df04bc0be9d5b4a5fd6ec"
         }
       ]
     },
     {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
-      "commit": "887bb294ab03482d4ef36d33e43359f45c728792",
+      "commit": "8e0013de4174c06ab2b8daae791e47f0cac81fad",
       "license": "MIT",
       "skills": [
         {
@@ -46,7 +46,7 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "2416f24d067c3383cfede92611a8627806f8a905",
+      "commit": "55d322faa0a909e8a8689a86b59fcf9230540371",
       "license": "MIT",
       "skills": [
         {
@@ -66,7 +66,7 @@
     {
       "id": "purpose-fit-design",
       "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "2a11f902fd303e4871e6e4c1f3363f991504836f",
+      "commit": "d8a4d3c9002de137ba61f6edc213f6dc69513570",
       "license": "MIT",
       "skills": [
         {
@@ -108,7 +108,7 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "0da4beaac025eaffe05fc33ad5d0d1dd2b12f745",
+      "commit": "bd0f4b75515072f8fab6d36330822b0dfe55f014",
       "license": "MIT",
       "skills": [
         {
@@ -122,7 +122,7 @@
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "073d5e3e4caf2d886de2b7f4343629ad4d16679f",
+      "commit": "09a352912420c084958a9508b9ba1feae68cf38d",
       "license": "MIT",
       "skills": [
         {

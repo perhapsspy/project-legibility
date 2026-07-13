@@ -1,4 +1,4 @@
 interface:
   display_name: "Agents MD Editor"
   short_description: "Keep always-read instructions short and durable"
-  default_prompt: "Use $agents-md-editor to keep the lasting rules here and move or remove everything that should not load every time."
+  default_prompt: "Use $agents-md-editor to review these always-read instructions, classify what belongs here, and edit only when authorized."

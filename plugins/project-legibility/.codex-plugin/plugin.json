@@ -1,6 +1,6 @@
 {
   "name": "project-legibility",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Keep long-running repository work coherent, verifiable, and easy to resume.",
   "author": {
     "name": "perhapsspy",
@@ -32,7 +32,7 @@
     "defaultPrompt": [
       "Find where work last stopped in this repository and continue safely.",
       "Before editing, check which existing behavior and constraints this change should preserve.",
-      "Implement and verify this so the next task can understand and continue the work."
+      "Implement and verify this so the work is easy to understand and continue in a later task."
     ],
     "brandColor": "#4F46E5",
     "composerIcon": "./assets/icon.svg",

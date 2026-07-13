@@ -12,7 +12,7 @@ This document owns the workflow for carrying a canonical skill change into a plu
 - Change `sources.lock.json`, the generated snapshot, plugin manifest, release documentation, and assembly or validation tools in this repository.
 - Never implement one change manually in both the canonical repository and generated snapshot.
 
-The [included-skills table](README.en.md#included-skills) lists every canonical repository.
+The [included-skills list](README.en.md#included-skills) links every canonical repository.
 
 ## Development setup
 
@@ -66,7 +66,7 @@ python3 -m unittest discover -s tests -v
 3. Run `sync_skills.py update` here to update the full SHA, skill integrity, and snapshot together.
 4. Review the generated diff. Stop if it contains unexpected files or unrelated skill changes.
 5. Run the local-source check, offline check, bundle validation, and repository tests.
-6. Update the plugin manifest SemVer and [CHANGELOG](CHANGELOG.md) according to the rules below.
+6. Update the plugin manifest SemVer and both the [English](CHANGELOG.en.md) and [Korean](CHANGELOG.md) changelogs according to the rules below.
 7. Pass the full CI suite, including tests and plugin validation.
 8. After review and merge, create and push a `v<version>` tag on that exact commit.
 9. Once the GitHub release succeeds, update the `project-legibility` source SHA in [`perhapsspy/codex-plugins`](https://github.com/perhapsspy/codex-plugins) to the release commit.
@@ -105,7 +105,7 @@ Every release commit must satisfy all of these conditions:
 - The full-SHA lock matches the canonical Git sources.
 - The generated snapshot matches the locked source trees byte for byte.
 - Snapshot-relative links and companion relationships are valid.
-- Retired skills such as `work-board`, `structure-first-docs`, and `justified-change` are absent from the catalog, lock, and snapshot.
+- Every retired skill listed in [`tests/catalog/forbidden-skills.json`](tests/catalog/forbidden-skills.json) is absent from the catalog, lock, and snapshot.
 - Sync tests and catalog trigger/non-trigger regression tests pass.
 - The release commit and Git tag point to the same verified result.
 

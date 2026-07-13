@@ -24,7 +24,7 @@ Find where work last stopped in this repository and continue safely.
 
 Before editing, check which existing behavior and constraints this change should preserve.
 
-Implement and verify this so the next task can understand and continue the work.
+Implement and verify this so the work is easy to understand and continue in a later task.
 ```
 
 You can also name a skill directly.
@@ -35,7 +35,7 @@ $source-owner-audit compare this code with the current source of truth.
 
 ## Included skills
 
-See each canonical repository for the skill's purpose, usage guidance, and examples.
+See each source repository for the skill's purpose, usage guidance, and examples.
 
 - [`project-context`, `project-context-migration`](https://github.com/perhapsspy/project-context)
 - [`structure-first`](https://github.com/perhapsspy/structure-first)
@@ -66,6 +66,7 @@ To remove the marketplace registration as well, remove every installed perhapssp
 
 Each skill is maintained in the repository linked above. This repository pins only the commits released together.
 
+- [Release notes](CHANGELOG.en.md)
 - [Plugin structure and validation](docs/ARCHITECTURE.en.md)
 - [Skill updates and releases](CONTRIBUTING.en.md)
 - [Included commits](plugins/project-legibility/sources.lock.json)

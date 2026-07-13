@@ -1,6 +1,8 @@
 # 작업 로그
 
-## 2026-07-11 · 조사와 scaffold
+**2026-07-11**
+
+- **조사와 scaffold**
 
 - 공식 `Build plugins` 문서, `plugin-creator` 규격과 설치된 OpenAI plugin 사례를 대조했다.
 - 9개 source 저장소가 모두 clean `main`이고 GitHub `main`과 일치하는지 확인했다.
@@ -9,7 +11,7 @@
 - 공개 manifest metadata와 최소 visual asset을 추가했다.
 - 다음 검증 지점은 deterministic assembly와 bundle validator 통과다.
 
-## 2026-07-11 · 조립·검증·local lifecycle
+- **조립·검증·local lifecycle**
 
 - 9개 canonical repository의 pushed `main` full SHA를 `sources.lock.json`에 고정했다.
 - Git commit에서 `git archive`로 10개 skill directory를 변환 없이 조립하고 파일 내용·실행 비트 기반 integrity를 기록했다.
@@ -19,7 +21,7 @@
 - local marketplace에서 `0.1.0` 설치, 공식 cachebuster를 사용한 update, plugin·marketplace remove를 확인했다.
 - 현재 가장 가까운 검증 지점은 GitHub initial push와 tag 기반 remote install이다.
 
-## 2026-07-11 · 공개 release와 remote discovery
+- **공개 release와 remote discovery**
 
 - `perhapsspy/project-legibility` 공개 저장소를 생성하고 제품 설명, topic, issue와 private vulnerability reporting metadata를 설정했다.
 - initial `main` CI와 `v0.1.0` release workflow가 모두 성공했고 GitHub Release가 생성됐다.

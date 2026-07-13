@@ -4,6 +4,19 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-07-13
+
+### Changed
+
+- 공개 문서에서 변경 내역과 각 스킬의 원본 설명으로 바로 이동할 수 있게 경로를 정리했습니다.
+- 리팩터링 예제가 기존 동작을 보존하도록 교정하고, 실행되지 않은 테스트를 검증 완료로 표현하지 않도록 고쳤습니다.
+- 스킬 유지보수, 편집 승인과 토큰 감사 안내를 실제 실행 범위와 권한 경계에 맞게 다듬었습니다.
+- 생성 배포본을 최신 원본 스킬 커밋으로 갱신했습니다.
+
+### Removed
+
+- 현재 운영에 필요하지 않은 GitHub issue와 pull request 양식을 제거했습니다.
+
 ## [0.2.2] - 2026-07-12
 
 ### Changed
@@ -46,7 +59,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.2...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3
 [0.2.2]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.2
 [0.2.1]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.1
 [0.2.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.0

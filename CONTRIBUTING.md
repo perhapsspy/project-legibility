@@ -12,7 +12,7 @@
 - 이 저장소에서는 `sources.lock.json`, 생성 snapshot, plugin manifest, release 문서와 조립·검증 도구만 변경합니다.
 - 하나의 변경을 canonical 저장소와 생성 snapshot에서 따로 수동 구현하지 않습니다.
 
-Canonical 저장소 목록은 [README의 포함 스킬 표](README.md#포함-스킬)에 있습니다.
+Canonical 저장소 목록은 [README의 포함 스킬 목록](README.md#포함된-스킬)에 있습니다.
 
 ## 개발 환경
 
@@ -66,7 +66,7 @@ python3 -m unittest discover -s tests -v
 3. 이 저장소에서 `sync_skills.py update`를 실행해 full SHA, skill integrity와 snapshot을 함께 갱신합니다.
 4. 생성 diff에 의도한 canonical 변경만 있는지 검토합니다. 예상하지 않은 파일이나 다른 스킬 변경이 섞였으면 중단합니다.
 5. 로컬 source check, offline check, bundle validation과 repository test를 모두 실행합니다.
-6. 아래 version 규칙에 따라 plugin manifest의 SemVer와 [CHANGELOG](CHANGELOG.md)를 갱신합니다.
+6. 아래 version 규칙에 따라 plugin manifest의 SemVer와 한국어 [CHANGELOG](CHANGELOG.md), 영어 [CHANGELOG](CHANGELOG.en.md)를 갱신합니다.
 7. test와 plugin validation을 포함한 전체 CI를 통과시킵니다.
 8. review와 merge 뒤 동일 commit에 `v<version>` tag를 만들고 push합니다.
 9. GitHub release가 성공하면 [`perhapsspy/codex-plugins`](https://github.com/perhapsspy/codex-plugins)의 `project-legibility` source SHA를 release commit으로 갱신합니다.
@@ -105,7 +105,7 @@ Release commit은 다음 조건을 모두 만족해야 합니다.
 - full SHA lock이 canonical Git source와 일치합니다.
 - 생성 snapshot이 lock의 source tree와 byte-for-byte 일치합니다.
 - snapshot 내부 상대 링크와 companion 관계가 유효합니다.
-- `work-board`, `structure-first-docs`, `justified-change` 같은 폐기 스킬이 catalog, lock과 snapshot에 없습니다.
+- [`tests/catalog/forbidden-skills.json`](tests/catalog/forbidden-skills.json)에 등록된 폐기 스킬이 catalog, lock과 snapshot에 없습니다.
 - sync test와 catalog trigger/non-trigger 회귀 test가 통과합니다.
 - release commit과 Git tag가 같은 검증 결과를 가리킵니다.
 

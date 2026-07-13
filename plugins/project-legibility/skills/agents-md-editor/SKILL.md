@@ -73,7 +73,7 @@ Before editing an always-read instruction file, produce a short review with:
 - duplicate or stale content found
 - proposed diff
 
-Do not save changes until the user approves, unless the user explicitly requested direct editing or the requested change cannot be completed without editing.
+Do not save changes until the user approves unless the user explicitly requested direct editing.
 
 ## Final Gate
 
