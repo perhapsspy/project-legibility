@@ -23,10 +23,11 @@
 - generated plugin snapshot과 source lock을 최신 canonical commit에서 다시 만들었다.
 - GitHub issue·PR 양식을 제거하고 한국어·영어 changelog 경로를 추가했다.
 - Project Legibility 검증과 저장소 test가 통과했다.
+- `v0.2.3` release와 publisher catalog CI가 성공했고 로컬 설치본도 같은 release tree로 갱신했다.
 
 ## 다음 행동
 
-- patch release를 commit·tag·push하고 publisher catalog pin과 로컬 설치본을 갱신한다.
+- 완료. 후속 변경은 새 task에서 다룬다.
 
 ## 작업 경계
 
