@@ -16,12 +16,12 @@
 
 ## 현재 상태
 
-- canonical 변경 `5158636`은 `main`에 push됐다.
-- Project Legibility는 새 SHA, integrity, 생성 snapshot과 notice를 갱신했고 source·offline·bundle·plugin 검증과 31개 test가 통과했다.
+- `tighten-docs` canonical 변경 `5158636`과 Project Legibility `0.2.4` release `edffc73`가 공개됐다.
+- publisher catalog `0125021`은 release commit을 고정하며, marketplace 재설치본은 canonical 영문·한국어 스킬과 일치한다.
 
 ## 다음 행동
 
-- Project Legibility `0.2.4` 변경을 검토·commit·push하고 release tag를 만든다.
+- 완료. 후속 스킬 변경은 새 task에서 canonical 저장소부터 시작한다.
 
 ## 작업 경계
 
