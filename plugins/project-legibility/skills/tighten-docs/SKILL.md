@@ -35,11 +35,11 @@ Treat review as read-only. Treat edit or organize as permission to change only t
 
 1. Lock the selected scope, mode, latest correction or drafting constraint, required prose language, and locale.
 2. Read the governing repository and document-format contract before applying general package heuristics.
-3. Identify each target's single role, primary subject, reader action, and owned promise.
+3. Identify each target's single role, primary subject, reader action, owned promise, and coherent unit of change.
 4. For a package, map only material conflicts among its entrypoint, router, current owners, gate/runbook, backlog, evidence/log, and working/archive surfaces.
 5. Treat each relevant unit as keep, replace, delete, compress, language-fix, move, or demote. Write final-state prose directly.
 6. Preserve tentative status and source meaning. Turn any unresolved ownership or policy choice into a decision request.
-7. Re-read for current facts, one owner per current promise, clear reader routes, required-language prose, valid links, and reviewable density.
+7. Re-read for current facts, one owner per current promise, clear reader routes, justified document boundaries, required-language prose, valid links, and reviewable density.
 
 ## Prose Rules
 
@@ -66,9 +66,13 @@ Use these roles as a lens, not a required template:
 
 Separate current canon from evidence, chronology, drafts, and archived material. Give each current decision, contract, gate, or plan one owning document.
 
+Split a document only when its parts have independently useful reader actions, owners, or change reasons. Keep material together when readers must use it together or it completes one coherent current contract or procedure. Do not split by length, heading count, or concept labels alone.
+
+References and coordinated edits are allowed when the underlying subject genuinely changes. Avoid competing canonical definitions, decisions, contracts, and procedures; do not treat normal cross-document links or required coordinated edits as defects by themselves.
+
 Start from the reader's job: resume, decide, implement, verify, or operate. Create only routes and surfaces justified by the selected source and contract.
 
-When ownership moves, make the old surface route to the new owner or mark it historical/archive so it no longer competes as canon. Prefer editing the existing owner over adding another explanation elsewhere.
+When ownership moves, make the old surface route to the new owner or mark it historical/archive so it no longer competes as canon. A router may own its reader, selection criteria, sequence, and preconditions, but must not become a competing canonical owner. Prefer editing the existing owner over adding another explanation elsewhere.
 
 Preserve useful native forms such as emails, checklists, ADRs, runbooks, handoffs, and logs. Do not rewrite append-only logs for neatness unless historical cleanup is explicitly requested.
 

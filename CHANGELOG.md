@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-07-13
+
+### Changed
+
+- bundled `tighten-docs`가 독립적인 문서 경계, 정본 소유, 조합 라우팅을 구분하도록 갱신했습니다.
+
 ## [0.2.3] - 2026-07-13
 
 ### Changed
@@ -59,7 +65,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4
 [0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3
 [0.2.2]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.2
 [0.2.1]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.1

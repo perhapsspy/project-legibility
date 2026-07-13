@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-07-13
+
+### Changed
+
+- Updated bundled `tighten-docs` to distinguish independent document boundaries, canonical ownership, and compositional routing.
+
 ## [0.2.3] - 2026-07-13
 
 ### Changed
@@ -59,7 +65,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4
 [0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3
 [0.2.2]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.2
 [0.2.1]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.1
