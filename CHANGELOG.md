@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-07-13
+
+### Changed
+
+- 공개 README와 목록 설명이 확인된 사용자 상황·결과·다음 행동을 먼저 제시하도록 bundled `tighten-docs`를 갱신했습니다.
+
 ## [0.2.4] - 2026-07-13
 
 ### Changed
@@ -65,7 +71,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.4...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.5...HEAD
+[0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
 [0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4
 [0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3
 [0.2.2]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.2
