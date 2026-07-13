@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design User Interfaces"
+  short_description: "Turn ideas into complete, usable interfaces"
+  default_prompt: "Use $design-user-interfaces to turn this product idea into a complete, usable interface that works with real content, relevant states, and different screen sizes."

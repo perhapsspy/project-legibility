@@ -16,6 +16,20 @@
       "rationale": "The task has no long-session, broad-read, or context-budget risk."
     },
     {
+      "id": "design-user-interfaces-local-style",
+      "skill": "design-user-interfaces",
+      "prompt": "Reduce the horizontal padding on this existing button by four pixels.",
+      "expected": "do-not-select",
+      "rationale": "The request is a settled local style edit rather than a new screen or major redesign."
+    },
+    {
+      "id": "design-user-interfaces-read-only-review",
+      "skill": "design-user-interfaces",
+      "prompt": "Review this finished landing page for AI-looking visual patterns without changing it.",
+      "expected": "do-not-select",
+      "rationale": "The request is a post-hoc read-only review, not interface creation or a major redesign."
+    },
+    {
       "id": "interactive-state-flow-sync-formatter",
       "skill": "interactive-state-flow",
       "prompt": "Fix a pure synchronous formatter that returns the wrong punctuation.",

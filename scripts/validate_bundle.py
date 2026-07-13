@@ -29,6 +29,7 @@ CHANGELOG_REL = Path("CHANGELOG.md")
 EXPECTED_SKILLS = (
     "agents-md-editor",
     "codex-token-discipline",
+    "design-user-interfaces",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",
@@ -41,6 +42,7 @@ EXPECTED_SKILLS = (
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
     "codex-token-discipline": ("codex-token-discipline",),
+    "design-user-interfaces": ("design-user-interfaces",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-fit-design": ("purpose-fit-design",),

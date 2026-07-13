@@ -30,6 +30,20 @@
       ]
     },
     {
+      "id": "design-user-interfaces",
+      "repository": "https://github.com/perhapsspy/design-user-interfaces.git",
+      "commit": "bab4b92b4ebaf1001b78065c5765a69b364b51a9",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "design-user-interfaces",
+          "sourcePath": "skills/design-user-interfaces",
+          "targetPath": "skills/design-user-interfaces",
+          "integrity": "sha256:e5c37ca2ba56e945c482bc3130ea47cccc10b55efac8cca5471be9babac5af19"
+        }
+      ]
+    },
+    {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
       "commit": "8e0013de4174c06ab2b8daae791e47f0cac81fad",

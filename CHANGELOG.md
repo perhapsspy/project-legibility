@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-13
+
+### Added
+
+- 새 화면과 큰 재설계에서 사용자 과업, 실제 콘텐츠, 정보 구조, 관련 상태와 렌더 검증을 함께 다루는 `design-user-interfaces`를 추가했습니다.
+
 ## [0.2.5] - 2026-07-13
 
 ### Changed
@@ -71,7 +77,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.5...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0
 [0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
 [0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4
 [0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3

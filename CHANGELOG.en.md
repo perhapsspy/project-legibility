@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-13
+
+### Added
+
+- Added `design-user-interfaces` for new screens and major redesigns that need user-task framing, real content, information structure, relevant states, and rendered verification.
+
 ## [0.2.5] - 2026-07-13
 
 ### Changed
@@ -71,7 +77,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.2.5...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0
 [0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
 [0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4
 [0.2.3]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.3

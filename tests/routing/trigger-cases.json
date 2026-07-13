@@ -16,6 +16,13 @@
       "rationale": "The work has explicit long-session, broad-read, and delegation risks."
     },
     {
+      "id": "design-user-interfaces-new-screen",
+      "skill": "design-user-interfaces",
+      "prompt": "Design and build a new permission-management screen, including its information hierarchy, empty and denied states, and mobile layout.",
+      "expected": "select",
+      "rationale": "The request needs interface decisions and implementation for a new screen across relevant states and viewports."
+    },
+    {
       "id": "interactive-state-flow-stale-search",
       "skill": "interactive-state-flow",
       "prompt": "Fix search results that become stale when the user types quickly and older requests finish last.",

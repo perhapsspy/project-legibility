@@ -8,7 +8,7 @@
 
 Project Legibility keeps long-running repository work from losing context or direction and helps leave changes that are easy to understand and resume later.
 
-The included skills pick up interrupted work, check what a change should follow, and keep complex code and documentation readable.
+The included skills pick up interrupted work, check what a change should follow, keep complex code and documentation readable, and design new screens through usable states.
 
 ## Install
 
@@ -31,6 +31,8 @@ You can also name a skill directly.
 
 ```text
 $source-owner-audit compare this code with the current source of truth.
+
+$design-user-interfaces design and build a new permission-management screen, including relevant states and mobile layouts.
 ```
 
 ## Included skills
@@ -46,6 +48,7 @@ See each source repository for the skill's purpose, usage guidance, and examples
 - [`tighten-docs`](https://github.com/perhapsspy/tighten-docs)
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor)
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline)
+- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces)
 
 This plugin installs skill instructions only. It does not connect to external services or start background work.
 

@@ -8,7 +8,7 @@
 
 Project Legibility는 긴 저장소 작업에서도 맥락과 기준을 잃지 않고, 다음에 이어서 작업하기 쉬운 변경을 남기도록 돕습니다.
 
-중단된 작업을 이어받고, 무엇을 따라야 할지 확인하고, 복잡한 코드와 문서를 읽기 좋은 상태로 정리하는 일을 각 문제에 맞는 스킬이 맡습니다.
+중단된 작업을 이어받고, 무엇을 따라야 할지 확인하고, 복잡한 코드와 문서를 읽기 좋게 정리하며, 새 화면을 실제로 사용할 수 있는 상태까지 설계하는 일을 각 문제에 맞는 스킬이 맡습니다.
 
 ## 설치
 
@@ -31,6 +31,8 @@ codex plugin add project-legibility@perhapsspy
 
 ```text
 $source-owner-audit 현재 기준 구현과 이 코드의 차이를 확인해줘.
+
+$design-user-interfaces 새 권한 관리 화면을 상태와 모바일까지 포함해 설계하고 구현해줘.
 ```
 
 ## 포함된 스킬
@@ -46,6 +48,7 @@ $source-owner-audit 현재 기준 구현과 이 코드의 차이를 확인해줘
 - [`tighten-docs`](https://github.com/perhapsspy/tighten-docs)
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor)
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline)
+- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces)
 
 이 플러그인은 스킬 지침만 설치합니다. 외부 서비스에 연결하거나 백그라운드 작업을 실행하지 않습니다.
 
