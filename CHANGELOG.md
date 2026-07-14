@@ -4,6 +4,11 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+### Changed
+
+- 운영 화면이 공용 primitive를 page template로 복제하지 않고 핵심 판단, 위험, lifecycle과 다음 행동에서 구조를 정하도록 bundled `design-user-interfaces`를 보강했습니다.
+- 최소 구현 경계가 서로 다른 도메인 의미와 판단 소유자를 보존하고, 문서 정본 소유권이 그 자체로 runtime UX composition을 규정하지 않도록 bundled `structure-first`와 `tighten-docs`를 보강했습니다.
+
 ## [0.3.0] - 2026-07-13
 
 ### Added

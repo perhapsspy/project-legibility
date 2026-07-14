@@ -67,6 +67,8 @@ Use these roles as a lens, not a required template:
 
 Separate current canon from evidence, chronology, drafts, and archived material. Give each current decision, contract, gate, or plan one owning document.
 
+Documentation ownership governs canonical claims and reader routes; it does not by itself prescribe runtime UX composition, information hierarchy, or component reuse. Follow those only when the selected source explicitly owns that runtime contract.
+
 Split a document only when its parts have independently useful reader actions, owners, or change reasons. Keep material together when readers must use it together or it completes one coherent current contract or procedure. Do not split by length, heading count, or concept labels alone.
 
 References and coordinated edits are allowed when the underlying subject genuinely changes. Avoid competing canonical definitions, decisions, contracts, and procedures; do not treat normal cross-document links or required coordinated edits as defects by themselves.

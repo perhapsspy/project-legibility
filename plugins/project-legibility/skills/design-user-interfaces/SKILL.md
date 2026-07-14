@@ -49,6 +49,8 @@ Confirm only the inputs that could change the result before implementation.
 - Impressions or patterns to avoid intentionally
 - Surface contract: product workspace, marketing, or content; platform; target density; and task character
 
+For an operational surface, before reusing a page-level composition, name the operator's primary decision, risk, lifecycle, and next action.
+
 Do not fill evidence gaps with generic hero copy, statistics, testimonials, or feature cards. If content is not ready, define the required content structure first and mark unresolved content.
 
 Treat identifiers, operational metadata, time ranges, status reasons, and error causes that users could read as facts as content, not decoration. Show only what the input, product contract, or existing source provides. When a failure cause is unknown, describe the observable effect and available recovery instead of guessing the cause.
@@ -72,6 +74,8 @@ For a new screen or major redesign, hold a structure checkpoint before distincti
 ### 3. Bind to a visual system
 
 Prefer existing tokens and components. Add a value only when the current task needs a role that the existing system does not provide.
+
+Shared primitives are a vocabulary of tokens and interaction contracts, not a page template. Reuse them without inheriting another domain's information hierarchy or list-to-detail composition.
 
 - Build hierarchy first with size, weight, spacing, and alignment.
 - Use color to support brand and status meaning, not to replace structure.

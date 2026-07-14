@@ -32,14 +32,14 @@
     {
       "id": "design-user-interfaces",
       "repository": "https://github.com/perhapsspy/design-user-interfaces.git",
-      "commit": "bab4b92b4ebaf1001b78065c5765a69b364b51a9",
+      "commit": "ebae31899d7f4925099b5c8d5c63923f2711dfd7",
       "license": "MIT",
       "skills": [
         {
           "id": "design-user-interfaces",
           "sourcePath": "skills/design-user-interfaces",
           "targetPath": "skills/design-user-interfaces",
-          "integrity": "sha256:e5c37ca2ba56e945c482bc3130ea47cccc10b55efac8cca5471be9babac5af19"
+          "integrity": "sha256:db52c5522b4ba9cf6e52d4c5abc4671a4f6bc2329098dde6b308f7f42f990d19"
         }
       ]
     },
@@ -122,28 +122,28 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "bd0f4b75515072f8fab6d36330822b0dfe55f014",
+      "commit": "c9cd75690a082bd65ac2c77407b3bafa0ccec78c",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:aafe73761e0ab22884b74578643ada5a99d1989af4f64a821f12154d1369005c"
+          "integrity": "sha256:f2b30cf49d14f7adf4f9ada148fae50db4471f36d1dfdc729885419659b27da4"
         }
       ]
     },
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "d7480dc36d27aa10ec09790312316f8a84400d25",
+      "commit": "04715997d03328674d6a635b9086c67dd43bf720",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:07cfda2f70698d5cb7fa674ca1b45a91cd839360fb5c058d0be49f111d81622d"
+          "integrity": "sha256:2f6fee775a83fc73e9fca1283aa0f7c3393e27383835ea7d9d19c6be0306b975"
         }
       ]
     }
