@@ -6,7 +6,7 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ### Changed
 
-- Updated bundled `design-user-interfaces` so operational screens treat shared primitives as vocabulary rather than page templates and begin reuse decisions with the operator's decision, risk, lifecycle, and next action.
+- Updated bundled `design-user-interfaces` so operational screens treat shared primitives as vocabulary rather than page templates and begin reuse decisions with the operator's decision, next action, and any risk or lifecycle distinction that materially shapes the hierarchy.
 - Updated bundled `structure-first` and `tighten-docs` so minimal implementation boundaries preserve distinct domain meanings and decision owners, while documentation ownership does not by itself prescribe runtime UX composition.
 
 ## [0.3.0] - 2026-07-13

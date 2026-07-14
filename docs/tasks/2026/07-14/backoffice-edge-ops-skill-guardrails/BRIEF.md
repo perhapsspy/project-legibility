@@ -12,7 +12,7 @@
 
 ## Current Understanding
 
-- 공용 primitive 재사용은 화면 구조 복제가 아니라 제품 언어 재사용이며, 운영 화면 구조는 operator의 주 판단, 위험, lifecycle, 다음 행동에서 시작해야 한다.
+- 공용 primitive 재사용은 화면 구조 복제가 아니라 제품 언어 재사용이며, 운영 화면 구조는 operator의 주 판단과 다음 행동, 위계를 실제로 바꾸는 위험·lifecycle 구분에서 시작해야 한다.
 - 최소 구현 경계는 도메인 의미와 판단 소유 경계를 없애는 평탄화를 뜻하지 않는다.
 - 문서 정본과 라우팅 소유권은 문서 체계를 지배하지만 runtime UX 조합을 자동 결정하지 않는다.
 - Project Legibility의 `plugins/project-legibility/skills/**`는 generated snapshot이고 각 독립 skill 저장소가 canonical source다.

@@ -32,14 +32,14 @@
     {
       "id": "design-user-interfaces",
       "repository": "https://github.com/perhapsspy/design-user-interfaces.git",
-      "commit": "ebae31899d7f4925099b5c8d5c63923f2711dfd7",
+      "commit": "34d0fb4b8fac06fb881104c3c98836747ece1959",
       "license": "MIT",
       "skills": [
         {
           "id": "design-user-interfaces",
           "sourcePath": "skills/design-user-interfaces",
           "targetPath": "skills/design-user-interfaces",
-          "integrity": "sha256:db52c5522b4ba9cf6e52d4c5abc4671a4f6bc2329098dde6b308f7f42f990d19"
+          "integrity": "sha256:79d4e0075bd3a0525c3ceef4a4a680bc88bc32954541a6ade48d3263a5808a60"
         }
       ]
     },

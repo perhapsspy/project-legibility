@@ -49,7 +49,7 @@ Confirm only the inputs that could change the result before implementation.
 - Impressions or patterns to avoid intentionally
 - Surface contract: product workspace, marketing, or content; platform; target density; and task character
 
-For an operational surface, before reusing a page-level composition, name the operator's primary decision, risk, lifecycle, and next action.
+For an operational surface, before reusing a page-level composition, identify the operator's primary decision and next action, plus any risk or lifecycle distinction that materially shapes the hierarchy.
 
 Do not fill evidence gaps with generic hero copy, statistics, testimonials, or feature cards. If content is not ready, define the required content structure first and mark unresolved content.
 
