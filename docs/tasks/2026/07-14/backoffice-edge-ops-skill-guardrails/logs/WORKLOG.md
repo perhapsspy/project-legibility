@@ -10,3 +10,4 @@
 
 **2026-07-15**
 - Project Legibility 0.3.1 patch release를 준비했다. manifest·한영 changelog와 현재 task 상태를 release 경계에 맞췄고 local·remote·offline source check, release-tag bundle validation, plugin validation, 31개 repository test와 task shape 검사가 통과했다.
+- Project Legibility release commit b996e2a와 annotated v0.3.1 tag를 push했고 main CI·release workflow·GitHub Release가 성공했다. publisher catalog commit e00d2cb는 release full SHA를 고정하며 12개 test, remote manifest validation과 CI를 통과했다. Codex marketplace upgrade와 plugin add를 통해 0.3.1을 재설치했고 설치 tree·manifest·세 guardrail이 release tree와 일치함을 확인했다.

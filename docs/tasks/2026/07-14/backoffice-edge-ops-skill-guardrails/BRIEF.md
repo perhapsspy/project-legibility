@@ -20,13 +20,13 @@
 ## Current State
 
 - 세 canonical skill의 최소 guardrail이 검증·push됐고 Project Legibility lock과 generated snapshot이 해당 commit을 가리킨다.
-- source, offline integrity, bundle과 repository 검증이 통과했으며 Project Legibility 공개 문서에는 중복 UX 규칙을 추가하지 않았다.
-- Project Legibility 0.3.1 patch release를 준비 중이며, 설치된 0.3.0 runtime은 release·marketplace·재설치 전까지 유지된다.
+- Project Legibility 0.3.1 release와 publisher marketplace pin이 공개됐고 source, bundle, catalog와 원격 CI 검증을 통과했다.
+- Codex의 정상 marketplace 경로로 0.3.1을 재설치했으며 설치 runtime은 release tree와 일치하고 세 guardrail을 포함한다.
 - Backoffice `DESIGN.md`의 같은 방향 문구는 해당 저장소의 미커밋 변경이므로 이 task에서 수정하거나 정본으로 승격하지 않았다.
 
 ## Next Step
 
-- 0.3.1 release gate를 통과한 뒤 release commit과 tag를 push한다.
+- 실제 운영 화면 생성에서 같은 의미 평탄화 회귀가 다시 관찰되면 behavioral evaluation 범위로 다시 연다.
 
 ## Working Boundary
 
