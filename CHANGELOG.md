@@ -4,6 +4,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-07-15
+
 ### Changed
 
 - 운영 화면이 공용 primitive를 page template로 복제하지 않고 핵심 판단과 다음 행동, 위계를 실질적으로 바꾸는 위험·lifecycle 구분에서 구조를 정하도록 bundled `design-user-interfaces`를 보강했습니다.
@@ -82,7 +84,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0
 [0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
 [0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4

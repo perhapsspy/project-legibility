@@ -4,6 +4,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-07-15
+
 ### Changed
 
 - Updated bundled `design-user-interfaces` so operational screens treat shared primitives as vocabulary rather than page templates and begin reuse decisions with the operator's decision, next action, and any risk or lifecycle distinction that materially shapes the hierarchy.
@@ -82,7 +84,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0
 [0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
 [0.2.4]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.4

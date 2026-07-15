@@ -21,12 +21,12 @@
 
 - 세 canonical skill의 최소 guardrail이 검증·push됐고 Project Legibility lock과 generated snapshot이 해당 commit을 가리킨다.
 - source, offline integrity, bundle과 repository 검증이 통과했으며 Project Legibility 공개 문서에는 중복 UX 규칙을 추가하지 않았다.
-- 설치된 Project Legibility 0.3.0 runtime cache는 의도적으로 수정하지 않았고, 새 문구는 아직 release·marketplace·재설치 경로에 배포되지 않았다.
+- Project Legibility 0.3.1 patch release를 준비 중이며, 설치된 0.3.0 runtime은 release·marketplace·재설치 전까지 유지된다.
 - Backoffice `DESIGN.md`의 같은 방향 문구는 해당 저장소의 미커밋 변경이므로 이 task에서 수정하거나 정본으로 승격하지 않았다.
 
 ## Next Step
 
-- 새 guardrail을 설치 runtime에 공개할 때 patch release와 marketplace pin 갱신 범위로 다시 연다.
+- 0.3.1 release gate를 통과한 뒤 release commit과 tag를 push한다.
 
 ## Working Boundary
 
