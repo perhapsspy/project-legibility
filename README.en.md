@@ -6,9 +6,15 @@
 
 [한국어](README.md)
 
-Project Legibility keeps long-running repository work from losing context or direction and helps leave changes that are easy to understand and resume later.
+**AI coding work that stays clear from one task to the next.**
 
-The included skills pick up interrupted work, check what a change should follow, keep complex code and documentation readable, and design new screens through usable states.
+Project Legibility is a Codex skills plugin that carries the context and direction of long-running repository work into changes people can understand, review, and continue.
+
+- Recover the context of interrupted work and continue from there.
+- Check the current behavior and source of truth that a change should follow.
+- Leave coherent structure and verification evidence for the next change.
+
+Focused skills guide the work when their particular problem appears.
 
 ## Install
 
@@ -17,23 +23,43 @@ codex plugin marketplace add perhapsspy/codex-plugins
 codex plugin add project-legibility@perhapsspy
 ```
 
-Start a new task after installation. Ask for the work as usual; the relevant skills are selected automatically.
+Start a new task after installation. Ask for the work as usual; Codex can select a matching skill, or you can name one directly.
+
+## Try these first
+
+### Continue from where the work stopped
 
 ```text
 Find where work last stopped in this repository and continue safely.
+```
 
+### Check the current source of truth
+
+```text
 Before editing, check which existing behavior and constraints this change should preserve.
+```
 
+### Leave the work ready for the next task
+
+```text
 Implement and verify this so the work is easy to understand and continue in a later task.
 ```
 
-You can also name a skill directly.
+Name a skill when you want to choose the workflow explicitly.
 
 ```text
 $source-owner-audit compare this code with the current source of truth.
 
 $design-user-interfaces design and build a new permission-management screen, including relevant states and mobile layouts.
 ```
+
+## Package contents
+
+Project Legibility is a skills-only plugin made of instructions and their supporting references and scripts.
+
+- Each skill states the problem it handles and the scope of its workflow.
+- It publishes every canonical skill repository and the pinned commits included in each release.
+- It is distributed under the [MIT License](LICENSE).
 
 ## Included skills
 
@@ -49,8 +75,6 @@ See each source repository for the skill's purpose, usage guidance, and examples
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor)
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline)
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces)
-
-This plugin installs skill instructions only. It does not connect to external services or start background work.
 
 ## Update and remove
 

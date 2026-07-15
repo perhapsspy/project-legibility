@@ -48,6 +48,7 @@ Treat review as read-only. Treat edit or organize as permission to change only t
 - Keep legacy compatibility, fallback, exception, or routing claims only when the selected source proves they remain required.
 - Keep local corrections local unless the user explicitly requests a broader policy.
 - Remove defensive explanations, duplicate routes, process narration, agent-convenience notes, apology-style prose, and edit meta-commentary unless the target owns that purpose.
+- Prefer affirmative final-state prose: state what the subject does, provides, or requires. Use negation or contrast only when the target owns a real prohibition, limitation, safety boundary, compatibility constraint, or explicit comparison. Do not invent an objection to reassure the reader.
 - For a public entrypoint that helps readers evaluate, choose, or begin using something, lead with the verified user situation, outcome, and next action. Keep internal process or mechanism only when it helps that decision.
 - Determine the required language and locale from the selected target, repository or user instruction, latest correction, and drafting constraint. If they conflict, ask briefly.
 - Rewrite kept general prose into the required language and remove duplicated, stale, or extra prose in other languages.

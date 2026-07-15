@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-07-15
+
+### Changed
+
+- Reworked the public README to lead with the outcomes of long-running repository work, representative ways to begin, and the plugin's contents.
+- Updated bundled `tighten-docs` to state the subject's role and reader outcome in affirmative final-state prose, using negation or contrast when the document owns a real prohibition, limitation, or safety boundary.
+
 ## [0.3.1] - 2026-07-15
 
 ### Changed
@@ -84,7 +91,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0
 [0.2.5]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.2.5
