@@ -2,7 +2,7 @@
 
 [English](ARCHITECTURE.en.md)
 
-이 문서는 Project Legibility의 source ownership, plugin assembly, lock 무결성과 release gate를 소유합니다. 제품의 사용법과 포함 스킬은 [README](../README.md), 실제 변경·release 순서는 [CONTRIBUTING](../CONTRIBUTING.md)을 따릅니다.
+이 문서는 Project Legibility의 source ownership, plugin assembly, lock 무결성과 release 검증 모델을 소유합니다. 제품 약속, 스킬 구성 역할과 호출 모델은 [PRODUCT](PRODUCT.md), 공개 설치와 사용 진입은 [README](../README.md), 실제 변경·release 순서와 gate는 [CONTRIBUTING](../CONTRIBUTING.md)을 따릅니다.
 
 ## 설계 목표
 
@@ -18,6 +18,7 @@ Project Legibility는 독립적으로 관리되는 canonical skill 저장소를 
 | Owner | 소유하는 것 | 소유하지 않는 것 |
 |---|---|---|
 | Canonical skill repositories | `SKILL.md`, trigger, reference, skill 전용 script·asset·test와 그 변경 이력 | plugin bundle 구성, 배포 catalog, bundle version |
+| [제품 계약](PRODUCT.md) | 제품 약속, 스킬 구성 역할과 호출 모델 | 개별 스킬의 의미·trigger·instruction, plugin assembly와 release 절차 |
 | [`sources.lock.json`](../plugins/project-legibility/sources.lock.json) | 선택된 repository URL, full commit SHA, source·배포 path와 skill integrity digest | 스킬 내용의 의미, 자동으로 “최신”인 branch |
 | [`plugins/project-legibility/skills/`](../plugins/project-legibility/skills/) | 설치 시 바로 사용할 수 있는 생성 snapshot | 직접 authoring되는 canonical 내용 |
 | [`THIRD_PARTY_NOTICES.md`](../plugins/project-legibility/THIRD_PARTY_NOTICES.md) | lock에서 생성한 source, commit, bundled skill과 license 요약 | 별도 수동 provenance 기록 |
@@ -83,11 +84,11 @@ Submodule은 repository 관계를 보여주지만 plugin 설치에 추가 init/f
 
 ### Umbrella skill
 
-새 umbrella skill은 제품 수준 요청을 다시 route하면서 `project-context`, `structure-first`와 전문 스킬의 기존 trigger 위에 또 하나의 책임 계층을 만듭니다. Manifest 설명과 starter prompt만 공통 진입점으로 사용하고, 실제 행동은 기존 스킬이 소유합니다.
+새 umbrella skill은 제품 수준 요청을 다시 route하면서 기존 스킬의 canonical trigger 위에 또 하나의 책임 계층을 만듭니다. 호출 모델은 [PRODUCT](PRODUCT.md)가 소유하고 README, manifest 설명과 starter prompt는 사용자 진입점에서 이를 표현합니다. 실제 선택과 행동은 canonical trigger와 기존 스킬이 소유합니다.
 
-## Release gate
+## Release 검증 모델
 
-Release는 다음 세 종류의 증거가 모두 있을 때만 가능합니다.
+Release 판단은 다음 세 종류의 증거로 구성됩니다. 실제 실행 gate는 [CONTRIBUTING](../CONTRIBUTING.md#release-gate)의 체크리스트를 따릅니다.
 
 1. **Package:** manifest와 plugin tree가 유효하고 manifest version은 CHANGELOG·Git tag와 일치합니다.
 2. **Source:** full SHA가 remote canonical source에 존재하고 lock, source tree와 snapshot이 일치합니다.

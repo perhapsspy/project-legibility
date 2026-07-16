@@ -2,7 +2,7 @@
 
 [English](CONTRIBUTING.en.md)
 
-이 문서는 canonical 스킬 변경을 plugin release로 가져오는 절차를 소유합니다. 구성과 source ownership의 이유는 [Architecture](docs/ARCHITECTURE.md), 사용법과 제품 범위는 [README](README.md)를 따릅니다.
+이 문서는 canonical 스킬 변경을 plugin release로 가져오는 절차를 소유합니다. 제품 약속과 스킬 구성 계약은 [PRODUCT](docs/PRODUCT.md), 구성과 source ownership의 이유는 [Architecture](docs/ARCHITECTURE.md), 공개 설치와 일반 사용법은 [README](README.md)를 따릅니다.
 
 ## 먼저 변경 owner를 찾기
 
@@ -89,7 +89,7 @@ python3 -m unittest discover -s tests -v
 사용자가 선택하거나 경험하는 plugin 구성이 의미 있게 달라지는 변경입니다.
 
 - 스킬 추가 또는 제거
-- core 역할이나 스킬 책임 경계의 변경
+- [제품 계약](docs/PRODUCT.md)의 구성 역할이나 스킬 책임 경계의 변경
 - trigger 동작의 의미 있는 확대·축소
 - starter prompt나 제품 수준의 요청 흐름 변경
 - lock 또는 snapshot 구조의 호환 가능한 확장

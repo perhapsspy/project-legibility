@@ -4,6 +4,19 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-16
+
+### Added
+
+- Added a product contract that owns the product promise, skill composition roles, and invocation model.
+
+### Changed
+
+- Reframed the public README and plugin description around strengthening code structure, decision criteria, and working context as agent-produced changes accumulate.
+- Updated usage examples and starter prompts so ordinary feature, bug-fix, refactoring, and resume requests select skills through their canonical triggers.
+- Distinguished Core practices, the conditional Gateway, Specialists, and Optional helpers while leaving each skill's meaning and triggers with its canonical repository.
+- Updated bundled `purpose-fit-design` to distinguish local, relational, and broad correction reach while preserving unaffected purpose, constraints, and known owner boundaries.
+
 ## [0.3.2] - 2026-07-15
 
 ### Changed
@@ -91,7 +104,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0

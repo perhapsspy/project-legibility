@@ -4,6 +4,19 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-16
+
+### Added
+
+- 제품 약속, 스킬 구성 역할과 호출 모델의 정본인 제품 계약을 추가했습니다.
+
+### Changed
+
+- 공개 README와 plugin 설명을 에이전트 변경이 쌓여도 코드 구조, 판단 기준과 작업 맥락을 함께 강화하는 제품 방향으로 다시 구성했습니다.
+- 일반적인 기능 변경, 버그 수정, 리팩터링과 작업 재개 요청에서 canonical trigger에 맞는 스킬이 선택되도록 사용 예시와 starter prompt를 갱신했습니다.
+- Core practices, 조건부 Gateway, Specialists와 Optional helpers의 제품 역할을 구분하고 개별 스킬의 의미와 trigger는 각 canonical 저장소가 소유하도록 경계를 명시했습니다.
+- bundled `purpose-fit-design`이 사용자 정정의 국소·관계·광범위 도달 범위를 구분하고, 영향받지 않은 목적·제약·확인된 owner 경계를 보존하도록 보강했습니다.
+
 ## [0.3.2] - 2026-07-15
 
 ### Changed
@@ -91,7 +104,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perhapsspy/project-legibility/releases/tag/v0.3.0

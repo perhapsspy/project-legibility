@@ -18,7 +18,7 @@ Do not prove source ownership, assign semantic owners, or shape code here when a
 Answer only what affects the decision. For small tasks, one compact paragraph is enough.
 
 1. **Purpose and success:** state the user/domain outcome and the smallest observable success condition.
-2. **Constraints:** name explicit user corrections, rejected concepts, or "do not add X" rules.
+2. **Correction reach and constraints:** name explicit user corrections and rejected concepts; state what each correction changes, whether its reach is local or broader, and which relevant purpose, constraints, and known owner boundaries remain in force.
 3. **Evidence:** classify current implementation or precedent as `source owner`, `derived caller`, `legacy/compatibility`, `evidence candidate`, or `unknown`.
 4. **Fit risk:** name the reuse, fallback, schema, adapter, shortcut, or "copy now, clean later" path that could steer the design away from purpose.
 5. **Direction or handoff:** state the narrow purpose-fit direction, or name one specialist workflow.
@@ -26,7 +26,7 @@ Answer only what affects the decision. For small tasks, one compact paragraph is
 
 If purpose, constraints, evidence status, or success condition are unknown and affect the design, investigate or ask one focused question. Do not fill the gap with the current implementation shape.
 
-Treat explicit user corrections as hard constraints. Do not reintroduce a rejected field, status, UI pattern, schema, timeout, policy, or fallback under another layer name unless the user asks to revisit it.
+Treat explicit user corrections as binding direction and scope constraints. Determine their reach from the correction and surrounding request: neither widen a local correction into a redesign nor narrow a broad correction into a local patch. Preserve unaffected purpose, constraints, and known owner boundaries. Do not reintroduce a rejected field, status, UI pattern, schema, timeout, policy, or fallback under another layer name unless the user asks to revisit it.
 
 Treat lower-layer fallback as a potential design decision when it can affect command meaning, visible state, retries, audit, persistence, tests, policy, or another caller. If it recreates a rejected constraint or lacks an owner for meaning-affecting behavior, stop and hand off to a semantic-boundary workflow.
 
@@ -63,6 +63,7 @@ Before implementation or final recommendation, confirm:
 - The purpose is not merely "make the current implementation work."
 - The selected direction fits the user/domain purpose and observable success condition.
 - Explicit user corrections or rejected concepts were not reintroduced.
+- The reach of each correction matches the request; unaffected purpose, constraints, and known owner boundaries remain intact.
 - Urgency did not override constraints, owner boundaries, rollback boundary, or verification.
 - Existing code has been classified by evidence status, not convenience.
 - Any semantic decision has one owner or a named unknown.

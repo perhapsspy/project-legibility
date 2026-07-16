@@ -5,6 +5,7 @@
 - 스킬 변경은 정본 저장소에서 먼저 검증·push한 뒤 `scripts/sync_skills.py`로 lock과 bundle을 갱신한다.
 - plugin manifest, lock과 generated snapshot의 이름·버전 경계를 서로 일치시킨다.
 - publisher marketplace 변경은 `perhapsspy/codex-plugins`에서 하며, push된 Project Legibility release commit만 고정한다.
+- 제품 약속, 스킬 구성 역할이나 호출 모델을 변경할 때는 `docs/PRODUCT.md`를 먼저 갱신한다.
 - 현재 task 상태는 `docs/tasks/`에 두고 always-read 지침에 넣지 않는다.
 
 ## 검증

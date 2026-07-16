@@ -2,7 +2,7 @@
 
 [한국어](CONTRIBUTING.md)
 
-This document owns the workflow for carrying a canonical skill change into a plugin release. See [Architecture](docs/ARCHITECTURE.en.md) for the source-ownership rationale and the [README](README.en.md) for product scope and usage.
+This document owns the workflow for carrying a canonical skill change into a plugin release. See [PRODUCT](docs/PRODUCT.en.md) for the product promise and composition contract, [Architecture](docs/ARCHITECTURE.en.md) for the source-ownership rationale, and the [README](README.en.md) for public installation and ordinary usage.
 
 ## Find the change owner first
 
@@ -89,7 +89,7 @@ Use a patch when the existing product promise and install composition remain com
 Use a minor when the composition or user-visible behavior changes meaningfully, including:
 
 - adding or removing a skill;
-- changing a core role or skill responsibility boundary;
+- changing a composition role or skill responsibility boundary in the [product contract](docs/PRODUCT.en.md);
 - materially broadening or narrowing trigger behavior;
 - changing starter prompts or the product-level request flow; or
 - compatibly extending the lock or snapshot structure.

@@ -6,15 +6,15 @@
 
 [한국어](README.md)
 
-**AI coding work that stays clear from one task to the next.**
+**Projects that stay changeable at agent speed.**
 
-Project Legibility is a Codex skills plugin that carries the context and direction of long-running repository work into changes people can understand, review, and continue.
+Coding agents can produce a large volume of changes quickly. Once each task optimizes only for immediate completion, primary flows and ownership boundaries break down fast while current sources of truth and working context scatter. The damage compounds with every change. After only a few tasks, people and future agents have to excavate what to follow and where to make the next change.
 
-- Recover the context of interrupted work and continue from there.
-- Check the current behavior and source of truth that a change should follow.
-- Leave coherent structure and verification evidence for the next change.
+Project Legibility is a Codex skills plugin that helps Codex strengthen project structure, decision criteria, and working context while changing the code.
 
-Focused skills guide the work when their particular problem appears.
+- **Code:** Keep primary flows and responsibilities legible as changes accumulate.
+- **Decisions:** Keep behavior aligned with user purpose and design criteria by making ownership of meaning explicit.
+- **Context:** Carry rationale, verification state, and next actions across sessions and agents.
 
 ## Install
 
@@ -23,58 +23,72 @@ codex plugin marketplace add perhapsspy/codex-plugins
 codex plugin add project-legibility@perhapsspy
 ```
 
-Start a new task after installation. Ask for the work as usual; Codex can select a matching skill, or you can name one directly.
+Start a new task after installation. Codex selects skills that match the problem expressed in the request.
 
-## Try these first
+## Ask for the work as usual
 
-### Continue from where the work stopped
-
-```text
-Find where work last stopped in this repository and continue safely.
-```
-
-### Check the current source of truth
+### Change a feature
 
 ```text
-Before editing, check which existing behavior and constraints this change should preserve.
+Implement this feature and verify that existing behavior still works.
 ```
 
-### Leave the work ready for the next task
+### Fix a bug
 
 ```text
-Implement and verify this so the work is easy to understand and continue in a later task.
+Find out why this bug happens and fix it.
 ```
 
-Name a skill when you want to choose the workflow explicitly.
+### Refactor code
 
 ```text
-$source-owner-audit compare this code with the current source of truth.
-
-$design-user-interfaces design and build a new permission-management screen, including relevant states and mobile layouts.
+Restructure this code so it is easier to read and change.
 ```
 
-## Package contents
+### Resume interrupted work
 
-Project Legibility is a skills-only plugin made of instructions and their supporting references and scripts.
+```text
+Find the work in progress in this repository and continue it.
+```
 
-- Each skill states the problem it handles and the scope of its workflow.
-- It publishes every canonical skill repository and the pinned commits included in each release.
-- It is distributed under the [MIT License](LICENSE).
+Ask for feature work, bug fixes, refactoring, design, UI, documentation cleanup, and long-running work as usual. Project Legibility brings the code structure, decision criteria, and working context each task needs.
+
+## Set up a long-running repository
+
+For a repository that will continue across sessions or agents, add this line to `AGENTS.md`:
+
+```md
+- For work that spans sessions or agents, use `project-legibility:project-context` to keep the current objective, decisions, verification state, and next actions in the repository.
+```
+
+After that, ask for work normally. `project-context` keeps the current objective, decision rationale, verification state, and next action available in the repository.
 
 ## Included skills
 
-See each source repository for the skill's purpose, usage guidance, and examples.
+Project Legibility centers on two core practices. A gateway checks purpose fit when early direction is at risk, while specialists and optional helpers join only for the problems they own. See the [skill composition model](docs/PRODUCT.en.md) for these roles and the selection model, and the linked source repositories for detailed usage.
 
-- [`project-context`, `project-context-migration`](https://github.com/perhapsspy/project-context)
-- [`structure-first`](https://github.com/perhapsspy/structure-first)
-- [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit)
-- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design)
-- [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design)
-- [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow)
-- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs)
-- [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor)
-- [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline)
-- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces)
+### Core practices
+
+- [`structure-first`](https://github.com/perhapsspy/structure-first): Make the primary flow and responsibilities of code changes easy to read, then leave a structure that can absorb the next change through behavior-contract verification.
+- [`project-context`](https://github.com/perhapsspy/project-context): Preserve the objectives, decisions, current state, and next actions of long-running work in the repository across sessions and agents.
+
+### Gateway for early direction
+
+- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design): Briefly check whether early design or implementation direction fits user purpose, constraints, current evidence, and success conditions, then proceed, investigate what is missing, or hand off to the relevant specialist.
+
+### Specialists for specific problems
+
+- [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): Read current evidence to determine what to follow, what differs, and which decisions remain open.
+- [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design): Give user or domain meaning one owner and explicit translation boundaries so it stays consistent across representations and layers.
+- [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive and prevent obsolete asynchronous results from overwriting newer state.
+- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): Create complete, verified interfaces for new screens and major redesigns, grounded in real content, user tasks, relevant states, and responsive behavior.
+- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): Clarify the roles, current guidance, and reader routes of a selected document or documentation package.
+- [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): Keep always-read files such as `AGENTS.md` small, durable, and actionable as startup instructions.
+
+### Optional operational and adoption helpers
+
+- [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): Reduce reading and output and compress resume state when long sessions, large outputs, or repeated work consume the token budget quickly.
+- [`project-context-migration`](https://github.com/perhapsspy/project-context): Audit an existing repository with scattered working context and move only the necessary material into the `project-context` structure.
 
 ## Update and remove
 
@@ -94,6 +108,7 @@ To remove the marketplace registration as well, remove every installed perhapssp
 Each skill is maintained in the repository linked above. This repository pins only the commits released together.
 
 - [Release notes](CHANGELOG.en.md)
+- [Product contract](docs/PRODUCT.en.md)
 - [Plugin structure and validation](docs/ARCHITECTURE.en.md)
 - [Skill updates and releases](CONTRIBUTING.en.md)
 - [Included commits](plugins/project-legibility/sources.lock.json)

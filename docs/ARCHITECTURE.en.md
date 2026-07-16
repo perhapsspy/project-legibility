@@ -2,7 +2,7 @@
 
 [한국어](ARCHITECTURE.md)
 
-This document owns Project Legibility's source boundaries, plugin assembly, lock integrity, and release gates. See the [README](../README.en.md) for usage and included skills, and [CONTRIBUTING](../CONTRIBUTING.en.md) for the change and release procedure.
+This document owns Project Legibility's source boundaries, plugin assembly, lock integrity, and release verification model. See [PRODUCT](PRODUCT.en.md) for the product promise, skill composition roles, and invocation model; the [README](../README.en.md) for public installation and usage; and [CONTRIBUTING](../CONTRIBUTING.en.md) for the change procedure and release gate.
 
 ## Design goals
 
@@ -18,6 +18,7 @@ Project Legibility distributes a reviewed skill bundle as a reproducible Codex p
 | Owner | Owns | Does not own |
 |---|---|---|
 | Canonical skill repositories | `SKILL.md`, triggers, references, skill-specific scripts, assets, tests, and their history | Plugin composition, distribution catalog, bundle version |
+| [Product contract](PRODUCT.en.md) | Product promise, skill composition roles, and invocation model | Individual skill meaning, triggers, or instructions; plugin assembly and release procedure |
 | [`sources.lock.json`](../plugins/project-legibility/sources.lock.json) | Selected repository URL, full commit SHA, source and distribution paths, and skill integrity digest | Skill meaning or a branch that is automatically “latest” |
 | [`plugins/project-legibility/skills/`](../plugins/project-legibility/skills/) | The generated, install-ready distribution snapshot | Canonical authoring |
 | [`THIRD_PARTY_NOTICES.md`](../plugins/project-legibility/THIRD_PARTY_NOTICES.md) | A generated summary of sources, commits, bundled skills, and licenses from the lock | A separate hand-maintained provenance record |
@@ -83,11 +84,11 @@ Fetching each canonical repository during installation or runtime would put netw
 
 ### An umbrella skill
 
-An umbrella skill would route product-level requests again, adding another responsibility layer over `project-context`, `structure-first`, and the existing specialist triggers. The manifest description and starter prompts are the shared entry points; existing skills own the behavior.
+An umbrella skill would route product-level requests again, adding another responsibility layer over the canonical triggers of the existing skills. [PRODUCT](PRODUCT.en.md) owns the invocation model, while the README, manifest description, and starter prompts express it at user entry points. Canonical triggers and the existing skills own actual selection and behavior.
 
-## Release gates
+## Release verification model
 
-A release requires all three kinds of evidence:
+A release decision uses three kinds of evidence. Follow the checklist in the [CONTRIBUTING release gate](../CONTRIBUTING.en.md#release-gates) for the executable gate.
 
 1. **Package:** the manifest and plugin tree are valid, and the manifest version matches the CHANGELOG and Git tag.
 2. **Source:** every full SHA exists in the remote canonical source, and the lock, source tree, and snapshot agree.

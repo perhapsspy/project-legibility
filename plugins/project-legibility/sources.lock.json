@@ -80,14 +80,14 @@
     {
       "id": "purpose-fit-design",
       "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "d8a4d3c9002de137ba61f6edc213f6dc69513570",
+      "commit": "b326f1bdf6ffd22282385e9e2a0a7f887bb13257",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-fit-design",
           "sourcePath": "skills/purpose-fit-design",
           "targetPath": "skills/purpose-fit-design",
-          "integrity": "sha256:ab5d13e5cebf7b563da19066ca37605082f49977f3465e1507d968a489c80316"
+          "integrity": "sha256:7262bf84c9f6549d862f1c787eb7a7c5bcfa7e8cd84c310ea5b14081f1e29318"
         }
       ]
     },

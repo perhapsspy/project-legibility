@@ -1,7 +1,7 @@
 {
   "name": "project-legibility",
-  "version": "0.3.2",
-  "description": "Keep long-running repository work coherent, verifiable, and easy to resume.",
+  "version": "0.4.0",
+  "description": "Keep projects understandable, reviewable, and changeable as agent work accumulates.",
   "author": {
     "name": "perhapsspy",
     "url": "https://github.com/perhapsspy"
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Project Legibility",
-    "shortDescription": "Keep long-running repository work coherent and easy to resume.",
-    "longDescription": "Carry context across tasks, check the right behavior before editing, and leave code and documentation easier to understand.",
+    "shortDescription": "Keep projects changeable as agent work accumulates.",
+    "longDescription": "Strengthen code structure, decision criteria, and working context as Codex implements, fixes, refactors, and resumes repository work.",
     "developerName": "perhapsspy",
     "category": "Developer Tools",
     "capabilities": [
@@ -30,9 +30,9 @@
     ],
     "websiteURL": "https://github.com/perhapsspy/project-legibility",
     "defaultPrompt": [
-      "Find where work last stopped in this repository and continue safely.",
-      "Before editing, check which existing behavior and constraints this change should preserve.",
-      "Implement and verify this so the work is easy to understand and continue in a later task."
+      "Implement this feature and verify that existing behavior still works.",
+      "Refactor this code so it stays easy to understand and change.",
+      "Find the work in progress in this repository and continue it from the current context."
     ],
     "brandColor": "#4F46E5",
     "composerIcon": "./assets/icon.svg",
