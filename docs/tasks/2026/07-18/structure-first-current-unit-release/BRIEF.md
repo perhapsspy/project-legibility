@@ -15,12 +15,13 @@
 ## Current State
 
 - canonical `structure-first` commit `0974f2d`가 공개됐고 lock·generated snapshot·provenance가 해당 source로 갱신됐다.
-- Project Legibility `0.4.1` release candidate의 manifest와 한·영 changelog가 준비됐다.
-- local·remote·offline source check, release-tag bundle validation, repository test와 task shape check가 통과했다.
+- Project Legibility commit `c1d84be`가 `v0.4.1`과 GitHub Release로 공개됐고 main·release workflow가 통과했다.
+- publisher commit `57aeb53`가 release commit을 고정했으며 publisher CI와 marketplace upgrade·설치 검증이 통과했다.
+- 설치된 `0.4.1`의 manifest와 `structure-first` skill이 release bundle과 일치한다.
 
 ## Next Step
 
-- 전체 release gate를 통과한 뒤 `v0.4.1`을 공개하고 publisher catalog pin과 설치본을 갱신한다.
+- 설치 drift가 발견되거나 current-unit 선정 원칙이 실제 작업에서 회귀할 때 다시 연다.
 
 ## Working Boundary
 
