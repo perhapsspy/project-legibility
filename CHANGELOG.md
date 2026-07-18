@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-07-18
+
+### Changed
+
+- bundled `structure-first`가 증상이나 결과가 나타난 위치가 아니라 바꾸려는 동작이나 규칙의 실제 책임을 기준으로 가장 작은 current unit을 고르도록 보강했습니다.
+
 ## [0.4.0] - 2026-07-16
 
 ### Added
@@ -104,7 +110,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1

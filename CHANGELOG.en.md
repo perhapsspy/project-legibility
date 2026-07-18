@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-07-18
+
+### Changed
+
+- Updated bundled `structure-first` to choose the smallest current unit by responsibility for the behavior or rule being changed rather than merely where symptoms or outputs appear.
+
 ## [0.4.0] - 2026-07-16
 
 ### Added
@@ -104,7 +110,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/perhapsspy/project-legibility/compare/v0.3.0...v0.3.1
