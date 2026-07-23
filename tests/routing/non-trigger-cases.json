@@ -79,6 +79,20 @@
       "rationale": "The edit is purely mechanical and does not justify structural intervention."
     },
     {
+      "id": "structure-first-coherent-local-fix",
+      "skill": "structure-first",
+      "prompt": "Change this existing predicate from archived OR disabled to archived AND disabled; the function already owns the rule and its focused tests.",
+      "expected": "do-not-select",
+      "rationale": "The existing unit supports a coherent local change and focused verification without structural judgment."
+    },
+    {
+      "id": "structure-first-coherent-local-feature",
+      "skill": "structure-first",
+      "prompt": "Add an optional label to this existing serializer mapping and its focused test; the serializer already owns this field mapping.",
+      "expected": "do-not-select",
+      "rationale": "Being feature work alone does not trigger the skill when one focused unit already owns and verifies the change."
+    },
+    {
       "id": "tighten-docs-new-spec",
       "skill": "tighten-docs",
       "prompt": "Create a new architecture specification from an unresolved product idea.",

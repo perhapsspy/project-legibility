@@ -1,70 +1,57 @@
 ---
 name: purpose-fit-design
-description: Check early design or implementation-planning direction for fit with user/domain purpose, explicit constraints, current evidence, and verifiable success conditions before existing code, copied behavior, fallback/default logic, or shortcut pressure shapes the design. Use when reuse/precedent, rejected constraints, meaning-affecting fallback, or "copy now, clean later" could steer design. Skip mechanical edits, read-only owner discovery, clear specialist cases, and coding after direction is settled.
+description: Use to set an early design or implementation-planning direction from user/domain purpose, explicit constraints, current evidence, and verifiable success conditions. Apply to new features, reuse decisions, and temporary implementations when existing code, precedent, defaults, or urgency could steer the choice. Direct source discovery, settled implementation work, and clear specialist problems to their owning workflows.
 ---
 
 # Purpose-Fit Design
 
 ## Job
 
-Check whether an early design direction fits the user/domain purpose before planning or coding starts. Treat existing implementation, copied behavior, and fallback/default logic as evidence to evaluate, not as default design authority.
+Set an early direction that fits the user/domain purpose, explicit constraints, current evidence, and the minimum observable success. Treat existing implementation and precedent as evidence, not automatic authority.
 
-End by proceeding narrowly, asking or investigating one blocking fact, or handing off to one specialist workflow.
-
-Do not prove source ownership, assign semantic owners, or shape code here when a specialist trigger is already clear.
+End with a provisional direction, the smallest useful check, or one question that blocks the choice. Keep implementation scope tied to the chosen purpose and confirmed contracts.
 
 ## Fit Check
 
-Answer only what affects the decision. For small tasks, one compact paragraph is enough.
+Answer only what affects the decision. A small task may need one paragraph.
 
-1. **Purpose and success:** state the user/domain outcome and the smallest observable success condition.
-2. **Correction reach and constraints:** name explicit user corrections and rejected concepts; state what each correction changes, whether its reach is local or broader, and which relevant purpose, constraints, and known owner boundaries remain in force.
-3. **Evidence:** classify current implementation or precedent as `source owner`, `derived caller`, `legacy/compatibility`, `evidence candidate`, or `unknown`.
-4. **Fit risk:** name the reuse, fallback, schema, adapter, shortcut, or "copy now, clean later" path that could steer the design away from purpose.
-5. **Direction or handoff:** state the narrow purpose-fit direction, or name one specialist workflow.
-6. **Verification:** name the smallest check that could falsify the chosen direction.
+1. **Purpose:** state the user/domain outcome and minimum observable success.
+2. **Constraints:** state explicit corrections, rejected concepts, and limits on the choice.
+3. **Evidence:** identify what is confirmed, unknown, or merely suggested by existing code, precedent, or defaults. Treat urgency as a delivery constraint, not evidence of fit.
+4. **Direction:** choose a provisional direction and name the evidence or smallest check that could change it.
 
-If purpose, constraints, evidence status, or success condition are unknown and affect the design, investigate or ask one focused question. Do not fill the gap with the current implementation shape.
+Investigate or ask one focused question when a missing fact changes the choice. Keep the gap explicit until evidence resolves it.
 
-Treat explicit user corrections as binding direction and scope constraints. Determine their reach from the correction and surrounding request: neither widen a local correction into a redesign nor narrow a broad correction into a local patch. Preserve unaffected purpose, constraints, and known owner boundaries. Do not reintroduce a rejected field, status, UI pattern, schema, timeout, policy, or fallback under another layer name unless the user asks to revisit it.
+Compare alternatives only for a material choice: one that changes responsibility, persistent state, policy, dependency, lifecycle, public contract, compatibility, or hard-to-reverse coupling.
 
-Treat lower-layer fallback as a potential design decision when it can affect command meaning, visible state, retries, audit, persistence, tests, policy, or another caller. If it recreates a rejected constraint or lacks an owner for meaning-affecting behavior, stop and hand off to a semantic-boundary workflow.
+Treat explicit user corrections as binding. Apply them at the reach implied by the request, preserve unaffected constraints, and keep rejected concepts outside the direction.
 
-For fallback chains that compute domain/status identity in route, UI, adapter, realtime, or presentation code, do not treat the problem as scope control only. If no current owner is named, hand off to source-owner or semantic-boundary discovery before planning edits.
+A technical default, fallback, or security/consistency claim is a design choice when it changes user-visible behavior, domain meaning, or policy. Otherwise, keep it as a technical detail.
 
-A transport watchdog or infrastructure guard may proceed without semantic-boundary work when it is owned by the transport/infra layer, limited to liveness or resource protection, introduces no domain field/status/policy/default, changes no accepted user-visible state, and cannot become business meaning for callers.
+For a temporary implementation, choose the smallest useful slice that preserves purpose and constraints. Require a credible way to verify and reverse it, but add an adapter, wrapper, or rollback boundary only when it materially helps.
 
-Urgency is not evidence of fit. When the user asks for a shortcut, offer the smallest slice that preserves purpose, constraints, and owner boundaries now. Do not present "copy now, clean later" as a design strategy. A temporary implementation still needs an explicit adapter, wrapper, or rollback boundary before code starts.
+## Specialist Handoff
 
-## Specialist Routing
+Use a specialist directly when the problem is already clear. While checking an unresolved direction, hand off when a missing fact blocks the choice:
 
-Skip this skill and use a specialist workflow directly when its trigger is already clear. Otherwise, after this check:
-
-- Use source-owner discovery when the source of truth is unproven.
-- Use semantic-boundary design when one meaning can drift across layers.
-- Use structure-focused change-boundary planning when options, fields, abstractions, or follow-ups could expand, or after the owner/design direction is settled and code shape is the next problem.
-- Use interactive-state flow analysis when user intent, presentation, async work, or freshness can mix.
+- source ownership when the governing contract is unknown;
+- semantic boundaries when one meaning may differ across layers;
+- interactive state flow when intent, async work, presentation, or freshness are mixed;
+- structure-first after direction is settled and code shape or verification is the remaining problem.
 
 ## Red Flags
 
-- "This component already exists, so reuse it" without checking fit to the current purpose.
-- "Security/consistency suggests adding a schema/catalog/timeout" without user goal or owner evidence.
-- Reintroducing a rejected field, status, UI pattern, schema, timeout, policy, or fallback as a lower-level implementation detail.
-- Accepting "copy now, clean later" when the copied surface owns another domain's state, layout, policy, or lifecycle.
-- UI, route, adapter, or realtime code deciding domain meaning through `x || y || z` fallback chains.
-- Tests proving helper internals while caller-boundary behavior remains unprotected.
-- A design explanation that mostly describes why the current implementation is acceptable.
-- Moving directly to edits after the user asks to rethink design, ownership, purpose, or fit.
+- Reusing something because it already exists, without checking purpose and constraints.
+- Adding policy or structure from a vague security, consistency, or future-use claim.
+- Reintroducing an explicitly rejected concept under another name or layer.
+- Treating "copy now, clean later" as sufficient without a verification and reversal story.
 
 ## Final Check
 
 Before implementation or final recommendation, confirm:
 
-- The purpose is not merely "make the current implementation work."
-- The selected direction fits the user/domain purpose and observable success condition.
-- Explicit user corrections or rejected concepts were not reintroduced.
-- The reach of each correction matches the request; unaffected purpose, constraints, and known owner boundaries remain intact.
-- Urgency did not override constraints, owner boundaries, rollback boundary, or verification.
-- Existing code has been classified by evidence status, not convenience.
-- Any semantic decision has one owner or a named unknown.
-- Process weight matches task size.
+- The direction fits the purpose, constraints, and observable success.
+- Existing code and precedent were treated as evidence rather than default authority.
+- Explicit corrections and rejected concepts remain respected.
+- The choice has a useful verification or a clearly named unknown.
+- The process weight matches the size and reversibility of the choice.

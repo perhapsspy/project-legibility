@@ -80,14 +80,14 @@
     {
       "id": "purpose-fit-design",
       "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "b326f1bdf6ffd22282385e9e2a0a7f887bb13257",
+      "commit": "7e52d397ac9d1abefc676dc27cd300a52167448d",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-fit-design",
           "sourcePath": "skills/purpose-fit-design",
           "targetPath": "skills/purpose-fit-design",
-          "integrity": "sha256:7262bf84c9f6549d862f1c787eb7a7c5bcfa7e8cd84c310ea5b14081f1e29318"
+          "integrity": "sha256:1ac4b439353a56b5da49991db07d56661182d742324250c8cdc48819388af365"
         }
       ]
     },
@@ -122,14 +122,14 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "0974f2df7c6250ffb9790bef740f4aff2cd5a1b1",
+      "commit": "5b42389078949381ef89b5965ef297d81015a0b2",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:04fcc9797582111f60dc1aba0d147c1e9e9e409043a6db5464fe707a251a97ff"
+          "integrity": "sha256:42a9f01eafc9779ac5d4926187de95b09bc0f1a71a67c3266d9cdd77486ed372"
         }
       ]
     },

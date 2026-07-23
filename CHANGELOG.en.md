@@ -4,6 +4,14 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-23
+
+### Changed
+
+- Simplified `purpose-fit-design` around choosing early directions for new features, reuse, and temporary implementations from purpose, constraints, evidence, and success conditions.
+- Updated `structure-first` to choose among preserving the current structure, making a local change, and improving structure according to the problem across feature work, bug fixes, and refactoring.
+- Defined smells and heuristics as investigation signals, and aligned public plugin copy and routing fixtures with the new invocation model.
+
 ## [0.4.1] - 2026-07-18
 
 ### Changed
@@ -110,7 +118,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2

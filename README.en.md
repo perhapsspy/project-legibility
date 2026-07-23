@@ -8,8 +8,6 @@
 
 **Projects that stay changeable at agent speed.**
 
-Coding agents can produce a large volume of changes quickly. Once each task optimizes only for immediate completion, primary flows and ownership boundaries break down fast while current sources of truth and working context scatter. The damage compounds with every change. After only a few tasks, people and future agents have to excavate what to follow and where to make the next change.
-
 Project Legibility is a Codex skills plugin that helps Codex strengthen project structure, decision criteria, and working context while changing the code.
 
 - **Code:** Keep primary flows and responsibilities legible as changes accumulate.
@@ -65,22 +63,22 @@ After that, ask for work normally. `project-context` keeps the current objective
 
 ## Included skills
 
-Project Legibility centers on two core practices. A gateway checks purpose fit when early direction is at risk, while specialists and optional helpers join only for the problems they own. See the [skill composition model](docs/PRODUCT.en.md) for these roles and the selection model, and the linked source repositories for detailed usage.
+Two core practices are joined by an early-direction check, specialists for concrete design and implementation problems, and separate operational or adoption helpers. See the [skill composition model](docs/PRODUCT.en.md) for their roles and selection, and the linked source repositories for detailed usage.
 
 ### Core practices
 
-- [`structure-first`](https://github.com/perhapsspy/structure-first): Make the primary flow and responsibilities of code changes easy to read, then leave a structure that can absorb the next change through behavior-contract verification.
+- [`structure-first`](https://github.com/perhapsspy/structure-first): Keep code changes that reshape flow, state, responsibility, composition, or boundary contracts readable and verifiable.
 - [`project-context`](https://github.com/perhapsspy/project-context): Preserve the objectives, decisions, current state, and next actions of long-running work in the repository across sessions and agents.
 
-### Gateway for early direction
+### Early direction check
 
-- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design): Briefly check whether early design or implementation direction fits user purpose, constraints, current evidence, and success conditions, then proceed, investigate what is missing, or hand off to the relevant specialist.
+- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design): When the fit of an early design or implementation direction remains a material choice, check it against purpose, constraints, evidence, and success conditions.
 
 ### Specialists for specific problems
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): Read current evidence to determine what to follow, what differs, and which decisions remain open.
 - [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design): Give user or domain meaning one owner and explicit translation boundaries so it stays consistent across representations and layers.
-- [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive and prevent obsolete asynchronous results from overwriting newer state.
+- [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive, with the latest user intent governing state as asynchronous results arrive.
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): Create complete, verified interfaces for new screens and major redesigns, grounded in real content, user tasks, relevant states, and responsive behavior.
 - [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): Clarify the roles, current guidance, and reader routes of a selected document or documentation package.
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): Keep always-read files such as `AGENTS.md` small, durable, and actionable as startup instructions.

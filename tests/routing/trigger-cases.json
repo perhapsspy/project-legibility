@@ -51,6 +51,13 @@
       "rationale": "An early reuse decision could steer implementation away from the stated purpose."
     },
     {
+      "id": "purpose-fit-design-new-feature-direction",
+      "skill": "purpose-fit-design",
+      "prompt": "Before coding a new notification-preferences flow, choose a direction that preserves per-channel control, mobile usability, and an observable save confirmation.",
+      "expected": "select",
+      "rationale": "The new feature needs an early direction grounded in purpose, constraints, and observable success without depending on an existing implementation."
+    },
+    {
       "id": "semantic-boundary-design-status-owner",
       "skill": "semantic-boundary-design",
       "prompt": "Unify status meaning that is currently decided differently by the API, UI, and realtime adapter.",
@@ -65,11 +72,18 @@
       "rationale": "The task is a read-only source-of-truth audit."
     },
     {
+      "id": "structure-first-hidden-event-ownership",
+      "skill": "structure-first",
+      "prompt": "Refactor this event-driven upload flow because completion ownership is duplicated and helper chains hide which callback persists and emits each terminal result.",
+      "expected": "select",
+      "rationale": "The refactor needs readable flow and clear completion ownership."
+    },
+    {
       "id": "structure-first-feature-flow",
       "skill": "structure-first",
-      "prompt": "Implement this feature with a readable primary flow, minimal boundaries, and contract-focused tests.",
+      "prompt": "Add pause and resume to this event-driven upload. Pausing stops new chunks without completing the upload; resuming continues the same upload; failures persist one terminal status and emit one terminal result.",
       "expected": "select",
-      "rationale": "The request is non-trivial implementation work whose code shape affects maintainability."
+      "rationale": "The feature changes flow, state, effects, and behavior contracts even though the request does not diagnose a pre-existing structural problem."
     },
     {
       "id": "tighten-docs-current-stale-routes",

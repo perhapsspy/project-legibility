@@ -4,6 +4,14 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-23
+
+### Changed
+
+- `purpose-fit-design`은 새 기능, 기존 구현 재사용과 임시 구현의 초기 방향을 목적·제약·근거와 성공 조건에 맞춰 판단하는 간결한 스킬로 정리했습니다.
+- `structure-first`는 기능 구현·버그 수정·리팩터링 전반에서 현재 구조 유지, 국소 변경과 구조 개선 중 문제에 맞는 결과를 선택하도록 조정했습니다.
+- 위험 징후와 경험칙을 조사 단서로 삼고, 공개 플러그인 설명과 스킬 선택 검증 사례를 새 호출 모델에 맞췄습니다.
+
 ## [0.4.1] - 2026-07-18
 
 ### Changed
@@ -110,7 +118,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/perhapsspy/project-legibility/compare/v0.3.1...v0.3.2
