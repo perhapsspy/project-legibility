@@ -4,6 +4,10 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+### Changed
+
+- bundled `source-owner-audit`가 소스 소유권 근거와 쓰기 권한을 분리하고, owner 확인만으로 실행 범위를 사용자 승인 밖으로 넓히지 않도록 보강했습니다.
+
 ## [0.5.0] - 2026-07-23
 
 ### Changed

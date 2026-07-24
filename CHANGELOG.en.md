@@ -4,6 +4,10 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated bundled `source-owner-audit` to separate source-ownership evidence from write authorization so confirming an owner does not expand execution beyond the user-authorized scope.
+
 ## [0.5.0] - 2026-07-23
 
 ### Changed
