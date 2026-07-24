@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-07-24
+
+### Changed
+
+- bundled `source-owner-audit`가 소스 소유권 근거와 쓰기 권한을 분리하고, owner 확인만으로 실행 범위를 사용자 승인 밖으로 넓히지 않도록 보강했습니다.
+
 ## [0.5.0] - 2026-07-23
 
 ### Changed
@@ -118,7 +124,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/perhapsspy/project-legibility/compare/v0.3.2...v0.4.0
