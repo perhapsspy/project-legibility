@@ -16,13 +16,12 @@
 ## Current State
 
 - canonical commit `24cb094`가 `source-owner-audit` 원격 `main`에 push됐다.
-- Project Legibility lock과 generated snapshot, third-party notice, changelog pair를 갱신했다.
-- `0.5.1` manifest와 release changelog를 준비했다.
-- release gate 재검증과 PR·CI·tag·publisher·설치 반영이 남았다.
+- Project Legibility `0.5.1` release와 publisher catalog pin이 공개됐고 원격 CI·release workflow가 통과했다.
+- marketplace 설치본은 release commit `60093d5`의 plugin tree와 일치하고 새 쓰기 권한 경계를 포함한다.
 
 ## Next Step
 
-`0.5.1` release gate를 통과시키고 release commit을 publisher catalog에 고정한다.
+사용자 승인 범위와 owner 근거가 다시 혼동되거나 설치 drift가 발견될 때 재검토한다.
 
 ## Working Boundary
 
