@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-07-25
+
+### Changed
+
+- Strengthened the bundled `codex-project-director` to separate defect evidence from proposed remedies while applying the existing decision boundary, preserve user-approved contract literals in handoffs, and resume only affected work after user corrections are acknowledged.
+
 ## [0.6.0] - 2026-07-25
 
 ### Added
@@ -131,7 +137,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...HEAD
+[0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
