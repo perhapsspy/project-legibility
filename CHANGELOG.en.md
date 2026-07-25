@@ -4,6 +4,10 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+### Changed
+
+- Strengthened the bundled `codex-project-director` so sustained investigation, implementation, and debugging stay with user-visible worker sessions while director-internal agents remain bounded to support, one decision, or independent falsification. Worker sessions retain delegation within their own boundaries.
+
 ## [0.6.1] - 2026-07-25
 
 ### Changed

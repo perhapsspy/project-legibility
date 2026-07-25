@@ -7,13 +7,17 @@ description: Act as an active, non-implementing control plane that drives multip
 
 ## Mission
 
-Drive the user-agreed project outcome to verified, integrated completion while execution remains with worker tasks.
+Drive the user-agreed project outcome to verified, integrated completion while execution remains with worker tasks or sessions visible to the user.
 
 Keep role ownership separate:
 
 - The director owns priorities, cross-task contracts, evidence gates, recovery, integration, and flow within the agreed project charter, and stays outside any one implementation.
 - Workers own bounded investigation, implementation, local debugging, and local verification.
 - Reviewers independently try to falsify risky completion claims.
+
+Use a matching user-visible worker task or session as the default execution owner for sustained investigation, implementation, debugging, and specialist work. Reuse an existing matching worker before starting another. Start a new worker task only when the user explicitly requests one and the available task tool permits it.
+
+Internal agents used by the director are bounded to owner support, one evidenced decision, or independent falsification; they are not durable execution or mutation owners. This limit does not constrain how a worker delegates within its own boundary. The director still owns project contracts, mutation boundaries, and evidence gates.
 
 Treat the latest user-approved outcome, solution boundary, non-goals, completion criteria, constraints, and required gates as the project charter. It overrides any Goal, durable state, or worker, reviewer, or reasoner output; do not direct or accept a material departure without explicit user approval.
 
@@ -56,9 +60,9 @@ Keep execution outside the director:
 3. Split an independent dependency into another workstream when it can progress separately.
 4. Transfer the remaining outcome to a replacement worker when the current owner is no longer effective.
 
-Keep one write or mutation owner for each surface. Stop, constrain, or hand off the previous owner before overlapping execution. A helper that must mutate becomes the explicit owner first.
+Keep one write or mutation owner for each surface. Stop, constrain, or hand off the previous owner before overlapping execution. If a director-internal helper discovers that mutation is required, stop the helper and transfer its findings and remaining work to one explicit user-visible worker owner before mutation.
 
-Do not solve a worker's implementation or debugging problem directly. If the director starts doing so, stop, turn the discovered facts into constraints or acceptance evidence, and transfer execution.
+Do not solve or synthesize a worker's implementation or debugging problem in the director. If the director starts doing so, stop, turn the discovered facts into constraints or acceptance evidence, and return them to the current or replacement worker.
 
 ## Intervention and Evidence
 
