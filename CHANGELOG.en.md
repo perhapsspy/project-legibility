@@ -4,6 +4,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.2] - 2026-07-26
+
 ### Changed
 
 - Strengthened the bundled `codex-project-director` so sustained investigation, implementation, and debugging stay with user-visible worker sessions while director-internal agents remain bounded to support, one decision, or independent falsification. Worker sessions retain delegation within their own boundaries.
@@ -141,7 +143,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...HEAD
+[0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1

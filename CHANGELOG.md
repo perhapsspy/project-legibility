@@ -4,6 +4,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.2] - 2026-07-26
+
 ### Changed
 
 - 포함된 `codex-project-director`가 지속적인 조사·구현·디버깅을 사용자 가시 작업 세션에 맡기고, 디렉터 내부 에이전트를 제한된 지원·결정·독립 반증으로 한정하도록 보강했습니다. 다른 작업 세션의 자체 위임은 유지합니다.
@@ -141,7 +143,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...HEAD
+[0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
