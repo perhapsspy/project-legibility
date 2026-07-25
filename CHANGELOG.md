@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-07-25
+
+### Changed
+
+- 포함된 `codex-project-director`가 결함 증거와 제안 해법을 분리하고 기존 결정 상향 경계를 적용하며, 사용자 승인 계약값을 정확히 인계하고 교정과 충돌하는 영향 작업만 확인 후 재개하도록 보강했습니다.
+
 ## [0.6.0] - 2026-07-25
 
 ### Added
@@ -131,7 +137,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...HEAD
+[0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0

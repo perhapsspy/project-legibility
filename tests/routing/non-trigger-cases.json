@@ -37,6 +37,13 @@
       "rationale": "Ordinary bounded delegation does not designate a persistent director session or shared multi-task project charter."
     },
     {
+      "id": "codex-project-director-local-user-correction",
+      "skill": "codex-project-director",
+      "prompt": "Correct this one configuration value from 14 days to 30 days and update its focused test.",
+      "expected": "do-not-select",
+      "rationale": "A local user correction in one task does not designate a multi-task director role."
+    },
+    {
       "id": "design-user-interfaces-local-style",
       "skill": "design-user-interfaces",
       "prompt": "Reduce the horizontal padding on this existing button by four pixels.",

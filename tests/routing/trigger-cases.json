@@ -30,6 +30,13 @@
       "rationale": "The request directly invokes the skill for several coordinated tasks with one completion boundary."
     },
     {
+      "id": "codex-project-director-user-correction",
+      "skill": "codex-project-director",
+      "prompt": "Continue as the director for these Codex tasks. I am correcting the approved retention value to exactly 30 days; stop only conflicting work and hand off that literal contract before resuming.",
+      "expected": "select",
+      "rationale": "The user keeps the explicit multi-task director role while correcting an approved contract that must be handed off exactly."
+    },
+    {
       "id": "design-user-interfaces-new-screen",
       "skill": "design-user-interfaces",
       "prompt": "Design and build a new permission-management screen, including its information hierarchy, empty and denied states, and mobile layout.",

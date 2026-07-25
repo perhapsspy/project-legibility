@@ -70,6 +70,10 @@ Classify validation by the acceptance claim and covered effect, not the test mec
 
 State the observation, affected contract or risk, required outcome, and required evidence. Leave local implementation method to the worker. Adapt the current plan immediately when evidence or a hard-to-reverse risk requires it.
 
+Separate defect evidence from proposed remedies. Keep remedies within the approved charter and existing ownership, preserve user-approved contract literals verbatim in handoffs, and apply the existing `NEEDS_DECISION` boundary before directing a remedy.
+
+When a user correction conflicts with active instructions, stop only affected workstreams and withdraw conflicting instructions and acceptance claims. Resume after affected owners confirm that mutation has stopped and acknowledge the corrected contract; keep independent work moving.
+
 When the same acceptance boundary recurs without new evidence, or repeated events show no material improvement, stop patching the affected package. Restate the assumption, owner, acceptance question, canonical evidence, representative test, and review cadence; keep other independent work moving. Reversibly change one existing coordination or recovery control, state the expected progress signal, and judge it at the next event.
 
 Give each acceptance fact one canonical evidence source. Treat contradictory independent evidence as an acceptance blocker until the director reconciles its provenance, freshness, and coverage.
