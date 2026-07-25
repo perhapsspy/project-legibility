@@ -73,6 +73,20 @@ python3 -m unittest discover -s tests -v
 
 When one canonical repository provides multiple skills, inspect every snapshot diff attached to that source entry. `sources.lock.json` owns the current relationship.
 
+## Adding skills and reviewing real usage
+
+Add a new skill through the existing release path without creating a separate experimental status. Before inclusion, the canonical owner supplies the following evidence and the Project Legibility maintainer approves the product role and invocation boundary:
+
+- the role gap it fills and the adjacent cases that should not select it;
+- canonical validation plus representative behavior and invocation cases; and
+- invocation fit or distinct value to examine in real usage after release.
+
+After inclusion, record only meaningful real cases in the relevant task log using `observed version or canonical commit`, `situation`, `expected selection or value`, `actual result`, `problem`, and `current disposition`. Review at the first material failure, repeated boundary confusion, the next related correction, or another composition change. Do not require periodic scoring or usage quotas.
+
+The canonical owner changes content, triggers, and skill-specific tests. A compatible correction is a patch; a changed role or trigger meaning is a minor that updates the product contract first. Keep the skill without a separate promotion ceremony when evidence remains sound. Remove it in a minor release when an unresolved material failure, repeated misrouting, or duplicated responsibility shows no distinct value. Low usage alone is not a removal reason.
+
+For a problem that needs immediate reversal, use the existing rollback procedure to return the publisher catalog to the last verified release.
+
 ## Version rules
 
 ### Patch

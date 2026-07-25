@@ -16,6 +16,27 @@
       "rationale": "The task has no long-session, broad-read, or context-budget risk."
     },
     {
+      "id": "codex-project-director-single-task-review",
+      "skill": "codex-project-director",
+      "prompt": "Review this one pull request and summarize whether its focused tests cover the change.",
+      "expected": "do-not-select",
+      "rationale": "A single local review has no user-designated director role or multi-task project outcome."
+    },
+    {
+      "id": "codex-project-director-status-summary",
+      "skill": "codex-project-director",
+      "prompt": "Summarize the current status of these tasks without directing or changing their work.",
+      "expected": "do-not-select",
+      "rationale": "A read-only status summary does not designate this session as an active project director."
+    },
+    {
+      "id": "codex-project-director-ordinary-parallel-subtasks",
+      "skill": "codex-project-director",
+      "prompt": "Use a few parallel subagents to inspect these independent files, then combine their findings in this task.",
+      "expected": "do-not-select",
+      "rationale": "Ordinary bounded delegation does not designate a persistent director session or shared multi-task project charter."
+    },
+    {
       "id": "design-user-interfaces-local-style",
       "skill": "design-user-interfaces",
       "prompt": "Reduce the horizontal padding on this existing button by four pixels.",
@@ -98,6 +119,20 @@
       "prompt": "Create a new architecture specification from an unresolved product idea.",
       "expected": "do-not-select",
       "rationale": "New specification design is not final cleanup of a selected document package."
+    },
+    {
+      "id": "ui-design-rigor-new-dashboard",
+      "skill": "ui-design-rigor",
+      "prompt": "Design and build a new operations dashboard, deciding its primary task, page hierarchy, states, and responsive layout.",
+      "expected": "do-not-select",
+      "rationale": "A new dashboard with unsettled page-level decisions belongs to broader interface design."
+    },
+    {
+      "id": "ui-design-rigor-exact-padding",
+      "skill": "ui-design-rigor",
+      "prompt": "Change this button padding from 12px to the already-approved 8px value.",
+      "expected": "do-not-select",
+      "rationale": "An exact approved mechanical edit requires no interface-quality judgment."
     }
   ]
 }

@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-07-25
+
+### Added
+
+- 사용자가 디렉터로 지정한 세션에서 여러 Codex 작업을 하나의 검증된 결과까지 조정하는 `codex-project-director`를 추가했습니다.
+- 기존 제품 화면의 읽기 전용 검토, 구조 보존형 개선과 방향이 정해진 구성 요소 구현을 맡는 `ui-design-rigor`를 추가했습니다.
+
 ## [0.5.1] - 2026-07-24
 
 ### Changed
@@ -124,7 +131,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1

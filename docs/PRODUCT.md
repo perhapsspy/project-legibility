@@ -14,8 +14,8 @@ Project Legibility는 에이전트의 변경이 빠르게 쌓여도 프로젝트
 |---|---|---|
 | 핵심 작업 방식 | `structure-first`, `project-context` | `structure-first`는 변경이 흐름·상태·책임·조합이나 경계 계약을 만들거나 바꿀 때 이들을 읽고 검증하기 쉽게 유지합니다. `project-context`는 작업 맥락을 여러 세션이나 에이전트에 걸쳐 이어야 할 때 사용합니다. |
 | 초기 방향 점검 | `purpose-fit-design` | 초기 설계나 구현 방향의 적합성이 중요한 선택으로 남아 있을 때 목적·제약·근거와 성공 조건을 확인합니다. 구체적인 전문 문제는 해당 전문 스킬이 맡습니다. |
-| 전문 스킬 | `source-owner-audit`, `semantic-boundary-design`, `interactive-state-flow`, `design-user-interfaces`, `tighten-docs`, `agents-md-editor` | 정본의 적용 조건에 해당하는 구체적인 문제가 나타날 때 그 문제를 맡습니다. |
-| 선택형 보조 | `codex-token-discipline`, `project-context-migration` | 높은 토큰 부담이나 기존 작업 맥락 이관처럼 별도의 운영·도입 문제가 있을 때 사용합니다. |
+| 전문 스킬 | `source-owner-audit`, `semantic-boundary-design`, `interactive-state-flow`, `design-user-interfaces`, `ui-design-rigor`, `tighten-docs`, `agents-md-editor` | 정본의 적용 조건에 해당하는 구체적인 문제가 나타날 때 그 문제를 맡습니다. `design-user-interfaces`는 새 화면과 큰 재설계를, `ui-design-rigor`는 기존 화면의 검토·구조 보존형 개선과 방향이 정해진 구성 요소·영역 구현을 맡습니다. |
+| 선택형 보조 | `codex-project-director`, `codex-token-discipline`, `project-context-migration` | 여러 Codex 작업의 명시적 디렉터 운영, 높은 토큰 부담이나 기존 작업 맥락 이관처럼 별도의 운영·도입 문제가 있을 때 사용합니다. |
 
 ## 공통 선택 원칙
 

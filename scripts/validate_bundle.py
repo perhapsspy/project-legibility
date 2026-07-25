@@ -28,6 +28,7 @@ CHANGELOG_REL = Path("CHANGELOG.md")
 
 EXPECTED_SKILLS = (
     "agents-md-editor",
+    "codex-project-director",
     "codex-token-discipline",
     "design-user-interfaces",
     "interactive-state-flow",
@@ -38,9 +39,11 @@ EXPECTED_SKILLS = (
     "source-owner-audit",
     "structure-first",
     "tighten-docs",
+    "ui-design-rigor",
 )
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
+    "codex-project-director": ("codex-project-director",),
     "codex-token-discipline": ("codex-token-discipline",),
     "design-user-interfaces": ("design-user-interfaces",),
     "interactive-state-flow": ("interactive-state-flow",),
@@ -50,6 +53,7 @@ EXPECTED_SOURCE_SKILLS = {
     "source-owner-audit": ("source-owner-audit",),
     "structure-first": ("structure-first",),
     "tighten-docs": ("tighten-docs",),
+    "ui-design-rigor": ("ui-design-rigor",),
 }
 EXPECTED_REPOSITORIES = {
     source_id: f"https://github.com/perhapsspy/{source_id}"

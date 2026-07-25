@@ -14,8 +14,8 @@ Project Legibility helps projects remain understandable, reviewable, and changea
 |---|---|---|
 | Core practices | `structure-first`, `project-context` | `structure-first` keeps changes that create or reshape flow, state, responsibility, composition, or boundary contracts readable and verifiable. `project-context` carries working context across sessions or agents when continuity is needed. |
 | Early direction check | `purpose-fit-design` | Use when the fit of an early design or implementation direction remains a material choice. Check purpose, constraints, evidence, and success conditions. Concrete specialist problems go directly to their matching skill. |
-| Specialists | `source-owner-audit`, `semantic-boundary-design`, `interactive-state-flow`, `design-user-interfaces`, `tighten-docs`, `agents-md-editor` | Each owns the specific problem covered by its canonical trigger. |
-| Optional helpers | `codex-token-discipline`, `project-context-migration` | These support separate operational or adoption problems such as high token pressure or migration of existing working context. |
+| Specialists | `source-owner-audit`, `semantic-boundary-design`, `interactive-state-flow`, `design-user-interfaces`, `ui-design-rigor`, `tighten-docs`, `agents-md-editor` | Each owns the specific problem covered by its canonical trigger. `design-user-interfaces` owns new screens and major redesigns; `ui-design-rigor` owns review, structure-preserving improvement, and settled component or region work in existing screens. |
+| Optional helpers | `codex-project-director`, `codex-token-discipline`, `project-context-migration` | These support separate operational or adoption problems such as an explicitly designated director for multiple Codex tasks, high token pressure, or migration of existing working context. |
 
 ## Common selection principles
 

@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "skills": [
     "agents-md-editor",
+    "codex-project-director",
     "codex-token-discipline",
     "design-user-interfaces",
     "interactive-state-flow",
@@ -11,6 +12,7 @@
     "semantic-boundary-design",
     "source-owner-audit",
     "structure-first",
-    "tighten-docs"
+    "tighten-docs",
+    "ui-design-rigor"
   ]
 }

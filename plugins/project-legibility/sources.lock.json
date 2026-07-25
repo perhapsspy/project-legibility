@@ -30,6 +30,20 @@
       ]
     },
     {
+      "id": "codex-project-director",
+      "repository": "https://github.com/perhapsspy/codex-project-director.git",
+      "commit": "7392d079b66bfe76d95336ba567ed460f8cdfc4e",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "codex-project-director",
+          "sourcePath": "skills/codex-project-director",
+          "targetPath": "skills/codex-project-director",
+          "integrity": "sha256:e88a7fc85e8d4e7395fa35cbda734e68bcd5b8ec43c91d20181128af93ee9c35"
+        }
+      ]
+    },
+    {
       "id": "design-user-interfaces",
       "repository": "https://github.com/perhapsspy/design-user-interfaces.git",
       "commit": "34d0fb4b8fac06fb881104c3c98836747ece1959",
@@ -144,6 +158,20 @@
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
           "integrity": "sha256:e408fc45c21da449d72749c3c4bd9a651c28fa76a358c35d764f5017bb1f08bb"
+        }
+      ]
+    },
+    {
+      "id": "ui-design-rigor",
+      "repository": "https://github.com/perhapsspy/ui-design-rigor.git",
+      "commit": "695c5e4ecd08e12e6d32da41fcf7fe770fc5c8d6",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "ui-design-rigor",
+          "sourcePath": "skills/ui-design-rigor",
+          "targetPath": "skills/ui-design-rigor",
+          "integrity": "sha256:4469ce83f938dfb4429920a6f8db788703ed3c3880c2bb0e2835d344724e89f7"
         }
       ]
     }

@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-07-25
+
+### Added
+
+- Added `codex-project-director` to coordinate multiple Codex tasks toward one verified outcome when the user explicitly designates a director session.
+- Added `ui-design-rigor` for read-only review, structure-preserving refinement, and settled component or region work in existing product interfaces.
+
 ## [0.5.1] - 2026-07-24
 
 ### Changed
@@ -124,7 +131,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/perhapsspy/project-legibility/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/perhapsspy/project-legibility/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/perhapsspy/project-legibility/compare/v0.4.0...v0.4.1

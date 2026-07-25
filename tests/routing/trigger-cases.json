@@ -16,6 +16,20 @@
       "rationale": "The work has explicit long-session, broad-read, and delegation risks."
     },
     {
+      "id": "codex-project-director-explicit-role",
+      "skill": "codex-project-director",
+      "prompt": "Act as the project director for these Codex tasks, start one Goal, and drive their shared outcome through verified integration.",
+      "expected": "select",
+      "rationale": "The user explicitly designates a multi-task director session with one shared project outcome."
+    },
+    {
+      "id": "codex-project-director-direct-invocation",
+      "skill": "codex-project-director",
+      "prompt": "Use $codex-project-director to supervise these implementation, migration, and release tasks through one verified project outcome.",
+      "expected": "select",
+      "rationale": "The request directly invokes the skill for several coordinated tasks with one completion boundary."
+    },
+    {
       "id": "design-user-interfaces-new-screen",
       "skill": "design-user-interfaces",
       "prompt": "Design and build a new permission-management screen, including its information hierarchy, empty and denied states, and mobile layout.",
@@ -91,6 +105,27 @@
       "prompt": "Tighten this selected documentation package so current decisions, stale material, and reader routes are unambiguous.",
       "expected": "select",
       "rationale": "The request is final document-level cleanup within an already selected package."
+    },
+    {
+      "id": "ui-design-rigor-existing-checkout-review",
+      "skill": "ui-design-rigor",
+      "prompt": "Review this existing checkout screen without editing it, focusing on hierarchy, task clarity, component behavior, and responsive risks.",
+      "expected": "select",
+      "rationale": "The request is a read-only quality review of an existing product interface."
+    },
+    {
+      "id": "ui-design-rigor-bounded-settings-refine",
+      "skill": "ui-design-rigor",
+      "prompt": "Refine the account settings form while preserving its purpose, primary task, page-level structure, and established design system.",
+      "expected": "select",
+      "rationale": "The request needs bounded interface improvement inside a settled screen."
+    },
+    {
+      "id": "ui-design-rigor-settled-filter-build",
+      "skill": "ui-design-rigor",
+      "prompt": "Design and implement the orders filter region inside this settled page using its existing task, layout, components, and visual system.",
+      "expected": "select",
+      "rationale": "The request is a bounded component or region build whose purpose and surrounding interface decisions are already settled."
     }
   ]
 }

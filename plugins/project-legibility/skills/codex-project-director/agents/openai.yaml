@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Project Director"
+  short_description: "Direct multiple Codex tasks toward one verified outcome"
+  default_prompt: "Use $codex-project-director to start one Codex Goal and direct these tasks through verified completion."
+
+policy:
+  allow_implicit_invocation: true
