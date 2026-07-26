@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.3] - 2026-07-27
+
+### Changed
+
+- Strengthened the bundled `codex-project-director` to form a sufficient product interpretation before splitting work, reserve separate tasks for large specialist responsibilities that can deepen independently, and converge on completed product capability without yielding direction to local issues or specialist opinions.
+- Separated the two durable coordination surfaces: stable product direction belongs in the existing product authority or `docs/director-charter.md`, while changing actions and waits belong in `docs/director-state.md`.
+
 ## [0.6.2] - 2026-07-26
 
 ### Changed
@@ -143,7 +150,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...HEAD
+[0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0

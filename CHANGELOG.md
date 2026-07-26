@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.3] - 2026-07-27
+
+### Changed
+
+- 포함된 `codex-project-director`가 작업을 나누기 전에 제품 결과를 충분히 해석하고, 별도 작업은 독립적으로 깊어질 수 있는 큰 전문 책임에만 사용하며, 국소 문제와 전문 의견에 방향을 넘기지 않고 실제 제품 완료로 수렴하도록 보강했습니다.
+- 안정적인 제품 기준은 기존 제품 정본 또는 `docs/director-charter.md`에, 계속 변하는 현재 행동과 대기는 `docs/director-state.md`에 유지하도록 두 기록 면의 책임을 구분했습니다.
+
 ## [0.6.2] - 2026-07-26
 
 ### Changed
@@ -143,7 +150,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...HEAD
+[0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/perhapsspy/project-legibility/compare/v0.5.1...v0.6.0
