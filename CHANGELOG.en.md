@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.5] - 2026-07-28
+
+### Changed
+
+- Corrected the bundled `codex-project-director` so a local correction and representative run of a causally changed revision remain continuous existing authority when the authorization record's outcome, surface, effect, and owner stay unchanged; `retry0` now forbids only unchanged repetition of the same revision, assumption, and input.
+- Worker terminal or next-decision wording is reclassified instead of forwarded as an approval request, and the Director must name the changed authorization field before asking the user. Existing pre-effect review and exact-once effects remain protected.
+
 ## [0.6.4] - 2026-07-27
 
 ### Changed
@@ -157,7 +164,9 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...HEAD
+[0.6.5]: https://github.com/perhapsspy/project-legibility/compare/v0.6.4...v0.6.5
+[0.6.4]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1

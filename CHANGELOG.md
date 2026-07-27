@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.5] - 2026-07-28
+
+### Changed
+
+- 포함된 `codex-project-director`가 승인 기록의 결과·영역·효과·담당자가 유지되는 국소 수정과 수정된 판본의 대표 검증을 기존 권한의 연속으로 처리하고, `retry0`은 같은 판본·가정·입력의 무변경 반복만 금지하도록 교정했습니다.
+- 작업자의 종료·다음 결정 문구를 그대로 승인 요청으로 올리지 않고 실제 권한 변화를 재분류하며, 사용자에게 묻기 전에 변경된 승인 필드를 밝히도록 보강했습니다. 기존 실행 전 검토와 정확히 한 번 효과는 유지합니다.
+
 ## [0.6.4] - 2026-07-27
 
 ### Changed
@@ -157,7 +164,9 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...HEAD
+[0.6.5]: https://github.com/perhapsspy/project-legibility/compare/v0.6.4...v0.6.5
+[0.6.4]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/perhapsspy/project-legibility/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/perhapsspy/project-legibility/compare/v0.6.0...v0.6.1

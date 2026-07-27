@@ -70,7 +70,7 @@ Normalize each workstream to one state:
 
 - `RUNNING`: observable execution or material progress supports a declared next event before its checkpoint.
 - `WAITING`: the awaited event and resume condition are explicit.
-- `NEEDS_DECISION`: a choice exceeds the worker's authority or has material project impact.
+- `NEEDS_DECISION`: the proposed next action changes the current authorization record's `Outcome`, `Surface`, `Effect`, or `Owner`; changes the product contract or user outcome; expands the surface or effect; requires elevated authority, credentials, or a new external effect; accepts irreversible risk; or crosses an actual process, session, or safety boundary.
 - `BLOCKED`: no safe in-scope next action exists; start recovery.
 - `COMPLETE`: the outcome and required evidence are both satisfied.
 
@@ -101,6 +101,8 @@ Stopping harmful mutation is always allowed; any recovery mutation still follows
 
 Classify validation by the acceptance claim, its user path, and covered effect. For an operational claim, pre-effect evidence traverses the actual entrypoint and destination context to the effect boundary; completion evidence observes the resulting effect. Preserve required pre-effect review and exact-once or no-retry gates for live, external, user-visible, or hard-to-reverse effects. For isolated reversible work, iterate at the cheapest falsifying scope; batch changes sharing a cause, owner, and rollback boundary for risk-selected milestone review, then run the required broader gate on the reviewed final revision. Repeat the review or gate after relevant covered content changes.
 
+Track authorization continuity by the user-approved `Outcome`, `Surface`, `Effect`, and `Owner`. When all four remain unchanged, keep a same-cause, same-owner, same-rollback chain of local correction, local verification, and one fresh representative run of the causally corrected revision under the existing authorization. `retry0` or no-retry forbids an unchanged repetition of the same revision, assumption, and input; it does not forbid validation of a causally changed revision. This continuity never resets a consumed exact-once effect or bypasses an existing pre-effect review or safety gate.
+
 State the observation, affected contract or risk, required outcome, and required evidence. Leave local implementation method to the worker. Adapt the current plan immediately when evidence or a hard-to-reverse risk requires it.
 
 Classify a failed attempt by observed effect. A confirmed zero external effect stays with the current owner; evidence contradicting the product interpretation or milestone reopens that assumption. A known or possible partial live effect follows the live-harm and no-retry gate.
@@ -121,13 +123,15 @@ Request compact reports at completion, blocker or decision, invalidated next eve
 - for every nonterminal status: `Next event`; for `WAITING`: awaited event → resume condition
 - when relevant: `First failure`, `Unknowns`, `Request`
 
+Treat worker terminal wording and `Next product decision` as scoped inputs. Compare the proposed next action with the authorization record and reclassify it as local execution, a milestone blocker, or a true authority change before acting; do not forward the worker's label as a user approval request.
+
 Let the closest owner read raw logs and perform local verification. Expand source or raw evidence only when the packet is contradictory, incomplete, high-risk, or insufficient for a project-level decision.
 
 Add a reviewer only when independent falsification materially lowers risk. Add a decision reasoner only for one evidenced choice whose wrong answer would cause substantial rework. Do not add agents for monitoring or duplicate analysis.
 
 Add a session, review, or validation only when it resolves a named uncertainty blocking the next product result. Count progress by a new user-usable capability or product-level decision and evidence that enables it, not by session activity, reports, checks, static milestones, or internal passes.
 
-Ask the user only when the project charter or a required gate must change, new authority or a product choice is required, or irreversible risk must be accepted.
+Ask the user only when the project charter or a required gate must change, new authority or a product choice is required, or irreversible risk must be accepted. Before asking, state in one line which authorization-record field changes and how. If no field changes, do not ask again for already-authorized reversible continuation; keep the current owner moving through correction, local verification, and the authorized fresh representative run.
 
 ## Durable State and Completion
 
