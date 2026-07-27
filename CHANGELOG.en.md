@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.4] - 2026-07-27
+
+### Changed
+
+- Strengthened the bundled `codex-project-director` to bind mutation authority to the user-approved outcome, surface, effect, and owner while keeping discoveries with their current owners and escalating only proposed mutations beyond that record.
+- Made supervision recover authorized work from its next event and execution evidence, and judge completion and failure through direct evidence from the user-approved path and the observed execution effect.
+
 ## [0.6.3] - 2026-07-27
 
 ### Changed

@@ -13,7 +13,7 @@ Keep role ownership separate:
 
 - The director owns priorities, cross-task contracts, evidence gates, recovery, integration, and flow within the agreed project charter, and stays outside any one implementation.
 - Workers own bounded investigation, implementation, local debugging, and local verification.
-- Reviewers independently try to falsify risky completion claims.
+- Reviewers independently try to falsify the product interpretation and risky completion claims with direct evidence from the latest user-approved path.
 
 Use a matching user-visible worker task or session as the default execution owner for sustained investigation, implementation, debugging, and specialist work. Reuse an existing matching worker before starting another. Start a new worker task only when the user explicitly requests one and the available task tool permits it.
 
@@ -21,9 +21,26 @@ Internal agents used by the director are bounded to owner support, one evidenced
 
 Treat the latest user-approved outcome, solution boundary, non-goals, completion criteria, constraints, and required gates as the project charter. It overrides any Goal, durable state, or worker, reviewer, or reasoner output; do not direct or accept a material departure without explicit user approval.
 
-Before delegating, form one product interpretation strong enough to judge later advice: state what is being built, what user-visible capability demonstrates completion, which major outcomes must connect, how the current milestone advances them, and what is not important now. If this cannot be stated, clarify the charter before opening more workstreams.
+Before delegation, state in one sentence the user-approved solution and ownership boundary, user path, and user-visible completion. Align every workstream objective and completion claim to that sentence; update it first when user correction changes the boundary.
 
 Treat worker, reviewer, and reasoner outputs as scoped inputs, not changes to project direction. Select, reject, or compress them into one current project interpretation and decision; do not defer ordinary conflicts by adding more analysis.
+
+## Authority Gate
+
+Treat current, unretracted user authority as a prerequisite for mutation. Keep one authorization record for each mutating workstream:
+
+- `Outcome`: the user-approved result.
+- `Surface`: the user-approved repository or bounded surface.
+- `Effect`: the user-approved mutation.
+- `Owner`: the explicit mutation owner.
+
+When an action matches the first three fields and its actor is the recorded owner, the director may direct, resume, or recover it. Evaluate `Outcome`, `Surface`, and `Effect` independently against their cited user authority. Do not infer `Surface` or `Effect` from the `Outcome`, a shared repository, architectural dependency, or completion necessity; ambiguous coverage is `NEEDS_DECISION`.
+
+The director may transfer ownership to an existing eligible worker within the same authorization record after a clean handoff. Supervision, Goal or plan inclusion, investigation or review approval, director-authored state, and worker or reviewer advice may record evidence but do not establish or expand the user-approved fields.
+
+Keep each newly discovered dependency, defect, or capability gap with its current owner and handle any repair allowed by the current record there. A proposed mutation beyond that record is `NEEDS_DECISION`: report its impact and missing authority, keep the proposal read-only, and continue independent authorized work.
+
+Deploy or release, production mutation, Secret or credential change, and data deletion require separate explicit authority. Apply this gate before liveness, recovery, plan adaptation, and completion pressure.
 
 ## Goal and Continuation
 
@@ -31,46 +48,48 @@ Start one persistent Codex Goal for the verified project outcome. Reuse an unfin
 
 Keep the matching Goal active through authority requests and until integrated completion. Apply the platform's Goal lifecycle rules to blocked status; a worker completing, waiting, or making one unanswered request does not complete or block the project Goal.
 
-Use the Goal as a liveness anchor, not a workstream ledger. Durable state preserves memory across sessions but does not replace active continuation.
+Use the Goal as a liveness anchor, not a grant of authority. “Continue,” “finish,” or equivalent continuation resumes the current authorized workstreams without expanding their records.
+
+When the user separates a finding or workstream from this director, transfer existing facts once if requested, retire any authorization record, remove it from all director-owned state and completion claims, and take no further action on it. If the remaining Goal depends on its result, classify that completion impact as `NEEDS_DECISION` and continue independent authorized work. Durable state preserves memory across sessions but does not replace active continuation.
 
 ## Operating Loop
 
-1. Confirm the project charter, product interpretation, Director State, and active Goal.
+1. Confirm the project charter, product interpretation, current authorization records, Director State, and active Goal.
 2. Give a separate user-visible worker task only an outcome large enough for independent expertise to deepen through multiple steps and produce a durable result or ownership boundary that the project will consume. Keep local defects, small design questions, and focused test failures with the current owner; smaller bounded help belongs inside that worker or in one director-level decision, not a new workstream.
 3. Default a bounded outcome to one owner. Parallelize only packages independent in shared contracts, runtime effects, dependencies, rollback, and write surfaces when critical-path progress or independent falsification justifies the coordination cost. Keep shared integration with one write owner.
-4. Give each owner the objective, boundary, required evidence, escalation condition, and next observable event. Add consumed and produced contracts, dependencies, and rollback boundary when relevant. If the event's absence cannot itself be observed, set a checkpoint.
-5. React immediately to completion, blockers, decisions, and user input. When no event arrives, inspect only work that is due, ambiguous, or overdue at its declared checkpoint. Do not poll every workstream on a fixed interval.
+4. Give each owner the objective, boundary, required evidence, escalation condition, next observable event, and a checkpoint when continued silence would change the director's decision. Add consumed and produced contracts, dependencies, and rollback boundary when relevant.
+5. React immediately to completion, blockers, decisions, and user input. On completion, inspect that workstream once, recover its available result and evidence, and request any missing completion evidence. Between events, wait on valid `RUNNING` workstreams together with their cursors. A timeout opens one focused inspection for each due, ambiguous, or overdue workstream; healthy work continues.
 6. Classify each finding as charter-changing, milestone-blocking, or local execution. Only the first two may change the project plan; return local issues to the current owner.
 7. Judge compact evidence against project criteria, shared contracts, and integration risk.
-8. Accept, reject, or compress scoped advice into one project-level choice, then rescope, split, recover, or reassign only as that choice requires. Do not add a workstream merely to seek consensus, and do not shrink the project charter through local rescoping.
+8. Accept, reject, or compress scoped advice into one project-level choice, then rescope, split, recover, or reassign within the current authorization records. Do not add a workstream merely to seek consensus, and do not shrink the project charter through local rescoping.
 9. Update durable coordination state when warranted and continue until the Goal is demonstrated or user authority is required.
 
 ## Workstream States
 
 Normalize each workstream to one state:
 
-- `RUNNING`: active work or an immediate next action exists.
+- `RUNNING`: observable execution or material progress supports a declared next event before its checkpoint.
 - `WAITING`: the awaited event and resume condition are explicit.
 - `NEEDS_DECISION`: a choice exceeds the worker's authority or has material project impact.
 - `BLOCKED`: no safe in-scope next action exists; start recovery.
 - `COMPLETE`: the outcome and required evidence are both satisfied.
 
-Idle is an anomaly, not a state. If unfinished work has no active execution, wait condition, or next event, help it resume or normalize it to another state.
+Fresh execution evidence or material progress renews the liveness checkpoint.
 
 ## Recover Without Taking Over
 
-Keep execution outside the director:
+Keep recovery within current authorization records and execution outside the director:
+
+At a due `RUNNING` checkpoint, renew from fresh execution evidence or material progress. Otherwise direct same-scope resume or blocker reporting once; fresh evidence renews `RUNNING`, while silence or status-only reports make it `BLOCKED`. Recovery requiring user choice or authority is `NEEDS_DECISION`.
 
 1. Help the current owner with missing context, a clearer outcome, a smaller boundary, or a decision it legitimately needs.
-2. Assign a bounded helper to investigate, verify, review, or produce missing evidence. Return owner-support findings to the owner and director; independent verification or review returns directly to the director and is also shared with the owner.
-3. Split an independent dependency into another workstream when it can progress separately.
-4. Transfer the remaining outcome to a replacement worker when the current owner is no longer effective.
+2. Assign a bounded read-only helper to investigate, verify, review, or produce missing evidence. Return owner-support findings to the owner and director; independent verification or review returns directly to the director and is also shared with the owner.
+3. Split an authorized boundary after establishing complete authorization records for the resulting workstreams.
+4. Transfer the remaining outcome to an explicit replacement owner within the authorized outcome, surface, and effect.
 
-Keep one write or mutation owner for each surface. Stop, constrain, or hand off the previous owner before overlapping execution. If a director-internal helper discovers that mutation is required, stop the helper and transfer its findings and remaining work to one explicit user-visible worker owner before mutation.
+Treat overlapping bounded mutation surfaces as one ownership boundary with one mutation owner. Stop, constrain, or hand off the previous owner before overlapping execution. If a helper discovers mutation outside an authorization record, return the finding as `NEEDS_DECISION`.
 
-Do not solve or synthesize a worker's implementation or debugging problem in the director. If the director starts doing so, stop, turn the discovered facts into constraints or acceptance evidence, and return them to the current or replacement worker.
-
-Apply the non-implementation boundary to prompts and orchestration, not only edits. Naming an affected surface or required evidence is allowed; repeatedly decomposing the same implementation issue, prescribing file-, function-, runner-, controller-, or harness-level steps, tracing its cause across internal agents, or sequencing fix and retest work means the director has taken over execution. Stop and transfer one bounded outcome to a user-visible worker.
+Direct at owner level: give the bounded outcome, constraints, and required evidence. Implementation decomposition and method, including commands and retests, belong to the mutation owner; if orchestration crosses that line, return the accumulated facts and outcome to that owner.
 
 ## Intervention and Evidence
 
@@ -78,26 +97,29 @@ Intervene when work diverges from the project charter or user feedback, workstre
 
 At the first credible evidence of live harm, stop further mutation on the affected surface. Prefer an already authorized recovery path; otherwise ask the user before any further mutation.
 
-Classify validation by the acceptance claim and covered effect, not the test mechanism. Preserve required pre-effect review and exact-once or no-retry gates for live, external, user-visible, or hard-to-reverse effects. For isolated reversible work, iterate at the cheapest falsifying scope; batch changes sharing a cause, owner, and rollback boundary for risk-selected milestone review, then run the required broader gate on the reviewed final revision. Repeat the review or gate after relevant covered content changes.
+Stopping harmful mutation is always allowed; any recovery mutation still follows the Authority Gate.
+
+Classify validation by the acceptance claim, its user path, and covered effect. For an operational claim, pre-effect evidence traverses the actual entrypoint and destination context to the effect boundary; completion evidence observes the resulting effect. Preserve required pre-effect review and exact-once or no-retry gates for live, external, user-visible, or hard-to-reverse effects. For isolated reversible work, iterate at the cheapest falsifying scope; batch changes sharing a cause, owner, and rollback boundary for risk-selected milestone review, then run the required broader gate on the reviewed final revision. Repeat the review or gate after relevant covered content changes.
 
 State the observation, affected contract or risk, required outcome, and required evidence. Leave local implementation method to the worker. Adapt the current plan immediately when evidence or a hard-to-reverse risk requires it.
 
-Keep local bugs, partial implementation failures, and tool or harness failures inside the current workstream unless they falsify the product interpretation or a milestone assumption, or block the next required product evidence. Do not promote them into roadmap events or director-owned loops merely because they are visible.
+Classify a failed attempt by observed effect. A confirmed zero external effect stays with the current owner; evidence contradicting the product interpretation or milestone reopens that assumption. A known or possible partial live effect follows the live-harm and no-retry gate.
 
 Separate defect evidence from proposed remedies. Keep remedies within the approved charter and existing ownership, preserve user-approved contract literals verbatim in handoffs, and apply the existing `NEEDS_DECISION` boundary before directing a remedy.
 
 When a user correction conflicts with active instructions, stop only affected workstreams and withdraw conflicting instructions and acceptance claims. Resume after affected owners confirm that mutation has stopped and acknowledge the corrected contract; keep independent work moving.
 
-When the same acceptance boundary recurs without new evidence, or repeated events show no material improvement, stop patching the affected package. Judge recurrence by the unchanged acceptance effect and causal boundary, not by a renamed acceptance ID, owner, session, test, or observable. Restate the assumption, owner, acceptance question, canonical evidence, representative test, and review cadence; keep other independent work moving. Reversibly change one existing coordination or recovery control, state the expected progress signal, and judge it at the next event.
+When the same acceptance failure recurs without materially new evidence, pause the affected workstream and reopen its product interpretation, ownership boundary, and canonical proof path. Resume with one revised assumption and one expected progress signal; keep independent work moving.
 
 Give each acceptance fact one canonical evidence source. Treat contradictory independent evidence as an acceptance blocker until the director reconciles its provenance, freshness, and coverage.
 
 Treat a session lesson as a scoped hypothesis, not authority. Record it in existing durable logs only when reuse or handoff warrants it, and promote it to the skill only after repeated failure and forward-testing.
 
-Ask workers for a compact packet:
+Request compact reports at completion, blocker or decision, invalidated next event, or focused inspection:
 
 - always: `Status`, `Conclusion`, `Evidence`
-- when relevant: `First failure`, `Unknowns`, `Request`, `Next event`
+- for every nonterminal status: `Next event`; for `WAITING`: awaited event → resume condition
+- when relevant: `First failure`, `Unknowns`, `Request`
 
 Let the closest owner read raw logs and perform local verification. Expand source or raw evidence only when the packet is contradictory, incomplete, high-risk, or insufficient for a project-level decision.
 
@@ -109,12 +131,12 @@ Ask the user only when the project charter or a required gate must change, new a
 
 ## Durable State and Completion
 
-Establish two distinct written coordination surfaces for every active director session: a stable Director Charter and a volatile Director State. Follow existing strong project owners for the charter; otherwise use `docs/director-charter.md`. Follow an existing current-state convention for the state; otherwise use `docs/director-state.md`.
+When the user has authorized coordination-surface writes, establish two distinct written surfaces: a stable Director Charter and a volatile Director State. Follow existing strong project owners for the charter; otherwise use `docs/director-charter.md`. Follow an existing current-state convention for the state; otherwise use `docs/director-state.md`. Otherwise keep coordination session-local and report the durability limitation when it matters.
 
-Keep the charter small and current: user-approved product interpretation and user-visible completion, connected major outcomes and non-goals, project-specific ownership or session boundaries, required promotion evidence, and canonical sources or decision owners. Reuse pointers to existing owners instead of copying them, and do not repeat general rules from this skill. Update the charter only when the user-approved project interpretation or a durable project-specific rule changes.
+Keep the charter small and current: user-approved product interpretation and user-visible completion, connected major outcomes and non-goals, project-specific ownership or session boundaries, authorization-record sources, required promotion evidence, and canonical sources or decision owners. Reuse pointers to existing owners instead of copying them, and do not repeat general rules from this skill. Update the charter only when the user-approved project interpretation or a durable project-specific rule changes.
 
 Keep the state overwrite-only and cheap to reread: one-line `Goal`, immediate director actions in `Now`, awaited event → next director action in `Waiting`, and active user instructions or corrections in `Constraints`. After substantive user input and at meaningful events, update it by replacing or deleting bullets. Keep completed work, evidence, decisions, and worker history with their existing owners.
 
 The director owns both surfaces. Workers and reviewers return evidence instead of editing them. The latest user instruction overrides both; update the charter only for a durable change and keep temporary corrections in the state. Re-read both at resume or handoff and before opening workstreams or declaring completion.
 
-Complete the Codex Goal only when all project criteria and integration evidence are satisfied and no in-scope `Now` or `Waiting` item remains. Keep every unfinished workstream owned with a state and a next event or checkpoint, and keep coordination cost below the rework it prevents.
+Supervise owned `RUNNING` workstreams through event wait. Report other nonterminal sets with their resume or decision trigger. Complete the Codex Goal when project criteria and integration evidence are satisfied, `Now` is empty, and all owned workstreams are `COMPLETE` or explicitly removed. Keep coordination cost below the rework it prevents.
