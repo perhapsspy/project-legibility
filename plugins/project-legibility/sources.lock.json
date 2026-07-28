@@ -32,14 +32,14 @@
     {
       "id": "codex-project-director",
       "repository": "https://github.com/perhapsspy/codex-project-director.git",
-      "commit": "29de612af55dcda20123de15efaa133dd90bd279",
+      "commit": "a7cf0d7faad05c1c0ed106aaade1463ca5ac87f1",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-project-director",
           "sourcePath": "skills/codex-project-director",
           "targetPath": "skills/codex-project-director",
-          "integrity": "sha256:b0439eaa588513f696b98152bff39a1bbc430ee6a5451e30e4ae503bb1c47371"
+          "integrity": "sha256:2174cf6b9435fc26900bfb1335e69bcc4ba2d2af02a6bea976fce00a0c3672ca"
         }
       ]
     },

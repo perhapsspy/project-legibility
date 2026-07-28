@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.6] - 2026-07-28
+
+### Changed
+
+- Compressed the bundled `codex-project-director` around authority, event-driven supervision, and evidence and recovery, preserving active direction and recovery of authorized work while removing repeated procedure.
+- Strengthened the Director to verify outcome, surface, action scope, mutation owner, and actual user authority instead of turning advice or completion necessity into changes to a new repository, service, or API. Cross-repository mutation now starts from current source relationships and existing wiring.
+
 ## [0.6.5] - 2026-07-28
 
 ### Changed
