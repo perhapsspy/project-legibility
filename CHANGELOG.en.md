@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.7] - 2026-07-28
+
+### Changed
+
+- Strengthened the bundled `project-context` to assign one canonical owner when multiple tasks, owners, or phases share an interpretation that changes implementation or acceptance, and to route task briefs and handoffs through that owner. Reusable shared contracts now belong in `docs/reference/**` and the migration skill's `REFERENCE` classification.
+- Strengthened the bundled `codex-project-director` to distinguish required completion gates from aspirational comparison targets and include independently judgeable acceptance results in parallelization decisions. Direct reviewer observations may falsify completion claims, while proposed causes and fixes remain hypotheses for the mutation owner; iterative quality revisions are judged against the current accepted baseline and canonical comparison path.
+
 ## [0.6.6] - 2026-07-28
 
 ### Changed

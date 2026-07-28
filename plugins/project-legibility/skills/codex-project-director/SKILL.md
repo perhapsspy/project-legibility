@@ -15,7 +15,7 @@ Drive one user-approved project outcome to verified integration while implementa
 
 Use a matching existing worker for sustained execution. Start a new user-visible worker only when the user explicitly requests one. Internal agents may provide bounded owner support, one evidenced decision, or independent falsification; they are evidence providers, not durable workstream or mutation owners.
 
-Keep the latest user-approved outcome, solution boundary, non-goals, constraints, required gates, and completion criteria as the project charter. Before delegation, state in one sentence the approved solution and ownership boundary, user path, and user-visible completion. Derive the target structure from that sentence and current source evidence; retain an existing owner or layer only when a current caller or required contract gives it a role. Align workstream objectives and completion claims to this interpretation, and update it first when user correction changes the boundary.
+Keep the latest user-approved outcome, solution boundary, non-goals, constraints, required gates, and completion criteria as the project charter. Classify user-approved quality criteria as required completion gates or aspirational comparison targets. Gates decide `COMPLETE`; comparison targets guide quality priorities and remaining-distance reports. Before delegation, state in one sentence the approved solution and ownership boundary, user path, and user-visible completion. Derive the target structure from that sentence and current source evidence; retain an existing owner or layer only when a current caller or required contract gives it a role. Align workstream objectives and completion claims to this interpretation, and update it first when user correction changes the boundary.
 
 ## Authority and Grounding
 
@@ -45,7 +45,7 @@ Use one persistent Codex Goal for the verified project outcome. Reuse an unfinis
 
 When the user separates a finding or workstream from this director, transfer existing facts once if requested, retire its authorization record, remove it from director-owned state and completion claims, and take no further action on it. If the remaining Goal depends on that result, classify the completion impact as `NEEDS_DECISION` and continue independent authorized work.
 
-Create a separate workstream only for a durable independently owned outcome that requires sustained expertise. Keep local defects, small design questions, and focused failures with the current owner. Default each bounded mutation surface to one owner. Parallelize only after shared contracts are established and when runtime effects, dependencies, rollback, and write surfaces are independent enough to justify coordination cost.
+Create a separate workstream only for a durable independently owned outcome that requires sustained expertise. Keep local defects, small design questions, and focused failures with the current owner. Default each bounded mutation surface to one owner. Parallelize only after shared contracts are established and when each workstream's acceptance result, runtime effects, dependencies, rollback, and write surfaces are independent enough to justify coordination cost.
 
 Normalize each owned workstream:
 
@@ -72,6 +72,8 @@ Keep overlapping mutation surfaces under one mutation owner and stop or hand off
 
 Classify findings as charter-changing, milestone-blocking, or local execution. Adapt the project plan for the first two; return local execution to its owner. Select, reject, or compress scoped advice into one project decision within current authority. Add reviewers or decision reasoners only when independent falsification or one costly-to-reverse choice materially lowers risk, not for monitoring or consensus.
 
+Brief reviewers with the current contract, claim under test, actual artifact or canonical evidence path, and relevant completion gate or comparison target. Observed discrepancies supported by direct evidence may falsify the claim. Proposed causes and fixes are hypotheses for the mutation owner to verify.
+
 ## Evidence, Recovery, and State
 
 Judge acceptance against the current charter, user path, covered effect, and shared contracts. Operational pre-effect evidence must traverse the real entrypoint and destination context to the effect boundary; completion evidence observes the resulting effect. Use the cheapest falsifying scope for isolated reversible work, while preserving required pre-effect review, exact-once, and no-retry gates for remote, live, user-visible, or hard-to-reverse effects.
@@ -87,6 +89,8 @@ When user correction conflicts with active instructions, pause all affected work
 
 When the same acceptance failure recurs without material new evidence, pause the affected workstream and reopen its product interpretation, ownership boundary, and canonical proof path. Resume with one revised assumption and one expected progress signal.
 
+For iterative quality claims, record a pointer to the current accepted baseline and one canonical comparison path. Judge each revision against that pair and update the baseline after acceptance.
+
 Give each acceptance fact one canonical evidence source. Reconcile contradictory evidence by provenance, freshness, and coverage before accepting completion. Request compact reports:
 
 - always: `Status`, `Conclusion`, `Evidence`
@@ -99,7 +103,7 @@ Ask the user when the charter, an authority field, a required gate, or accepted 
 
 When coordination-surface writes are authorized, maintain:
 
-- a stable Director Charter containing the current product interpretation, completion criteria, project-specific boundaries, authority sources, and canonical owner pointers;
+- a stable Director Charter containing the project-specific product interpretation, completion gates and comparison targets, project-specific boundaries, authority sources, and canonical owner pointers; durable shared contracts remain with those owners;
 - an overwrite-only Director State containing one-line `Goal`, immediate `Now`, awaited event → next action in `Waiting`, and active `Constraints`.
 
 Follow existing project owners; otherwise use `docs/director-charter.md` and `docs/director-state.md`. The director owns both surfaces. Workers return evidence instead of editing them. Replace or delete stale state at meaningful events; keep history with its existing owners. Without write authority, keep coordination session-local and report the durability limit when it matters.
