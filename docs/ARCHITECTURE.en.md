@@ -2,7 +2,7 @@
 
 [한국어](ARCHITECTURE.md)
 
-This document owns Project Legibility's source boundaries, plugin assembly, lock integrity, and release verification model. See [PRODUCT](PRODUCT.en.md) for the product promise, skill composition roles, and invocation model; the [README](../README.en.md) for public installation and usage; and [CONTRIBUTING](../CONTRIBUTING.en.md) for the change procedure and release gate.
+This document owns Project Legibility's source boundaries, plugin assembly, lock integrity, and release evidence model.
 
 ## Design goals
 
@@ -58,7 +58,7 @@ Sync does not merge meaning. It assembles canonical trees as-is and fails on a d
 
 ## Distribution boundary
 
-This repository owns the Project Legibility plugin and its releases, but it does not own a marketplace. `perhapsspy/codex-plugins` is a thin catalog that points at a verified release commit without copying the plugin tree or canonical skills. Users register the publisher marketplace once and install `project-legibility@perhapsspy`.
+This repository owns the Project Legibility plugin and its releases. `perhapsspy/codex-plugins` is a thin catalog that points at a verified release commit without copying the plugin tree or canonical skills. The [release runbook](runbooks/release.md) owns publication and installed-plugin refresh boundaries.
 
 ## Lock and integrity
 
@@ -88,10 +88,10 @@ An umbrella skill would route product-level requests again, adding another respo
 
 ## Release verification model
 
-A release decision uses three kinds of evidence. Follow the checklist in the [CONTRIBUTING release gate](../CONTRIBUTING.en.md#release-gates) for the executable gate.
+A release decision uses three kinds of evidence; the [release runbook](runbooks/release.md) owns execution conditions and sequence.
 
 1. **Package:** the manifest and plugin tree are valid, and the manifest version matches the CHANGELOG and Git tag.
 2. **Source:** every full SHA exists in the remote canonical source, and the lock, source tree, and snapshot agree.
 3. **Skill:** every bundled skill validator, relative links, companion relationships, and catalog regressions pass.
 
-Release tags are immutable `v<version>` checkpoints that match the manifest version. Publisher-catalog publication finishes only after it pins that commit and passes a remote install round trip. Fix a faulty release with a new patch or minor version; never move its tag.
+Release tags are immutable `v<version>` checkpoints that match the manifest version. Publisher-catalog publication finishes after it pins that commit and catalog CI passes remote-manifest verification.

@@ -18,10 +18,9 @@
 
 # Current State
 
-- `project-context` 정본 `b1394c9c54470109855fbae2b8b7a0c9275f88da`와 `codex-project-director` 정본 `9a18b665a96afb5787328aaf799437882533aea6`이 공개 `main`에 게시됐다.
-- Project Legibility 0.6.7 후보가 두 정본, 최신 canonical source lock과 생성 snapshot을 가리키며 local·remote·offline source, release-tag bundle, plugin·skill validator와 unit test 31개를 통과했다.
-- `CHANGE-REVIEW.md`가 변경 전후 행동 차이와 축소 결정을 설명한다.
+- `project-context`와 `codex-project-director` 정본 변경, Project Legibility 0.6.7 release와 publisher catalog 갱신이 완료됐다.
+- 변경 전후 행동 차이와 축소 결정은 `archive/CHANGE-REVIEW.md`에 보존한다.
 
 # Next Step
 
-- 검증된 release commit을 push하고 `v0.6.7` tag와 GitHub Release를 만든 뒤 publisher catalog 고정값을 갱신한다.
+- 같은 계약에서 회귀가 확인되거나 제품 구성 변경이 필요할 때 다시 연다.

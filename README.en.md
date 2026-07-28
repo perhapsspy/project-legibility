@@ -92,11 +92,9 @@ Two core practices are joined by an early-direction check, specialists for concr
 
 ## Update and remove
 
-```bash
-# Update
-codex plugin marketplace upgrade perhapsspy
-codex plugin add project-legibility@perhapsspy
+The Codex app manages updates for installed plugins. Published versions arrive through the app's plugin update lifecycle; start a new task after the update to use the refreshed skills.
 
+```bash
 # Remove the plugin
 codex plugin remove project-legibility@perhapsspy
 ```
@@ -105,14 +103,7 @@ To remove the marketplace registration as well, remove every installed perhapssp
 
 ## Development
 
-Each skill is maintained in the repository linked above. This repository pins only the commits released together.
-
-- [Release notes](CHANGELOG.en.md)
-- [Product contract](docs/PRODUCT.en.md)
-- [Plugin structure and validation](docs/ARCHITECTURE.en.md)
-- [Skill updates and releases](CONTRIBUTING.en.md)
-- [Included commits](plugins/project-legibility/sources.lock.json)
-- [perhapsspy plugin catalog](https://github.com/perhapsspy/codex-plugins)
+Each skill is maintained in the repository linked above, while this repository pins the commits released together. See [PRODUCT](docs/PRODUCT.en.md) for product composition, [Architecture](docs/ARCHITECTURE.en.md) for assembly, and the [CHANGELOG](CHANGELOG.en.md) for public release history.
 
 ## License
 

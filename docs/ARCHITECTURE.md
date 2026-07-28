@@ -2,7 +2,7 @@
 
 [English](ARCHITECTURE.en.md)
 
-이 문서는 Project Legibility의 source ownership, plugin assembly, lock 무결성과 release 검증 모델을 소유합니다. 제품 약속, 스킬 구성 역할과 호출 모델은 [PRODUCT](PRODUCT.md), 공개 설치와 사용 진입은 [README](../README.md), 실제 변경·release 순서와 gate는 [CONTRIBUTING](../CONTRIBUTING.md)을 따릅니다.
+이 문서는 Project Legibility의 source ownership, plugin assembly, lock 무결성과 release 증거 모델을 소유합니다.
 
 ## 설계 목표
 
@@ -58,7 +58,7 @@ Sync는 의미를 merge하지 않습니다. Canonical tree를 그대로 조립�
 
 ## 배포 경계
 
-이 저장소는 Project Legibility plugin과 release를 소유하지만 marketplace는 소유하지 않습니다. `perhapsspy/codex-plugins`는 검증된 release commit을 가리키는 얇은 catalog이며 plugin tree나 canonical skill을 복사하지 않습니다. 사용자는 publisher marketplace를 한 번 등록하고 `project-legibility@perhapsspy`를 설치합니다.
+이 저장소는 Project Legibility plugin과 release를 소유합니다. `perhapsspy/codex-plugins`는 검증된 release commit을 가리키는 얇은 catalog이며 plugin tree나 canonical skill을 복사하지 않습니다. 게시와 설치본 갱신의 실행 경계는 [release runbook](runbooks/release.md)이 소유합니다.
 
 ## Lock과 무결성
 
@@ -88,10 +88,10 @@ Submodule은 repository 관계를 보여주지만 plugin 설치에 추가 init/f
 
 ## Release 검증 모델
 
-Release 판단은 다음 세 종류의 증거로 구성됩니다. 실제 실행 gate는 [CONTRIBUTING](../CONTRIBUTING.md#release-gate)의 체크리스트를 따릅니다.
+Release 판단은 다음 세 종류의 증거로 구성되며 실행 조건과 순서는 [release runbook](runbooks/release.md)이 소유합니다.
 
 1. **Package:** manifest와 plugin tree가 유효하고 manifest version은 CHANGELOG·Git tag와 일치합니다.
 2. **Source:** full SHA가 remote canonical source에 존재하고 lock, source tree와 snapshot이 일치합니다.
 3. **Skill:** 포함된 모든 skill validator, 상대 링크, companion 관계와 catalog 회귀가 통과합니다.
 
-Release tag는 manifest version과 같은 `v<version>` 형식의 immutable 기준점입니다. Publisher catalog 공개는 release 뒤에 그 commit을 고정하고 remote install round trip을 통과해야 완료됩니다. 실패한 release는 tag를 이동하지 않고 새 patch 또는 minor version으로 고칩니다.
+Release tag는 manifest version과 같은 `v<version>` 형식의 immutable 기준점입니다. Publisher catalog 공개는 release 뒤에 그 commit을 고정하고 catalog CI의 remote manifest 검증을 통과하면 완료됩니다.

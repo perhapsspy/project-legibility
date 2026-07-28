@@ -92,11 +92,9 @@ codex plugin add project-legibility@perhapsspy
 
 ## 업데이트와 제거
 
-```bash
-# 업데이트
-codex plugin marketplace upgrade perhapsspy
-codex plugin add project-legibility@perhapsspy
+설치된 플러그인의 업데이트는 Codex 앱이 관리합니다. 게시된 새 버전은 앱의 plugin update lifecycle을 통해 반영되며, 반영 뒤 새 작업에서 갱신된 스킬을 사용합니다.
 
+```bash
 # 플러그인 제거
 codex plugin remove project-legibility@perhapsspy
 ```
@@ -105,14 +103,7 @@ codex plugin remove project-legibility@perhapsspy
 
 ## 개발
 
-각 스킬은 위 목록에 연결된 저장소에서 따로 관리합니다. 이 저장소는 함께 배포할 커밋만 고정합니다.
-
-- [변경 내역](CHANGELOG.md)
-- [제품 계약](docs/PRODUCT.md)
-- [플러그인 구성과 검증](docs/ARCHITECTURE.md)
-- [스킬 갱신과 릴리스](CONTRIBUTING.md)
-- [현재 포함된 커밋](plugins/project-legibility/sources.lock.json)
-- [perhapsspy 플러그인 카탈로그](https://github.com/perhapsspy/codex-plugins)
+각 스킬은 위 목록에 연결된 저장소에서 관리하며 이 저장소는 함께 배포할 커밋을 고정합니다. 제품 구성은 [PRODUCT](docs/PRODUCT.md), 조립 구조는 [Architecture](docs/ARCHITECTURE.md), 공개 변경 이력은 [CHANGELOG](CHANGELOG.md)에서 확인할 수 있습니다.
 
 ## 라이선스
 

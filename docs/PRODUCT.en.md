@@ -22,6 +22,8 @@ Project Legibility helps projects remain understandable, reviewable, and changea
 - Users ask for work normally, and Codex selects skills that match the problems evident in the request.
 - A selected skill performs its own responsibility and hands off to or works with another skill only when an adjacent problem actually appears.
 
-## Document boundaries
+## Composition changes
 
-This document owns the product center and composition. See the [README](../README.en.md) for installation and ordinary usage and [Architecture](ARCHITECTURE.en.md) for plugin assembly and release boundaries. Each canonical `SKILL.md` owns that skill's meaning, triggers, and workflow. Public descriptions follow and summarize these roles.
+Add a skill when it fills a role the current composition does not cover, its selection boundary with adjacent skills is clear, and canonical validation plus representative invocation cases are ready for the maintainer to approve its product role and invocation boundary. Review the published composition when evidence shows a severe failure, repeated selection confusion, or role duplication without distinct value.
+
+Each canonical `SKILL.md` owns that skill's meaning, triggers, and workflow. This document owns skill addition or removal and product-level role relationships.
