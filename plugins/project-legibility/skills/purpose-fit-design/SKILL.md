@@ -5,53 +5,31 @@ description: Use to set an early design or implementation-planning direction fro
 
 # Purpose-Fit Design
 
-## Job
+## Job and Exit
 
-Set an early direction that fits the user/domain purpose, explicit constraints, current evidence, and the minimum observable success. Treat existing implementation and precedent as evidence, not automatic authority.
+Set an early direction from the user/domain purpose, explicit constraints, current evidence, and minimum observable success. Treat existing implementation, precedent, and defaults as evidence, not automatic authority.
 
-End with a provisional direction, the smallest useful check, or one question that blocks the choice. Keep implementation scope tied to the chosen purpose and confirmed contracts.
+End with a provisional direction, the smallest useful check, or one question that blocks the choice. Keep the response proportional—a small choice may need one paragraph—and do not expand implementation scope while exploring.
 
-## Fit Check
+## Decision Contract
 
-Answer only what affects the decision. A small task may need one paragraph.
+- State the desired outcome and minimum observable success.
+- Preserve explicit limits. Treat user corrections and rejected concepts as binding at the reach implied by the request; do not reintroduce them under another name or layer.
+- Separate confirmed evidence, unknowns, and suggestions from existing code or precedent. Urgency is a delivery constraint, not evidence that a direction fits.
+- Choose a provisional direction and name the evidence or smallest check that would change it. Investigate or ask one focused question only when a missing fact changes the choice; otherwise proceed with the uncertainty stated.
+- Compare alternatives only when they materially change responsibility, persistent state, policy, dependency, lifecycle, public contract, compatibility, or hard-to-reverse coupling.
 
-1. **Purpose:** state the user/domain outcome and minimum observable success.
-2. **Constraints:** state explicit corrections, rejected concepts, and limits on the choice.
-3. **Evidence:** identify what is confirmed, unknown, or merely suggested by existing code, precedent, or defaults. Treat urgency as a delivery constraint, not evidence of fit.
-4. **Direction:** choose a provisional direction and name the evidence or smallest check that could change it.
+A technical default, fallback, or security/consistency claim is a design choice when it changes user-visible behavior, domain meaning, or policy. Otherwise leave it as an implementation detail.
 
-Investigate or ask one focused question when a missing fact changes the choice. Keep the gap explicit until evidence resolves it.
+For temporary work, choose the smallest useful slice that preserves purpose and constraints. Require a credible way to verify and reverse it; add an adapter, wrapper, or rollback boundary only when it materially helps.
 
-Compare alternatives only for a material choice: one that changes responsibility, persistent state, policy, dependency, lifecycle, public contract, compatibility, or hard-to-reverse coupling.
+## Boundaries and Handoffs
 
-Treat explicit user corrections as binding. Apply them at the reach implied by the request, preserve unaffected constraints, and keep rejected concepts outside the direction.
+Use the owning workflow when the remaining problem is already clear:
 
-A technical default, fallback, or security/consistency claim is a design choice when it changes user-visible behavior, domain meaning, or policy. Otherwise, keep it as a technical detail.
+- source discovery when the governing contract is unknown;
+- semantic boundary design when meaning ownership differs across layers;
+- interactive state flow when intent, async work, presentation, or freshness are entangled;
+- structure work after direction is settled and code shape or verification remains.
 
-For a temporary implementation, choose the smallest useful slice that preserves purpose and constraints. Require a credible way to verify and reverse it, but add an adapter, wrapper, or rollback boundary only when it materially helps.
-
-## Specialist Handoff
-
-Use a specialist directly when the problem is already clear. While checking an unresolved direction, hand off when a missing fact blocks the choice:
-
-- source ownership when the governing contract is unknown;
-- semantic boundaries when one meaning may differ across layers;
-- interactive state flow when intent, async work, presentation, or freshness are mixed;
-- structure-first after direction is settled and code shape or verification is the remaining problem.
-
-## Red Flags
-
-- Reusing something because it already exists, without checking purpose and constraints.
-- Adding policy or structure from a vague security, consistency, or future-use claim.
-- Reintroducing an explicitly rejected concept under another name or layer.
-- Treating "copy now, clean later" as sufficient without a verification and reversal story.
-
-## Final Check
-
-Before implementation or final recommendation, confirm:
-
-- The direction fits the purpose, constraints, and observable success.
-- Existing code and precedent were treated as evidence rather than default authority.
-- Explicit corrections and rejected concepts remain respected.
-- The choice has a useful verification or a clearly named unknown.
-- The process weight matches the size and reversibility of the choice.
+When direction is already settled, do not redesign it or decide code, state, or ownership structure here; pass the settled contract to the relevant workflow. Do not perform specialist decisions inside this skill. Hand off the purpose, constraints, evidence, success condition, and unresolved fact so the next workflow does not reopen product direction without new evidence.
