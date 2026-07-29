@@ -20,6 +20,8 @@
 
 새 skill의 역할과 선택 경계는 [제품 계약](../PRODUCT.md)에 먼저 반영합니다. Manifest, 한영 changelog와 `v<version>` tag는 선택한 version을 함께 가리킵니다.
 
+저장소 루트의 운영 문서만 바뀐 경우 즉시 plugin release는 필요하지 않습니다. 위 분류는 다음 release의 version을 선택할 때 적용합니다.
+
 ## 1. 한 번에 사전 점검
 
 시작 전에 다음을 한 번만 결정합니다.
@@ -133,6 +135,8 @@ python3 scripts/sync_skills.py check
 7. Catalog 변경을 commit·push하고 catalog CI 성공을 확인합니다.
 
 여기서 배포가 완료됩니다. 로컬 설치 version이나 cache freshness는 Codex 앱의 plugin lifecycle이 소유합니다. 클라이언트 갱신을 별도로 진단하는 작업은 사용자가 요청한 환경과 시점에서 수행합니다.
+
+PR은 필수 릴리스 단계가 아닙니다. 별도 검토나 협업이 필요할 때만 선택적으로 사용합니다.
 
 ## 중단 조건
 
