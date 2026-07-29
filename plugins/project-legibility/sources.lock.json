@@ -108,14 +108,14 @@
     {
       "id": "semantic-boundary-design",
       "repository": "https://github.com/perhapsspy/semantic-boundary-design.git",
-      "commit": "2590d3dc2a059942c579e9ccca957725a444ef52",
+      "commit": "795b7193bc0bb4d483421cd2be646a07f7fd1257",
       "license": "MIT",
       "skills": [
         {
           "id": "semantic-boundary-design",
           "sourcePath": "skills/semantic-boundary-design",
           "targetPath": "skills/semantic-boundary-design",
-          "integrity": "sha256:e626cb529625944ee07ff9c9d986789c3f3d34efef20d9ced8af45891d59a15c"
+          "integrity": "sha256:e1ee8b91fc527474d0c5840587426dc533b626d7938de416a841e29012946358"
         }
       ]
     },

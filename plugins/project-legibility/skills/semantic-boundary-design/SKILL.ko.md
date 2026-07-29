@@ -1,102 +1,35 @@
 # Semantic Boundary Design
 
-## 목적
+## 역할과 경계
 
-의미를 정하는 결정마다 owner를 하나만 두어 semantic drift를 막는다.
+의미를 정하는 결정마다 owner 하나를 배정해 semantic drift를 막는다. 여러 계층이 같은 데이터를 관찰, 전달, 표시할 수 있지만 identity, lifecycle, permission, command, route, event, compatibility, presentation의 의미는 한 곳에서만 결정한다.
 
-여러 계층이 같은 데이터를 observe, pass, render할 수는 있다. 하지만 identity, lifecycle, permission, command, route, event, compatibility, presentation의 의미를 결정하는 계층은 하나여야 한다.
+하나의 사용자·도메인 capability가 여러 representation을 지나며 의미 규칙이 중복되거나 caller가 추론하거나 adapter가 보존하기 시작할 때 쓴다. 현재 owner를 읽기 전용으로 찾는 일, owner 확정 뒤 local 코드 구조화, 순수 async 반응성·최신성, 변경 범위 통제는 각각 source-owner 감사, 구조 작업, interactive-state flow, 범위 소유 workflow로 넘긴다. 제외된 concern이 주 문제라면 여기서 owner ledger나 해법을 만들지 말고, 구현 메커니즘 없이 관찰된 동작과 제약만 넘긴다.
 
-## Use / Do Not Use
+## Owner Ledger
 
-다음 cross-layer 작업 전이나 작업 중에 사용한다.
+1. capability를 사용자 또는 도메인 용어로 이름 붙인다.
+2. 관련 representation crossing만 확인한다. record/read model, UI draft·intent, route/query state, command input, API payload, result/event/patch, presentation model, compatibility adapter가 해당할 수 있다.
+3. drift될 결정을 나열한다. identity/alias, lifecycle/status, permission/capability, command·navigation grammar, projection/presentation, compatibility, representation 사이 freshness/fallback/revision 의미가 해당할 수 있다.
+4. decision마다 owner 하나만 배정한다. 현재 근거와 권한이 모두 뒷받침할 때만 가장 작은 durable owner를 고른다. 그렇지 않으면 `decision needed -> missing evidence/authority`로 남기고, 결정 주체도 근거가 있거나 명시됐을 때만 적는다.
+5. caller 경계를 정한다. caller는 전달, 선택, 호출, 표시, 렌더링할 수 있지만 자신이 소유하지 않은 의미를 해석, 정규화, 재결정하거나 policy로 보존하지 않는다.
 
-- 하나의 capability가 여러 representation을 지난다.
-- alias, fallback, label, status, permission, lifecycle rule이 caller로 퍼진다.
-- owner가 아닌 caller가 의미를 parse, normalize, translate, infer하기 시작한다.
-- adapter가 shape translation을 넘어 product policy를 보존한다.
-- test가 owner-boundary behavior가 아니라 helper internals를 고정한다.
+현재 task가 정당화하는 범위만 refactor한다. 의미 소유권은 더 넓은 정리나 구현 우선순위를 허가하지 않는다.
 
-다음 용도로는 쓰지 않는다.
+## 배치 규칙
 
-- semantic boundary 이동이 없는 작은 local edit.
-- 기존 owner를 읽기 전용으로 찾는 일. 이때는 `source-owner-audit`.
-- owner가 명확한 뒤 local 변경 경계나 flow를 정리하는 일. 이때는 `structure-first`.
-- 순수 async freshness, responsiveness, race-prone interaction 작업. 이때는 `interactive-state-flow`.
-- change scope만 통제하는 일. 이때는 `structure-first`.
+- record identity와 field alias는 record 또는 contract owner가 맡는다.
+- 사용자 intent는 UI surface나 command-input owner가, 최종 command payload는 session 또는 command owner가 맡는다.
+- business request parsing은 framework wrapper가 아니라 application route가 맡는다. 공용 route/query grammar는 navigation owner가 맡는다.
+- permission과 capability는 policy owner가, label과 action은 surface 또는 view-model owner가 맡는다.
+- result envelope, event, patch, resync 의미는 application/realtime result owner가 맡는다.
+- representation 사이 stale, pending, fallback, conflict, revision 수용은 해당 의미 계약을 소유한 route, session, screen이 맡는다. 순수 async behavior는 이 스킬 밖에서 다룬다.
+- adapter는 shape를 변환한다. 제품 policy는 근거 있는 명시적 배정이 있을 때만 소유한다.
 
-## 인접 스킬
+근거로 확인된 owner 밖의 fallback chain, 중복 status check, caller가 만든 최종 payload, wrapper의 business parsing, 반복된 freshness key, policy를 보존하는 adapter는 결정이 owner 밖으로 샜다는 근거다. 새 계층을 만들라는 자동 지시는 아니다.
 
-- `source-owner-audit`는 현재 source owner를 근거로 찾는다. 이 스킬은 owner 배치가 설계 문제가 된 뒤 semantic decision을 배정한다.
-- `structure-first`는 owner가 정해진 뒤 current unit의 경계를 잡고 구조를 다듬는다. 이 스킬은 capability-wide owner ledger에서 시작한다.
-- `interactive-state-flow`는 freshness, pending, stale, async presentation behavior에 특화된다. 이 스킬은 freshness/fallback/revision이 representation 사이 semantic contract ownership일 때만 다룬다.
+## Guard와 이관
 
-## Operating Flow
+안정된 owner 경계를 보호하는 가장 작은 contract, boundary, negative, type/schema, user-visible regression test를 둔다. owner가 의미를 한 번만 결정하고 caller가 조용히 다른 의미를 고를 수 없음을 검증하며 helper 내부 구현은 고정하지 않는다.
 
-1. capability를 user/domain term으로 이름 붙인다.
-2. representation crossings를 나열한다: source record, read model, UI draft, user intent, route/query state, command input, API payload, command result, realtime patch, presentation model, compatibility adapter.
-3. semantic decisions를 나열한다: identity/alias, lifecycle/status, permission/capability, command grammar, route/navigation grammar, freshness/conflict/revision/pending/fallback, projection/presentation, compatibility.
-4. decision마다 owner를 하나만 배정한다. 현재 source나 명시적 task context가 충분한 evidence와 authority를 보여줄 때만 가장 작은 durable owner를 고른다. 둘 중 하나라도 없으면 `decision needed -> missing evidence/authority`를 쓰고, 누가 결정해야 하는지는 그 decision owner가 근거로 확인되었거나 명시되었을 때만 적는다.
-5. caller boundaries를 정한다: caller는 pass, select, invoke, display, render할 수 있다. owner가 아닌 caller는 interpret, normalize, re-decide, preserve policy를 하지 않는다.
-6. 현재 task가 정당화하는 범위만 refactor한다.
-7. semantic decision이 caller로 새면 실패하는 guard를 추가한다.
-8. source discovery, local code shape, async freshness, scope control이 주제가 되면 해당 인접 스킬로 넘긴다.
-
-## Owner Selection Rules
-
-- Schema 또는 field alias -> record/contract owner.
-- User intent shape -> UI surface 또는 command input owner.
-- Final command payload -> session/command owner.
-- API request parsing -> framework wrapper가 아니라 application route owner.
-- Route 또는 query grammar -> navigation owner.
-- Permission 또는 capability -> policy owner.
-- Label과 action -> surface/view-model owner.
-- Result envelope, patch, resync semantics -> application/realtime result owner.
-- Stale, pending, fallback, conflict, revision acceptance -> freshness-owning route, session, screen owner.
-- Compatibility behavior -> adapter는 shape를 translate한다. policy ownership은 명시적으로 배정해야 한다.
-
-## Drift Smells
-
-- record/contract owner 밖의 `x || y || z` fallback chain.
-- 중복된 lifecycle 또는 status check.
-- UI code가 record에서 final command payload를 직접 만든다.
-- route component가 shared query grammar를 parse/build한다.
-- API wrapper가 business request field를 읽는다.
-- realtime 또는 event handler가 lifecycle, permission, policy를 다시 결정한다.
-- revision, conflict, pending, fallback, freshness key가 중복된다.
-- adapter가 owner에게 translate하지 않고 policy를 보존한다.
-- test가 owner-boundary behavior가 아니라 helper internals를 assert한다.
-
-## Required Guards
-
-owner boundary를 보호하는 가장 작은 guard를 선택한다.
-
-- alias normalization, command payload shape, route/query grammar, result envelope에 대한 contract test
-- caller가 meaning을 reinterpret하지 않고 pass/render/invoke한다는 boundary test
-- stale, fallback, permission, lifecycle, compatibility behavior에 대한 negative case
-- 중복 해석을 표현하기 어렵게 만드는 type 또는 schema constraint
-- semantic decision에 의존하는 user-visible behavior regression test
-
-helper internals를 고정하지 않는다. owner가 meaning을 한 번만 결정하고 caller가 조용히 다른 meaning을 선택할 수 없다는 점을 검증한다.
-
-## Output Contract
-
-plan, review, implementation note에는 다음 형태를 짧게 사용한다.
-
-- `Capability:` user/domain capability
-- `Representation Crossings:` 관련 data 또는 control forms
-- `Semantic Decisions:` drift될 수 있는 decisions
-- `Owner Ledger:` `decision -> owner 또는 decision needed -> reason`
-- `Caller Boundaries:` 허용된 caller behavior와 금지된 interpretation
-- `Drift Smells:` 관찰되거나 예상되는 leak
-- `Required Guards:` tests, schemas, checks
-- `Handoffs:` adjacent skills 또는 follow-up owners
-
-## Final Gates
-
-- capability가 user/domain term으로 이름 붙었는가?
-- 각 semantic decision에 owner가 정확히 하나이거나 `decision needed`가 명시되었는가?
-- caller가 meaning을 결정하지 않고 observe, pass, render, invoke할 수 있는가?
-- policy ownership이 명시되지 않은 adapter는 translation으로 제한되는가?
-- fallback, freshness, lifecycle, permission, compatibility decision이 검증 가능한 owner에게 있는가?
-- refactor scope가 현재 task로 제한되는가?
-- guard가 helper internals가 아니라 owner-boundary behavior를 검증하는가?
+task에 필요한 만큼만 capability, 주요 crossing, owner ledger, caller 경계, 관찰된 누수, guard, 미확정 결정을 보고한다. 기준 source 탐색, 확정된 local 구조, 순수 async interaction, 범위 통제가 주 문제가 되면 owner ledger를 보존해 해당 workflow로 넘기고, 새 근거나 권한 없이 의미를 재배정하지 않게 한다.
