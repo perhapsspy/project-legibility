@@ -60,14 +60,14 @@
     {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
-      "commit": "88cbacb082a7ab6ae7dc91c6874a829a770c0285",
+      "commit": "c5cf6f916d23b890139df5ec79b54c232eba72d7",
       "license": "MIT",
       "skills": [
         {
           "id": "interactive-state-flow",
           "sourcePath": "skills/interactive-state-flow",
           "targetPath": "skills/interactive-state-flow",
-          "integrity": "sha256:7377fd592a8cae1133dad8b4dd8add86ac5566f050082ab9c727215bae16929f"
+          "integrity": "sha256:ec7678df212fb63403cfa88feb91681e8743b3b3add8fb0de82160c7af31137e"
         }
       ]
     },
