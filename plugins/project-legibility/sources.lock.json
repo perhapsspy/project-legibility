@@ -74,20 +74,20 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "b1394c9c54470109855fbae2b8b7a0c9275f88da",
+      "commit": "abf32f34bd069e5f62adbf0e522c78d439e1d973",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:1ae1d426782e3306dc6b0f8b9f6ff39ccb38bdbe1e9c318eee1f157eec003163"
+          "integrity": "sha256:a59bff1d14a9aecdd50693362f9a8f4b1f3121d1ab8a8202a56059a385c1768b"
         },
         {
           "id": "project-context-migration",
           "sourcePath": "skills/project-context-migration",
           "targetPath": "skills/project-context-migration",
-          "integrity": "sha256:e660843db37d9faf9433a701d671088ab02cdb358de659238296ec8567b6e10e"
+          "integrity": "sha256:1b31f8178cafbc59c7a1d349887ebf8571a8610a5ae351963f3d75166db28ff0"
         }
       ]
     },
@@ -164,14 +164,14 @@
     {
       "id": "ui-design-rigor",
       "repository": "https://github.com/perhapsspy/ui-design-rigor.git",
-      "commit": "695c5e4ecd08e12e6d32da41fcf7fe770fc5c8d6",
+      "commit": "f02450f8967c8068c96183a1082c4a7bb92b0bf4",
       "license": "MIT",
       "skills": [
         {
           "id": "ui-design-rigor",
           "sourcePath": "skills/ui-design-rigor",
           "targetPath": "skills/ui-design-rigor",
-          "integrity": "sha256:4469ce83f938dfb4429920a6f8db788703ed3c3880c2bb0e2835d344724e89f7"
+          "integrity": "sha256:d780c17423524110c48cbb5ea3b8a9b12a9ef92cf1fd3855bfe61126283081b0"
         }
       ]
     }

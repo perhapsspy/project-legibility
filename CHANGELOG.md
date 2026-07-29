@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.9] - 2026-07-29
+
+### Changed
+
+- 포함된 `project-context`와 migration 계약을 재개에 필요한 현재 상태·정본 소유권·감사 가능한 이력에 집중하도록 압축하고, 불확실한 legacy 문서를 성급히 reference로 승격하거나 이동하지 않도록 경계를 유지했습니다.
+- 포함된 `ui-design-rigor`를 화면 목적과 제품 구조를 보존하는 국소 개선, 실제 근거 수준, 영향 비례 보고에 집중하도록 압축해 보편 checklist와 인접 재설계로의 확장을 줄였습니다.
+
 ## [0.6.8] - 2026-07-29
 
 ### Changed
@@ -185,7 +192,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...HEAD
+[0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
 [0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7
 [0.6.6]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...v0.6.6

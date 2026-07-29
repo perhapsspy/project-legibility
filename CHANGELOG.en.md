@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.9] - 2026-07-29
+
+### Changed
+
+- Compressed the bundled `project-context` and migration contracts around resumable current state, canonical ownership, and auditable history while preserving safeguards against prematurely promoting or moving uncertain legacy material.
+- Compressed the bundled `ui-design-rigor` around bounded improvements that preserve screen purpose and product structure, actual evidence levels, and proportional reporting, reducing universal checklists and expansion into adjacent redesign.
+
 ## [0.6.8] - 2026-07-29
 
 ### Changed
@@ -185,7 +192,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...HEAD
+[0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
 [0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7
 [0.6.6]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...v0.6.6
