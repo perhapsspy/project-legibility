@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.6.8] - 2026-07-29
+
+### Changed
+
+- 포함된 `codex-project-director`가 사용자나 정본에 없는 완료 조건을 만들지 않고, 이미 승인된 구현·출시·배포·readback과 독립적으로 실행 가능한 lane을 불필요한 재승인이나 중간 정지 없이 이어가도록 교정했습니다.
+- 반복 실패는 실제 stage·class 증거를 먼저 확보하고, 검증 범위는 acceptance claim과 변경 위험에 맞추도록 줄였습니다. 세션 컨텍스트는 비정본 작업 메모리로 취급하며 승인된 정본 인계, stale-context 재도출과 in-flight 변경 소유권을 보존합니다.
+
 ## [0.6.7] - 2026-07-28
 
 ### Changed
@@ -178,7 +185,10 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...HEAD
+[0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
+[0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7
+[0.6.6]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...v0.6.6
 [0.6.5]: https://github.com/perhapsspy/project-legibility/compare/v0.6.4...v0.6.5
 [0.6.4]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3

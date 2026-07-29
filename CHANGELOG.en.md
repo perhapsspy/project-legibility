@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.6.8] - 2026-07-29
+
+### Changed
+
+- Corrected the bundled `codex-project-director` to avoid inventing completion gates and to continue already-approved implementation, release, deployment, readback, and independently runnable lanes without redundant approval requests or intermediate stops.
+- Recurring failures now require evidence of the actual stage or class before another fix, while verification stays proportional to the acceptance claim and changed risk. Session context is non-canonical working memory, with authorized canonical handoff, stale-context rederivation, and in-flight mutation ownership preserved.
+
 ## [0.6.7] - 2026-07-28
 
 ### Changed
@@ -178,7 +185,10 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...HEAD
+[0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
+[0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7
+[0.6.6]: https://github.com/perhapsspy/project-legibility/compare/v0.6.5...v0.6.6
 [0.6.5]: https://github.com/perhapsspy/project-legibility/compare/v0.6.4...v0.6.5
 [0.6.4]: https://github.com/perhapsspy/project-legibility/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/perhapsspy/project-legibility/compare/v0.6.2...v0.6.3

@@ -9,7 +9,7 @@ All listed sources use the MIT License; the license text is included in `LICENSE
 |---|---|---|---|
 | [agents-md-editor](https://github.com/perhapsspy/agents-md-editor) | [`dcbacdd551b9`](https://github.com/perhapsspy/agents-md-editor/commit/dcbacdd551b9b5efba935094436f2e68e0ddc111) | `agents-md-editor` | MIT |
 | [codex-token-discipline](https://github.com/perhapsspy/codex-token-discipline) | [`bda05f468a5d`](https://github.com/perhapsspy/codex-token-discipline/commit/bda05f468a5db40352c93f33bff34bfedd37ffbb) | `codex-token-discipline` | MIT |
-| [codex-project-director](https://github.com/perhapsspy/codex-project-director) | [`9a18b665a96a`](https://github.com/perhapsspy/codex-project-director/commit/9a18b665a96afb5787328aaf799437882533aea6) | `codex-project-director` | MIT |
+| [codex-project-director](https://github.com/perhapsspy/codex-project-director) | [`aefbf901fbac`](https://github.com/perhapsspy/codex-project-director/commit/aefbf901fbac125f59258e4755cb813e2316e133) | `codex-project-director` | MIT |
 | [design-user-interfaces](https://github.com/perhapsspy/design-user-interfaces) | [`832b55c17ae6`](https://github.com/perhapsspy/design-user-interfaces/commit/832b55c17ae6239f611e3db85d4135c7d555b547) | `design-user-interfaces` | MIT |
 | [interactive-state-flow](https://github.com/perhapsspy/interactive-state-flow) | [`88cbacb082a7`](https://github.com/perhapsspy/interactive-state-flow/commit/88cbacb082a7ab6ae7dc91c6874a829a770c0285) | `interactive-state-flow` | MIT |
 | [project-context](https://github.com/perhapsspy/project-context) | [`b1394c9c5447`](https://github.com/perhapsspy/project-context/commit/b1394c9c54470109855fbae2b8b7a0c9275f88da) | `project-context`, `project-context-migration` | MIT |
