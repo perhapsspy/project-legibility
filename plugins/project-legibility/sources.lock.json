@@ -122,14 +122,14 @@
     {
       "id": "source-owner-audit",
       "repository": "https://github.com/perhapsspy/source-owner-audit.git",
-      "commit": "24cb09474195daba9782ccb8d646fcdbf9243da5",
+      "commit": "699575df1b7c446fb1657d010938a5f017cac7ce",
       "license": "MIT",
       "skills": [
         {
           "id": "source-owner-audit",
           "sourcePath": "skills/source-owner-audit",
           "targetPath": "skills/source-owner-audit",
-          "integrity": "sha256:2ef6df15a67d4dea7ed66a1ab58ca14117f5378e90198e6cdb7d17dbe19c0c45"
+          "integrity": "sha256:da22e4a396846e12797f844218df2fcac62c039add221c690f2a5f476e18fc13"
         }
       ]
     },
