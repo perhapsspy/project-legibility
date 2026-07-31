@@ -18,28 +18,28 @@
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "bda05f468a5db40352c93f33bff34bfedd37ffbb",
+      "commit": "cc5dd58f262be38b5f24b59d4661fc2341ba52f9",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:3dfd6e4bdaa87dcf74bad49a96dc782f0e4d61f6504df04bc0be9d5b4a5fd6ec"
+          "integrity": "sha256:fad6ef28981bec17770f90823a7d95f1dc6c61af88d16ee43200aba77e6e8f41"
         }
       ]
     },
     {
       "id": "codex-project-director",
       "repository": "https://github.com/perhapsspy/codex-project-director.git",
-      "commit": "aefbf901fbac125f59258e4755cb813e2316e133",
+      "commit": "2cde0d13cb04394a1ab636675925a5fdb7bfd2d8",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-project-director",
           "sourcePath": "skills/codex-project-director",
           "targetPath": "skills/codex-project-director",
-          "integrity": "sha256:3d3f994a557da51d564c15d486a74d8eefb803d9ac33d1f7ba86d2e081d24330"
+          "integrity": "sha256:c775527335728b1d0160c842e29519caf6ed2d8ee3b78ef99b8ebfd9d5e2369f"
         }
       ]
     },

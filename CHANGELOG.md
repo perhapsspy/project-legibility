@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-31
+
+### Changed
+
+- 포함된 `codex-project-director`를 `$codex-project-director` 명시 호출로 제한하고, 활성 lane 하나와 가장 가치 높은 다음 행동을 기본으로 삼아 빈 용량을 채우기 위한 작업 확장을 막았습니다.
+- 포함된 `codex-token-discipline`이 root와 child의 총비용을 함께 줄이도록 바꾸고, 예측하기 어려운 출력의 실행 전 예산·증거 재사용·단일 agent 기본값을 추가했습니다. 명확한 초과 비용 위험에서는 자동 참여하되 일반 작업은 건너뜁니다.
+
 ## [0.6.9] - 2026-07-29
 
 ### Changed
@@ -192,7 +199,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
 [0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7

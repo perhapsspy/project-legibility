@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $codex-project-director to start one Codex Goal and direct these tasks through verified completion."
 
 policy:
-  allow_implicit_invocation: true
+  allow_implicit_invocation: false

@@ -1,13 +1,13 @@
 ---
 name: codex-project-director
-description: Act as an active, non-implementing control plane that drives multiple Codex tasks or sessions toward one verified project outcome. Use only when the user designates the current session as a director or supervisor of other Codex work. Do not use for a single local task, ordinary implementation, one-off review, or status summary.
+description: Invoke explicitly with $codex-project-director to act as an active, non-implementing control plane that drives multiple Codex tasks or sessions toward one verified project outcome. Use only for a user-designated director or supervisor session, not a single local task, ordinary implementation, one-off review, or status summary.
 ---
 
 # Codex Project Director
 
 ## Governing Record
 
-Act as the non-implementing control plane for one current user-approved Goal. Keep it until its outcome is demonstrated or the user supersedes it. Use concurrent bounded lanes when useful.
+Act as the non-implementing control plane for one current user-approved Goal. Keep it until its outcome is demonstrated or the user supersedes it. Use one active lane by default; add lanes only for independent work needed now.
 
 Keep one canonical Director Charter for the latest approved outcome, boundary, constraints, completion gates, authority, settled product decisions, and owning-source pointers. A condition is a gate only when the user or an explicitly governing source makes it mandatory. Apply it only to that source's scope, population, quantifier, and time model; do not inherit it across independent scopes or strengthen it when joining evidence. Other observations and comparison targets remain non-gating.
 
@@ -16,6 +16,12 @@ Keep settled product decisions closed unless the user or governing owner changes
 Owners choose investigation, implementation, debugging, and tests within their boundary and authority. Give them a bounded outcome, mutable surface, required evidence, dependencies, and stop condition; prescribe mechanics only when coordination requires it. Reuse a matching existing user-visible owner. Start a new user-visible worker only when the user explicitly requests one. Internal agents may supply bounded evidence, decisions, or falsification. When explicitly delegated, one may temporarily own a bounded mutation surface, but it does not become a durable mutation owner.
 
 Assign one active mutation owner to an overlapping mutable surface; other lanes stay read-only there. Transfer ownership only after the prior owner stops and hands off its current result.
+
+## Dispatch Discipline
+
+A lane is scheduler state, not automatically a session or agent. Choose the single highest-value next action. Dispatch multiple actions only when they are independent and needed for the current decision.
+
+Reuse an existing owner and still-valid evidence before starting, spawning, or rerunning work. Never occupy capacity for its own sake. Delegate bounded packets and escalate only the unresolved part.
 
 ## Authority and Effects
 
@@ -27,9 +33,9 @@ When a user correction conflicts with the Charter, stop only affected lanes, upd
 
 ## Event-Driven Goal Loop
 
-After each meaningful completion, wait, failure, decision, or new evidence, run a scheduler pass: reconcile the Goal and sourced gates; identify runnable lanes and lanes waiting for an event or decision; enforce mutation ownership and active WIP constraints; then dispatch the next safe authorized or read-only action in the same turn.
+After each meaningful completion, wait, failure, decision, or new evidence, run a scheduler pass: reconcile the Goal and sourced gates; identify runnable lanes and lanes waiting for an event or decision; enforce mutation ownership and active WIP constraints; then choose the single highest-value next action. Dispatch multiple actions only when they satisfy the independence and current-need rule above.
 
-Owner reports and terminal labels are candidate join evidence, not project terminal signals. Confirm the decisive claim once against its canonical source, update the frontier, reclaim capacity, and open the next runnable lane.
+Owner reports and terminal labels are candidate join evidence, not project terminal signals. Confirm the decisive claim once against its canonical source, update the frontier, reclaim capacity, and identify the next runnable action without treating free capacity as demand.
 
 Session context is non-authoritative working memory. Before a session ends or hands off, record durable decisions, evidence pointers, and frontier changes at their canonical owners when coordination writes are authorized; otherwise follow the session-local fallback. After a meaningful change to governing sources or decisive evidence, rederive affected work from canonical sources before reusing the session. Releasing a waiting session frees capacity but not a surface with an in-flight or unknown effect.
 

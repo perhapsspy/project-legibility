@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-31
+
+### Changed
+
+- Limited the bundled `codex-project-director` to explicit `$codex-project-director` invocation and made one active lane plus the single highest-value next action the default, preventing work from expanding merely to fill capacity.
+- Updated the bundled `codex-token-discipline` to reduce root-and-child cost together through preflight budgets for unpredictable output, evidence reuse, and a one-agent default. It participates automatically for clear excess-cost risk while skipping routine work.
+
 ## [0.6.9] - 2026-07-29
 
 ### Changed
@@ -192,7 +199,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8
 [0.6.7]: https://github.com/perhapsspy/project-legibility/compare/v0.6.6...v0.6.7
