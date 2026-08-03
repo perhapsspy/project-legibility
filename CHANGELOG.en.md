@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-08-03
+
+### Changed
+
+- Strengthened the bundled `structure-first` to reopen only the smallest implicated unit when evidence reveals another owner and to avoid closing a boundary from local tests without a safe owner-backed witness. It does not automatically require production or full end-to-end checks.
+
 ## [0.7.0] - 2026-07-31
 
 ### Changed
