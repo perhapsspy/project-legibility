@@ -16,13 +16,12 @@
 ## Current State
 
 - canonical `structure-first` commit `8388c0b3fb9899ab007fb4c2ce64686719df8ee6`이 공개 `main`에 존재한다.
-- lock, generated snapshot와 provenance가 해당 commit으로 갱신됐고 `structure-first` 관련 파일만 변경됐다.
-- manifest와 한·영 changelog를 `0.7.1`로 준비했다.
-- local·remote·offline source check, release-tag bundle validation, plugin·skill validation과 repository test 31개가 통과했다.
+- Project Legibility release commit `72bcd942eba363b825e33a12a7209aa079822859`가 `v0.7.1`과 GitHub Release로 공개됐고 main·release workflow가 통과했다.
+- publisher commit `a92d578e9d07b6a6e729613ed1fdd671b5697a13`이 release commit을 고정했으며 catalog 검증과 CI가 통과했다.
 
 ## Next Step
 
-- Project Legibility release commit, `v0.7.1`, GitHub Release와 publisher pin을 순서대로 공개한다.
+- 설치 drift가 발견되거나 ownership closure 규칙이 실제 작업에서 회귀할 때 다시 연다.
 
 ## Working Boundary
 
