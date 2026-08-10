@@ -74,14 +74,14 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "abf32f34bd069e5f62adbf0e522c78d439e1d973",
+      "commit": "0cad6e2110b51d06651b4840abce0a5877580065",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:a59bff1d14a9aecdd50693362f9a8f4b1f3121d1ab8a8202a56059a385c1768b"
+          "integrity": "sha256:98789b509ebaf07c88467e92299a153ab41885dd466c3e55ed3a1926fc35e436"
         },
         {
           "id": "project-context-migration",

@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.7.2] - 2026-08-10
+
+### Changed
+
+- Corrected the bundled `project-context` to reconcile the goal, current state, and restart point before resuming, keeping adjacent work as a candidate when the selected task is already complete. Work selected by the user or an authoritative approved plan still continues.
+
 ## [0.7.1] - 2026-08-03
 
 ### Changed
