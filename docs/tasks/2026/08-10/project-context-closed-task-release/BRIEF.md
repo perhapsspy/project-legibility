@@ -16,11 +16,12 @@
 ## Current State
 
 - canonical `project-context` commit `0cad6e2110b51d06651b4840abce0a5877580065`이 공개 `main`에 존재한다.
-- Project Legibility bundle은 새 정본을 고정했고 release gate 실행을 앞두고 있다.
+- Project Legibility release commit `e48402c167790135afb181285998e24d55c6201d`가 `v0.7.2`와 GitHub Release로 공개됐고 main·release workflow가 통과했다.
+- publisher commit `8231a71e1d659a5fd0b449f10277c7010f6eee34`이 release commit을 고정했으며 catalog 검증과 CI가 통과했다.
 
 ## Next Step
 
-- `v0.7.2` release gate를 통과한 뒤 release와 publisher pin을 게시한다.
+- 완료된 작업의 인접 후보 승격이 실제 재개에서 다시 나타날 때 이 작업을 연다.
 
 ## Working Boundary
 
