@@ -150,14 +150,14 @@
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "a46c40ec3131489645ca2df56c8eb87245cab459",
+      "commit": "5cd74f91be0f6bfd7d38dfa049d26be78c83be02",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:fd9edeecfaf00ee79d933874df4de713535af66ce7273089ae23e81be140afc3"
+          "integrity": "sha256:0f45af5efcc2a5301562fc7ce7e28ab7d615e5177084b7ca5f39c8562ab024de"
         }
       ]
     },

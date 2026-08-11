@@ -107,11 +107,32 @@
       "rationale": "The feature changes flow, state, effects, and behavior contracts even though the request does not diagnose a pre-existing structural problem."
     },
     {
+      "id": "tighten-docs-settled-api-first-draft",
+      "skill": "tighten-docs",
+      "prompt": "The API contract in api.yaml is approved. Create the first draft of the developer integration guide with one clear entry point and one owner for each current contract.",
+      "expected": "select",
+      "rationale": "The source meaning is settled and the first draft needs document-level routing and ownership clarity."
+    },
+    {
+      "id": "tighten-docs-settled-runbook-first-draft",
+      "skill": "tighten-docs",
+      "prompt": "We verified the deployment procedure and approved the rollback criteria. Turn them into the first version of the operator runbook.",
+      "expected": "select",
+      "rationale": "A concrete current-canon document should receive the skill's quality rules from its first draft."
+    },
+    {
+      "id": "tighten-docs-material-package-rewrite",
+      "skill": "tighten-docs",
+      "prompt": "Materially rewrite this README, architecture guide, and operations guide so duplicated current rules have one owner and each reader has a clear route.",
+      "expected": "select",
+      "rationale": "A selected documentation package needs substantial document-level restructuring without changing settled meaning."
+    },
+    {
       "id": "tighten-docs-current-stale-routes",
       "skill": "tighten-docs",
       "prompt": "Tighten this selected documentation package so current decisions, stale material, and reader routes are unambiguous.",
       "expected": "select",
-      "rationale": "The request is final document-level cleanup within an already selected package."
+      "rationale": "Final document-level cleanup of a selected current-canon package remains in scope."
     },
     {
       "id": "ui-design-rigor-existing-checkout-review",

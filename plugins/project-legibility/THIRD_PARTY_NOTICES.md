@@ -17,5 +17,5 @@ All listed sources use the MIT License; the license text is included in `LICENSE
 | [semantic-boundary-design](https://github.com/perhapsspy/semantic-boundary-design) | [`795b7193bc0b`](https://github.com/perhapsspy/semantic-boundary-design/commit/795b7193bc0bb4d483421cd2be646a07f7fd1257) | `semantic-boundary-design` | MIT |
 | [source-owner-audit](https://github.com/perhapsspy/source-owner-audit) | [`699575df1b7c`](https://github.com/perhapsspy/source-owner-audit/commit/699575df1b7c446fb1657d010938a5f017cac7ce) | `source-owner-audit` | MIT |
 | [structure-first](https://github.com/perhapsspy/structure-first) | [`8388c0b3fb98`](https://github.com/perhapsspy/structure-first/commit/8388c0b3fb9899ab007fb4c2ce64686719df8ee6) | `structure-first` | MIT |
-| [tighten-docs](https://github.com/perhapsspy/tighten-docs) | [`a46c40ec3131`](https://github.com/perhapsspy/tighten-docs/commit/a46c40ec3131489645ca2df56c8eb87245cab459) | `tighten-docs` | MIT |
+| [tighten-docs](https://github.com/perhapsspy/tighten-docs) | [`5cd74f91be0f`](https://github.com/perhapsspy/tighten-docs/commit/5cd74f91be0f6bfd7d38dfa049d26be78c83be02) | `tighten-docs` | MIT |
 | [ui-design-rigor](https://github.com/perhapsspy/ui-design-rigor) | [`f02450f8967c`](https://github.com/perhapsspy/ui-design-rigor/commit/f02450f8967c8068c96183a1082c4a7bb92b0bf4) | `ui-design-rigor` | MIT |

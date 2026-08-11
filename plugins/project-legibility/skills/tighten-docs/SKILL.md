@@ -1,6 +1,6 @@
 ---
 name: tighten-docs
-description: Use when a concrete document, documentation diff, or explicitly selected documentation package needs final wording or document-level cleanup such as distinct roles, reader routes, current-vs-stale separation, and one owner per current decision, contract, gate, or plan. Stay within the selected documentation scope; do not choose external source truth, design task state, or change implementation meaning.
+description: Use when creating, materially rewriting, or finalizing a concrete current-canon document or selected documentation package from already-settled source meaning. Apply from the first draft when document roles, reader routes, ownership, or current-vs-stale clarity matter. Do not use to decide unresolved product, policy, architecture, or implementation meaning; maintain append-only history or generated artifacts; or make trivial mechanical edits.
 ---
 
 # Tighten Docs

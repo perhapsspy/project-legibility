@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-08-11
+
+### Changed
+
+- 포함된 `tighten-docs`가 의미가 정해진 현재 정본 문서를 만들거나 크게 고치거나 마무리할 때 초안부터 참여하도록 선택 경계를 넓혔습니다. 미해결 제품·정책·설계·구현 의미, 작업 기록, 생성물과 단순 기계 수정은 맡지 않습니다.
+
 ## [0.7.3] - 2026-08-11
 
 ### Changed
@@ -217,7 +223,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8

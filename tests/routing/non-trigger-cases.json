@@ -125,7 +125,28 @@
       "skill": "tighten-docs",
       "prompt": "Create a new architecture specification from an unresolved product idea.",
       "expected": "do-not-select",
-      "rationale": "New specification design is not final cleanup of a selected document package."
+      "rationale": "The product and architecture meaning is unresolved, so documentation quality work must not decide it."
+    },
+    {
+      "id": "tighten-docs-append-only-worklog",
+      "skill": "tighten-docs",
+      "prompt": "Keep appending raw investigation notes and timestamps to WORKLOG.md as the debugging session continues.",
+      "expected": "do-not-select",
+      "rationale": "Append-only history maintenance is outside the skill's current-canon document scope."
+    },
+    {
+      "id": "tighten-docs-generated-snapshot",
+      "skill": "tighten-docs",
+      "prompt": "Regenerate the documentation snapshot exactly from sources.lock.json.",
+      "expected": "do-not-select",
+      "rationale": "Generated artifacts should follow their source and generator rather than receive manual document cleanup."
+    },
+    {
+      "id": "tighten-docs-trivial-mechanical-edit",
+      "skill": "tighten-docs",
+      "prompt": "Fix one typo and update the version number in README.md without changing any surrounding wording.",
+      "expected": "do-not-select",
+      "rationale": "A trivial mechanical edit does not need the specialist documentation workflow."
     },
     {
       "id": "ui-design-rigor-new-dashboard",

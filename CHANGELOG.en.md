@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-08-11
+
+### Changed
+
+- Expanded the bundled `tighten-docs` selection boundary so it participates from the first draft when creating, materially rewriting, or finalizing current-canon documentation whose meaning is settled. Unresolved product, policy, design, or implementation meaning, work logs, generated artifacts, and trivial mechanical edits remain outside its scope.
+
 ## [0.7.3] - 2026-08-11
 
 ### Changed
@@ -217,7 +223,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/perhapsspy/project-legibility/compare/v0.6.7...v0.6.8

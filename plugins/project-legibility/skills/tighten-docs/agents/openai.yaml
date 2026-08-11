@@ -1,4 +1,4 @@
 interface:
   display_name: "Tighten Docs"
   short_description: "Make docs clear, current, and easy to navigate"
-  default_prompt: "Use $tighten-docs to make these selected docs concise, current, and clear about where readers should start."
+  default_prompt: "Use $tighten-docs from the first draft to make this settled documentation concise, current, and clear about where readers should start."
