@@ -12,13 +12,32 @@
 
 ## Version 선택
 
-| Version | 적용 범위 |
-|---|---|
-| Patch | 제품 약속과 설치 구성을 유지하는 skill bug fix·문안·reference, trigger 의미를 유지하는 교정, 조립 도구와 공개 절차의 호환 가능한 수정 |
-| Minor | skill 추가·제거, 제품 역할이나 trigger 의미 변경, starter prompt 변경, lock·snapshot 구조의 호환 가능한 확장 |
-| Major | plugin source contract를 깨는 변경과 그 migration |
+Version은 바뀐 파일 이름이나 diff 크기가 아니라 설치 사용자에게 공개된 호환성 계약으로 선택합니다. [제품 계약](../PRODUCT.md)은 제품 역할과 skill 구성을, 각 canonical skill description은 선택 조건을, plugin manifest는 공개 starter prompt와 source contract를 소유합니다. 특히 description이나 starter prompt를 수정했다는 사실만으로 minor가 되지는 않습니다.
 
-새 skill의 역할과 선택 경계는 [제품 계약](../PRODUCT.md)에 먼저 반영합니다. Manifest, 한영 changelog와 `v<version>` tag는 선택한 version을 함께 가리킵니다.
+| Version | 사용자 관점의 판정 |
+|---|---|
+| Patch | 공개된 skill 구성과 선택 계약을 유지합니다. 이미 약속된 선택이 description이나 routing 구현의 결함 때문에 어긋난 경우를 복구하거나, 선택된 skill의 실행 품질, bug, 문안, reference나 guardrail을 호환 가능하게 교정합니다. 조립 도구와 공개 절차의 호환 가능한 수정도 포함합니다. |
+| Minor | 공개 선택 계약을 넓히거나 좁힙니다. skill 추가·제거, 제품 역할 관계 변경, canonical trigger가 선택하는 요청 종류의 변경, 명시 호출과 자동 참여 사이의 전환, 새로운 사용자 과업을 여는 starter prompt, lock·snapshot 구조의 호환 가능한 확장을 포함합니다. |
+| Major | 기존 plugin source contract나 설치 소비 방식을 깨고 migration이 필요합니다. |
+
+다음 순서로 판정합니다.
+
+1. 변경 대상의 현재 정본에서 제품 역할, 선택 조건, starter prompt나 source contract를 확인합니다.
+2. 같은 대표 요청 묶음에 대해 변경 전후 정본이 약속하는 선택 결과를 비교합니다.
+3. 정본 계약은 같고 실제 description·routing이나 선택 후 행동만 그 계약에 맞게 복구하면 patch입니다.
+4. 정본이 약속하는 결과가 `do-not-select → select` 또는 `select → do-not-select`로 바뀌면 minor입니다.
+5. 기존 설치나 source 소비자가 migration 없이 사용할 수 없으면 major입니다.
+6. 한 release에 여러 변경이 있으면 가장 높은 version 영향을 적용합니다.
+
+경계 사례는 다음처럼 처리합니다.
+
+- description을 더 정확히 쓰거나 기존 제품·trigger 계약과 어긋난 선택을 복구하되 공개 선택 계약이 같으면 patch입니다.
+- starter prompt의 표현만 다듬고 같은 과업으로 연결하면 patch입니다. 새 과업이나 호출 경로를 제공하거나 제거하면 minor입니다.
+- canonical trigger가 skill을 최종 문안 정리에만 선택하도록 약속하다가 의미가 정해진 문서의 초안 작성부터 선택하도록 넓히면 minor입니다.
+- skill을 자동 선택에서 명시 호출 전용으로 바꾸거나 그 반대로 바꾸면 minor입니다.
+- 이미 선택된 skill이 source ownership이나 failure handling을 더 정확히 수행하도록 고치되 trigger를 유지하면 patch입니다.
+
+제품 역할, skill 구성이나 선택되는 요청 집합이 달라지면 [제품 계약](../PRODUCT.md)에 먼저 반영합니다. Manifest, 한영 changelog와 `v<version>` tag는 선택한 version을 함께 가리킵니다.
 
 저장소 루트의 운영 문서만 바뀐 경우 즉시 plugin release는 필요하지 않습니다. 위 분류는 다음 release의 version을 선택할 때 적용합니다.
 
