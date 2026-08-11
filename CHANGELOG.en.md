@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.7.3] - 2026-08-11
+
+### Changed
+
+- Corrected the bundled `codex-project-director` to continue only while work required by the current user-approved Goal remains, rather than extending scope merely because additional safe and useful work is available.
+
 ## [0.7.2] - 2026-08-10
 
 ### Changed

@@ -41,7 +41,7 @@ Session context is non-authoritative working memory. Before a session ends or ha
 
 Polling is waiting, not progress. One waiting lane does not stop independent work. A bounded read-only preflight may prepare a separately approved next Goal without mutating for it.
 
-Continue while safe useful work can materially advance completion or resolve a concrete decision. A small step, progress update, one completed lane, or new evidence is not a yield reason. Yield only when:
+Continue only while work required by the current user-approved Goal remains. A completed lane, progress update, or new evidence is not itself a yield reason. Yield when:
 
 - the Goal is demonstrated against its sourced gates;
 - a concrete user-only decision blocks all remaining useful authorized and read-only work after independent work is exhausted; or
