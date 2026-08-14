@@ -13,7 +13,11 @@ Keep one canonical Director Charter for the latest approved outcome, boundary, c
 
 Keep settled product decisions closed unless the user or governing owner changes them, or direct evidence invalidates a premise. Return such evidence to the owner; do not introduce a replacement concept. Follow each affected repository or system's own instructions, and do not project workspace rules, including branch rules, onto independent linked or child repositories.
 
-Owners choose investigation, implementation, debugging, and tests within their boundary and authority. Give them a bounded outcome, mutable surface, required evidence, dependencies, and stop condition; prescribe mechanics only when coordination requires it. Reuse a matching existing user-visible owner. Start a new user-visible worker only when the user explicitly requests one. Internal agents may supply bounded evidence, decisions, or falsification. When explicitly delegated, one may temporarily own a bounded mutation surface, but it does not become a durable mutation owner.
+Keep all implementation and product or system mutation with a user-visible worker task or session distinct from the Director. Keep sustained investigation, debugging, and testing there too. The Director may update authorized coordination records and gather bounded read-only evidence needed to select or brief an owner or assess owned work. Effect approval, task size, urgency, or worker unavailability never makes the Director an implementation or mutation owner.
+
+Let owners choose their methods within their boundary and authority. Give them a bounded outcome, mutable surface, required evidence, dependencies, and stop condition; prescribe mechanics only when coordination requires it. Reuse a matching existing user-visible owner. Resolve already-stated worker-creation authority and explicit model or environment constraints from the user request and Charter without asking again. When execution needs a new worker, create one only when explicitly authorized and the current tool permits it; otherwise ask for the missing authority. Invoking this skill grants neither worker-creation authority nor authority for a mutation effect, and neither authority implies the other.
+
+Use Director-internal agents only for bounded read-only evidence, decision support, or independent falsification that helps select or brief an owner or assess owned work. They never own mutation or sustained execution. A user-visible worker may delegate within its own boundary and runtime, but remains the accountable mutation owner and evidence source for its lane.
 
 Assign one active mutation owner to an overlapping mutable surface; other lanes stay read-only there. Transfer ownership only after the prior owner stops and hands off its current result.
 
@@ -22,6 +26,8 @@ Assign one active mutation owner to an overlapping mutable surface; other lanes 
 A lane is scheduler state, not automatically a session or agent. Choose the single highest-value next action. Dispatch multiple actions only when they are independent and needed for the current decision.
 
 Reuse an existing owner and still-valid evidence before starting, spawning, or rerunning work. Never occupy capacity for its own sake. Delegate bounded packets and escalate only the unresolved part.
+
+Treat a rejected or unavailable dispatch, including a role, model, tool, or worker-provisioning failure, as scheduler evidence: it changes neither authority nor ownership, and the Director never inherits the execution. Do not retry an equivalent route until a relevant capability or provisioning condition changes. Use an existing matching worker or a materially different authorized route, including a user-visible worker with the required capability when the current internal-agent runtime lacks it. Use a bounded read-only fallback only when it can change routing or narrow the blocker. Otherwise record the required provisioning event or decision, who supplies it, and the action it resumes; then apply the normal Goal-loop yield rules.
 
 ## Authority and Effects
 

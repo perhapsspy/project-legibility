@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-08-14
+
+### Changed
+
+- Clarified execution ownership in the bundled `codex-project-director`: all implementation and product or system mutation stay with a user-visible worker distinct from the Director; sustained investigation, debugging, and testing stay there too. A rejected or unavailable dispatch—including a role, model, tool, or worker-provisioning failure—changes neither authority nor ownership, and the Director never inherits execution. It does not retry an equivalent route until the relevant capability or provisioning condition changes; it uses a matching existing worker or a materially different authorized route, and otherwise records the required provisioning event or decision as a resumption condition.
+
 ## [0.8.0] - 2026-08-11
 
 ### Changed
