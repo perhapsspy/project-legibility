@@ -6,6 +6,7 @@ on:
       - "v*"
 
 permissions:
+  actions: read
   contents: write
 
 jobs:
@@ -22,14 +23,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -p 'test_*.py' -v
-
-      - name: Validate committed bundle
-        run: python scripts/validate_bundle.py
-
-      - name: Rebuild locked sources and check drift
-        run: python scripts/sync_skills.py check
+      - name: Require successful main CI for this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          validated=$(gh run list \
+            --repo "$GITHUB_REPOSITORY" \
+            --workflow CI \
+            --commit "$GITHUB_SHA" \
+            --limit 20 \
+            --json conclusion,headBranch,headSha \
+            --jq 'any(.[]; .headSha == env.GITHUB_SHA and .headBranch == "main" and .conclusion == "success")')
+          test "$validated" = true
 
       - name: Verify release tag matches plugin version
         run: python scripts/validate_bundle.py --release-tag "$GITHUB_REF_NAME"

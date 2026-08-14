@@ -7,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -83,8 +84,93 @@ class GitArchiveTests(unittest.TestCase):
                 self.root / "rejected",
             )
 
+    def test_remote_main_proof_accepts_ancestor_and_rejects_other_history(self) -> None:
+        main_ancestor = self.git("rev-parse", "HEAD")
+        (self.repo / "README.md").write_text("main tip\n", encoding="utf-8")
+        self.git("add", "README.md")
+        self.git("commit", "-m", "Advance main")
+
+        self.git("checkout", "--orphan", "other")
+        self.git("rm", "-rf", ".")
+        (self.repo / "other.txt").write_text("other history\n", encoding="utf-8")
+        self.git("add", "other.txt")
+        self.git("commit", "-m", "Other history")
+        other_commit = self.git("rev-parse", "HEAD")
+        self.git("checkout", "main")
+
+        source = {"id": "fixture", "repository": str(self.repo)}
+        sync.verify_remote_main_commit(source, main_ancestor)
+        with self.assertRaisesRegex(sync.SyncError, "not published on canonical main"):
+            sync.verify_remote_main_commit(source, other_commit)
+
 
 class SyncContractTests(unittest.TestCase):
+    def _lock_with_sources(self) -> dict:
+        return {
+            "lockVersion": 1,
+            "sources": [
+                {
+                    "id": "alpha",
+                    "repository": "https://github.com/perhapsspy/alpha.git",
+                    "commit": "a" * 40,
+                    "license": "MIT",
+                    "skills": [],
+                },
+                {
+                    "id": "beta",
+                    "repository": "https://github.com/perhapsspy/beta.git",
+                    "commit": "b" * 40,
+                    "license": "MIT",
+                    "skills": [],
+                },
+            ],
+        }
+
+    def test_source_pin_parser_rejects_invalid_id_and_sha(self) -> None:
+        with self.assertRaisesRegex(sync.SyncError, "form source-id"):
+            sync.parse_source_pin("alpha")
+        with self.assertRaisesRegex(sync.SyncError, "lowercase full 40-character SHA"):
+            sync.parse_source_pin("alpha=" + "A" * 40)
+        with self.assertRaisesRegex(sync.SyncError, "source pin source id"):
+            sync.parse_source_pin("not valid=" + "a" * 40)
+
+    def test_source_pins_preserve_unselected_and_require_remote_main_reachability(self) -> None:
+        lock = self._lock_with_sources()
+        alpha_tip = "c" * 40
+        with mock.patch.object(
+            sync, "verify_remote_main_commit"
+        ):
+            updated = sync.apply_source_pins(lock, {"alpha": alpha_tip})
+        self.assertEqual(
+            [source["commit"] for source in updated["sources"]],
+            [alpha_tip, "b" * 40],
+        )
+
+    def test_source_pins_reject_unknown_unpublished_and_unreachable_commits(self) -> None:
+        with self.assertRaisesRegex(sync.SyncError, "unknown source id"):
+            sync.apply_source_pins(self._lock_with_sources(), {"missing": "c" * 40})
+
+        with mock.patch.object(
+            sync,
+            "verify_remote_main_commit",
+            side_effect=sync.SyncError("alpha: requested commit is not published on canonical main"),
+        ):
+            with self.assertRaisesRegex(sync.SyncError, "not published on canonical main"):
+                sync.apply_source_pins(self._lock_with_sources(), {"alpha": "c" * 40})
+
+        with mock.patch.object(
+            sync,
+            "verify_remote_main_commit",
+            side_effect=sync.SyncError("beta: requested commit is not published on canonical main"),
+        ):
+            with self.assertRaisesRegex(sync.SyncError, "not published on canonical main"):
+                sync.apply_source_pins(self._lock_with_sources(), {"beta": "f" * 40})
+
+    def test_source_pin_cli_requires_exactly_one_update_mode(self) -> None:
+        args = sync.parse_args(["update", "--source", "alpha=" + "c" * 40])
+        self.assertEqual(args.source_pins, ["alpha=" + "c" * 40])
+        self.assertEqual(sync.main(["update"]), 1)
+
     def test_lock_shape_rejects_unknown_fields(self) -> None:
         lock = json.loads(
             (REPO_ROOT / "plugins/project-legibility/sources.lock.json").read_text(

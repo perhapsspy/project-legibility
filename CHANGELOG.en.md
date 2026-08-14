@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-08-14
+
+### Changed
+
+- Added remote assembly that updates only selected canonical sources at published full SHAs while preserving every other pin. A single `publish` command now takes reviewed, committed input through Project Legibility main CI, an immutable tag and GitHub Release at the same SHA, and the publisher catalog pin and CI. Rerunning the command resumes from public external state; candidate branches, private state files, and post-release task-record waits stay out of the publication path.
+
 ## [0.8.1] - 2026-08-14
 
 ### Changed

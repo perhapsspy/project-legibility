@@ -47,18 +47,18 @@ perhapsspy/codex-plugins
 ```
 
 1. 변경은 canonical repository에서 먼저 검증하고 push합니다.
-2. `update`는 각 checkout의 commit과 source path를 lock하고 skill tree를 snapshot으로 복사합니다.
+2. `update --source <id>=<full-sha>`는 public canonical `main`에서 도달 가능한 선택 commit만 lock에 반영하고, 나머지 pin을 보존한 채 모든 locked source에서 snapshot을 재조립합니다. 전체 local checkout을 함께 전진시킬 때만 `--projects-root` 경로를 사용합니다.
 3. `sync`는 lock을 바꾸지 않고 locked local 또는 remote commit에서 snapshot과 third-party notice를 재생성합니다.
 4. `check --projects-root`는 local canonical source, lock과 snapshot을 함께 비교합니다.
 5. `check`는 임시 checkout으로 locked remote commit을 materialize해 release source와 비교합니다.
 6. `check --offline`은 committed lock, snapshot과 notice의 자체 무결성을 빠르게 확인합니다.
-7. 검증된 plugin release를 push한 뒤 publisher catalog가 그 commit과 `plugins/project-legibility` 경로를 고정합니다.
+7. 검토·commit된 release 입력을 `scripts/release.py publish`가 Project Legibility `main` CI, 같은 SHA의 tag·GitHub Release, publisher full-SHA pin·catalog CI 순서로 게시합니다. 중단되면 같은 명령이 공개된 외부 상태를 읽어 완료된 단계를 건너뜁니다.
 
 Sync는 의미를 merge하지 않습니다. Canonical tree를 그대로 조립하고 차이가 있으면 실패시켜, 사람이 예상한 source와 release 대상이 다른 상태를 숨기지 않습니다.
 
 ## 배포 경계
 
-이 저장소는 Project Legibility plugin과 release를 소유합니다. `perhapsspy/codex-plugins`는 검증된 release commit을 가리키는 얇은 catalog이며 plugin tree나 canonical skill을 복사하지 않습니다. 게시와 설치본 갱신의 실행 경계는 [release runbook](runbooks/release.md)이 소유합니다.
+이 저장소는 Project Legibility plugin과 release를 소유합니다. `perhapsspy/codex-plugins`는 검증된 release commit을 가리키는 얇은 catalog이며 plugin tree나 canonical skill을 복사하지 않습니다. 게시·재실행·rollback과 설치본 갱신의 실행 경계는 [release runbook](runbooks/release.md)이 소유합니다. 작업 기록은 공개 상태의 보조 설명이며 release 완료 gate가 아닙니다.
 
 ## Lock과 무결성
 

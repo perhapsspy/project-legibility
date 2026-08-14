@@ -47,18 +47,18 @@ perhapsspy/codex-plugins
 ```
 
 1. A change is validated and pushed in its canonical repository first.
-2. `update` locks each checkout commit and source path, then copies the skill trees into the snapshot.
+2. `update --source <id>=<full-sha>` accepts only a selected commit reachable from public canonical `main`, preserves every other pin, and rebuilds the snapshot from all locked sources. The `--projects-root` path remains for intentionally advancing all local checkouts together.
 3. `sync` regenerates the snapshot and third-party notice from locked local or remote commits without changing the lock.
 4. `check --projects-root` compares local canonical sources, the lock, and snapshot together.
 5. `check` materializes locked remote commits in temporary checkouts and compares the release sources.
 6. `check --offline` provides a fast self-integrity check of the committed lock, snapshot, and notice.
-7. After the verified plugin release is pushed, the publisher catalog pins that commit and the `plugins/project-legibility` path.
+7. `scripts/release.py publish` takes an already reviewed and committed release input through Project Legibility `main` CI, a tag and GitHub Release at the same SHA, and the publisher full-SHA pin and catalog CI. After interruption, the same command reads public external state and skips completed steps.
 
 Sync does not merge meaning. It assembles canonical trees as-is and fails on a difference, so an unexpected gap between reviewed sources and the release cannot be hidden.
 
 ## Distribution boundary
 
-This repository owns the Project Legibility plugin and its releases. `perhapsspy/codex-plugins` is a thin catalog that points at a verified release commit without copying the plugin tree or canonical skills. The [release runbook](runbooks/release.md) owns publication and installed-plugin refresh boundaries.
+This repository owns the Project Legibility plugin and its releases. `perhapsspy/codex-plugins` is a thin catalog that points at a verified release commit without copying the plugin tree or canonical skills. The [release runbook](runbooks/release.md) owns publication, rerun and rollback behavior, and the installed-plugin refresh boundary. Task records are supporting context, not a release-completion gate.
 
 ## Lock and integrity
 

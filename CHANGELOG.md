@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-08-14
+
+### Changed
+
+- 특정 canonical source의 공개 full SHA만 갱신하고 나머지 pin을 보존하는 원격 조립 경로를 추가했습니다. 릴리스는 검토·commit된 입력을 한 `publish` 명령으로 Project Legibility main CI, 같은 SHA의 immutable tag·GitHub Release, publisher catalog pin·CI까지 게시하며, 중단 뒤 같은 명령이 공개된 외부 상태에서 이어갑니다. Candidate branch, 별도 상태 파일과 배포 뒤 작업 기록 대기는 공개 경로에 두지 않습니다.
+
 ## [0.8.1] - 2026-08-14
 
 ### Changed

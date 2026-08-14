@@ -176,6 +176,93 @@ def command_update(projects_root: Path) -> None:
     )
 
 
+def parse_source_pin(value: str) -> tuple[str, str]:
+    """Parse the repeatable ``source-id=40-character-sha`` CLI value."""
+    source_id, separator, commit = value.partition("=")
+    if not separator or not source_id or not commit:
+        raise SyncError("source pin must have the form source-id=40-character-sha")
+    require_slug(source_id, "source pin source id")
+    if not COMMIT_RE.fullmatch(commit):
+        raise SyncError(
+            f"{source_id}: source pin commit must be a lowercase full 40-character SHA"
+        )
+    return source_id, commit
+
+
+def verify_remote_main_commit(source: dict[str, Any], commit: str) -> None:
+    """Prove that ``commit`` is published and reachable from canonical main."""
+    with tempfile.TemporaryDirectory(prefix="project-legibility-source-pin-") as temp:
+        checkout = Path(temp)
+        run_git(checkout, "init", "--quiet")
+        run_git(checkout, "remote", "add", "origin", source["repository"])
+        try:
+            run_git(checkout, "fetch", "--quiet", "--no-tags", "origin", commit)
+            run_git(
+                checkout,
+                "fetch",
+                "--quiet",
+                "--no-tags",
+                "origin",
+                "refs/heads/main:refs/remotes/origin/main",
+            )
+            run_git(
+                checkout,
+                "merge-base",
+                "--is-ancestor",
+                commit,
+                "refs/remotes/origin/main",
+            )
+        except SyncError as exc:
+            raise SyncError(
+                f"{source['id']}: requested {commit} is not published on canonical main"
+            ) from exc
+
+
+def apply_source_pins(
+    lock: dict[str, Any], pins: dict[str, str]
+) -> dict[str, Any]:
+    """Apply selected remote-main pins while preserving every other lock entry."""
+    if not pins:
+        raise SyncError("at least one source pin is required")
+    by_id = {source["id"]: source for source in lock["sources"]}
+    unknown = sorted(set(pins) - set(by_id))
+    if unknown:
+        raise SyncError(f"unknown source id: {unknown[0]}")
+    invalid_commits = [
+        source_id
+        for source_id, commit in pins.items()
+        if not COMMIT_RE.fullmatch(commit)
+    ]
+    if invalid_commits:
+        source_id = invalid_commits[0]
+        raise SyncError(
+            f"{source_id}: source pin commit must be a lowercase full 40-character SHA"
+        )
+
+    # Resolve every requested tip before mutating the lock. A failed multi-pin
+    # update therefore leaves the in-memory lock unchanged and cannot produce a
+    # partially updated generated bundle.
+    for source_id, commit in pins.items():
+        source = by_id[source_id]
+        verify_remote_main_commit(source, commit)
+    for source_id, commit in pins.items():
+        by_id[source_id]["commit"] = commit
+    return lock
+
+
+def command_update_sources(pins: dict[str, str]) -> None:
+    """Update selected sources directly from canonical remotes and regenerate."""
+    lock = apply_source_pins(load_lock(), pins)
+    with tempfile.TemporaryDirectory(prefix="project-legibility-update-remote-") as temp:
+        assembled = Path(temp) / "skills"
+        assemble_from_lock(
+            lock, assembled, projects_root=None, verify_integrity=False
+        )
+        update_integrities(lock, assembled)
+        install_generated(assembled, lock, render_notices(lock))
+    print(f"Updated {len(pins)} source pin(s) from canonical remote main.")
+
+
 def command_sync(projects_root: Path | None) -> None:
     lock = load_lock()
     with tempfile.TemporaryDirectory(prefix="project-legibility-sync-") as temp:
@@ -530,9 +617,21 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     update = subparsers.add_parser(
-        "update", help="pin clean pushed local main checkouts and regenerate"
+        "update",
+        help="pin selected canonical main commits, or update all local checkouts",
     )
-    update.add_argument("--projects-root", type=Path, required=True)
+    update.add_argument(
+        "--source",
+        dest="source_pins",
+        action="append",
+        metavar="SOURCE_ID=SHA",
+        help="repeatable exact canonical main pin; avoids local checkouts",
+    )
+    update.add_argument(
+        "--projects-root",
+        type=Path,
+        help="legacy full local update root (required when --source is absent)",
+    )
 
     sync = subparsers.add_parser("sync", help="regenerate from the existing lock")
     sync.add_argument("--projects-root", type=Path)
@@ -549,7 +648,20 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     try:
         if args.command == "update":
-            command_update(args.projects_root)
+            if args.source_pins:
+                if args.projects_root is not None:
+                    raise SyncError("--source cannot be combined with --projects-root")
+                pins: dict[str, str] = {}
+                for value in args.source_pins:
+                    source_id, commit = parse_source_pin(value)
+                    if source_id in pins:
+                        raise SyncError(f"duplicate source pin: {source_id}")
+                    pins[source_id] = commit
+                command_update_sources(pins)
+            elif args.projects_root is not None:
+                command_update(args.projects_root)
+            else:
+                raise SyncError("update requires --source SOURCE_ID=SHA or --projects-root")
         elif args.command == "sync":
             command_sync(args.projects_root)
         elif args.command == "check":
