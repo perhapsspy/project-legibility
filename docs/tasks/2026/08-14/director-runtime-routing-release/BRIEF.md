@@ -19,12 +19,12 @@
 ## 현재 상태
 
 - Director 정본 `5b6671e`과 개인 설정 안내 `89b1a60`은 공개 `main`에 게시됐다.
-- Director만 갱신한 `0.8.1` release candidate가 source·bundle, plugin, bundled skill, remote source와 작업 기록 검사를 통과했다.
-- Project Legibility release commit, tag·GitHub Release와 publisher catalog pin은 아직 게시 전이다.
+- Director만 갱신한 Project Legibility `0.8.1` release `ee9c771`이 source·bundle, plugin, bundled skill, remote source와 CI를 통과했고 같은 commit의 tag와 GitHub Release가 게시됐다.
+- Publisher catalog `0c933f3`이 release SHA를 고정하며 원격 manifest 검사와 CI를 통과했다.
 
 ## 다음 행동
 
-- release candidate의 최종 diff를 확인하고 Project Legibility `0.8.1` commit을 게시한다.
+- 새 Codex 작업에서 갱신된 plugin이 로드된 뒤 실제 운영 사례가 계약과 다르게 동작할 때 이 작업을 다시 연다.
 
 ## 작업 경계
 
