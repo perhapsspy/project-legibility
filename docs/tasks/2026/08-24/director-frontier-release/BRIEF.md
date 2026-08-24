@@ -18,12 +18,13 @@
 
 ## 현재 상태
 
-- `0.9.2` manifest와 한영 release note, source sync를 완료 조건으로 오인하지 않게 하는 런북·AGENTS 경계를 준비했다.
-- offline source, 기본·`v0.9.2` bundle, 공식 plugin validator, 52개 단위 검사, runtime shape와 diff check가 통과했다.
+- Project Legibility release `f5416f2`에 `v0.9.2` tag와 GitHub Release가 존재하며 exact-SHA main CI와 release workflow가 성공했다.
+- Publisher catalog `7aa3e3d`이 release full SHA를 고정하며 원격 manifest 검증과 catalog CI를 통과했다.
+- source sync를 완료 조건으로 오인하지 않게 하는 릴리스 런북과 always-read 라우팅을 함께 게시했다.
 
 ## 다음 행동
 
-- 준비 diff를 commit한 뒤 `scripts/release.py publish --version 0.9.2 --catalog-root ../codex-plugins`로 release와 catalog CI를 완료한다.
+- 새 Codex 작업에서 갱신된 plugin이 로드된 뒤 실제 운영 사례가 계약과 다르게 동작할 때 이 작업을 다시 연다.
 
 ## 작업 경계
 
