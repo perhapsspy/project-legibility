@@ -21,11 +21,12 @@
 
 - 제품 수준 역할 변경을 `docs/PRODUCT.md`와 `docs/PRODUCT.en.md`에 먼저 반영했다.
 - Director 정본 `d8325758441953f436adbef7ab736ba685f0c30d`을 공개 `main`에 게시하고 source lock·generated bundle·출처 고지에 동기화했다.
-- Project Legibility 0.9.3 manifest와 한영 changelog를 준비했으며 offline source check, 기본·release-tag bundle 검증과 52개 단위 검사가 통과했다.
+- Project Legibility release `95514eeffa9367de2493de243fe8b0e8f91b2128`에 `v0.9.3` tag와 GitHub Release가 존재하며 exact-SHA CI와 release workflow가 성공했다.
+- Publisher catalog `b012f0798cffc061f743821750d19ce569886a7f`이 release full SHA를 고정하며 catalog CI를 통과했다.
 
 ## 다음 행동
 
-- Project Legibility release commit을 만들고 `v0.9.3` release와 publisher catalog pin·CI까지 게시한다.
+- 새 Codex 작업에서 trajectory review가 정상 진행에 과잉 개입하거나 실제 drift를 놓치는 운영 증거가 생기면 이 작업을 다시 연다.
 
 ## 작업 경계
 
