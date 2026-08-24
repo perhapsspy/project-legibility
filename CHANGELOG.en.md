@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-08-24
+
+### Changed
+
+- Removed `semantic-boundary-design` from the product composition because it had not demonstrated distinct value and overlapped `structure-first` in selection and responsibility. Its minimal useful contract now lives in the existing `structure-first` ownership and verification rules: when one settled domain meaning has a material risk of drifting across representations, keep interpretation ownership, allowed projection or compatibility translation, and a representative check at the first reinterpretation boundary. A boundary remains unresolved when no safe witness is available or current witnesses conflict, and cross-skill routing language was replaced with a self-contained input boundary.
+
 ## [0.8.2] - 2026-08-14
 
 ### Changed

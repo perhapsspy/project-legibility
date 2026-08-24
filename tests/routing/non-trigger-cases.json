@@ -86,13 +86,6 @@
       "rationale": "The direction is settled and the change is mechanical."
     },
     {
-      "id": "semantic-boundary-design-local-style",
-      "skill": "semantic-boundary-design",
-      "prompt": "Adjust spacing in one component without changing state or domain meaning.",
-      "expected": "do-not-select",
-      "rationale": "No user or domain meaning crosses representation boundaries."
-    },
-    {
       "id": "source-owner-audit-owner-confirmed",
       "skill": "source-owner-audit",
       "prompt": "Implement the change using the API contract already confirmed as authoritative.",

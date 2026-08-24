@@ -35,7 +35,6 @@ EXPECTED_SKILLS = (
     "project-context",
     "project-context-migration",
     "purpose-fit-design",
-    "semantic-boundary-design",
     "source-owner-audit",
     "structure-first",
     "tighten-docs",
@@ -49,7 +48,6 @@ EXPECTED_SOURCE_SKILLS = {
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-fit-design": ("purpose-fit-design",),
-    "semantic-boundary-design": ("semantic-boundary-design",),
     "source-owner-audit": ("source-owner-audit",),
     "structure-first": ("structure-first",),
     "tighten-docs": ("tighten-docs",),
@@ -61,6 +59,7 @@ EXPECTED_REPOSITORIES = {
 }
 FORBIDDEN_SKILLS = (
     "justified-change",
+    "semantic-boundary-design",
     "structure-first-docs",
     "work-board",
 )

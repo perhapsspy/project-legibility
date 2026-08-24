@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-08-24
+
+### Changed
+
+- 고유 효용이 입증되지 않고 `structure-first`와 선택·책임이 겹치던 `semantic-boundary-design`을 제품 구성에서 제거했습니다. 확정된 동일 도메인 의미가 여러 표현에서 달라질 실질적 위험이 있을 때 해석 owner, 허용된 projection·호환 번역과 최초 재해석 경계의 대표 검증을 유지하는 최소 원칙은 `structure-first`의 기존 ownership·verification 계약에 흡수했습니다. 안전한 증거가 없거나 현재 증거가 충돌하면 해당 경계를 미해결로 유지하며, 다른 스킬 이름에 의존하던 라우팅 문구도 자기완결적인 입력 경계로 교체했습니다.
+
 ## [0.8.2] - 2026-08-14
 
 ### Changed

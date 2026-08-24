@@ -1,4 +1,0 @@
-interface:
-  display_name: "Semantic Boundary Design"
-  short_description: "Keep IDs, status, and permission rules consistent"
-  default_prompt: "Use $semantic-boundary-design to decide where these shared rules should live so every layer behaves consistently."

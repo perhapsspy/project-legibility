@@ -67,7 +67,7 @@ Two core practices are joined by an early-direction check, specialists for concr
 
 ### Core practices
 
-- [`structure-first`](https://github.com/perhapsspy/structure-first): Keep code changes that reshape flow, state, responsibility, composition, or boundary contracts readable and verifiable.
+- [`structure-first`](https://github.com/perhapsspy/structure-first): Keep code changes that reshape flow, state, responsibility, composition, or boundary contracts readable and verifiable, with settled meaning and translation boundaries owned once across representations.
 - [`project-context`](https://github.com/perhapsspy/project-context): Preserve the objectives, decisions, current state, and next actions of long-running work in the repository across sessions and agents.
 
 ### Early direction check
@@ -77,7 +77,6 @@ Two core practices are joined by an early-direction check, specialists for concr
 ### Specialists for specific problems
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): Read current evidence to determine what to follow, what differs, and which decisions remain open.
-- [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design): Give user or domain meaning one owner and explicit translation boundaries so it stays consistent across representations and layers.
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive, with the latest user intent governing state as asynchronous results arrive.
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): Create complete, verified interfaces for new screens and major redesigns, grounded in real content, user tasks, relevant states, and responsive behavior.
 - [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): Review existing product interfaces or improve a bounded scope while preserving screen purpose and page-level structure.

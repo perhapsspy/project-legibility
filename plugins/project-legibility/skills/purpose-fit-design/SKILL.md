@@ -28,8 +28,7 @@ For temporary work, choose the smallest useful slice that preserves purpose and 
 Use the owning workflow when the remaining problem is already clear:
 
 - source discovery when the governing contract is unknown;
-- semantic boundary design when meaning ownership differs across layers;
 - interactive state flow when intent, async work, presentation, or freshness are entangled;
-- structure work after direction is settled and code shape or verification remains.
+- structure work after direction is settled and ownership of settled meaning across representations, code shape, or verification remains.
 
 When direction is already settled, do not redesign it or decide code, state, or ownership structure here; pass the settled contract to the relevant workflow. Do not perform specialist decisions inside this skill. Hand off the purpose, constraints, evidence, success condition, and unresolved fact so the next workflow does not reopen product direction without new evidence.

@@ -94,28 +94,14 @@
     {
       "id": "purpose-fit-design",
       "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "6081f8ec9d64f0a604b1042099f2bdabe668628d",
+      "commit": "08753983fda43637ad5fd0ab43d5c349151e3d74",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-fit-design",
           "sourcePath": "skills/purpose-fit-design",
           "targetPath": "skills/purpose-fit-design",
-          "integrity": "sha256:924b619a6f09385ac577558bb4bb5cc86ac61278a63a475be5be55e0a31c503a"
-        }
-      ]
-    },
-    {
-      "id": "semantic-boundary-design",
-      "repository": "https://github.com/perhapsspy/semantic-boundary-design.git",
-      "commit": "795b7193bc0bb4d483421cd2be646a07f7fd1257",
-      "license": "MIT",
-      "skills": [
-        {
-          "id": "semantic-boundary-design",
-          "sourcePath": "skills/semantic-boundary-design",
-          "targetPath": "skills/semantic-boundary-design",
-          "integrity": "sha256:e1ee8b91fc527474d0c5840587426dc533b626d7938de416a841e29012946358"
+          "integrity": "sha256:9eb3d0a9344e986a9a70c2fed8b3c910384706801cf32ff781d424e512b6aa3b"
         }
       ]
     },
@@ -136,14 +122,14 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "8388c0b3fb9899ab007fb4c2ce64686719df8ee6",
+      "commit": "40385d8e2bc421dbac8d958826a732c811faf028",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:747b7bca9d02ce70ccf0bdf3b9e11aaf55b6c3ab3a0ab45e80bfc3d9b423ead6"
+          "integrity": "sha256:da6ed2b92e3baf295b3bf689ce6ec8fb240b53a043473a7908a7c780f3f4bfa2"
         }
       ]
     },

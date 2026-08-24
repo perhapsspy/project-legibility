@@ -67,7 +67,7 @@ codex plugin add project-legibility@perhapsspy
 
 ### 핵심 작업 방식
 
-- [`structure-first`](https://github.com/perhapsspy/structure-first): 흐름·상태·책임·조합이나 경계 계약이 달라지는 코드 변경을 읽고 검증하기 쉽게 유지합니다.
+- [`structure-first`](https://github.com/perhapsspy/structure-first): 흐름·상태·책임·조합이나 경계 계약이 달라지는 코드 변경을 읽고 검증하기 쉽게 유지하며, 여러 표현에 걸친 확정 의미의 해석과 번역 경계도 한 owner에 둡니다.
 - [`project-context`](https://github.com/perhapsspy/project-context): 장기 작업의 목표와 판단, 현재 상태와 다음 행동을 저장소에 남겨 세션과 에이전트 사이에서 이어갑니다.
 
 ### 초기 방향 점검
@@ -77,7 +77,6 @@ codex plugin add project-legibility@perhapsspy
 ### 문제별 전문 스킬
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): 현재 무엇을 따라야 하는지, 무엇이 다른지, 어떤 결정이 남았는지를 실제 근거에서 읽기 전용으로 확인합니다.
-- [`semantic-boundary-design`](https://github.com/perhapsspy/semantic-boundary-design): 하나의 의미가 여러 표현과 계층에서 일관되도록 그 의미의 소유자와 변환 경계를 세웁니다.
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): 복잡한 상호작용에서도 빠르게 반응하고 최신 사용자 의도가 화면 상태를 이끄는 흐름을 만듭니다.
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): 새 화면과 큰 재설계에서 실제 콘텐츠, 사용자 과업, 필요한 상태와 반응형 동작을 갖춘 완전하고 검증된 인터페이스를 만듭니다.
 - [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): 기존 제품 화면을 읽기 전용으로 검토하거나 화면 목적과 페이지 구조를 보존하며 제한된 범위를 개선합니다.

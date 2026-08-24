@@ -79,11 +79,11 @@
       "rationale": "The new feature needs an early direction grounded in purpose, constraints, and observable success without depending on an existing implementation."
     },
     {
-      "id": "semantic-boundary-design-status-owner",
-      "skill": "semantic-boundary-design",
-      "prompt": "Unify status meaning that is currently decided differently by the API, UI, and realtime adapter.",
+      "id": "structure-first-status-meaning-drift",
+      "skill": "structure-first",
+      "prompt": "Implement the settled status contract across the API, UI, and realtime adapter without letting each representation infer a different meaning.",
       "expected": "select",
-      "rationale": "One domain meaning is drifting across several representations."
+      "rationale": "The change needs one readable implementation owner and guarded projection boundaries for a settled meaning at material risk of drift."
     },
     {
       "id": "source-owner-audit-canonical-config",
