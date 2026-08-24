@@ -4,6 +4,7 @@
 
 ## 완료 조건
 
+- 사용자에게 노출되는 bundled skill 변경은 source sync나 bundle commit·push만으로 완료되지 않습니다. Plugin manifest version과 한영 `CHANGELOG`를 반영한 release commit을 만들고, 그 SHA의 `main` CI, 동일 SHA의 tag·GitHub Release, publisher catalog pin·CI까지 모두 성공해야 완료로 보고합니다.
 - Project Legibility release commit의 `main` CI가 성공하고, 같은 commit에 `v<version>` tag와 GitHub Release가 존재합니다.
 - `perhapsspy/codex-plugins`가 그 commit의 full SHA를 고정하고 catalog CI가 성공합니다.
 

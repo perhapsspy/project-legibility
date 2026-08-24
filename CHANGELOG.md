@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.9.2] - 2026-08-24
+
+### Changed
+
+- 포함된 `codex-project-director`가 구현·디버깅·진단·테스트·검증을 직접 수행하지 않고, 기존 산출물·권위 있는 상태·담당자 증거에 대한 범위가 정해진 읽기 전용 조정과 인수 확인만 하도록 실행 소유권을 강화했습니다. 현재 Goal에 필요하고 독립적으로 실행 가능한 lane은 WIP 한도까지 매 scheduling pass에서 병렬 dispatch하며, focus 변경만으로 다른 eligible lane을 중단하지 않습니다.
+
 ## [0.9.1] - 2026-08-24
 
 ### Fixed

@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.9.2] - 2026-08-24
+
+### Changed
+
+- Strengthened the bundled `codex-project-director` so it never directly implements, debugs, diagnoses, tests, or verifies work, limiting itself to bounded read-only coordination and acceptance confirmation over existing artifacts, authoritative state, and owner-produced evidence. At each scheduling pass it dispatches every independent runnable lane required by the current Goal up to the WIP limit, and a focus change alone does not stop other eligible lanes.
+
 ## [0.9.1] - 2026-08-24
 
 ### Fixed
