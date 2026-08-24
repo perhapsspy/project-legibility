@@ -59,7 +59,6 @@ EXPECTED_REPOSITORIES = {
 }
 FORBIDDEN_SKILLS = (
     "justified-change",
-    "semantic-boundary-design",
     "structure-first-docs",
     "work-board",
 )

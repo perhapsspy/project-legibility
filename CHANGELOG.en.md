@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.9.1] - 2026-08-24
+
+### Fixed
+
+- Removed validation that permanently classified the retired `semantic-boundary-design` as forbidden. It remains absent from the current product composition, while the validator no longer blocks a future evidence-backed decision to reintroduce it.
+
 ## [0.9.0] - 2026-08-24
 
 ### Changed

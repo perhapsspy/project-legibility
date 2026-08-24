@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.9.1] - 2026-08-24
+
+### Fixed
+
+- 제거된 `semantic-boundary-design`을 forbidden skill로 고정하던 검증을 제거했습니다. 현재 제품 구성에서는 제외된 상태를 유지하지만, 향후 근거와 판단에 따른 재도입 가능성까지 validator가 금지하지 않습니다.
+
 ## [0.9.0] - 2026-08-24
 
 ### Changed
