@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.9.3] - 2026-08-24
+
+### Changed
+
+- Strengthened the bundled `codex-project-director` to use independent read-only trajectory review only for drift signals such as repeated investigation or verification, expansion beyond the packet, or a stalled acceptance frontier. Elapsed time and normal progress do not trigger intervention; the reviewer performs no implementation, testing, or requirement creation and returns one advisory disposition: `CONTINUE`, `STEER`, `STOP_AND_REPLAN`, or `ESCALATE`. `CONTINUE` stays silent, and stop-and-replan does not reassign work before the prior owner safely stops and hands off effect state.
+
 ## [0.9.2] - 2026-08-24
 
 ### Changed
@@ -253,7 +259,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...HEAD
+[0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9

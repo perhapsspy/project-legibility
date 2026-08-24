@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.9.3] - 2026-08-24
+
+### Changed
+
+- 포함된 `codex-project-director`가 반복 조사·검증, packet 밖 범위 확장이나 acceptance frontier 정체 같은 drift 신호에서만 독립적인 읽기 전용 trajectory review를 사용하도록 보강했습니다. 시간 경과나 정상 진척만으로는 개입하지 않고, reviewer는 구현·테스트·새 요구사항을 맡지 않은 채 `CONTINUE`, `STEER`, `STOP_AND_REPLAN`, `ESCALATE` 중 하나를 자문 증거로 반환합니다. `CONTINUE`에는 침묵하며, 중단·재계획도 기존 담당자의 안전한 중단과 effect state 인계 전에는 재배정하지 않습니다.
+
 ## [0.9.2] - 2026-08-24
 
 ### Changed
@@ -253,7 +259,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...HEAD
+[0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0
 [0.6.9]: https://github.com/perhapsspy/project-legibility/compare/v0.6.8...v0.6.9
