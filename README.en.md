@@ -80,12 +80,12 @@ Two core practices are joined by an early-direction check, specialists for concr
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive, with the latest user intent governing state as asynchronous results arrive.
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): Create complete, verified interfaces for new screens and major redesigns, grounded in real content, user tasks, relevant states, and responsive behavior.
 - [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): Review existing product interfaces or improve a bounded scope while preserving screen purpose and page-level structure.
-- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): Clarify the roles, current guidance, and reader routes of a selected document or documentation package.
+- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): Apply a quality pass from first draft through final review to settled human-authored documentation, clarifying current guidance and reader routes while removing traces of rejected decisions.
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): Keep always-read files such as `AGENTS.md` small, durable, and actionable as startup instructions.
 
 ### Optional operational and adoption helpers
 
-- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): Coordinate multiple Codex tasks toward one verified project outcome when the user explicitly designates a director session.
+- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): Track the lifecycle and effect state of multiple Codex tasks toward one verified project outcome when the user explicitly designates a director session.
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): Reduce reading and output and compress resume state when long sessions, large outputs, or repeated work consume the token budget quickly.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): Audit an existing repository with scattered working context and move only the necessary material into the `project-context` structure.
 

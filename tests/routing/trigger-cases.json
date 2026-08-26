@@ -121,6 +121,27 @@
       "rationale": "A concrete current-canon document should receive the skill's quality rules from its first draft."
     },
     {
+      "id": "tighten-docs-routine-prose-edit",
+      "skill": "tighten-docs",
+      "prompt": "Update the setup guide to use the approved install command and revise the surrounding explanation so readers know the current path.",
+      "expected": "select",
+      "rationale": "A routine edit that changes human-authored prose should receive the default documentation quality pass even without a large rewrite."
+    },
+    {
+      "id": "tighten-docs-adjacent-doc-change",
+      "skill": "tighten-docs",
+      "prompt": "Add the approved retry option to the client and update its README so the settled behavior and operator action are clear.",
+      "expected": "select",
+      "rationale": "Documentation changed as part of another task still needs the default documentation quality pass."
+    },
+    {
+      "id": "tighten-docs-removed-decision-negation",
+      "skill": "tighten-docs",
+      "prompt": "We removed the hosted-mode proposal. Review the current guide and remove sentences such as 'hosted mode is not supported' that only preserve that rejected decision as negation.",
+      "expected": "select",
+      "rationale": "The review must detect and remove the semantic footprint of a rejected decision from current-canon prose."
+    },
+    {
       "id": "tighten-docs-material-package-rewrite",
       "skill": "tighten-docs",
       "prompt": "Materially rewrite this README, architecture guide, and operations guide so duplicated current rules have one owner and each reader has a clear route.",

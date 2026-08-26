@@ -1,19 +1,19 @@
 ---
 name: tighten-docs
-description: Use when creating, materially rewriting, or finalizing a concrete current-canon document or selected documentation package from already-settled source meaning. Apply from the first draft when document roles, reader routes, ownership, or current-vs-stale clarity matter. Do not use to decide unresolved product, policy, architecture, or implementation meaning; maintain append-only history or generated artifacts; or make trivial mechanical edits.
+description: Use by default whenever creating, revising, reviewing, or finalizing human-authored documentation whose source meaning is settled, including documentation changed within another task. Apply from first draft through final review to keep one direct current state, clear reader routes and ownership, and remove rejected decisions that survive as negation or defensive prose. Skip prose-free mechanical edits, unresolved meaning, append-only history, generated artifacts, pure translation or localization, and always-read instruction design.
 ---
 
 # Tighten Docs
 
 ## Purpose and Authority
 
-Make the selected document, diff, or documentation package read as one clear current final state. Tighten prose and clarify document roles, reader routes, and current ownership without changing source meaning.
+Make the selected document, diff, or documentation package read as one clear current final state. Use this as the default quality pass for human-authored documentation, from the first sentence through the final review. Tighten prose and clarify document roles, reader routes, and current ownership without changing source meaning.
 
 Apply authority in this order: user and repository instructions, the selected format's contract, verified source evidence, then these general rules. Preserve tentative status. If the governing sources do not settle a necessary policy or ownership choice, ask briefly or record a decision request instead of deciding it.
 
 ## Scope and Permission
 
-Choose the surface—one target or an explicitly selected package—and permission—review or edit/organize. Review is read-only. Edit or organize permits changes only inside the selected documentation scope. Create, move, or delete a document only when the user requested changes and the governing contract or source justifies the action.
+Choose the surface—one target or an explicitly selected package—and permission—review or edit/organize. A requested human-authored prose change or review selects that documentation surface even when it is one deliverable inside a code, product, or operational task; do not wait for a separate cleanup request or a large rewrite. An edit is mechanical only when it leaves human-authored wording and structure untouched. Review is read-only. Edit or organize permits changes only inside the selected documentation scope. Create, move, or delete a document only when the user requested changes and the governing contract or source justifies the action.
 
 Before acting, identify each target's role, primary subject, reader action, owned promise, and coherent unit of change. Use the required prose language and locale. Preserve code identifiers, API names, file paths, commands, product names, domain terms, quoted protocol text, and externally owned labels.
 
@@ -25,6 +25,13 @@ Before acting, identify each target's role, primary subject, reader action, owne
 - For a public entrypoint, lead with the verified reader situation, outcome, and next action. Keep internal mechanism only when it helps that decision.
 - Rewrite kept general prose into the required language; remove extra or stale prose in other languages. Ask when governing language or locale requirements conflict.
 - Prefer no change or a light edit when restructuring would not materially improve reader action, ownership, or operational use.
+
+## Removal Discipline
+
+- Treat a rejected, removed, or replaced decision as absent from current canon. Do not preserve its semantic footprint merely to say it is unsupported, unused, no longer planned, or intentionally excluded.
+- Search the selected current-canon scope for the removed decision's names, aliases, paraphrases, and dependent rationale. Delete comparisons, denials, warnings, exceptions, fallback text, route stubs, and explanations whose only job is to remember or rebut it. Preserve such material only when the target explicitly owns history, decision rationale, safety, or compatibility evidence.
+- Use a counterfactual check: if the discarded option had never been proposed, would a current reader still need this sentence to act correctly or safely? If not, delete it. If yes, state the surviving current rule, requirement, or reader action directly; keep negation only when the boundary itself is current and source-backed.
+- In review mode, classify remnants that fail this check as deletion findings rather than wording suggestions. In edit mode, remove them throughout the selected scope instead of reporting them while leaving them in place.
 
 ## Package Ownership
 
@@ -42,6 +49,6 @@ For operational gates and runbooks, check whether required preconditions, allowe
 
 ## Output and Handoff
 
-For authorized edits, change the selected files directly when possible and report material owner or route changes plus blocked decisions. For review, lead with issues and risks in severity order and connect evidence to the required change or decision. Keep the response proportional; do not create a separate report, task document, or documentation surface unless requested.
+For authorized edits, change the selected files directly when possible and report material owner or route changes plus blocked decisions. For review, lead with issues and risks in severity order and connect evidence to the required change or decision. Before handoff, reread changed current-canon prose as if discarded options had never existed; remove traces that fail the counterfactual check and verify that each remaining negation serves a current reader, safety, or compatibility need. Keep the response proportional; do not create a separate report, task document, or documentation surface unless requested.
 
 Stop and ask or hand off when the work requires choosing an external source of truth; inventing product, policy, architecture, or implementation decisions; designing task-state, work-log, or handoff storage; changing an implementation plan's meaning or scope; pure translation/localization; or deciding the meaning or structure of an always-read repository instruction file. A wording pass on an already settled instruction or plan is allowed.

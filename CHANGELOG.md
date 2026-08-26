@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-08-26
+
+### Changed
+
+- 포함된 `tighten-docs`를 의미가 정해진 사람이 작성하는 문서의 기본 품질 패스로 확장했습니다. 다른 코드·제품·운영 작업에 딸린 문서 변경과 일상적인 본문 수정·리뷰에도 초안부터 최종 검토까지 참여하며, 제거된 판단이 부정·비교·경고·예외·방어적 근거로 남았는지 반사실로 검사해 현재 정본에서 삭제합니다.
+- 포함된 `codex-project-director`가 자신이 만들었거나 명시적으로 인계받은 작업만 제어하고, 작업 식별자와 교체 세대, 다음 사건, 실제 효과 상태를 대조하도록 작업 생명주기를 강화했습니다. 보고나 종료 표시만으로 완료하지 않고 모든 현재 작업과 이전 세대 작업을 안전하게 회수해 소유권을 해제하고 정본 완료 조건을 입증한 뒤 완료합니다.
+
 ## [0.9.3] - 2026-08-24
 
 ### Changed
@@ -259,7 +266,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0

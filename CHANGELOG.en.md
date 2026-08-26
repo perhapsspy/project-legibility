@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-08-26
+
+### Changed
+
+- Expanded the bundled `tighten-docs` into the default quality pass for settled human-authored documentation. It now participates from first draft through final review for routine prose changes and documentation changed within code, product, or operational work, and uses a counterfactual check to remove rejected decisions that survive in current canon as negation, comparison, warnings, exceptions, or defensive rationale.
+- Strengthened the bundled `codex-project-director` task lifecycle so it controls only tasks it created or was explicitly handed, and reconciles task identity, replacement generation, next events, and actual effect state. It no longer treats reports or terminal labels as completion; it completes only after safely joining current and prior-generation tasks, releasing ownership, and demonstrating the sourced gates.
+
 ## [0.9.3] - 2026-08-24
 
 ### Changed
@@ -259,7 +266,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0
 [0.7.0]: https://github.com/perhapsspy/project-legibility/compare/v0.6.9...v0.7.0

@@ -80,12 +80,12 @@ codex plugin add project-legibility@perhapsspy
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): 복잡한 상호작용에서도 빠르게 반응하고 최신 사용자 의도가 화면 상태를 이끄는 흐름을 만듭니다.
 - [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): 새 화면과 큰 재설계에서 실제 콘텐츠, 사용자 과업, 필요한 상태와 반응형 동작을 갖춘 완전하고 검증된 인터페이스를 만듭니다.
 - [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): 기존 제품 화면을 읽기 전용으로 검토하거나 화면 목적과 페이지 구조를 보존하며 제한된 범위를 개선합니다.
-- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): 선택한 문서와 문서 묶음의 역할, 지금 따라야 할 내용과 독자가 이동할 경로를 분명하게 정리합니다.
+- [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): 의미가 정해진 사람이 작성하는 문서에 초안부터 최종 리뷰까지 참여해 현재 안내와 독자 경로를 분명히 하고, 폐기된 판단의 흔적을 제거합니다.
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): `AGENTS.md` 같은 항상 읽는 지침을 작고 오래 유효하며 행동 가능한 시작 규칙으로 유지합니다.
 
 ### 필요할 때 쓰는 운영·도입 보조
 
-- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): 사용자가 디렉터로 지정한 세션에서 여러 Codex 작업을 하나의 검증된 프로젝트 결과까지 조정합니다.
+- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): 사용자가 디렉터로 지정한 세션에서 여러 Codex 작업의 생명주기와 효과 상태를 추적해 하나의 검증된 프로젝트 결과까지 조정합니다.
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): 긴 세션과 큰 출력, 반복 작업으로 token budget이 빠르게 소모될 때 읽기와 출력을 줄이고 이어갈 상태를 압축합니다.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): 작업 맥락이 흩어진 기존 저장소를 검토해 필요한 자료만 `project-context` 구조에 정착시킵니다.
 

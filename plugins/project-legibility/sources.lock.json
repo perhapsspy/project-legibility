@@ -32,14 +32,14 @@
     {
       "id": "codex-project-director",
       "repository": "https://github.com/perhapsspy/codex-project-director.git",
-      "commit": "d8325758441953f436adbef7ab736ba685f0c30d",
+      "commit": "04993b0df22ed68d9354983219913826a13387c6",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-project-director",
           "sourcePath": "skills/codex-project-director",
           "targetPath": "skills/codex-project-director",
-          "integrity": "sha256:87046c5c53d93be4c06a37adddd46e62ac757e1ad9aaeaf16d8337bebcfa7b62"
+          "integrity": "sha256:d9ca26c636f3163b7b48c4bf277c8dd3209338a4656c43937851e8b5a4afc08e"
         }
       ]
     },
@@ -136,14 +136,14 @@
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "5cd74f91be0f6bfd7d38dfa049d26be78c83be02",
+      "commit": "a9dc1211404ee6099540ffa062d0fddd8f3da75b",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:0f45af5efcc2a5301562fc7ce7e28ab7d615e5177084b7ca5f39c8562ab024de"
+          "integrity": "sha256:a009a7c3caf0cc598501012f244b94294efb649d9fc52f1839149b355b7d46c3"
         }
       ]
     },
