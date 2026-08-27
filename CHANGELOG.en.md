@@ -4,6 +4,18 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-08-27
+
+### Changed
+
+- Removed `design-user-interfaces` and `ui-design-rigor` from the Project Legibility bundle. Their explicit invocations have no direct successor; UI work is requested normally.
+- Updated the bundled `project-context` contract so disposable experiment and browser-test code and runtime artifacts stay in an isolated location outside the repository, while retained code and evidence go to their normal owner. Removed the heuristic `check_gardening.py` document-growth helper and kept formal structure validation with the runtime-shape checker.
+- Simplified the bundled `codex-token-discipline` usage audit around directly observed signals such as token totals, cache rate, child share, and tool-output volume.
+
+### Fixed
+
+- Fixed the usage audit double-counting ancestor history replayed into forked child rollouts as child token usage and tool output.
+
 ## [0.10.0] - 2026-08-26
 
 ### Changed
@@ -266,7 +278,8 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...HEAD
+[0.11.0]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0

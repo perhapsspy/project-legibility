@@ -63,7 +63,7 @@ codex plugin add project-legibility@perhapsspy
 
 ## 포함된 스킬
 
-두 핵심 작업 방식을 중심으로, 초기 방향 점검과 구체적인 설계·구현 문제를 맡는 스킬, 별도의 운영·도입 보조를 제공합니다. 역할과 선택 방식은 [스킬 구성 원칙](docs/PRODUCT.md), 자세한 사용법은 각 원본 저장소에서 확인할 수 있습니다.
+두 핵심 작업 방식을 중심으로, 초기 방향 점검과 구체적인 프로젝트 문제를 맡는 스킬, 별도의 운영·도입 보조를 제공합니다. 역할과 선택 방식은 [스킬 구성 원칙](docs/PRODUCT.md), 자세한 사용법은 각 원본 저장소에서 확인할 수 있습니다.
 
 ### 핵심 작업 방식
 
@@ -78,8 +78,6 @@ codex plugin add project-legibility@perhapsspy
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): 현재 무엇을 따라야 하는지, 무엇이 다른지, 어떤 결정이 남았는지를 실제 근거에서 읽기 전용으로 확인합니다.
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): 복잡한 상호작용에서도 빠르게 반응하고 최신 사용자 의도가 화면 상태를 이끄는 흐름을 만듭니다.
-- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): 새 화면과 큰 재설계에서 실제 콘텐츠, 사용자 과업, 필요한 상태와 반응형 동작을 갖춘 완전하고 검증된 인터페이스를 만듭니다.
-- [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): 기존 제품 화면을 읽기 전용으로 검토하거나 화면 목적과 페이지 구조를 보존하며 제한된 범위를 개선합니다.
 - [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): 의미가 정해진 사람이 작성하는 문서에 초안부터 최종 리뷰까지 참여해 현재 안내와 독자 경로를 분명히 하고, 폐기된 판단의 흔적을 제거합니다.
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): `AGENTS.md` 같은 항상 읽는 지침을 작고 오래 유효하며 행동 가능한 시작 규칙으로 유지합니다.
 

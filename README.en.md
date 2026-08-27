@@ -63,7 +63,7 @@ After that, ask for work normally. `project-context` keeps the current objective
 
 ## Included skills
 
-Two core practices are joined by an early-direction check, specialists for concrete design and implementation problems, and separate operational or adoption helpers. See the [skill composition model](docs/PRODUCT.en.md) for their roles and selection, and the linked source repositories for detailed usage.
+Two core practices are joined by an early-direction check, specialists for specific project problems, and separate operational or adoption helpers. See the [skill composition model](docs/PRODUCT.en.md) for their roles and selection, and the linked source repositories for detailed usage.
 
 ### Core practices
 
@@ -78,8 +78,6 @@ Two core practices are joined by an early-direction check, specialists for concr
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): Read current evidence to determine what to follow, what differs, and which decisions remain open.
 - [`interactive-state-flow`](https://github.com/perhapsspy/interactive-state-flow): Keep complex interactions responsive, with the latest user intent governing state as asynchronous results arrive.
-- [`design-user-interfaces`](https://github.com/perhapsspy/design-user-interfaces): Create complete, verified interfaces for new screens and major redesigns, grounded in real content, user tasks, relevant states, and responsive behavior.
-- [`ui-design-rigor`](https://github.com/perhapsspy/ui-design-rigor): Review existing product interfaces or improve a bounded scope while preserving screen purpose and page-level structure.
 - [`tighten-docs`](https://github.com/perhapsspy/tighten-docs): Apply a quality pass from first draft through final review to settled human-authored documentation, clarifying current guidance and reader routes while removing traces of rejected decisions.
 - [`agents-md-editor`](https://github.com/perhapsspy/agents-md-editor): Keep always-read files such as `AGENTS.md` small, durable, and actionable as startup instructions.
 

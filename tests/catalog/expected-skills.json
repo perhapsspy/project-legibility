@@ -4,14 +4,12 @@
     "agents-md-editor",
     "codex-project-director",
     "codex-token-discipline",
-    "design-user-interfaces",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",
     "purpose-fit-design",
     "source-owner-audit",
     "structure-first",
-    "tighten-docs",
-    "ui-design-rigor"
+    "tighten-docs"
   ]
 }

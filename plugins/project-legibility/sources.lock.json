@@ -18,14 +18,14 @@
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "202d6e812a17fbdc88f53254d1fe0399f87d37e9",
+      "commit": "5929a979f5a9ef82d2534bf374216edc4bc68eac",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:07e664d88db5b4b046cd82dbf62d786de1a7b2a04c37e5dabfe0af6c58dab931"
+          "integrity": "sha256:84cc1d4dcbe9987d777948b4be062d43d1f4f1c7d662c08f2b8acf2224cfc71c"
         }
       ]
     },
@@ -40,20 +40,6 @@
           "sourcePath": "skills/codex-project-director",
           "targetPath": "skills/codex-project-director",
           "integrity": "sha256:d9ca26c636f3163b7b48c4bf277c8dd3209338a4656c43937851e8b5a4afc08e"
-        }
-      ]
-    },
-    {
-      "id": "design-user-interfaces",
-      "repository": "https://github.com/perhapsspy/design-user-interfaces.git",
-      "commit": "1a84858c829014b522c5760895f9df1f9bc8588d",
-      "license": "MIT",
-      "skills": [
-        {
-          "id": "design-user-interfaces",
-          "sourcePath": "skills/design-user-interfaces",
-          "targetPath": "skills/design-user-interfaces",
-          "integrity": "sha256:9cddf6424ecb53c834465f15e0f767722130bada7f3ce4e9cdc9cef68cc61de5"
         }
       ]
     },
@@ -74,14 +60,14 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "0cad6e2110b51d06651b4840abce0a5877580065",
+      "commit": "89902497d88fd02c4fd795316a9ca68addc24433",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:98789b509ebaf07c88467e92299a153ab41885dd466c3e55ed3a1926fc35e436"
+          "integrity": "sha256:c021c940713a6ebbc2465b963a22bc8bf047a4c3ddc7b9c7831646439586b6c0"
         },
         {
           "id": "project-context-migration",
@@ -144,20 +130,6 @@
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
           "integrity": "sha256:a009a7c3caf0cc598501012f244b94294efb649d9fc52f1839149b355b7d46c3"
-        }
-      ]
-    },
-    {
-      "id": "ui-design-rigor",
-      "repository": "https://github.com/perhapsspy/ui-design-rigor.git",
-      "commit": "f02450f8967c8068c96183a1082c4a7bb92b0bf4",
-      "license": "MIT",
-      "skills": [
-        {
-          "id": "ui-design-rigor",
-          "sourcePath": "skills/ui-design-rigor",
-          "targetPath": "skills/ui-design-rigor",
-          "integrity": "sha256:d780c17423524110c48cbb5ea3b8a9b12a9ef92cf1fd3855bfe61126283081b0"
         }
       ]
     }

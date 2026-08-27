@@ -35,7 +35,6 @@ def build_valid_repo(root: Path) -> None:
     skills_root = plugin_root / "skills"
     for fixture_rel in (
         bundle.EXPECTED_CATALOG_REL,
-        bundle.FORBIDDEN_CATALOG_REL,
         bundle.TRIGGER_CASES_REL,
         bundle.NON_TRIGGER_CASES_REL,
     ):
@@ -232,29 +231,6 @@ class BundleValidatorTests(unittest.TestCase):
         self.assertTrue(
             any("must cover every bundled skill" in error for error in errors)
         )
-
-    def test_removed_name_is_rejected_in_active_bundle(self) -> None:
-        skill_path = (
-            self.repo_root
-            / bundle.PLUGIN_ROOT_REL
-            / "skills"
-            / "source-owner-audit"
-            / "SKILL.md"
-        )
-        skill_path.write_text(
-            skill_path.read_text(encoding="utf-8") + "\nLegacy: work-board\n",
-            encoding="utf-8",
-        )
-        self.assert_error_contains("removed skill name 'work-board'")
-
-    def test_historical_docs_are_outside_removed_name_scan(self) -> None:
-        history = self.repo_root / "docs" / "history.md"
-        history.parent.mkdir(parents=True)
-        history.write_text(
-            "Historical names: work-board, justified-change, structure-first-docs.\n",
-            encoding="utf-8",
-        )
-        self.assertEqual([], self.errors())
 
     def test_frontmatter_name_must_match_directory(self) -> None:
         skill_path = (

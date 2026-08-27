@@ -1,4 +1,0 @@
-interface:
-  display_name: "UI Design Rigor"
-  short_description: "Review and refine UI design with practical rigor"
-  default_prompt: "Use $ui-design-rigor to review this existing interface, preserve its purpose and structure, and change only the scope I explicitly request."

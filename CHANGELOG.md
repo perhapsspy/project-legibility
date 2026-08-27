@@ -4,6 +4,18 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-08-27
+
+### Changed
+
+- Project Legibility bundle에서 `design-user-interfaces`와 `ui-design-rigor`를 제거했습니다. 두 스킬의 명시 호출에는 직접 successor가 없으며, UI 작업은 일반 요청으로 전달합니다.
+- 포함된 `project-context`가 폐기할 실험·브라우저 검증 코드와 실행 산출물은 저장소 밖 격리 위치에서 다루고, 보존할 코드와 증거는 정식 owner에 두도록 계약을 정리했습니다. 휴리스틱 문서 누적 검사기 `check_gardening.py`는 제거하고 정형 구조 검증은 runtime-shape checker에 남겼습니다.
+- 포함된 `codex-token-discipline`의 사용량 감사 도구를 token total, cache rate, child share와 tool-output volume 같은 직접 관찰 신호에 집중하도록 단순화했습니다.
+
+### Fixed
+
+- 사용량 감사 도구가 fork된 child rollout에 복제된 ancestor 기록을 child 사용량과 도구 출력에 다시 더하던 중복 집계를 수정했습니다.
+
 ## [0.10.0] - 2026-08-26
 
 ### Changed
@@ -266,7 +278,8 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...HEAD
+[0.11.0]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3
 [0.8.0]: https://github.com/perhapsspy/project-legibility/compare/v0.7.3...v0.8.0

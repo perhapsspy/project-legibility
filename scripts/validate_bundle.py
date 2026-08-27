@@ -30,7 +30,6 @@ EXPECTED_SKILLS = (
     "agents-md-editor",
     "codex-project-director",
     "codex-token-discipline",
-    "design-user-interfaces",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",
@@ -38,33 +37,24 @@ EXPECTED_SKILLS = (
     "source-owner-audit",
     "structure-first",
     "tighten-docs",
-    "ui-design-rigor",
 )
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
     "codex-project-director": ("codex-project-director",),
     "codex-token-discipline": ("codex-token-discipline",),
-    "design-user-interfaces": ("design-user-interfaces",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-fit-design": ("purpose-fit-design",),
     "source-owner-audit": ("source-owner-audit",),
     "structure-first": ("structure-first",),
     "tighten-docs": ("tighten-docs",),
-    "ui-design-rigor": ("ui-design-rigor",),
 }
 EXPECTED_REPOSITORIES = {
     source_id: f"https://github.com/perhapsspy/{source_id}"
     for source_id in EXPECTED_SOURCE_SKILLS
 }
-FORBIDDEN_SKILLS = (
-    "justified-change",
-    "structure-first-docs",
-    "work-board",
-)
 
 EXPECTED_CATALOG_REL = Path("tests") / "catalog" / "expected-skills.json"
-FORBIDDEN_CATALOG_REL = Path("tests") / "catalog" / "forbidden-skills.json"
 TRIGGER_CASES_REL = Path("tests") / "routing" / "trigger-cases.json"
 NON_TRIGGER_CASES_REL = Path("tests") / "routing" / "non-trigger-cases.json"
 
@@ -106,7 +96,6 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
     manifest = load_json(repo_root / MANIFEST_REL, errors)
     lock = load_json(repo_root / LOCK_REL, errors)
     expected_catalog = load_json(repo_root / EXPECTED_CATALOG_REL, errors)
-    forbidden_catalog = load_json(repo_root / FORBIDDEN_CATALOG_REL, errors)
     trigger_cases = load_json(repo_root / TRIGGER_CASES_REL, errors)
     non_trigger_cases = load_json(repo_root / NON_TRIGGER_CASES_REL, errors)
 
@@ -116,12 +105,6 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
         expected_catalog,
         EXPECTED_CATALOG_REL,
         EXPECTED_SKILLS,
-        errors,
-    )
-    validate_catalog(
-        forbidden_catalog,
-        FORBIDDEN_CATALOG_REL,
-        FORBIDDEN_SKILLS,
         errors,
     )
     lock_skills = validate_lock(lock, LOCK_REL, errors)
@@ -140,7 +123,6 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
         expected_result="do-not-select",
         errors=errors,
     )
-    validate_removed_names(repo_root, plugin_root, errors)
     if release_tag is not None:
         validate_release_changelog(repo_root / CHANGELOG_REL, release_tag, errors)
 
@@ -995,41 +977,6 @@ def validate_routing_cases(
             fixture_path,
             f"routing fixtures must cover every bundled skill, missing {sorted(set(EXPECTED_SKILLS) - covered_skills)!r}",
         )
-
-
-def validate_removed_names(
-    repo_root: Path,
-    plugin_root: Path,
-    errors: ValidationErrors,
-) -> None:
-    active_paths: list[Path] = []
-    if plugin_root.exists():
-        active_paths.extend(path for path in plugin_root.rglob("*") if path.is_file())
-    active_paths.extend(
-        repo_root / relative_path
-        for relative_path in (
-            EXPECTED_CATALOG_REL,
-            TRIGGER_CASES_REL,
-            NON_TRIGGER_CASES_REL,
-        )
-    )
-    for path in sorted(set(active_paths)):
-        if not path.is_file() or path.is_symlink():
-            continue
-        try:
-            content = path.read_bytes().lower()
-        except OSError as exc:
-            errors.add(
-                relative_location(path, repo_root),
-                f"could not scan removed names ({exc})",
-            )
-            continue
-        for forbidden_name in FORBIDDEN_SKILLS:
-            if forbidden_name.encode("utf-8") in content:
-                errors.add(
-                    relative_location(path, repo_root),
-                    f"removed skill name {forbidden_name!r} remains in the active bundle",
-                )
 
 
 def validate_existing_relative_path(

@@ -44,20 +44,6 @@
       "rationale": "A local user correction in one task does not designate a multi-task director role."
     },
     {
-      "id": "design-user-interfaces-local-style",
-      "skill": "design-user-interfaces",
-      "prompt": "Reduce the horizontal padding on this existing button by four pixels.",
-      "expected": "do-not-select",
-      "rationale": "The request is a settled local style edit rather than a new screen or major redesign."
-    },
-    {
-      "id": "design-user-interfaces-read-only-review",
-      "skill": "design-user-interfaces",
-      "prompt": "Review this finished landing page for AI-looking visual patterns without changing it.",
-      "expected": "do-not-select",
-      "rationale": "The request is a post-hoc read-only review, not interface creation or a major redesign."
-    },
-    {
       "id": "interactive-state-flow-sync-formatter",
       "skill": "interactive-state-flow",
       "prompt": "Fix a pure synchronous formatter that returns the wrong punctuation.",
@@ -140,20 +126,6 @@
       "prompt": "Fix one typo and update the version number in README.md without changing any surrounding wording.",
       "expected": "do-not-select",
       "rationale": "A trivial mechanical edit does not need the specialist documentation workflow."
-    },
-    {
-      "id": "ui-design-rigor-new-dashboard",
-      "skill": "ui-design-rigor",
-      "prompt": "Design and build a new operations dashboard, deciding its primary task, page hierarchy, states, and responsive layout.",
-      "expected": "do-not-select",
-      "rationale": "A new dashboard with unsettled page-level decisions belongs to broader interface design."
-    },
-    {
-      "id": "ui-design-rigor-exact-padding",
-      "skill": "ui-design-rigor",
-      "prompt": "Change this button padding from 12px to the already-approved 8px value.",
-      "expected": "do-not-select",
-      "rationale": "An exact approved mechanical edit requires no interface-quality judgment."
     }
   ]
 }
