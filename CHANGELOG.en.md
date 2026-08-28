@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.11.1] - 2026-08-28
+
+### Changed
+
+- Moved the bundled `structure-first` core owner, flow, completion, and verification decisions into a short runtime contract. Detailed rules for public I/O, ownership boundaries, async and state lifecycles, representations, migration, and boundary verification now load from one-level references only when their conditions apply. The existing product role and automatic-selection boundary remain unchanged.
+
 ## [0.11.0] - 2026-08-27
 
 ### Changed
