@@ -108,14 +108,14 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "40385d8e2bc421dbac8d958826a732c811faf028",
+      "commit": "11819e82afdb70f94bd5f7b8c1eb6df686eafcc2",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:da6ed2b92e3baf295b3bf689ce6ec8fb240b53a043473a7908a7c780f3f4bfa2"
+          "integrity": "sha256:2a528e28ed684908fd94b5153b959e296fd03d67338151d1e32d6da4e656bb9d"
         }
       ]
     },

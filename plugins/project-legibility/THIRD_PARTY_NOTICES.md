@@ -14,5 +14,5 @@ All listed sources use the MIT License; the license text is included in `LICENSE
 | [project-context](https://github.com/perhapsspy/project-context) | [`89902497d88f`](https://github.com/perhapsspy/project-context/commit/89902497d88fd02c4fd795316a9ca68addc24433) | `project-context`, `project-context-migration` | MIT |
 | [purpose-fit-design](https://github.com/perhapsspy/purpose-fit-design) | [`08753983fda4`](https://github.com/perhapsspy/purpose-fit-design/commit/08753983fda43637ad5fd0ab43d5c349151e3d74) | `purpose-fit-design` | MIT |
 | [source-owner-audit](https://github.com/perhapsspy/source-owner-audit) | [`699575df1b7c`](https://github.com/perhapsspy/source-owner-audit/commit/699575df1b7c446fb1657d010938a5f017cac7ce) | `source-owner-audit` | MIT |
-| [structure-first](https://github.com/perhapsspy/structure-first) | [`40385d8e2bc4`](https://github.com/perhapsspy/structure-first/commit/40385d8e2bc421dbac8d958826a732c811faf028) | `structure-first` | MIT |
+| [structure-first](https://github.com/perhapsspy/structure-first) | [`11819e82afdb`](https://github.com/perhapsspy/structure-first/commit/11819e82afdb70f94bd5f7b8c1eb6df686eafcc2) | `structure-first` | MIT |
 | [tighten-docs](https://github.com/perhapsspy/tighten-docs) | [`a9dc1211404e`](https://github.com/perhapsspy/tighten-docs/commit/a9dc1211404ee6099540ffa062d0fddd8f3da75b) | `tighten-docs` | MIT |
