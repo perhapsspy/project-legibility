@@ -44,7 +44,7 @@ EXPECTED_SOURCE_SKILLS = {
     "codex-token-discipline": ("codex-token-discipline",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
-    "purpose-fit-design": ("purpose-first-design",),
+    "purpose-first-design": ("purpose-first-design",),
     "source-owner-audit": ("source-owner-audit",),
     "structure-first": ("structure-first",),
     "tighten-docs": ("tighten-docs",),

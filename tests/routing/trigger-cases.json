@@ -72,6 +72,13 @@
       "rationale": "The new feature needs an early direction grounded in purpose, constraints, and observable success without depending on an existing implementation."
     },
     {
+      "id": "purpose-first-design-temporary-implementation",
+      "skill": "purpose-first-design",
+      "prompt": "Before building the permanent billing integration, choose whether a temporary implementation can validate the checkout purpose without weakening the locked refund and audit boundaries.",
+      "expected": "select",
+      "rationale": "A temporary implementation is an early product and implementation-planning choice whose direction must preserve locked boundaries and observable validation."
+    },
+    {
       "id": "structure-first-status-meaning-drift",
       "skill": "structure-first",
       "prompt": "Implement the settled status contract across the API, UI, and realtime adapter without letting each representation infer a different meaning.",

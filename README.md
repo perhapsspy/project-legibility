@@ -72,7 +72,7 @@ codex plugin add project-legibility@perhapsspy
 
 ### 목적 우선 방향 결정
 
-- [`purpose-first-design`](https://github.com/perhapsspy/purpose-fit-design): 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 목적과 확정된 경계에서 가장 작은 충분한 방향을 정하고, 답변이 만든 불필요한 범위와 약속을 마지막에 줄입니다.
+- [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 새 기능·재사용 선택·임시 구현 등 중대한 선택의 초기 방향을 목적과 확정된 경계에서 정하고, 답변이 만든 불필요한 범위와 약속을 줄입니다.
 
 ### 문제별 전문 스킬
 

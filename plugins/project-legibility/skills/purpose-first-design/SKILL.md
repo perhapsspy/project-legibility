@@ -1,6 +1,6 @@
 ---
 name: purpose-first-design
-description: Use when product meaning or implementation-planning direction is materially open before solution structure is settled. Choose a bounded provisional direction from user/domain purpose, locked decisions, explicit constraints, authority, current evidence, and observable success. Do not use for settled code structure, implementation execution, source discovery, or document editing.
+description: Use when product meaning or implementation-planning direction is materially open before solution structure is settled, including early direction for a new feature, reuse choices, temporary implementations, or another materially consequential product or implementation-planning choice. Choose a bounded provisional direction from user/domain purpose, locked decisions, explicit constraints, authority, current evidence, and observable success. Do not use for settled code structure, implementation execution, source discovery, or document editing.
 ---
 
 # Purpose-First Design

@@ -78,16 +78,16 @@
       ]
     },
     {
-      "id": "purpose-fit-design",
-      "repository": "https://github.com/perhapsspy/purpose-fit-design.git",
-      "commit": "f694ac7271e985374108828531a58831ed737c79",
+      "id": "purpose-first-design",
+      "repository": "https://github.com/perhapsspy/purpose-first-design.git",
+      "commit": "64cc734ad5504f18da2c61f50da2cdde3208fdb2",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-first-design",
           "sourcePath": "skills/purpose-first-design",
           "targetPath": "skills/purpose-first-design",
-          "integrity": "sha256:47f2a710c4d214999f8cd18c09625c7e707b78b075ac2e2aa897bad885a660ff"
+          "integrity": "sha256:74f5054cc0365d48e3e491ecd9e2f8a74e02ab88100c503b5a415b9329a7b77d"
         }
       ]
     },
