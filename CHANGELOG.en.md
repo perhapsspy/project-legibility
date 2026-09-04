@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-09-04
+
+### Changed
+
+- Completed `purpose-first-design` as the canonical repository and install identity, aligning the bundled skill's source ownership and Project Legibility bundle identity.
+- Broadened `purpose-first-design` automatic participation to early direction for new features, reuse of existing implementations, temporary implementations, and other materially consequential open product or implementation-planning choices. Settled work and concrete specialist problems remain excluded, while locked meaning and safety and operational boundaries remain preserved.
+
 ## [0.12.0] - 2026-09-04
 
 ### Changed

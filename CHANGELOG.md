@@ -4,6 +4,13 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-09-04
+
+### Changed
+
+- `purpose-first-design`을 canonical repository와 설치 identity로 완성해 정본 스킬과 Project Legibility bundle의 소유·식별 경로를 일치시켰습니다.
+- `purpose-first-design` 자동 참여 범위를 새 기능의 초기 방향, 기존 구현 재사용, 임시 구현 및 그 밖의 결과에 중대한 영향을 주는 열린 제품·구현 계획 선택까지 넓혔습니다. 의미가 정해진 작업과 구체적인 전문 문제는 제외하며, 잠긴 의미와 안전·운영 경계는 보존합니다.
+
 ## [0.12.0] - 2026-09-04
 
 ### Changed
