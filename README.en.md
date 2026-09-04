@@ -63,16 +63,16 @@ After that, ask for work normally. `project-context` keeps the current objective
 
 ## Included skills
 
-Two core practices are joined by an early-direction check, specialists for specific project problems, and separate operational or adoption helpers. See the [skill composition model](docs/PRODUCT.en.md) for their roles and selection, and the linked source repositories for detailed usage.
+Two core practices are joined by purpose-first direction setting, specialists for specific project problems, and separate operational or adoption helpers. See the [skill composition model](docs/PRODUCT.en.md) for their roles and selection, and the linked source repositories for detailed usage.
 
 ### Core practices
 
 - [`structure-first`](https://github.com/perhapsspy/structure-first): Keep code changes that reshape flow, state, responsibility, composition, or boundary contracts readable and verifiable, with settled meaning and translation boundaries owned once across representations.
 - [`project-context`](https://github.com/perhapsspy/project-context): Preserve the objectives, decisions, current state, and next actions of long-running work in the repository across sessions and agents.
 
-### Early direction check
+### Purpose-first direction
 
-- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design): When the fit of an early design or implementation direction remains a material choice, check it against purpose, constraints, evidence, and success conditions.
+- [`purpose-first-design`](https://github.com/perhapsspy/purpose-fit-design): When product meaning or implementation-planning direction remains materially open, choose the smallest sufficient direction from purpose and locked boundaries, then reduce scope and commitments introduced by the answer.
 
 ### Specialists for specific problems
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Purpose-First Design"
+  short_description: "Choose the smallest direction from purpose and locked boundaries"
+  default_prompt: "Use $purpose-first-design to choose the smallest sufficient direction from the purpose, locked decisions, constraints, authority, evidence, and observable success."

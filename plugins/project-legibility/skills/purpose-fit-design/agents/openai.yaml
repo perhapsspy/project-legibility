@@ -1,4 +1,0 @@
-interface:
-  display_name: "Purpose-Fit Design"
-  short_description: "Choose early design direction from purpose and evidence"
-  default_prompt: "Use $purpose-fit-design to set this direction from the goal, constraints, evidence, and success condition."

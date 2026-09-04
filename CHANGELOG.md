@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-09-04
+
+### Changed
+
+- 포함된 `purpose-fit-design`을 `purpose-first-design`으로 교체했습니다. 새 스킬은 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 목적, 확정된 결정과 경계, 권한, 근거와 관찰 가능한 성공에서 가장 작은 충분한 방향을 정합니다. 완료 전에는 답변이 새로 만든 불필요한 범위·약속·가정·열린 결정을 줄이되 확정 의미와 필수 안전·운영 복잡성을 보존합니다. 기존 명시 호출은 `$purpose-first-design`으로 바꿔야 합니다.
+
 ## [0.11.1] - 2026-08-28
 
 ### Changed
@@ -284,7 +290,9 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 - v0.1에는 MCP server, app, hook, lifecycle automation과 umbrella skill이 없습니다.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/perhapsspy/project-legibility/compare/v0.11.1...v0.12.0
+[0.11.1]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3

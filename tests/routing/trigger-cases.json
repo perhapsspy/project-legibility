@@ -58,15 +58,15 @@
       "rationale": "The request is specifically an adoption migration from scattered context."
     },
     {
-      "id": "purpose-fit-design-reuse-decision",
-      "skill": "purpose-fit-design",
+      "id": "purpose-first-design-reuse-decision",
+      "skill": "purpose-first-design",
       "prompt": "Before coding, decide whether reusing the existing admin workflow fits the new end-user purpose and constraints.",
       "expected": "select",
       "rationale": "An early reuse decision could steer implementation away from the stated purpose."
     },
     {
-      "id": "purpose-fit-design-new-feature-direction",
-      "skill": "purpose-fit-design",
+      "id": "purpose-first-design-new-feature-direction",
+      "skill": "purpose-first-design",
       "prompt": "Before coding a new notification-preferences flow, choose a direction that preserves per-channel control, mobile usability, and an observable save confirmation.",
       "expected": "select",
       "rationale": "The new feature needs an early direction grounded in purpose, constraints, and observable success without depending on an existing implementation."

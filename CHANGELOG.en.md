@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-09-04
+
+### Changed
+
+- Replaced the bundled `purpose-fit-design` with `purpose-first-design`. The new skill chooses the smallest sufficient direction from purpose, locked decisions and boundaries, authority, evidence, and observable success when product meaning or implementation-planning direction remains materially open. Before completion, it reduces unnecessary scope, commitments, assumptions, and open decisions introduced by the answer while preserving locked meaning and required safety and operational complexity. Existing explicit invocations must use `$purpose-first-design`.
+
 ## [0.11.1] - 2026-08-28
 
 ### Changed
@@ -284,7 +290,9 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 - v0.1 contains no MCP server, app, hook, lifecycle automation, or umbrella skill.
 
-[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...HEAD
+[Unreleased]: https://github.com/perhapsspy/project-legibility/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/perhapsspy/project-legibility/compare/v0.11.1...v0.12.0
+[0.11.1]: https://github.com/perhapsspy/project-legibility/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/perhapsspy/project-legibility/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/perhapsspy/project-legibility/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/perhapsspy/project-legibility/compare/v0.9.2...v0.9.3

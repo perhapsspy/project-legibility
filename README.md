@@ -63,16 +63,16 @@ codex plugin add project-legibility@perhapsspy
 
 ## 포함된 스킬
 
-두 핵심 작업 방식을 중심으로, 초기 방향 점검과 구체적인 프로젝트 문제를 맡는 스킬, 별도의 운영·도입 보조를 제공합니다. 역할과 선택 방식은 [스킬 구성 원칙](docs/PRODUCT.md), 자세한 사용법은 각 원본 저장소에서 확인할 수 있습니다.
+두 핵심 작업 방식을 중심으로, 목적 우선 방향 결정과 구체적인 프로젝트 문제를 맡는 스킬, 별도의 운영·도입 보조를 제공합니다. 역할과 선택 방식은 [스킬 구성 원칙](docs/PRODUCT.md), 자세한 사용법은 각 원본 저장소에서 확인할 수 있습니다.
 
 ### 핵심 작업 방식
 
 - [`structure-first`](https://github.com/perhapsspy/structure-first): 흐름·상태·책임·조합이나 경계 계약이 달라지는 코드 변경을 읽고 검증하기 쉽게 유지하며, 여러 표현에 걸친 확정 의미의 해석과 번역 경계도 한 owner에 둡니다.
 - [`project-context`](https://github.com/perhapsspy/project-context): 장기 작업의 목표와 판단, 현재 상태와 다음 행동을 저장소에 남겨 세션과 에이전트 사이에서 이어갑니다.
 
-### 초기 방향 점검
+### 목적 우선 방향 결정
 
-- [`purpose-fit-design`](https://github.com/perhapsspy/purpose-fit-design): 초기 설계나 구현 방향의 적합성이 중요한 선택으로 남아 있을 때 목적·제약·근거와 성공 조건을 확인합니다.
+- [`purpose-first-design`](https://github.com/perhapsspy/purpose-fit-design): 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 목적과 확정된 경계에서 가장 작은 충분한 방향을 정하고, 답변이 만든 불필요한 범위와 약속을 마지막에 줄입니다.
 
 ### 문제별 전문 스킬
 

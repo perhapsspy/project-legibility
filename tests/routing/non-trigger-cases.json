@@ -65,8 +65,8 @@
       "rationale": "New task creation is not a migration from existing context."
     },
     {
-      "id": "purpose-fit-design-settled-copy",
-      "skill": "purpose-fit-design",
+      "id": "purpose-first-design-settled-copy",
+      "skill": "purpose-first-design",
       "prompt": "Apply the already-approved one-word copy correction.",
       "expected": "do-not-select",
       "rationale": "The direction is settled and the change is mechanical."
