@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-09-06
+
+### Changed
+
+- `codex-token-discipline` now participates in costly execution/retry loops and progress observation even when output is small. Prior results guide the next bounded execution or observation; routine test runs alone do not trigger the skill.
+- Available progress information is considered before further waiting when it can inform a known, time-sensitive decision. Still-valid evidence is reused and required verification is preserved.
+
 ## [0.13.1] - 2026-09-05
 
 ### Fixed

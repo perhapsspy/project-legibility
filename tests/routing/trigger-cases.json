@@ -16,6 +16,13 @@
       "rationale": "The work has explicit long-session, broad-read, and delegation risks."
     },
     {
+      "id": "codex-token-discipline-costly-small-output",
+      "skill": "codex-token-discipline",
+      "prompt": "This simulation prints only one result line but each attempt takes ten minutes. Use the last run result to choose the next bounded execution or progress observation.",
+      "expected": "select",
+      "rationale": "Costly execution and retry choices need prior evidence even when output is small."
+    },
+    {
       "id": "codex-project-director-explicit-role",
       "skill": "codex-project-director",
       "prompt": "Act as the project director for these Codex tasks, start one Goal, and drive their shared outcome through verified integration.",

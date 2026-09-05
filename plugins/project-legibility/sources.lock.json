@@ -18,14 +18,14 @@
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "5929a979f5a9ef82d2534bf374216edc4bc68eac",
+      "commit": "3aefdaf9cacd826e552cb17aea02aa5bd3da65ed",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:84cc1d4dcbe9987d777948b4be062d43d1f4f1c7d662c08f2b8acf2224cfc71c"
+          "integrity": "sha256:841bdfd77755a5f5c39a0f9422f75a8e3dc63a0d78d44888e9ea1eb3fefb42e9"
         }
       ]
     },

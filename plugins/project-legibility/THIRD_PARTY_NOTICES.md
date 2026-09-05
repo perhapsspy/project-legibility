@@ -8,7 +8,7 @@ All listed sources use the MIT License; the license text is included in `LICENSE
 | Canonical source | Commit | Bundled skills | License |
 |---|---|---|---|
 | [agents-md-editor](https://github.com/perhapsspy/agents-md-editor) | [`dcbacdd551b9`](https://github.com/perhapsspy/agents-md-editor/commit/dcbacdd551b9b5efba935094436f2e68e0ddc111) | `agents-md-editor` | MIT |
-| [codex-token-discipline](https://github.com/perhapsspy/codex-token-discipline) | [`5929a979f5a9`](https://github.com/perhapsspy/codex-token-discipline/commit/5929a979f5a9ef82d2534bf374216edc4bc68eac) | `codex-token-discipline` | MIT |
+| [codex-token-discipline](https://github.com/perhapsspy/codex-token-discipline) | [`3aefdaf9cacd`](https://github.com/perhapsspy/codex-token-discipline/commit/3aefdaf9cacd826e552cb17aea02aa5bd3da65ed) | `codex-token-discipline` | MIT |
 | [codex-project-director](https://github.com/perhapsspy/codex-project-director) | [`04993b0df22e`](https://github.com/perhapsspy/codex-project-director/commit/04993b0df22ed68d9354983219913826a13387c6) | `codex-project-director` | MIT |
 | [interactive-state-flow](https://github.com/perhapsspy/interactive-state-flow) | [`c5cf6f916d23`](https://github.com/perhapsspy/interactive-state-flow/commit/c5cf6f916d23b890139df5ec79b54c232eba72d7) | `interactive-state-flow` | MIT |
 | [project-context](https://github.com/perhapsspy/project-context) | [`8dfff6683b4d`](https://github.com/perhapsspy/project-context/commit/8dfff6683b4d05ddab5db9503af449a309dd5313) | `project-context`, `project-context-migration` | MIT |
