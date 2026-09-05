@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.13.1] - 2026-09-05
+
+### Fixed
+
+- `project-context` now accepts an empty `DECISIONS.md` when no decision needs recording. Empty logs support tail, check, and the first decision append; incomplete decision records still fail validation.
+- Added `--task-root` to the runtime-shape checker for checking the current task during routine completion and handoff. Omitting the option preserves the existing repository-wide checks.
+
 ## [0.13.0] - 2026-09-04
 
 ### Changed
