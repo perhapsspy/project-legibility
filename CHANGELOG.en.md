@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.14.1] - 2026-09-08
+
+### Changed
+
+- Clarified that bundled `codex-token-discipline` uses existing tools or the current executor for routine status observation and comparison. Progress reports retain execution ownership, surface only completion, unresolved blockers, and scope, acceptance, authority, or risk decisions, and add an observer only when it has an independently useful responsibility.
+
 ## [0.14.0] - 2026-09-06
 
 ### Changed

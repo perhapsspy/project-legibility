@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.14.1] - 2026-09-08
+
+### Changed
+
+- 포함된 `codex-token-discipline`이 반복 상태 관찰과 비교에는 기존 도구나 현재 실행 담당자를 사용하도록 명확히 했습니다. 진행 보고는 실행 소유권을 parent에게 넘기지 않으며, 완료·미해결 blocker·범위·acceptance·authority·risk 판단이 필요한 변경만 드러내고 독립적 책임이 있을 때만 별도 observer를 둡니다.
+
 ## [0.14.0] - 2026-09-06
 
 ### Changed
