@@ -19,7 +19,7 @@ Default to read-only evidence, comparison, classification, and owner-level recom
 
 Resolve each candidate owner independently from the smallest current source path. Start with the feature, route, API, config, document, or behavior named by the user; prefer path-specific reads over broad scans. When local changes may affect the answer, inspect worktree status and the relevant diff.
 
-Current source outranks memory, prior summaries, old task notes, stale documentation, and candidate implementations. Until the current owner is confirmed, label conclusions as inference or insufficient current evidence. Do not select an owner or product value by plausibility when evidence is insufficient; report the missing decision instead. Separate confirmed fact from inference.
+Current source outranks memory, prior summaries, old task notes, stale documentation, and candidate implementations. Distinguish adopted requirements from proposals within a current owner document. Until the current owner is confirmed, label conclusions as inference or insufficient current evidence. Do not select an owner or product value by plausibility when evidence is insufficient; report what remains unverified. Separate confirmed fact from inference.
 
 Trace only the ownership path needed for the question, such as caller, adapter/client, route/API, command/service, persistence/schema, test, config, runbook, or owner document. Distinguish current production owners from derived/router, legacy/compatibility, stale/superseded, generated/copied, and evidence-only surfaces.
 
@@ -29,9 +29,9 @@ Capability does not prove caller intent, access policy, product approval, or UX 
 
 ## Compare and Decide
 
-Compare the proposed, migrated, ported, or current surface against its owner. For UX parity, compare relevant affordances, labels, state transitions, empty/error states, density, and permission behavior—not backend capability alone.
+Compare the proposed, migrated, ported, or current surface against its owner, including linked contract detail. Omission from a derived surface alone is not a contract gap. For UX parity, compare relevant affordances, labels, state transitions, empty/error states, density, and permission behavior—not backend capability alone.
 
-Mark a difference as implementation work only when both owner evidence and user-approved scope support it. If source evidence leaves policy, product, access, or ownership open, name the decision needed and its owner when known.
+Mark a difference as implementation work only when both owner evidence and user-approved scope support it. Distinguish facts still to verify from unresolved policy, product, access, or ownership choices; report the latter with their decision owner when known.
 
 Use labels only when they clarify the answer:
 

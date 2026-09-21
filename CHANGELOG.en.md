@@ -4,6 +4,14 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.14.2] - 2026-09-21
+
+### Fixed
+
+- `purpose-first-design` no longer treats its own proposal or a review pass as evidence of a locked decision. It compares directions including their dependencies against simpler alternatives while preserving locked meaning and required safety and operational boundaries.
+- `source-owner-audit` distinguishes adopted requirements from proposals and unverified facts from unresolved choices. It compares linked contract detail instead of treating omissions from derived documents alone as contract gaps, while retaining its read-only scope.
+- Includes the `codex-token-discipline` usage-accounting correction already merged into main after the previous tag. It uses event-time windows and model/effort attribution, reporting missing time, model, or fork-boundary evidence as unknown rather than inferring it.
+
 ## [0.14.1] - 2026-09-08
 
 ### Changed

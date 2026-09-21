@@ -14,9 +14,9 @@ End with a provisional direction, the smallest check that could change an actual
 ## Decision Contract
 
 - State only the purpose and observable success needed to distinguish the choice.
-- Separate decision-relevant inputs into `LOCKED`, `EVIDENCE`, `ASSUMPTION`, and `OPEN`. Never promote a locked decision, explicit constraint, rejected scope, or evidence-settled item into `OPEN`. A failed check may change only an unresolved mechanism, not locked product meaning.
+- Separate decision-relevant inputs into `LOCKED`, `EVIDENCE`, `ASSUMPTION`, and `OPEN`. Establish `LOCKED` from authoritative requirements or decisions, not merely from your proposal or a review pass. Never promote a locked decision, explicit constraint, rejected scope, or evidence-settled item into `OPEN`. A failed check may change only an unresolved mechanism, not locked product meaning.
 - Treat existing implementation, precedent, defaults, and urgency as evidence unless explicitly authoritative. Compare only alternatives that materially change meaning, responsibility, persistent state, policy, lifecycle, public contract, accepted risk, or hard-to-reverse coupling.
-- Choose the smallest sufficient direction. Do not add owners, processes, rollback machinery, platforms, future programs, or open decisions unless the source or chosen direction requires them.
+- Choose the smallest sufficient direction, considering its dependencies as part of the choice. Justify added scope, machinery, or open decisions by a required outcome or concrete failure condition that a simpler direction would not address.
 
 ## Handoff
 

@@ -1,0 +1,2 @@
+**2026-09-21**
+- 정본 purpose-first-design 1cdb3bbad8f540bda1432a450b4975077de0e616, source-owner-audit f25bd4a25a2c113784a18a65b5982626533f00a7을 main에 게시했다. 승인안·정본·bundle 네 파일이 정확히 일치한다. 선택한 두 source pin만 갱신했고 0.14.2 manifest·한영 CHANGELOG를 준비했다. 스킬 형식·diff·offline lock·release metadata 검사, Project Legibility 50개 테스트와 catalog 12개 테스트를 통과했다. 모델 행동 개선 A/B는 수행하지 않았다. 다음 단계는 검토된 release commit의 publish다.
