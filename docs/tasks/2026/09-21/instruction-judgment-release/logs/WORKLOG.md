@@ -1,2 +1,3 @@
 **2026-09-21**
 - 정본 purpose-first-design 1cdb3bbad8f540bda1432a450b4975077de0e616, source-owner-audit f25bd4a25a2c113784a18a65b5982626533f00a7을 main에 게시했다. 승인안·정본·bundle 네 파일이 정확히 일치한다. 선택한 두 source pin만 갱신했고 0.14.2 manifest·한영 CHANGELOG를 준비했다. 스킬 형식·diff·offline lock·release metadata 검사, Project Legibility 50개 테스트와 catalog 12개 테스트를 통과했다. 모델 행동 개선 A/B는 수행하지 않았다. 다음 단계는 검토된 release commit의 publish다.
+- v0.14.2 게시 완료. release SHA 925cecc97dfd6d65536e4cc8dc4a945449744baa의 main CI 35584072329와 Release 35584103892가 성공했고 tag의 peeled SHA도 일치한다. GitHub Release는 draft/prerelease가 아니다. catalog f7106ce0ffc038476f9f3fdc3c53705ab4d0c55f의 pin이 같은 release SHA이며 CI 35584143498이 성공했다. 로컬 install/cache refresh 없이 릴리스 런북의 완료 조건을 충족했다.
