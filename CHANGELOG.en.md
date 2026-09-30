@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-09-30
+
+### Changed
+
+- `codex-token-discipline` participates for costly or repeated delegation and reads known small files directly. Agent-count guidance applies when delegation is warranted.
+- `project-context` restores needed context on task entry, resume, or context loss and reuses valid context during continuous work. Bounded subagents use the parent task's handoff and document writer.
+
 ## [0.14.2] - 2026-09-21
 
 ### Fixed

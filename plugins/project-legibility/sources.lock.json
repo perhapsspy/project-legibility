@@ -18,14 +18,14 @@
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "9a46d161db8b8a17eab051fe1d3b86d6508a6dc8",
+      "commit": "9304177f83e91bc27bff388e4fe0b74f4c1e9d80",
       "license": "MIT",
       "skills": [
         {
           "id": "codex-token-discipline",
           "sourcePath": "skills/codex-token-discipline",
           "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:1fc056fc85ff9591b5d160cf7d1f46d31013804f2396223eae8c10cf4ebc241d"
+          "integrity": "sha256:c68e6b44bdc66949499fcbc470f43e98b1b62f88333cac2a67ec97a0b55b6a38"
         }
       ]
     },
@@ -60,14 +60,14 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "8dfff6683b4d05ddab5db9503af449a309dd5313",
+      "commit": "f89b426f624238c00d079c50b5c22f89f3ae4c1d",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:61750b79084e78003ad7973e6632a4198df77a7de82e763a0d280c69efb611a5"
+          "integrity": "sha256:baa1269fb08ac2abd23ddda39c54af66743d78f706e0ac41b90d5f3abf2d8fea"
         },
         {
           "id": "project-context-migration",
