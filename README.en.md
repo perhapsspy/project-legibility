@@ -83,7 +83,6 @@ Two core practices are joined by purpose-first direction setting, specialists fo
 
 ### Optional operational and adoption helpers
 
-- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): Track the lifecycle and effect state of multiple Codex tasks toward one verified project outcome when the user explicitly designates a director session.
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): Reduce reading and output and compress resume state when long sessions, large outputs, or repeated work consume the token budget quickly.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): Audit an existing repository with scattered working context and move only the necessary material into the `project-context` structure.
 

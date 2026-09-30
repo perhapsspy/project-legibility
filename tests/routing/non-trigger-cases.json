@@ -16,34 +16,6 @@
       "rationale": "The task has no long-session, broad-read, or context-budget risk."
     },
     {
-      "id": "codex-project-director-single-task-review",
-      "skill": "codex-project-director",
-      "prompt": "Review this one pull request and summarize whether its focused tests cover the change.",
-      "expected": "do-not-select",
-      "rationale": "A single local review has no user-designated director role or multi-task project outcome."
-    },
-    {
-      "id": "codex-project-director-status-summary",
-      "skill": "codex-project-director",
-      "prompt": "Summarize the current status of these tasks without directing or changing their work.",
-      "expected": "do-not-select",
-      "rationale": "A read-only status summary does not designate this session as an active project director."
-    },
-    {
-      "id": "codex-project-director-ordinary-parallel-subtasks",
-      "skill": "codex-project-director",
-      "prompt": "Use a few parallel subagents to inspect these independent files, then combine their findings in this task.",
-      "expected": "do-not-select",
-      "rationale": "Ordinary bounded delegation does not designate a persistent director session or shared multi-task project charter."
-    },
-    {
-      "id": "codex-project-director-local-user-correction",
-      "skill": "codex-project-director",
-      "prompt": "Correct this one configuration value from 14 days to 30 days and update its focused test.",
-      "expected": "do-not-select",
-      "rationale": "A local user correction in one task does not designate a multi-task director role."
-    },
-    {
       "id": "interactive-state-flow-sync-formatter",
       "skill": "interactive-state-flow",
       "prompt": "Fix a pure synchronous formatter that returns the wrong punctuation.",

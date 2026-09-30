@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-09-30
+
+### Changed
+
+- Removed `codex-project-director` from the bundled skills.
+
 ## [0.15.0] - 2026-09-30
 
 ### Changed

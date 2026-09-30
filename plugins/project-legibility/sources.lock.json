@@ -30,20 +30,6 @@
       ]
     },
     {
-      "id": "codex-project-director",
-      "repository": "https://github.com/perhapsspy/codex-project-director.git",
-      "commit": "04993b0df22ed68d9354983219913826a13387c6",
-      "license": "MIT",
-      "skills": [
-        {
-          "id": "codex-project-director",
-          "sourcePath": "skills/codex-project-director",
-          "targetPath": "skills/codex-project-director",
-          "integrity": "sha256:d9ca26c636f3163b7b48c4bf277c8dd3209338a4656c43937851e8b5a4afc08e"
-        }
-      ]
-    },
-    {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
       "commit": "c5cf6f916d23b890139df5ec79b54c232eba72d7",

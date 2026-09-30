@@ -23,27 +23,6 @@
       "rationale": "Costly execution and retry choices need prior evidence even when output is small."
     },
     {
-      "id": "codex-project-director-explicit-role",
-      "skill": "codex-project-director",
-      "prompt": "Act as the project director for these Codex tasks, start one Goal, and drive their shared outcome through verified integration.",
-      "expected": "select",
-      "rationale": "The user explicitly designates a multi-task director session with one shared project outcome."
-    },
-    {
-      "id": "codex-project-director-direct-invocation",
-      "skill": "codex-project-director",
-      "prompt": "Use $codex-project-director to supervise these implementation, migration, and release tasks through one verified project outcome.",
-      "expected": "select",
-      "rationale": "The request directly invokes the skill for several coordinated tasks with one completion boundary."
-    },
-    {
-      "id": "codex-project-director-user-correction",
-      "skill": "codex-project-director",
-      "prompt": "Continue as the director for these Codex tasks. I am correcting the approved retention value to exactly 30 days; stop only conflicting work and hand off that literal contract before resuming.",
-      "expected": "select",
-      "rationale": "The user keeps the explicit multi-task director role while correcting an approved contract that must be handed off exactly."
-    },
-    {
       "id": "interactive-state-flow-stale-search",
       "skill": "interactive-state-flow",
       "prompt": "Fix search results that become stale when the user types quickly and older requests finish last.",

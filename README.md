@@ -83,7 +83,6 @@ codex plugin add project-legibility@perhapsspy
 
 ### 필요할 때 쓰는 운영·도입 보조
 
-- [`codex-project-director`](https://github.com/perhapsspy/codex-project-director): 사용자가 디렉터로 지정한 세션에서 여러 Codex 작업의 생명주기와 효과 상태를 추적해 하나의 검증된 프로젝트 결과까지 조정합니다.
 - [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): 긴 세션과 큰 출력, 반복 작업으로 token budget이 빠르게 소모될 때 읽기와 출력을 줄이고 이어갈 상태를 압축합니다.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): 작업 맥락이 흩어진 기존 저장소를 검토해 필요한 자료만 `project-context` 구조에 정착시킵니다.
 

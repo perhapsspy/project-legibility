@@ -4,6 +4,12 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-09-30
+
+### Changed
+
+- 배포 스킬 구성에서 `codex-project-director`를 제거했습니다.
+
 ## [0.15.0] - 2026-09-30
 
 ### Changed
