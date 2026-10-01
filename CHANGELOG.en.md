@@ -4,6 +4,14 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.16.1] - 2026-10-01
+
+### Fixed
+
+- `project-context` reuses tasks and sessions only for matching goals, write scope, and outputs, and keeps reusable tools and evidence with their normal owners.
+- `structure-first` measures work and phase timings in existing performance reproductions, and grounds completion in check scope, environment, and fixture limits. Deployment checks resolve existing credential/configuration owners and the user's actual access path.
+- `source-owner-audit` distinguishes tool absence, workflow restrictions, explicit denial, connection failure, and unverified authentication, and checks supported alternatives within approved scope.
+
 ## [0.16.0] - 2026-09-30
 
 ### Changed

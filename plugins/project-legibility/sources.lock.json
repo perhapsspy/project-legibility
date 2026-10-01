@@ -46,14 +46,14 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "f89b426f624238c00d079c50b5c22f89f3ae4c1d",
+      "commit": "fc4244ab505615c104cd2af3372d2cb0c14ca5e7",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:baa1269fb08ac2abd23ddda39c54af66743d78f706e0ac41b90d5f3abf2d8fea"
+          "integrity": "sha256:913af4f5c43f370b781ee26c4014b18fe9ab815046477e275313693a79d9089a"
         },
         {
           "id": "project-context-migration",
@@ -80,28 +80,28 @@
     {
       "id": "source-owner-audit",
       "repository": "https://github.com/perhapsspy/source-owner-audit.git",
-      "commit": "f25bd4a25a2c113784a18a65b5982626533f00a7",
+      "commit": "059f272fadf83c4880c749b6e1d3cd05bac233e6",
       "license": "MIT",
       "skills": [
         {
           "id": "source-owner-audit",
           "sourcePath": "skills/source-owner-audit",
           "targetPath": "skills/source-owner-audit",
-          "integrity": "sha256:5f8faf9c1d045b418b90e85334a6d9321803c4d52dc7366b70adb38c3f96d2cf"
+          "integrity": "sha256:a2251f9067252945d4c948776050e8db28da535032a456aea179c1de77821974"
         }
       ]
     },
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "11819e82afdb70f94bd5f7b8c1eb6df686eafcc2",
+      "commit": "a3b892db138ed76a29eb9347150a72c1d4f5b7d4",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:2a528e28ed684908fd94b5153b959e296fd03d67338151d1e32d6da4e656bb9d"
+          "integrity": "sha256:ab4b569bd8944864034264efc25aa91cb110ccc0b72125edb0a9d633134c91ba"
         }
       ]
     },

@@ -25,7 +25,7 @@ Trace only the ownership path needed for the question, such as caller, adapter/c
 
 When the question crosses those boundaries, distinguish source/contract, caller/UX, write/read, document/task, migration, and decision owners.
 
-Capability does not prove caller intent, access policy, product approval, or UX parity; each needs its own evidence. Preserve existing product and UX contracts unless current owner evidence says otherwise.
+Capability does not prove caller intent, access policy, product approval, or UX parity; each needs its own evidence. Distinguish tool absence, workflow restriction, explicit access denial, connection failure, and unverified authentication. Check supported alternatives within the approved scope; do not bypass access denial or infer authentication loss from tool absence. Preserve existing product and UX contracts unless current owner evidence says otherwise.
 
 ## Compare and Decide
 
