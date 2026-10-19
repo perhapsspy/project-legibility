@@ -66,28 +66,28 @@
     {
       "id": "purpose-first-design",
       "repository": "https://github.com/perhapsspy/purpose-first-design.git",
-      "commit": "1cdb3bbad8f540bda1432a450b4975077de0e616",
+      "commit": "e86f73f70bb767d55059037bcc96a92d4200a3be",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-first-design",
           "sourcePath": "skills/purpose-first-design",
           "targetPath": "skills/purpose-first-design",
-          "integrity": "sha256:c70f394dc88490a1dec4afe5d944405045409d9b572c1f52d3dacc1f8bd66817"
+          "integrity": "sha256:c934086275b39151b7e40507f03f015cb8c83c3a96ed898d8d464c9a73db84be"
         }
       ]
     },
     {
       "id": "source-owner-audit",
       "repository": "https://github.com/perhapsspy/source-owner-audit.git",
-      "commit": "059f272fadf83c4880c749b6e1d3cd05bac233e6",
+      "commit": "b0ae93ecac997876cb9b0477b42f1f14f261e3ae",
       "license": "MIT",
       "skills": [
         {
           "id": "source-owner-audit",
           "sourcePath": "skills/source-owner-audit",
           "targetPath": "skills/source-owner-audit",
-          "integrity": "sha256:a2251f9067252945d4c948776050e8db28da535032a456aea179c1de77821974"
+          "integrity": "sha256:c1e8c8c4dae2b8d5dff764b913ddf9f08d5d75d78e2f752b94c1a1b07ff944bf"
         }
       ]
     },

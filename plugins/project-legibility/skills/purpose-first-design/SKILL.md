@@ -9,7 +9,7 @@ description: Use when product meaning or implementation-planning direction is ma
 
 Choose the smallest defensible direction for a materially open product or implementation-planning decision before solution structure is fixed. Purpose defines what success means; locked user decisions, authority, and required security, rollback, ownership, and operational boundaries bind the answer and are never alternatives.
 
-End with a provisional direction, the smallest check that could change an actually open choice, or one blocking question. If no material direction remains open, say so briefly and hand off without inventing alternatives.
+Resolve this decision with a provisional direction, the smallest check that could change an actually open choice, or one blocking question. If no material direction remains open, move on without inventing alternatives. Continue the user's already approved task after this stage; a blocking question pauses only the dependent work.
 
 ## Decision Contract
 
@@ -20,9 +20,11 @@ End with a provisional direction, the smallest check that could change an actual
 
 ## Handoff
 
-Use `source-owner-audit` first when present authority is unknown. Hand settled realization—code flow, state, sequencing, interfaces, failure handling, and implementation order—to `structure-first`. Hand settled expression and packaging to `tighten-docs`.
+Use `source-owner-audit` first when present authority is unknown. Use `structure-first` for settled realization—code flow, state, sequencing, interfaces, failure handling, and implementation order. Use `tighten-docs` for settled expression and packaging.
 
 Return a concise decision handoff: direction, decision-changing basis, locked boundaries, real assumptions or open decisions, and the next decisive check or owning workflow. Include a boundary only when it constrains the chosen direction.
+
+For a concrete design request, use that handoff to complete the design: what to build, why it is needed, and how responsibilities, behavior, interfaces, and change targets fit together.
 
 ## Final Reduction
 

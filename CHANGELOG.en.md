@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.16.2] - 2026-10-19
+
+### Fixed
+
+- `source-owner-audit` finishes with a recommendation for audit-only requests and continues within the existing scope when the audit is a step in already approved planning or execution.
+- Clarified that a `purpose-first-design` decision and handoff do not end the overall task. Concrete design requests continue through what to build, why it is needed, and how responsibilities, behavior, interfaces, and change targets fit together.
+
 ## [0.16.1] - 2026-10-01
 
 ### Fixed

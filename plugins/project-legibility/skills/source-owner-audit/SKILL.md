@@ -45,4 +45,4 @@ A derived surface may match its owner; an owner divergence may still require a d
 
 Lead with the practical answer. Use `Recommendation`, `Evidence`, `Difference`, and `Decision needed` only when they clarify it. For multiple surfaces, use compact findings. If evidence is incomplete, state what was checked and classify the uncertainty explicitly.
 
-Stop at an owner-backed recommendation unless the user expands scope to execution or planning. Treat adjacent domains as source-owner audits only when the user asks a concrete ownership question; otherwise hand the audit result to the workflow that owns the follow-up work.
+When the user requests only an audit, finish with an owner-backed recommendation. When the audit is a step in already approved planning or execution, use its findings to continue that work within the existing scope. Treat adjacent domains as source-owner audits only when the user asks a concrete ownership question; otherwise hand the audit result to the workflow that owns the follow-up work.
