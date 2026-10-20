@@ -83,7 +83,7 @@ Two core practices are joined by purpose-first direction setting, specialists fo
 
 ### Optional operational and adoption helpers
 
-- [`agent-cost-efficiency`](https://github.com/perhapsspy/codex-token-discipline): Reduce avoidable reading, output, execution, observation, and delegation cost while preserving required verification and result quality.
+- [`agent-cost-efficiency`](https://github.com/perhapsspy/agent-cost-efficiency): Reduce avoidable reading, output, execution, observation, and delegation cost while preserving required verification and result quality.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): Audit an existing repository with scattered working context and move only the necessary material into the `project-context` structure.
 
 ## Update and remove

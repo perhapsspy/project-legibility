@@ -16,9 +16,9 @@
       ]
     },
     {
-      "id": "codex-token-discipline",
-      "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "3403d274771ea26eb9e1fcfed181c034d29f54f6",
+      "id": "agent-cost-efficiency",
+      "repository": "https://github.com/perhapsspy/agent-cost-efficiency.git",
+      "commit": "42157089eea8e488e8c0d739e9120637b3bbfcff",
       "license": "MIT",
       "skills": [
         {

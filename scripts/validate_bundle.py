@@ -39,7 +39,7 @@ EXPECTED_SKILLS = (
 )
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
-    "codex-token-discipline": ("agent-cost-efficiency",),
+    "agent-cost-efficiency": ("agent-cost-efficiency",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-first-design": ("purpose-first-design",),
