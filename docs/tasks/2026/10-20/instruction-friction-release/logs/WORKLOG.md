@@ -1,3 +1,4 @@
 **2026-10-20**
 - 승인된 다섯 원본 파일을 수정했다. 기존 tighten-docs의 형식 단순화 변경과 personal-config의 미추적 docs는 보존하고 이번 커밋에서 제외한다. 원본 검증 후 patch release와 대상별 설치 확인을 진행한다.
 - 정본을 personal-config eafb5ed, structure-first abf9442, tighten-docs 3f19881로 main에 게시했다. personal-config 17개 테스트와 두 스킬 형식 검증을 통과했다. MacBook-Pro.local의 Codex home에 eafb5ed를 installer로 반영하고 verify.sh readback을 통과했다. 두 스킬의 원격 SHA만 bundle에 동기화해 0.16.3 게시를 준비한다. 현재 연결된 실행 대상은 Mac뿐이며 dot cloud 실행 경로는 없고 Windows는 수동 설치 대기다.
+- 0.16.3 release 58b7c004c944bcbab2f336b075f45730fa2b4aff의 main CI 39386060313·Release 39386100803, publisher db8a03fd4ed7022f62743be7562a08b6729f91ec의 CI 39386128383이 성공했다. Project Legibility 50개·catalog 12개 테스트, bundle·lock·remote manifest 검증을 통과했다. 공식 CLI로 Mac marketplace를 갱신하고 0.16.3을 설치했다. 설치된 한영 스킬 네 파일·lock·manifest와 공통 AGENTS의 원본 일치를 확인했으며 활성 플러그인 30개가 유지됐다. 실행 중 세션의 스킬 재로딩과 행동 개선은 별도 미검증이며 dot은 실행 경로 부재, Windows는 수동 설치 대기로 남긴다.
