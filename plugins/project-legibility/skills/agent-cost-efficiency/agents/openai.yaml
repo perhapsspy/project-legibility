@@ -1,0 +1,7 @@
+interface:
+  display_name: "Agent Cost Efficiency"
+  short_description: "Reduce agent work cost while preserving quality"
+  default_prompt: "Use $agent-cost-efficiency to reduce avoidable reading, execution, and delegation cost while preserving required verification."
+
+policy:
+  allow_implicit_invocation: true

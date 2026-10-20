@@ -1,13 +1,13 @@
 ---
-name: codex-token-discipline
-description: "Use for Codex work with clear excess-cost risk: broad or unpredictable logs and diffs, browser/UI loops, costly execution/retry loops and progress observation even with small output, costly or repeated delegation, repeated compaction, or explicit usage audits. Guides bounded execution and observation, preflight output limits, bounded delegation, evidence reuse, and compact checkpoints. Skip routine edits and direct answers. Routine test runs alone are not a trigger."
+name: agent-cost-efficiency
+description: "Use for agent work with clear excess-cost risk: broad or unpredictable logs and diffs, browser/UI loops, costly execution/retry loops and progress observation even with small output, costly or repeated delegation, or repeated compaction. Guides bounded execution and observation, preflight output limits, bounded delegation, evidence reuse, and compact checkpoints. Skip routine edits and direct answers. Routine test runs alone are not a trigger."
 ---
 
-# Codex Token Discipline
+# Agent Cost Efficiency
 
 ## Purpose
 
-Reduce total root-and-child cost without weakening task success, required evidence, or the requested deliverable.
+Reduce avoidable token, time, and tool-execution cost across the main agent and delegated work while preserving task success, required verification, and result quality.
 
 Keep reads, tool output, retries, and delegation bounded. Preserve reusable evidence and escalate only the unresolved part.
 
@@ -36,7 +36,7 @@ Use existing tools or the current executor for routine status collection and com
 Prevent excess output before it enters the main context; do not rely on summarizing it afterward.
 
 - For any unpredictable or batch command, name the required return shape first: status, count, paths, selected fields, or first actionable failure.
-- Set a finite return budget on the tool call. For exec-family calls, default to an explicit budget at or below 2,000 tokens unless named evidence requires more; do not wait for a single large-output threshold.
+- Set a finite return budget before execution. Use the tool's output limit when available; for token-based limits, start at or below 2,000 tokens unless named evidence requires more. Otherwise bound lines, bytes, or fields at the source. Do not wait for a single large-output threshold.
 - Filter, aggregate, or select at the source. For tests and builds, return the exit status, first actionable failure, and command before requesting more detail.
 - When full output is useful for later inspection, write it to a task-local or temporary artifact and return only its path, size, compact summary, and first actionable failure. Inspect bounded slices from the artifact as needed.
 - Do not create an artifact for disposable output that can be reduced at the source.
@@ -92,14 +92,6 @@ Every line in global or repo instructions has recurring cost.
 - Remove stale profiles, duplicate instructions, and historical explanations instead of documenting around them.
 
 When editing an always-read file, prefer a short routing rule over procedure text.
-
-## Usage Audit
-
-When asked where tokens went, resolve `scripts/summarize_codex_usage.py` relative to this installed skill directory, run it with `--help`, then audit with an explicit `--cwd-prefix`.
-
-The script groups Codex rollout logs by root thread and reports token-event deltas, turn-context model and effort attribution, root/child input-cached-output splits, tool-output volume, large-output events, and top-output-tool signals without raw payloads. Use `--since` and `--until` with UTC ISO-8601 timestamps for a reproducible event-time window; `--since-days` remains a convenience default.
-
-Missing event times or model context are reported as unknown rather than inferred. A fork replay without its child `thread_settings_applied` boundary is also reported as unknown. A delta belongs to its closing token event, so a window edge can include work since the prior snapshot. Treat token totals as diagnostic signals, not billing totals or quality. Avoid home-wide text searches; point the script at `$CODEX_HOME/sessions` or another explicit sessions root.
 
 ## Final Check
 

@@ -18,14 +18,14 @@
     {
       "id": "codex-token-discipline",
       "repository": "https://github.com/perhapsspy/codex-token-discipline.git",
-      "commit": "9304177f83e91bc27bff388e4fe0b74f4c1e9d80",
+      "commit": "3403d274771ea26eb9e1fcfed181c034d29f54f6",
       "license": "MIT",
       "skills": [
         {
-          "id": "codex-token-discipline",
-          "sourcePath": "skills/codex-token-discipline",
-          "targetPath": "skills/codex-token-discipline",
-          "integrity": "sha256:c68e6b44bdc66949499fcbc470f43e98b1b62f88333cac2a67ec97a0b55b6a38"
+          "id": "agent-cost-efficiency",
+          "sourcePath": "skills/agent-cost-efficiency",
+          "targetPath": "skills/agent-cost-efficiency",
+          "integrity": "sha256:f9ec298ff9aa6e7324b413bdef46b8bcdbc3733c1f24f487d83701bd1a4bce1a"
         }
       ]
     },

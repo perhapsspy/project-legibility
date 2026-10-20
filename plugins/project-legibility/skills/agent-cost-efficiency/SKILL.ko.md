@@ -1,10 +1,10 @@
-# Codex Token Discipline (한국어 페어)
+# Agent Cost Efficiency (한국어 페어)
 
 > 영문 기본 문서: `SKILL.md`
 
 ## 목적
 
-task 성공, 필요한 증거와 요청된 산출물을 약화하지 않으면서 root와 child의 총비용을 줄인다.
+작업 성공, 필요한 검증과 결과 품질을 유지하며 메인 에이전트와 위임된 작업의 불필요한 토큰·시간·도구 실행 비용을 줄인다.
 
 read, tool output, retry와 delegation을 제한한다. 재사용 가능한 증거를 보존하고 해소되지 않은 부분만 escalate한다.
 
@@ -33,7 +33,7 @@ read, tool output, retry와 delegation을 제한한다. 재사용 가능한 증�
 과도한 출력이 main context에 들어오기 전에 막는다. 들어온 뒤 요약하는 방식에 의존하지 않는다.
 
 - 예측하기 어렵거나 batch 성격인 명령은 status, count, path, 선택 필드, 첫 actionable failure 중 필요한 반환 형태를 먼저 정한다.
-- tool call에 유한한 반환 예산을 둔다. exec 계열은 특정 근거가 더 필요하지 않으면 명시적 2,000-token 이하를 기본으로 한다. 단일 large-output 임계값을 넘을 때까지 기다리지 않는다.
+- 실행 전에 유한한 반환 예산을 둔다. 도구가 출력 제한을 제공하면 사용하고, token 단위 제한은 특정 근거가 더 필요하지 않으면 2,000-token 이하에서 시작한다. 출력 제한이 없으면 source에서 줄 수, byte 수나 필드를 제한한다. 단일 large-output 임계값을 넘을 때까지 기다리지 않는다.
 - source에서 filter, aggregate, select한다. test/build는 더 자세히 보기 전에 exit status, 첫 actionable failure, command를 반환한다.
 - 전체 출력이 나중 점검에 유용하면 task-local 또는 임시 artifact에 쓰고, main context에는 path, size, compact summary, 첫 actionable failure만 반환한다. 이후에는 artifact의 제한된 범위만 본다.
 - source에서 줄일 수 있는 일회성 출력에는 artifact를 만들지 않는다.
@@ -89,14 +89,6 @@ global/repo instruction의 모든 줄은 반복 비용을 가진다.
 - stale profile, duplicate instruction, historical explanation은 문서로 우회하지 말고 제거한다.
 
 always-read 파일을 고칠 때는 절차보다 짧은 routing rule을 선호한다.
-
-## Usage Audit
-
-사용자가 토큰이 어디에 쓰였는지 물으면 이 스킬이 설치된 디렉터리를 기준으로 `scripts/summarize_codex_usage.py` 경로를 찾고 `--help`를 본 뒤, 명시적 `--cwd-prefix`로 감사한다.
-
-스크립트는 Codex rollout log를 root thread로 묶어 token-event delta, turn-context의 model·effort attribution, root/child input·cached·output 분리, tool-output volume, large-output event, top output tool 신호를 보여준다. raw payload는 출력하지 않는다. 재현 가능한 event-time window에는 UTC ISO-8601 `--since`, `--until`을 쓰며, `--since-days`는 편의용 기본값으로 유지한다.
-
-event time이나 model context가 없으면 추정하지 않고 unknown으로 보고한다. child `thread_settings_applied` 경계가 없는 fork replay도 unknown으로 보고한다. delta는 닫는 token event에 귀속되므로 window 경계에는 이전 snapshot 이후의 작업이 포함될 수 있다. 토큰 총량은 billing total이나 품질 기준이 아니라 진단 신호로 본다. 홈 전체 텍스트 검색은 피하고, `$CODEX_HOME/sessions` 같은 명시적 sessions root를 지정한다.
 
 ## 최종 확인
 

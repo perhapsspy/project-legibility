@@ -83,7 +83,7 @@ codex plugin add project-legibility@perhapsspy
 
 ### 필요할 때 쓰는 운영·도입 보조
 
-- [`codex-token-discipline`](https://github.com/perhapsspy/codex-token-discipline): 긴 세션과 큰 출력, 반복 작업으로 token budget이 빠르게 소모될 때 읽기와 출력을 줄이고 이어갈 상태를 압축합니다.
+- [`agent-cost-efficiency`](https://github.com/perhapsspy/codex-token-discipline): 필요한 검증과 결과 품질을 유지하며 읽기·출력·실행·관측·위임의 불필요한 비용을 줄입니다.
 - [`project-context-migration`](https://github.com/perhapsspy/project-context): 작업 맥락이 흩어진 기존 저장소를 검토해 필요한 자료만 `project-context` 구조에 정착시킵니다.
 
 ## 업데이트와 제거

@@ -27,8 +27,8 @@ LOCK_REL = PLUGIN_ROOT_REL / "sources.lock.json"
 CHANGELOG_REL = Path("CHANGELOG.md")
 
 EXPECTED_SKILLS = (
+    "agent-cost-efficiency",
     "agents-md-editor",
-    "codex-token-discipline",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",
@@ -39,7 +39,7 @@ EXPECTED_SKILLS = (
 )
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
-    "codex-token-discipline": ("codex-token-discipline",),
+    "codex-token-discipline": ("agent-cost-efficiency",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-first-design": ("purpose-first-design",),

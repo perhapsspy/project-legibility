@@ -9,11 +9,18 @@
       "rationale": "The target is not an always-read repository instruction file."
     },
     {
-      "id": "codex-token-discipline-tiny-edit",
-      "skill": "codex-token-discipline",
+      "id": "agent-cost-efficiency-tiny-edit",
+      "skill": "agent-cost-efficiency",
       "prompt": "Rename one local variable and run its focused unit test.",
       "expected": "do-not-select",
       "rationale": "The task has no long-session, broad-read, or context-budget risk."
+    },
+    {
+      "id": "agent-cost-efficiency-billing-analysis",
+      "skill": "agent-cost-efficiency",
+      "prompt": "Calculate the exact billed token usage and charges for these completed sessions from their provider usage records.",
+      "expected": "do-not-select",
+      "rationale": "The request is retrospective usage accounting; this skill owns avoidable cost in executing work."
     },
     {
       "id": "interactive-state-flow-sync-formatter",

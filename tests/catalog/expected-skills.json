@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "skills": [
+    "agent-cost-efficiency",
     "agents-md-editor",
-    "codex-token-discipline",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",

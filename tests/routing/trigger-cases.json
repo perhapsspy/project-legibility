@@ -9,15 +9,15 @@
       "rationale": "The request directly targets an always-read repository instruction file."
     },
     {
-      "id": "codex-token-discipline-long-audit",
-      "skill": "codex-token-discipline",
+      "id": "agent-cost-efficiency-long-audit",
+      "skill": "agent-cost-efficiency",
       "prompt": "Run a long multi-repository audit while keeping reads, subagents, and resume state within a strict context budget.",
       "expected": "select",
       "rationale": "The work has explicit long-session, broad-read, and delegation risks."
     },
     {
-      "id": "codex-token-discipline-costly-small-output",
-      "skill": "codex-token-discipline",
+      "id": "agent-cost-efficiency-costly-small-output",
+      "skill": "agent-cost-efficiency",
       "prompt": "This simulation prints only one result line but each attempt takes ten minutes. Use the last run result to choose the next bounded execution or progress observation.",
       "expected": "select",
       "rationale": "Costly execution and retry choices need prior evidence even when output is small."
