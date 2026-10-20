@@ -2,7 +2,7 @@
 
 ## 목표와 범위
 
-공통 스킬 정본·snapshot·버전을 유지하며 Codex와 Claude Code가 같은 Project Legibility 패키지를 로드하게 한다. 공통 manifest·클라이언트별 생성 manifest, 검증·설치 안내와 양쪽 catalog를 반영하는 release 경로를 구현했다. 실제 release·publisher pin 전환·사용자 설치본 갱신은 별도 범위다.
+공통 스킬 정본·snapshot·버전을 유지하며 Codex와 Claude Code가 같은 Project Legibility 패키지를 로드하게 한다. 공통 manifest·클라이언트별 생성 manifest, 검증·설치 안내와 양쪽 catalog를 반영하는 release 경로를 구현했다. 사용자의 후속 요청으로 0.17.0 release와 양쪽 publisher pin 게시까지 범위를 확장했다.
 
 ## 현재 상태
 
@@ -14,4 +14,4 @@ Release는 tag·GitHub Release 확인 뒤 두 catalog의 Project Legibility sour
 
 ## 다음 행동
 
-후속 release에서는 루트 version과 한영 CHANGELOG를 반영하고 client manifest를 재생성한 뒤 release runbook을 따른다. 현재 공개 version·tag·publisher pin과 사용자 설치본은 유지한다.
+0.17.0의 루트 version과 한영 CHANGELOG·설치 안내를 반영하고 client manifest를 재생성한다. Release runbook에 따라 main CI·tag·GitHub Release 뒤 양쪽 catalog pin·CI와 공개 설치를 확인한다.

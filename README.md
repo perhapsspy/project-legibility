@@ -27,15 +27,14 @@ codex plugin add project-legibility@perhapsspy
 
 ### Claude Code
 
-현재 checkout의 패키지는 이 저장소 루트에서 다음 명령으로 로드합니다.
-
 ```bash
-claude --plugin-dir ./plugins/project-legibility
+claude plugin marketplace add perhapsspy/codex-plugins
+claude plugin install project-legibility@perhapsspy
 ```
 
 양쪽 클라이언트는 같은 9개 스킬을 사용합니다. Claude Code에서는 `/project-legibility:project-context`처럼 명시 호출할 수 있습니다. 로컬 개발 중 저장한 변경은 `/reload-plugins`로 다시 읽습니다.
 
-Marketplace 설치는 동시 지원 release와 Claude catalog를 게시할 때 제공하며, 전환 절차는 [릴리스 런북](docs/runbooks/release.md)이 소유합니다.
+설치 확인은 `claude plugin details project-legibility`로 합니다. 로컬 개발에서는 이 저장소 루트에서 `claude --plugin-dir ./plugins/project-legibility`로 패키지를 로드합니다.
 
 ## 평소 하던 일을 요청하세요
 

@@ -27,15 +27,14 @@ Start a new task after installation. Codex selects skills that match the problem
 
 ### Claude Code
 
-To load the package from this checkout, run from the repository root:
-
 ```bash
-claude --plugin-dir ./plugins/project-legibility
+claude plugin marketplace add perhapsspy/codex-plugins
+claude plugin install project-legibility@perhapsspy
 ```
 
 Both clients use the same nine skills. In Claude Code, an explicit invocation is `/project-legibility:project-context`. During local development, `/reload-plugins` loads saved changes.
 
-Marketplace installation becomes available when a dual-client release and its Claude catalog are published. The [release runbook](docs/runbooks/release.md) owns that transition.
+Check the installation with `claude plugin details project-legibility`. For local development, load the package from the repository root with `claude --plugin-dir ./plugins/project-legibility`.
 
 ## Ask for the work as usual
 

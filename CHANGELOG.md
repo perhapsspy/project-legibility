@@ -4,6 +4,18 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-10-20
+
+### Added
+
+- Codex와 Claude Code에서 같은 9개 스킬을 사용하는 플러그인 패키지를 제공합니다. 공통 manifest에서 클라이언트별 manifest를 생성하고, 두 marketplace는 같은 release commit을 고정합니다.
+- Claude Code의 manifest strict validation과 marketplace 등록·설치·제거를 검증했습니다. Claude Code 명시 호출은 `/project-legibility:<skill-name>`을 사용합니다.
+
+### Changed
+
+- `codex-token-discipline`을 에이전트 공통 비용 절약 스킬 `agent-cost-efficiency`로 교체했습니다. Codex 명시 호출은 `$agent-cost-efficiency`, Claude Code는 `/project-legibility:agent-cost-efficiency`로 바꿔 사용합니다.
+- 비용 절약 지침은 필수 검증과 결과 품질을 유지하면서 불필요한 실행·출력·반복 관찰·위임 비용을 줄이는 데 집중합니다. 사용량 분석기와 전용 테스트를 제거했습니다.
+
 ## [0.16.3] - 2026-10-20
 
 ### Fixed

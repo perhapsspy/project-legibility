@@ -4,6 +4,18 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-10-20
+
+### Added
+
+- A plugin package for Codex and Claude Code with the same nine skills. Client manifests are generated from a shared manifest, and both marketplaces pin the same release commit.
+- Verified Claude Code strict manifest validation and marketplace registration, installation, and removal. Explicit invocation in Claude Code uses `/project-legibility:<skill-name>`.
+
+### Changed
+
+- Replaced `codex-token-discipline` with the agent-neutral cost-saving skill `agent-cost-efficiency`. Update explicit invocations to `$agent-cost-efficiency` in Codex or `/project-legibility:agent-cost-efficiency` in Claude Code.
+- Cost-saving guidance focuses on reducing avoidable execution, output, repeated observation, and delegation while preserving required verification and result quality. Removed the usage analyzer and its dedicated tests.
+
 ## [0.16.3] - 2026-10-20
 
 ### Fixed
