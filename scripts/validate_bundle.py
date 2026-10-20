@@ -19,10 +19,13 @@ from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
 from urllib.parse import unquote, urlsplit
 
+from sync_plugin_metadata import client_manifests
+
 
 PLUGIN_NAME = "project-legibility"
 PLUGIN_ROOT_REL = Path("plugins") / PLUGIN_NAME
 MANIFEST_REL = PLUGIN_ROOT_REL / ".codex-plugin" / "plugin.json"
+PORTABLE_MANIFEST_REL = PLUGIN_ROOT_REL / "plugin.json"
 LOCK_REL = PLUGIN_ROOT_REL / "sources.lock.json"
 CHANGELOG_REL = Path("CHANGELOG.md")
 
@@ -92,6 +95,18 @@ def validate_bundle(repo_root: Path, release_tag: str | None = None) -> list[str
     skills_root = plugin_root / "skills"
 
     manifest = load_json(repo_root / MANIFEST_REL, errors)
+    portable = load_json(repo_root / PORTABLE_MANIFEST_REL, errors)
+    try:
+        projections = client_manifests(portable)
+    except (ValueError, TypeError) as exc:
+        errors.add(PORTABLE_MANIFEST_REL, str(exc))
+    else:
+        for relative, expected in projections.items():
+            location = PLUGIN_ROOT_REL / relative
+            actual = manifest if location == MANIFEST_REL else load_json(repo_root / location, errors)
+            if actual != expected:
+                errors.add(location, "generated client manifest differs from plugin.json; run scripts/sync_plugin_metadata.py write")
+        validate_manifest(projections[Path(".codex-plugin/plugin.json")], plugin_root, PORTABLE_MANIFEST_REL, release_tag, errors)
     lock = load_json(repo_root / LOCK_REL, errors)
     expected_catalog = load_json(repo_root / EXPECTED_CATALOG_REL, errors)
     trigger_cases = load_json(repo_root / TRIGGER_CASES_REL, errors)

@@ -8,6 +8,10 @@ This document defines Project Legibility's product promise and skill composition
 
 Project Legibility helps projects remain understandable, reviewable, and changeable as agent-produced changes accumulate quickly. It connects code structure, decision criteria, and durable working context to the work that needs them so the project can keep absorbing change.
 
+## Supported clients
+
+The same skill snapshots support Codex and Claude Code. A root Agent Plugins manifest owns plugin identity and version; generated client manifests adapt installation metadata. Each client selects skills from the shared descriptions. Package and client-loading checks establish compatibility; model selection and task outcomes need their own evidence.
+
 ## Skill composition and selection
 
 | Role | Skills | Participation and responsibility |
@@ -19,7 +23,7 @@ Project Legibility helps projects remain understandable, reviewable, and changea
 
 ## Common selection principles
 
-- Users ask for work normally, and Codex selects skills that match the problems evident in the request.
+- Users ask for work normally, and the coding agent selects skills that match the problems evident in the request.
 - A selected skill performs its own responsibility and hands off to or works with another skill only when an adjacent problem actually appears.
 
 ## Composition changes

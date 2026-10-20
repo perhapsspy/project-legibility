@@ -1,0 +1,22 @@
+{
+  "name": "project-legibility",
+  "version": "0.16.3",
+  "description": "Keep projects understandable, reviewable, and changeable as agent work accumulates.",
+  "author": {
+    "name": "perhapsspy",
+    "url": "https://github.com/perhapsspy"
+  },
+  "homepage": "https://github.com/perhapsspy/project-legibility#readme",
+  "repository": "https://github.com/perhapsspy/project-legibility",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "claude-code",
+    "project-context",
+    "software-development",
+    "maintainability",
+    "documentation",
+    "verification"
+  ],
+  "displayName": "Project Legibility"
+}

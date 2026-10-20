@@ -25,12 +25,23 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node for Claude Code package validation
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Validate with Claude Code
+        env:
+          CLAUDE_CONFIG_DIR: ${{ runner.temp }}/claude-config
+          DISABLE_AUTOUPDATER: "1"
+        run: npx --yes --package @anthropic-ai/claude-code@2.1.304 claude plugin validate ./plugins/project-legibility --strict
+
       - name: Run unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
 
       - name: Validate release metadata
         run: |
-          version=$(python -c 'import json; print(json.load(open("plugins/project-legibility/.codex-plugin/plugin.json"))["version"])')
+          version=$(python -c 'import json; print(json.load(open("plugins/project-legibility/plugin.json"))["version"])')
           python scripts/validate_bundle.py --release-tag "v$version"
 
       - name: Rebuild locked sources and check drift

@@ -19,6 +19,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 MARKETPLACE = Path(".agents/plugins/marketplace.json")
+CLAUDE_MARKETPLACE = Path(".claude-plugin/marketplace.json")
 VERSION_RE = re.compile(r"^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$")
 
 
@@ -75,7 +76,7 @@ class ReleaseOrchestrator:
         if self.command(["git", "status", "--porcelain"]):
             raise ReleaseError("project checkout must be clean; publish a reviewed commit first")
         head = _sha(self.command(["git", "rev-parse", "HEAD"]))
-        manifest = self.root / "plugins/project-legibility/.codex-plugin/plugin.json"
+        manifest = self.root / "plugins/project-legibility/plugin.json"
         try:
             actual = json.loads(manifest.read_text(encoding="utf-8"))["version"]
         except (OSError, KeyError, json.JSONDecodeError) as exc:
@@ -218,28 +219,54 @@ class ReleaseOrchestrator:
 
     def _publish_catalog_prepared(self, catalog: Path, head: str) -> None:
         path = catalog / MARKETPLACE
+        claude_path = catalog / CLAUDE_MARKETPLACE
         data = json.loads(path.read_text(encoding="utf-8"))
         target = next((item for item in data["plugins"] if item.get("name") == "project-legibility"), None)
         if not target:
             raise ReleaseError("catalog has no project-legibility entry")
-        if target["source"].get("sha") == head:
+        claude_existed = claude_path.exists()
+        claude = json.loads(claude_path.read_text(encoding="utf-8")) if claude_existed else {
+            "name": "perhapsspy",
+            "owner": {"name": "perhapsspy"},
+            "description": "perhapsspy plugins for Claude Code",
+            "plugins": [],
+        }
+        claude_target = next((item for item in claude["plugins"] if item.get("name") == "project-legibility"), None)
+        expected_source = {**target["source"], "sha": head}
+        if target["source"] == expected_source and claude_target is not None and claude_target.get("source") == expected_source:
             local_head = self.command(["git", "rev-parse", "HEAD"], cwd=catalog)
             remote_head = self.command(["git", "ls-remote", "origin", "refs/heads/main"], cwd=catalog).split()
             if not remote_head or remote_head[0] != local_head:
                 self.command(["git", "push", "origin", "main"], cwd=catalog)
             self._wait_ci("ci.yml", local_head, repo=catalog)
             return
-        target["source"]["sha"] = head
-        path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-        changed = self.command(["git", "diff", "--name-only"], cwd=catalog).splitlines()
-        if changed != [str(MARKETPLACE)]:
-            raise ReleaseError(f"catalog update touched unexpected files: {changed}")
         try:
+            target["source"] = expected_source
+            if claude_target is None:
+                claude_target = {"name": "project-legibility"}
+                claude["plugins"].append(claude_target)
+            claude_target["source"] = expected_source.copy()
+            path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+            claude_path.parent.mkdir(parents=True, exist_ok=True)
+            claude_path.write_text(json.dumps(claude, indent=2) + "\n", encoding="utf-8")
+            changed = set(self.command(["git", "diff", "--name-only"], cwd=catalog).splitlines())
+            changed.update(self.command(["git", "ls-files", "--others", "--exclude-standard"], cwd=catalog).splitlines())
+            allowed = {str(MARKETPLACE), str(CLAUDE_MARKETPLACE)}
+            if not changed <= allowed:
+                raise ReleaseError(f"catalog update touched unexpected files: {sorted(changed - allowed)}")
             self.command([sys.executable, "scripts/validate_marketplace.py", "--verify-remote"], cwd=catalog)
-            self.command(["git", "add", str(MARKETPLACE)], cwd=catalog)
+            self.command(["git", "add", str(MARKETPLACE), str(CLAUDE_MARKETPLACE)], cwd=catalog)
             self.command(["git", "commit", "-m", f"Update project-legibility to {head[:12]}"], cwd=catalog)
-        except ReleaseError:
-            self.command(["git", "restore", "--staged", "--worktree", "--", str(MARKETPLACE)], cwd=catalog, check=False)
+        except (ReleaseError, OSError) as exc:
+            tracked = [str(MARKETPLACE)]
+            if claude_existed:
+                tracked.append(str(CLAUDE_MARKETPLACE))
+            else:
+                self.command(["git", "restore", "--staged", "--", str(CLAUDE_MARKETPLACE)], cwd=catalog, check=False)
+                claude_path.unlink(missing_ok=True)
+            self.command(["git", "restore", "--staged", "--worktree", "--", *tracked], cwd=catalog, check=False)
+            if isinstance(exc, OSError):
+                raise ReleaseError(f"could not write catalog metadata: {exc}") from exc
             raise
         self.command(["git", "push", "origin", "main"], cwd=catalog)
         self._wait_ci("ci.yml", self.command(["git", "rev-parse", "HEAD"], cwd=catalog), repo=catalog)

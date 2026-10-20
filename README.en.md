@@ -8,7 +8,7 @@
 
 **Projects that stay changeable at agent speed.**
 
-Project Legibility is a Codex skills plugin that helps Codex strengthen project structure, decision criteria, and working context while changing the code.
+Project Legibility is a skills plugin that helps Codex and Claude Code strengthen project structure, decision criteria, and working context while changing the code.
 
 - **Code:** Keep primary flows and responsibilities legible as changes accumulate.
 - **Decisions:** Keep behavior aligned with user purpose and design criteria by making ownership of meaning explicit.
@@ -16,12 +16,26 @@ Project Legibility is a Codex skills plugin that helps Codex strengthen project 
 
 ## Install
 
+### Codex
+
 ```bash
 codex plugin marketplace add perhapsspy/codex-plugins
 codex plugin add project-legibility@perhapsspy
 ```
 
 Start a new task after installation. Codex selects skills that match the problem expressed in the request.
+
+### Claude Code
+
+To load the package from this checkout, run from the repository root:
+
+```bash
+claude --plugin-dir ./plugins/project-legibility
+```
+
+Both clients use the same nine skills. In Claude Code, an explicit invocation is `/project-legibility:project-context`. During local development, `/reload-plugins` loads saved changes.
+
+Marketplace installation becomes available when a dual-client release and its Claude catalog are published. The [release runbook](docs/runbooks/release.md) owns that transition.
 
 ## Ask for the work as usual
 
@@ -58,6 +72,8 @@ For a repository that will continue across sessions or agents, add this line to 
 ```md
 - For work that spans sessions or agents, use `project-legibility:project-context` to keep the current objective, decisions, verification state, and next actions in the repository.
 ```
+
+If Claude Code already loads a `CLAUDE.md`, import the shared instructions there with `@AGENTS.md`. Otherwise, supported current Claude Code versions can load `AGENTS.md` directly; confirm it appears in `/memory`.
 
 After that, ask for work normally. `project-context` keeps the current objective, decision rationale, verification state, and next action available in the repository.
 
@@ -100,6 +116,8 @@ To remove the marketplace registration as well, remove every installed perhapssp
 ## Development
 
 Each skill is maintained in the repository linked above, while this repository pins the commits released together. See [PRODUCT](docs/PRODUCT.en.md) for product composition, [Architecture](docs/ARCHITECTURE.en.md) for assembly, and the [CHANGELOG](CHANGELOG.en.md) for public release history.
+
+Edit shared plugin metadata in `plugins/project-legibility/plugin.json`, then run `python3 scripts/sync_plugin_metadata.py write`. The `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` files are generated. `python3 scripts/validate_bundle.py` checks that both match the common identity, version, and shared skill directory.
 
 ## License
 

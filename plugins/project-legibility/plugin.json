@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "project-legibility",
+  "version": "0.16.3",
+  "description": "Keep projects understandable, reviewable, and changeable as agent work accumulates.",
+  "author": {
+    "name": "perhapsspy",
+    "url": "https://github.com/perhapsspy"
+  },
+  "homepage": "https://github.com/perhapsspy/project-legibility#readme",
+  "repository": "https://github.com/perhapsspy/project-legibility",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "claude-code",
+    "project-context",
+    "software-development",
+    "maintainability",
+    "documentation",
+    "verification"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Project Legibility",
+        "shortDescription": "Keep projects changeable as agent work accumulates.",
+        "longDescription": "Strengthen code structure, decision criteria, and working context as coding agents implement, fix, refactor, and resume repository work.",
+        "developerName": "perhapsspy",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/perhapsspy/project-legibility",
+        "defaultPrompt": [
+          "Implement this feature and verify that existing behavior still works.",
+          "Refactor this code so it stays easy to understand and change.",
+          "Find the work in progress in this repository and continue it from the current context."
+        ],
+        "brandColor": "#4F46E5",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}

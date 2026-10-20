@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -30,6 +32,40 @@ class FakeRunner:
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_real_git_rollback_restores_catalogs_and_removes_new_claude_file(self):
+        class RejectingValidator(release.CommandRunner):
+            def run(self, args, **kwargs):
+                if "scripts/validate_marketplace.py" in args:
+                    raise release.ReleaseError("rejected fixture release")
+                return super().run(args, **kwargs)
+
+        for existing_claude, io_failure in [(False, False), (True, False), (False, True), (True, True)]:
+            with self.subTest(existing_claude=existing_claude, io_failure=io_failure), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                def git(*args):
+                    return subprocess.check_output(["git", "-C", str(root), *args], text=True, stderr=subprocess.DEVNULL)
+                git("init", "-b", "main")
+                git("config", "user.email", "fixture@example.test")
+                git("config", "user.name", "Fixture")
+                original = json.dumps({"plugins": [{"name": "project-legibility", "source": {"sha": "old"}}]})
+                for relative in [release.MARKETPLACE] + ([release.CLAUDE_MARKETPLACE] if existing_claude else []):
+                    path = root / relative
+                    path.parent.mkdir(parents=True)
+                    path.write_text(original)
+                git("add", ".")
+                git("commit", "-m", "Fixture catalog")
+                orch = release.ReleaseOrchestrator(runner=RejectingValidator())
+                write_text = Path.write_text
+                def write(path, *args, **kwargs):
+                    if io_failure and path == root / release.CLAUDE_MARKETPLACE:
+                        raise OSError("fixture write failure")
+                    return write_text(path, *args, **kwargs)
+                with patch.object(Path, "write_text", write), self.assertRaises(release.ReleaseError):
+                    orch._publish_catalog_prepared(root, "a" * 40)
+                self.assertEqual("", git("status", "--porcelain"))
+                self.assertEqual(original, (root / release.MARKETPLACE).read_text())
+                self.assertEqual(existing_claude, (root / release.CLAUDE_MARKETPLACE).exists())
+
     def test_help_and_version(self):
         args = release.parse_args(["publish", "--version", "0.8.1", "--catalog-root", "/tmp"])
         self.assertEqual("publish", args.command)
@@ -132,6 +168,8 @@ class ReleaseTests(unittest.TestCase):
             data = json.loads(path.read_text())
             self.assertEqual("a" * 40, data["plugins"][0]["source"]["sha"])
             self.assertEqual("keep", data["plugins"][1]["source"]["sha"])
+            claude = json.loads((root / release.CLAUDE_MARKETPLACE).read_text())
+            self.assertEqual(data["plugins"][0]["source"], claude["plugins"][0]["source"])
             before = len([c for c in runner.calls if c[0][:2] == ("git", "commit")])
             orch._publish_catalog(root, "a" * 40)
             after = len([c for c in runner.calls if c[0][:2] == ("git", "commit")])
@@ -151,6 +189,43 @@ class ReleaseTests(unittest.TestCase):
             with self.assertRaises(release.ReleaseError):
                 orch._publish_catalog(root, "a" * 40)
             self.assertTrue(any(call[:4] == ("git", "restore", "--staged", "--worktree") for call, _, _ in runner.calls))
+            self.assertFalse((root / release.CLAUDE_MARKETPLACE).exists())
+
+    def test_existing_codex_pin_bootstraps_claude_catalog_and_preserves_other_entries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / release.MARKETPLACE
+            path.parent.mkdir(parents=True)
+            source = {"sha": "a" * 40, "path": "./plugins/project-legibility"}
+            path.write_text(json.dumps({"plugins": [{"name": "project-legibility", "source": source}]}))
+            claude_path = root / release.CLAUDE_MARKETPLACE
+            claude_path.parent.mkdir(parents=True)
+            other = {"name": "other", "source": {"sha": "keep"}}
+            claude_path.write_text(json.dumps({"name": "perhapsspy", "plugins": [other]}))
+            runner = FakeRunner({"git diff --name-only": str(release.CLAUDE_MARKETPLACE)})
+            orch = release.ReleaseOrchestrator(runner=runner)
+            orch._wait_ci = lambda *args, **kwargs: None
+            orch._publish_catalog_prepared(root, "a" * 40)
+            entries = json.loads(claude_path.read_text())["plugins"]
+            self.assertEqual(other, entries[0])
+            self.assertEqual(source, entries[1]["source"])
+            self.assertTrue(any(call[:2] == ("git", "commit") for call, _, _ in runner.calls))
+
+    def test_catalog_failure_restores_both_existing_catalogs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for relative in [release.MARKETPLACE, release.CLAUDE_MARKETPLACE]:
+                path = root / relative
+                path.parent.mkdir(parents=True)
+                path.write_text(json.dumps({"plugins": [{"name": "project-legibility", "source": {"sha": "old"}}]}))
+            validator = f"{sys.executable} scripts/validate_marketplace.py --verify-remote"
+            runner = FakeRunner({validator: ("", 1)})
+            orch = release.ReleaseOrchestrator(runner=runner)
+            with self.assertRaises(release.ReleaseError):
+                orch._publish_catalog_prepared(root, "a" * 40)
+            restores = [call for call, _, _ in runner.calls if call[:4] == ("git", "restore", "--staged", "--worktree")]
+            self.assertIn(str(release.MARKETPLACE), restores[-1])
+            self.assertIn(str(release.CLAUDE_MARKETPLACE), restores[-1])
 
     def test_already_pinned_local_commit_is_pushed_after_previous_push_failure(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": [
     "codex",
+    "claude-code",
     "project-context",
     "software-development",
     "maintainability",
@@ -21,7 +22,7 @@
   "interface": {
     "displayName": "Project Legibility",
     "shortDescription": "Keep projects changeable as agent work accumulates.",
-    "longDescription": "Strengthen code structure, decision criteria, and working context as Codex implements, fixes, refactors, and resumes repository work.",
+    "longDescription": "Strengthen code structure, decision criteria, and working context as coding agents implement, fix, refactor, and resume repository work.",
     "developerName": "perhapsspy",
     "category": "Developer Tools",
     "capabilities": [

@@ -69,6 +69,15 @@ def build_valid_repo(root: Path) -> None:
             },
         },
     )
+    native = read_json(root / bundle.MANIFEST_REL)
+    portable = {key: value for key, value in native.items() if key not in {"skills", "interface"}}
+    portable["keywords"] = []
+    portable["$schema"] = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+    portable["extensions"] = {"com.openai": {"interface": native["interface"]}}
+    write_json(root / bundle.PORTABLE_MANIFEST_REL, portable)
+    for relative, manifest in bundle.client_manifests(portable).items():
+        write_json(plugin_root / relative, manifest)
+
     for skill_id in bundle.EXPECTED_SKILLS:
         skill_dir = skills_root / skill_id
         skill_dir.mkdir(parents=True, exist_ok=True)

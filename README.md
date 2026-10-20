@@ -8,7 +8,7 @@
 
 **에이전트의 속도에서도 계속 고칠 수 있는 프로젝트.**
 
-Project Legibility는 Codex가 코드를 바꾸는 동안 프로젝트의 구조, 판단 기준과 작업 맥락도 함께 단단하게 만들도록 돕는 스킬 플러그인입니다.
+Project Legibility는 Codex와 Claude Code가 코드를 바꾸는 동안 프로젝트의 구조, 판단 기준과 작업 맥락도 함께 단단하게 만들도록 돕는 스킬 플러그인입니다.
 
 - **코드:** 변경이 쌓여도 주 흐름과 책임이 읽히고 계속 고칠 수 있게 합니다.
 - **판단:** 현재 동작이 사용자 목적과 설계 기준을 따르도록, 의미를 결정하는 책임을 분명히 합니다.
@@ -16,12 +16,26 @@ Project Legibility는 Codex가 코드를 바꾸는 동안 프로젝트의 구조
 
 ## 설치
 
+### Codex
+
 ```bash
 codex plugin marketplace add perhapsspy/codex-plugins
 codex plugin add project-legibility@perhapsspy
 ```
 
 설치한 뒤 새 작업을 시작하세요. Codex는 요청에서 드러난 문제에 맞는 스킬을 선택합니다.
+
+### Claude Code
+
+현재 checkout의 패키지는 이 저장소 루트에서 다음 명령으로 로드합니다.
+
+```bash
+claude --plugin-dir ./plugins/project-legibility
+```
+
+양쪽 클라이언트는 같은 9개 스킬을 사용합니다. Claude Code에서는 `/project-legibility:project-context`처럼 명시 호출할 수 있습니다. 로컬 개발 중 저장한 변경은 `/reload-plugins`로 다시 읽습니다.
+
+Marketplace 설치는 동시 지원 release와 Claude catalog를 게시할 때 제공하며, 전환 절차는 [릴리스 런북](docs/runbooks/release.md)이 소유합니다.
 
 ## 평소 하던 일을 요청하세요
 
@@ -58,6 +72,8 @@ codex plugin add project-legibility@perhapsspy
 ```md
 - 여러 세션이나 에이전트가 참여하는 작업에는 `project-legibility:project-context`를 사용해 현재 목표, 결정, 검증 상태와 다음 행동을 저장소에 유지한다.
 ```
+
+Claude Code가 기존 `CLAUDE.md`를 읽고 있다면 그 파일에서 `@AGENTS.md`로 공통 지침을 가져옵니다. 지원되는 최신 버전에서는 `AGENTS.md`를 직접 읽을 수도 있으며 `/memory`에서 로딩 여부를 확인합니다.
 
 이 설정 뒤에는 평소처럼 작업을 요청하면 됩니다. `project-context`가 현재 목표와 판단 근거, 검증 상태와 다음 행동을 저장소 안에서 이어갑니다.
 
@@ -100,6 +116,8 @@ codex plugin remove project-legibility@perhapsspy
 ## 개발
 
 각 스킬은 위 목록에 연결된 저장소에서 관리하며 이 저장소는 함께 배포할 커밋을 고정합니다. 제품 구성은 [PRODUCT](docs/PRODUCT.md), 조립 구조는 [Architecture](docs/ARCHITECTURE.md), 공개 변경 이력은 [CHANGELOG](CHANGELOG.md)에서 확인할 수 있습니다.
+
+공통 플러그인 메타데이터는 `plugins/project-legibility/plugin.json`에서 고친 뒤 `python3 scripts/sync_plugin_metadata.py write`로 반영합니다. `.codex-plugin/plugin.json`과 `.claude-plugin/plugin.json`은 생성 파일입니다. `python3 scripts/validate_bundle.py`가 양쪽의 공통 식별자·버전·스킬 경로를 확인합니다.
 
 ## 라이선스
 

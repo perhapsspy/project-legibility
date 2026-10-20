@@ -6,7 +6,7 @@ This document owns Project Legibility's source boundaries, plugin assembly, lock
 
 ## Design goals
 
-Project Legibility distributes a reviewed skill bundle as a reproducible Codex plugin while preserving independently maintained canonical skill repositories.
+Project Legibility distributes a reviewed skill bundle as a reproducible plugin for Codex and Claude Code while preserving independently maintained canonical skill repositories.
 
 - Skill authors can continue to develop, validate, and release in the existing repositories.
 - The installed plugin does not depend on network access or a developer checkout.
@@ -22,11 +22,20 @@ Project Legibility distributes a reviewed skill bundle as a reproducible Codex p
 | [`sources.lock.json`](../plugins/project-legibility/sources.lock.json) | Selected repository URL, full commit SHA, source and distribution paths, and skill integrity digest | Skill meaning or a branch that is automatically “latest” |
 | [`plugins/project-legibility/skills/`](../plugins/project-legibility/skills/) | The generated, install-ready distribution snapshot | Canonical authoring |
 | [`THIRD_PARTY_NOTICES.md`](../plugins/project-legibility/THIRD_PARTY_NOTICES.md) | A generated summary of sources, commits, bundled skills, and licenses from the lock | A separate hand-maintained provenance record |
-| [Plugin manifest](../plugins/project-legibility/.codex-plugin/plugin.json) | Plugin identity, version, public description, capabilities, and starter prompts | Individual skill triggers or instructions |
+| [Portable manifest](../plugins/project-legibility/plugin.json) | Common plugin identity and version, public description, and OpenAI presentation under `extensions.com.openai` | Individual skill triggers or instructions |
+| `scripts/sync_plugin_metadata.py` and generated client manifests | Project the root manifest into Codex and Claude Code formats and detect drift | A separate client version or skill tree |
 | [`perhapsspy` marketplace](https://github.com/perhapsspy/codex-plugins) | Marketplace name, published plugin list, and selected plugin release commit | Plugin content, version, or skill meaning |
 | `scripts/sync_skills.py` | Lock generation, source materialization, snapshot assembly, and drift detection | Resolving semantic conflicts between skills, redesigning triggers, or approving a release |
 
 One canonical repository may provide more than one skill. `sources.lock.json` records the relationship between source commits and individual skill paths.
+
+## Client metadata
+
+Root `plugin.json` uses Agent Plugins 1.0. `scripts/sync_plugin_metadata.py write` derives `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json`; the bundle validator rejects drift. Both clients discover the same `skills/` snapshot. Claude uses its default skill scan, while Codex compatibility metadata declares `./skills/`.
+
+The OpenAI extension supplies the complete OpenAI presentation object. Native client manifests are generated independently, so OpenAI fields do not enter the Claude manifest. The release version is edited once at the root before regenerating both clients.
+
+The format owners are the [OpenAI packaging specification](https://developers.openai.com/plugins/build/plugins) and [Claude manifest specification](https://code.claude.com/docs/en/plugins-reference).
 
 ## Assembly flow
 
@@ -38,7 +47,7 @@ canonical repositories
         │  scripts/sync_skills.py update
         ▼
 plugins/project-legibility/skills/
-        │  plugin manifest
+        │  plugin.json + generated client manifests
         ▼
 Project Legibility release commit
         ▲
@@ -52,7 +61,7 @@ perhapsspy/codex-plugins
 4. `check --projects-root` compares local canonical sources, the lock, and snapshot together.
 5. `check` materializes locked remote commits in temporary checkouts and compares the release sources.
 6. `check --offline` provides a fast self-integrity check of the committed lock, snapshot, and notice.
-7. `scripts/release.py publish` takes an already reviewed and committed release input through Project Legibility `main` CI, a tag and GitHub Release at the same SHA, and the publisher full-SHA pin and catalog CI. After interruption, the same command reads public external state and skips completed steps.
+7. `scripts/release.py publish` takes an already reviewed and committed release input through Project Legibility `main` CI, a tag and GitHub Release at the same SHA, and matching publisher full-SHA pins for Codex and Claude Code with catalog CI. After interruption, the same command reads public external state and skips completed steps.
 
 Sync does not merge meaning. It assembles canonical trees as-is and fails on a difference, so an unexpected gap between reviewed sources and the release cannot be hidden.
 

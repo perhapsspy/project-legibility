@@ -6,7 +6,7 @@
 
 - 사용자에게 노출되는 bundled skill 변경은 source sync나 bundle commit·push만으로 완료되지 않습니다. Plugin manifest version과 한영 `CHANGELOG`를 반영한 release commit을 만들고, 그 SHA의 `main` CI, 동일 SHA의 tag·GitHub Release, publisher catalog pin·CI까지 모두 성공해야 완료로 보고합니다.
 - Project Legibility release commit의 `main` CI가 성공하고, 같은 commit에 `v<version>` tag와 GitHub Release가 존재합니다.
-- `perhapsspy/codex-plugins`가 그 commit의 full SHA를 고정하고 catalog CI가 성공합니다.
+- `perhapsspy/codex-plugins`의 Codex·Claude catalog가 같은 commit의 full SHA를 고정하고, 양쪽 원격 manifest 검증을 포함한 catalog CI가 성공합니다.
 
 ## Version 선택
 
@@ -29,7 +29,7 @@ Version은 diff 크기가 아니라 설치 사용자에게 공개된 호환성 �
    python3 scripts/sync_skills.py update --source <source-id>=<40-character-sha>
    ```
 
-3. version과 한영 `CHANGELOG`의 `Unreleased`를 release section으로 반영합니다.
+3. `plugins/project-legibility/plugin.json`의 version과 한영 `CHANGELOG`의 `Unreleased`를 release section으로 반영하고 `python3 scripts/sync_plugin_metadata.py write`로 양쪽 client manifest를 생성합니다.
 4. 생성 diff와 배포 문구를 충분히 검토하고 commit합니다.
 
 게시 전 Project Legibility와 catalog checkout은 각각 clean `main`이어야 합니다. `publish`는 Project Legibility의 현재 `HEAD`를 release commit으로 사용하므로, 검토하지 않은 문구를 자동 생성하거나 변경하지 않습니다.
@@ -46,9 +46,21 @@ python3 scripts/release.py publish \
 
 1. Project Legibility `HEAD`를 `main`에 push하고 그 exact SHA의 CI 성공을 기다립니다.
 2. 같은 SHA에 immutable tag를 push하고 GitHub Release 성공을 확인합니다.
-3. catalog의 Project Legibility pin만 그 full SHA로 갱신·push하고 exact SHA의 catalog CI 성공을 기다립니다.
+3. Codex·Claude catalog의 Project Legibility source를 같은 full SHA로 맞춰 한 commit으로 push하고 exact SHA의 catalog CI 성공을 기다립니다. 최초 동시 지원 release에서는 `.claude-plugin/marketplace.json`을 생성합니다. 다른 플러그인 항목은 유지합니다.
 
 중간 확인, candidate branch, 별도 상태 파일과 수동 catalog 편집은 없습니다. 이미 완료된 단계는 remote `main`, tag, GitHub Release와 catalog pin에서 확인해 건너뜁니다.
+
+## Claude Code 설치 확인
+
+동시 지원 release와 publisher CI가 끝나면 다음 명령으로 공개 catalog 설치를 확인합니다.
+
+```bash
+claude plugin marketplace add perhapsspy/codex-plugins
+claude plugin install project-legibility@perhapsspy
+claude plugin details project-legibility
+```
+
+Component inventory의 9개 skill과 release version을 확인합니다. 기존 설치를 갱신할 때는 `claude plugin marketplace update perhapsspy`와 `claude plugin update project-legibility@perhapsspy`를 사용합니다. 새 version을 루트에서 올려 생성해야 Claude cache도 새 패키지를 구분합니다.
 
 ## 실패와 재실행
 

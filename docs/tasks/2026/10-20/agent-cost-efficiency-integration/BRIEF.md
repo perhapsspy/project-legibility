@@ -12,6 +12,6 @@
 
 ## 남은 경계
 
-Codex 앱 프로젝트 등록은 아직 codex-token-discipline 이름과 이전 폴더 경로로 남아 있다. Computer Use 도구가 com.openai.codex 앱 조작을 안전상 거절했으며 앱 내부 상태를 우회 수정하지 않았다. 앱에서 프로젝트 등록 경로를 새 폴더로 변경하는 작업이 남는다.
+Codex 앱에 agent-cost-efficiency 프로젝트가 새 폴더 경로로 등록된 것을 list_projects로 확인했다. 명칭 통일과 앱 연결의 후속 작업도 완료됐다.
 
 Codex·Claude Code 플러그인 동시 지원과 release는 후속 범위다. Plugin version·CHANGELOG·tag·publisher pin과 기존 설치본은 이번 통합에서 바꾸지 않았다. Routing 사례 검사는 형식·커버리지 증거이며 실제 모델 자동 선택이나 Claude Code 로딩을 입증하지 않는다.

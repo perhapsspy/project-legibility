@@ -6,7 +6,7 @@
 
 ## 설계 목표
 
-Project Legibility는 독립적으로 관리되는 canonical skill 저장소를 유지하면서 검증된 스킬 묶음을 재현 가능한 Codex plugin으로 배포합니다.
+Project Legibility는 독립적으로 관리되는 canonical skill 저장소를 유지하면서 검증된 스킬 묶음을 재현 가능한 Codex·Claude Code 공통 plugin으로 배포합니다.
 
 - 스킬 author는 기존 저장소에서 독립적으로 개발·검증·release할 수 있어야 합니다.
 - plugin 설치 결과는 network나 개발 checkout 상태에 의존하지 않아야 합니다.
@@ -22,11 +22,20 @@ Project Legibility는 독립적으로 관리되는 canonical skill 저장소를 
 | [`sources.lock.json`](../plugins/project-legibility/sources.lock.json) | 선택된 repository URL, full commit SHA, source·배포 path와 skill integrity digest | 스킬 내용의 의미, 자동으로 “최신”인 branch |
 | [`plugins/project-legibility/skills/`](../plugins/project-legibility/skills/) | 설치 시 바로 사용할 수 있는 생성 snapshot | 직접 authoring되는 canonical 내용 |
 | [`THIRD_PARTY_NOTICES.md`](../plugins/project-legibility/THIRD_PARTY_NOTICES.md) | lock에서 생성한 source, commit, bundled skill과 license 요약 | 별도 수동 provenance 기록 |
-| [Plugin manifest](../plugins/project-legibility/.codex-plugin/plugin.json) | plugin 식별자, version, 공개 설명, capability와 starter prompt | 개별 skill trigger나 instruction |
+| [공통 manifest](../plugins/project-legibility/plugin.json) | plugin 식별자·version·공개 설명과 `extensions.com.openai`의 OpenAI 표시 정보 | 개별 skill trigger나 instruction |
+| `scripts/sync_plugin_metadata.py`와 생성 client manifest | 루트 manifest를 Codex·Claude Code 형식으로 변환하고 drift 검사 | 별도 client version이나 skill tree |
 | [`perhapsspy` marketplace](https://github.com/perhapsspy/codex-plugins) | marketplace 이름, 공개 plugin 목록과 선택된 plugin release commit | plugin 내용, version 또는 skill 의미 |
 | `scripts/sync_skills.py` | lock 생성, source materialization, snapshot 조립과 차이 검증 | 스킬 간 의미 충돌 해결, trigger 재설계, release 승인 |
 
 한 canonical 저장소가 여러 스킬을 제공할 수 있습니다. `sources.lock.json`은 source commit과 각 skill path의 관계를 기록합니다.
+
+## 클라이언트 메타데이터
+
+루트 `plugin.json`은 Agent Plugins 1.0 형식을 사용합니다. `scripts/sync_plugin_metadata.py write`가 `.codex-plugin/plugin.json`과 `.claude-plugin/plugin.json`을 생성하며 bundle validator가 drift를 거절합니다. 두 클라이언트는 같은 `skills/` snapshot을 읽습니다. Claude는 기본 skill scan을 사용하고 Codex 호환 manifest는 `./skills/`를 선언합니다.
+
+OpenAI 확장은 OpenAI 표시 정보 전체를 제공합니다. 클라이언트 manifest를 각각 생성하므로 OpenAI 전용 필드가 Claude manifest에 들어가지 않습니다. Release version은 루트에서 한 번 바꾸고 양쪽을 다시 생성합니다.
+
+형식 정본은 [OpenAI 패키징 규격](https://developers.openai.com/plugins/build/plugins)과 [Claude manifest 규격](https://code.claude.com/docs/en/plugins-reference)입니다.
 
 ## Assembly 흐름
 
@@ -38,7 +47,7 @@ canonical repositories
         │  scripts/sync_skills.py update
         ▼
 plugins/project-legibility/skills/
-        │  plugin manifest
+        │  plugin.json + generated client manifests
         ▼
 Project Legibility release commit
         ▲
@@ -52,7 +61,7 @@ perhapsspy/codex-plugins
 4. `check --projects-root`는 local canonical source, lock과 snapshot을 함께 비교합니다.
 5. `check`는 임시 checkout으로 locked remote commit을 materialize해 release source와 비교합니다.
 6. `check --offline`은 committed lock, snapshot과 notice의 자체 무결성을 빠르게 확인합니다.
-7. 검토·commit된 release 입력을 `scripts/release.py publish`가 Project Legibility `main` CI, 같은 SHA의 tag·GitHub Release, publisher full-SHA pin·catalog CI 순서로 게시합니다. 중단되면 같은 명령이 공개된 외부 상태를 읽어 완료된 단계를 건너뜁니다.
+7. 검토·commit된 release 입력을 `scripts/release.py publish`가 Project Legibility `main` CI, 같은 SHA의 tag·GitHub Release, Codex·Claude Code publisher의 같은 full-SHA pin·catalog CI 순서로 게시합니다. 중단되면 같은 명령이 공개된 외부 상태를 읽어 완료된 단계를 건너뜁니다.
 
 Sync는 의미를 merge하지 않습니다. Canonical tree를 그대로 조립하고 차이가 있으면 실패시켜, 사람이 예상한 source와 release 대상이 다른 상태를 숨기지 않습니다.
 
