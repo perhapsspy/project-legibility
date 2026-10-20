@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.16.3] - 2026-10-20
+
+### Fixed
+
+- `structure-first` applies async verification examples only where the current contracts affected by the change require that behavior.
+- `tighten-docs` routes work outside its scope to the owning workflow and continues approved parent work, pausing only the parts that depend on a necessary unresolved user decision.
+
 ## [0.16.2] - 2026-10-19
 
 ### Fixed

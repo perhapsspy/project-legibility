@@ -94,28 +94,28 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "a3b892db138ed76a29eb9347150a72c1d4f5b7d4",
+      "commit": "abf9442c346376b9cbddc7b196d43da1e112941e",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:ab4b569bd8944864034264efc25aa91cb110ccc0b72125edb0a9d633134c91ba"
+          "integrity": "sha256:ecf04e708d8e5f985322f77b4879a7c8d315b2ef89e5eb44287671aac07f4a83"
         }
       ]
     },
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "a9dc1211404ee6099540ffa062d0fddd8f3da75b",
+      "commit": "3f19881a4779ec0c2be49077396899ac989f361f",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:a009a7c3caf0cc598501012f244b94294efb649d9fc52f1839149b355b7d46c3"
+          "integrity": "sha256:6543655582e63202de8830959ad2dbe7d4dd276d94a89b7c5677038a42dcbdac"
         }
       ]
     }
