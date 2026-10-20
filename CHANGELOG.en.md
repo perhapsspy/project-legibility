@@ -4,6 +4,12 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.17.1] - 2026-10-20
+
+### Fixed
+
+- `structure-first` scopes tracing by the affected contract and compares supported entries and outputs against their guards and input or state dependencies. Verification selects cases that expose decisions inconsistent with the contract, establishes evidence or state through actual composition, and includes valid contrasting cases where needed.
+
 ## [0.17.0] - 2026-10-20
 
 ### Added
