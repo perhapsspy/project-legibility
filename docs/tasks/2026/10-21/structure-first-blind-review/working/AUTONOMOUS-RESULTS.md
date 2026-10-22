@@ -35,7 +35,7 @@ B의 공개 dispatcher는 두 실행 모두 소스 추적이며 직접 실행은
 
 ## 채택·반영과 한계
 
-정본 한·영8파일을 commit/push한 뒤 정식 sync 도구로 bundle과 lock을 맞췄다. Skill frontmatter·상대 링크·whitespace 검사, bundle offline check, bundle validator, repo unittest57개가 통과했다. 게시 SHA·최종 검사 결과·임시 자료 정리는 [BRIEF](../BRIEF.md)에 있다. 자율 검증 뒤 승인된0.17.2배포·적용상태는 [BRIEF](../BRIEF.md)가 소유한다.
+정본 한·영8파일을 commit/push한 뒤 정식 sync 도구로 bundle과 lock을 맞췄다. Skill frontmatter·상대 링크·whitespace 검사, bundle offline check, bundle validator, repo unittest57개가 통과했다. 게시 SHA·최종 검사 결과·임시 자료 정리는 [BRIEF](../BRIEF.md)에 있다. 자율 검증 뒤 0.17.2를 정식 게시하고 Mac 실설치·새 실행 발견과 Claude 공개 설치를 확인했다. 대상별 배포·적용 상태는 [BRIEF](../BRIEF.md)가 소유한다.
 
 코드는 복원본이며 주요 코어는 당시 기록과 byte 단위로 맞췄지만 지원 파일은 후속 보존 snapshot이다. 당시 전체 checkout의 완전한 복제나 현재 제품 결함 여부를 주장하지 않는다. 실제 TLS·NTP 수신·clock syscall·Linux systemd/netlink·현장 binary·배포·장기 재시작 전체는 미검증이다. Seed의 모든 필드 결합이나 원래 생산 이력까지 검증한 것은 아니다.
 
