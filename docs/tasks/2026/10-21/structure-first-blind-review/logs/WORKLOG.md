@@ -51,4 +51,4 @@
 - 최종수용본11파일/생성bundlehash일치와연구전후인용20개실제본문일치·문서링크/shape/whitespace를확인했다. 소유임시실험디렉터리와pointer를정확한경로검증후정리했고기존보존소스·native기록·상담증거이미지는보존했다. 승인범위의스킬개선·무개입새확인·정본push·bundle동기화·필수검증을완료했다.
 - 사용자가충분하다고판단되면배포·적용까지완료하도록승인했다. 동일고정본의무개입두실행PASS를근거로호환실행품질교정0.17.2패치를선택했다. sourcee77bee1을유지하고공통manifest/양쪽생성manifest/한영changelog를준비했다. bundle/lock·version검사·저장소57tests·catalog17tests를통과했고Mac기존공식설치는0.17.1/enabled로확인했다.
 - 0.17.2게시완료: release81629dff031b4cec511be2d9a9b647694f016b6d, mainCI39785019953/ReleaseCI39785103068성공·tagpeeledSHA동일·GitHubRelease확인. publisher cd77f999d5bb288025e029e2453bf1c74d726334/CI39785138692성공·Codex/Claude동일fullSHA·원격manifest검증PASS. Mac공식upgrade/add후0.17.2installed/enabled·게시본41파일일치·기존plugin설정15항목동일·새app-server skills/list(forceReload)9개모두새버전/enabled. 임시ClaudeCLI2.1.304공개설치/details9개성공. Windows는사용자가별도싱크, dot은지원실행경로없어미반영. 실제MacGUI/기존대화재로딩은미확인이다.
-- 公開배포와접근가능설치를마쳤고임시Claude설정/cache·설치검증원시출력·임시readback자료를소유경로검증후정리했다. Mac실제0.17.2설치는유지했다. Windows별도싱크는사용자담당, dot은지원실행경로부재로미반영이며그외승인범위는완료했다.
+- 공개 배포와접근가능설치를마쳤고임시Claude설정/cache·설치검증원시출력·임시readback자료를소유경로검증후정리했다. Mac실제0.17.2설치는유지했다. Windows별도싱크는사용자담당, dot은지원실행경로부재로미반영이며그외승인범위는완료했다.
