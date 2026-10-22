@@ -4,6 +4,14 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.17.2] - 2026-10-22
+
+### Fixed
+
+- Broad `structure-first` bug reviews generate questions from the original contract's conditions and outcomes, comparing the evidence that produces a decision input with the meaning its consumer requires. They trace retained failures and unfinished work through independent lifetimes and public readers.
+- Investigation, checkpointing, deferred evidence challenge, and integration proceed autonomously within the same invocation and original budget. The challenge generates questions beyond the existing list and prioritizes material unexamined relations before expanding established causes.
+- Consequential finding claims are compared with actual witness inputs and observations, with source conclusions, executed results, and unmet checks reported separately.
+
 ## [0.17.1] - 2026-10-20
 
 ### Fixed
