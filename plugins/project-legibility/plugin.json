@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "project-legibility",
-  "version": "0.17.2",
+  "version": "0.18.0",
   "description": "Keep projects understandable, reviewable, and changeable as agent work accumulates.",
   "author": {
     "name": "perhapsspy",
@@ -24,7 +24,7 @@
       "interface": {
         "displayName": "Project Legibility",
         "shortDescription": "Keep projects changeable as agent work accumulates.",
-        "longDescription": "Strengthen code structure, decision criteria, and working context as coding agents implement, fix, refactor, and resume repository work.",
+        "longDescription": "Strengthen code structure, decision criteria, outcome reviews, and working context as agents implement, review, fix, refactor, and resume project work.",
         "developerName": "perhapsspy",
         "category": "Developer Tools",
         "capabilities": [

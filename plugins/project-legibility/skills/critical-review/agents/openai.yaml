@@ -1,0 +1,4 @@
+interface:
+  display_name: "Critical Review"
+  short_description: "Review purpose fulfillment, sufficiency, and excess"
+  default_prompt: "Use $critical-review to assess this artifact against its original purpose, test findings against counterexamples, and report only meaningful issues with evidence."

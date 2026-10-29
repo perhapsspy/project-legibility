@@ -30,6 +30,20 @@
       ]
     },
     {
+      "id": "critical-review",
+      "repository": "https://github.com/perhapsspy/critical-review.git",
+      "commit": "7d6076c7c044138c3ae90cf17980b5f1de3f6961",
+      "license": "MIT",
+      "skills": [
+        {
+          "id": "critical-review",
+          "sourcePath": "skills/critical-review",
+          "targetPath": "skills/critical-review",
+          "integrity": "sha256:b819d4da314fe0dedd8a4257628aace1e8efad1c71f7e1a9f6f2489ce9b774ef"
+        }
+      ]
+    },
+    {
       "id": "interactive-state-flow",
       "repository": "https://github.com/perhapsspy/interactive-state-flow.git",
       "commit": "c5cf6f916d23b890139df5ec79b54c232eba72d7",

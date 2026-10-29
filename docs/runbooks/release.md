@@ -60,7 +60,7 @@ claude plugin install project-legibility@perhapsspy
 claude plugin details project-legibility
 ```
 
-Component inventory의 9개 skill과 release version을 확인합니다. 기존 설치를 갱신할 때는 `claude plugin marketplace update perhapsspy`와 `claude plugin update project-legibility@perhapsspy`를 사용합니다. 새 version을 루트에서 올려 생성해야 Claude cache도 새 패키지를 구분합니다.
+Component inventory의 10개 skill과 release version을 확인합니다. 기존 설치를 갱신할 때는 `claude plugin marketplace update perhapsspy`와 `claude plugin update project-legibility@perhapsspy`를 사용합니다. 새 version을 루트에서 올려 생성해야 Claude cache도 새 패키지를 구분합니다.
 
 ## 실패와 재실행
 

@@ -4,6 +4,13 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-10-29
+
+### Added
+
+- Added `critical-review` for requested reviews of code, plans, designs, and related artifacts. It assesses original purpose fulfillment, sufficiency, and excess, and challenges the findings themselves with evidence and counterexamples. It does not add an automatic review gate to ordinary implementation.
+- Explicit invocation in Codex is `$project-legibility:critical-review`. Review-only requests end with diagnosis; already authorized fixes continue through revalidation. The shared Codex and Claude Code bundle now provides ten skills.
+
 ## [0.17.2] - 2026-10-22
 
 ### Fixed

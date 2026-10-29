@@ -32,6 +32,7 @@ CHANGELOG_REL = Path("CHANGELOG.md")
 EXPECTED_SKILLS = (
     "agent-cost-efficiency",
     "agents-md-editor",
+    "critical-review",
     "interactive-state-flow",
     "project-context",
     "project-context-migration",
@@ -43,6 +44,7 @@ EXPECTED_SKILLS = (
 EXPECTED_SOURCE_SKILLS = {
     "agents-md-editor": ("agents-md-editor",),
     "agent-cost-efficiency": ("agent-cost-efficiency",),
+    "critical-review": ("critical-review",),
     "interactive-state-flow": ("interactive-state-flow",),
     "project-context": ("project-context", "project-context-migration"),
     "purpose-first-design": ("purpose-first-design",),

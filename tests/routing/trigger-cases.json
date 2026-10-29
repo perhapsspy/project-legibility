@@ -140,6 +140,27 @@
       "prompt": "Tighten this selected documentation package so current decisions, stale material, and reader routes are unambiguous.",
       "expected": "select",
       "rationale": "Final document-level cleanup of a selected current-canon package remains in scope."
+    },
+    {
+      "id": "critical-review-code-purpose",
+      "skill": "critical-review",
+      "prompt": "Review this diff against the original request and report missing behavior or unnecessary complexity. Do not modify files.",
+      "expected": "select",
+      "rationale": "The request asks for an evidence-backed judgment of an implementation."
+    },
+    {
+      "id": "critical-review-design-sufficiency",
+      "skill": "critical-review",
+      "prompt": "Review this rollout design for whether it fulfills the user goal and is sufficient without adding unnecessary process.",
+      "expected": "select",
+      "rationale": "The request reviews a design artifact rather than choosing a new direction."
+    },
+    {
+      "id": "critical-review-own-proposal",
+      "skill": "critical-review",
+      "prompt": "Challenge your own proposal with counterexamples and give a final check of whether it is sufficient and proportionate.",
+      "expected": "select",
+      "rationale": "An explicit adversarial re-review should also test the findings themselves."
     }
   ]
 }

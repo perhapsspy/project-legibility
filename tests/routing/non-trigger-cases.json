@@ -105,6 +105,27 @@
       "prompt": "Fix one typo and update the version number in README.md without changing any surrounding wording.",
       "expected": "do-not-select",
       "rationale": "A trivial mechanical edit does not need the specialist documentation workflow."
+    },
+    {
+      "id": "critical-review-ordinary-implementation",
+      "skill": "critical-review",
+      "prompt": "Implement the approved CSV exporter and verify its existing behavior.",
+      "expected": "do-not-select",
+      "rationale": "Implementation and its verification do not request a separate critical review."
+    },
+    {
+      "id": "critical-review-summary",
+      "skill": "critical-review",
+      "prompt": "Summarize the decisions in this approved design in three sentences.",
+      "expected": "do-not-select",
+      "rationale": "Summarization does not ask to assess the artifact."
+    },
+    {
+      "id": "critical-review-wording",
+      "skill": "critical-review",
+      "prompt": "Correct the grammar in this paragraph while preserving its meaning.",
+      "expected": "do-not-select",
+      "rationale": "Wording edits do not request purpose or sufficiency review."
     }
   ]
 }

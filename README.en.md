@@ -32,7 +32,7 @@ claude plugin marketplace add perhapsspy/codex-plugins
 claude plugin install project-legibility@perhapsspy
 ```
 
-Both clients use the same nine skills. In Claude Code, an explicit invocation is `/project-legibility:project-context`. During local development, `/reload-plugins` loads saved changes.
+Both clients use the same ten skills. In Claude Code, an explicit invocation is `/project-legibility:project-context`. During local development, `/reload-plugins` loads saved changes.
 
 Check the installation with `claude plugin details project-legibility`. For local development, load the package from the repository root with `claude --plugin-dir ./plugins/project-legibility`.
 
@@ -89,6 +89,12 @@ Two core practices are joined by purpose-first direction setting, specialists fo
 
 - [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): When product meaning or implementation-planning direction remains materially open, choose early direction for a new feature, reuse choice, temporary implementation, or another consequential product or implementation-planning choice from purpose and locked boundaries, then reduce scope and commitments introduced by the answer.
 
+### Outcome review
+
+- [`critical-review`](https://github.com/perhapsspy/critical-review): When asked to review code, plans, designs, or related artifacts, assess purpose fulfillment, sufficiency, and excess using evidence and counterexamples, and challenge the findings themselves.
+
+In Codex, invoke it explicitly with `$project-legibility:critical-review Check whether this code fulfills the original requirements`.
+
 ### Specialists for specific problems
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): Read current evidence to determine what to follow, what differs, and which decisions remain open.
@@ -117,6 +123,15 @@ To remove the marketplace registration as well, remove every installed perhapssp
 Each skill is maintained in the repository linked above, while this repository pins the commits released together. See [PRODUCT](docs/PRODUCT.en.md) for product composition, [Architecture](docs/ARCHITECTURE.en.md) for assembly, and the [CHANGELOG](CHANGELOG.en.md) for public release history.
 
 Edit shared plugin metadata in `plugins/project-legibility/plugin.json`, then run `python3 scripts/sync_plugin_metadata.py write`. The `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` files are generated. `python3 scripts/validate_bundle.py` checks that both match the common identity, version, and shared skill directory.
+
+For Codex, install the generated bundle before publication by running these commands from the repository root:
+
+```bash
+codex plugin marketplace add .
+codex plugin add project-legibility@project-legibility-local
+```
+
+This local marketplace uses `plugins/project-legibility` as its source. If the published plugin is also installed, disable `project-legibility@perhapsspy` in Codex's plugin settings and keep only the local installation enabled to avoid duplicates. Reverse their enabled states to return to the published installation. The public source pin and release remain separate.
 
 ## License
 

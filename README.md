@@ -32,7 +32,7 @@ claude plugin marketplace add perhapsspy/codex-plugins
 claude plugin install project-legibility@perhapsspy
 ```
 
-양쪽 클라이언트는 같은 9개 스킬을 사용합니다. Claude Code에서는 `/project-legibility:project-context`처럼 명시 호출할 수 있습니다. 로컬 개발 중 저장한 변경은 `/reload-plugins`로 다시 읽습니다.
+양쪽 클라이언트는 같은 10개 스킬을 사용합니다. Claude Code에서는 `/project-legibility:project-context`처럼 명시 호출할 수 있습니다. 로컬 개발 중 저장한 변경은 `/reload-plugins`로 다시 읽습니다.
 
 설치 확인은 `claude plugin details project-legibility`로 합니다. 로컬 개발에서는 이 저장소 루트에서 `claude --plugin-dir ./plugins/project-legibility`로 패키지를 로드합니다.
 
@@ -89,6 +89,12 @@ Claude Code가 기존 `CLAUDE.md`를 읽고 있다면 그 파일에서 `@AGENTS.
 
 - [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 새 기능·재사용 선택·임시 구현 등 중대한 선택의 초기 방향을 목적과 확정된 경계에서 정하고, 답변이 만든 불필요한 범위와 약속을 줄입니다.
 
+### 결과 수용성 검토
+
+- [`critical-review`](https://github.com/perhapsspy/critical-review): 코드·기획·설계와 관련 산출물의 검토를 요청받았을 때 목적 충족·충분함·과함을 근거와 반례로 판단하고, 지적 자체도 반증합니다.
+
+Codex에서는 `$project-legibility:critical-review 이 코드가 원래 요구를 충족하는지 검토해줘`처럼 명시 호출할 수 있습니다.
+
 ### 문제별 전문 스킬
 
 - [`source-owner-audit`](https://github.com/perhapsspy/source-owner-audit): 현재 무엇을 따라야 하는지, 무엇이 다른지, 어떤 결정이 남았는지를 실제 근거에서 읽기 전용으로 확인합니다.
@@ -117,6 +123,15 @@ codex plugin remove project-legibility@perhapsspy
 각 스킬은 위 목록에 연결된 저장소에서 관리하며 이 저장소는 함께 배포할 커밋을 고정합니다. 제품 구성은 [PRODUCT](docs/PRODUCT.md), 조립 구조는 [Architecture](docs/ARCHITECTURE.md), 공개 변경 이력은 [CHANGELOG](CHANGELOG.md)에서 확인할 수 있습니다.
 
 공통 플러그인 메타데이터는 `plugins/project-legibility/plugin.json`에서 고친 뒤 `python3 scripts/sync_plugin_metadata.py write`로 반영합니다. `.codex-plugin/plugin.json`과 `.claude-plugin/plugin.json`은 생성 파일입니다. `python3 scripts/validate_bundle.py`가 양쪽의 공통 식별자·버전·스킬 경로를 확인합니다.
+
+Codex에서 공개 게시 전에 생성 bundle을 설치하려면 저장소 루트에서 다음 명령을 사용합니다.
+
+```bash
+codex plugin marketplace add .
+codex plugin add project-legibility@project-legibility-local
+```
+
+이 로컬 marketplace는 `plugins/project-legibility`를 source로 사용합니다. 공개 설치본도 있다면 Codex의 플러그인 설정에서 `project-legibility@perhapsspy`를 비활성화하고 로컬 설치본만 활성화해 중복을 피합니다. 공개 설치로 돌아갈 때는 두 설치본의 활성화를 반대로 전환합니다. 공개 source pin과 release는 별도로 유지됩니다.
 
 ## 라이선스
 
