@@ -10,13 +10,15 @@ Match checks to risk and change type:
 
 - Reproduce or characterize a bug before fixing it. Narrow the failure before changing several plausible causes.
 - Preserve stable behavior across a refactor.
-- Cover feature success, failure, and relevant boundaries.
+- Cover feature success, failure, and relevant boundaries. For a general extension contract, try a new supported case that was not previously enumerated and check whether core policy must change.
+- Trace skip, cache, deduplication, and completion identities to every input and effect they claim to cover, including work done by delegated branches. Preserve narrower modes with their own supported inputs.
+- Validate an automated action decision against normal baseline behavior and a representative injected fault before enabling its effects; until then keep that decision observational.
 - At async or stateful boundaries, verify the current contracts affected by the change at their owning unit. Stale-result handling, balanced completion, and equivalent-input no-op are candidate checks only where that behavior is required.
 
 For deployment, resolve the existing credential/configuration owner and exact target, effects, and recovery path before applying. Verify the user’s access path in the deployed environment; local or fixture success does not close that boundary.
 
 When recording or materially extending a finding, compare its consequential claims with the actual witness inputs and observations. If reproduction is required or chosen, select the supported contract violation that determines the finding's significance, rather than an easier symptom sharing its cause. If the witness lacks that consequence's qualifying facts, adapt and safely execute it before optional broader checks, reusing supported setup.
 
-Source reasoning may suffice for further consequences whose material premises and path are established. Execution is still needed when explicitly required or when a decision-relevant boundary premise remains unsettled. Do not require a run for every implication or field, or rebuild an undisputed producer chain. Distinguish source-backed conclusions from executed results and retain unavailable required checks as unmet. Derive completion claims from tested scope, source/target identity, environment, fixture dependencies, and unmet acceptance criteria. Reuse valid evidence.
+Source reasoning may suffice for further consequences whose material premises and path are established. Execution is still needed when explicitly required or when a decision-relevant boundary premise remains unsettled. Do not require a run for every implication or field, or rebuild an undisputed producer chain. Distinguish source-backed conclusions from executed results and retain unavailable required checks as unmet. Derive completion claims from tested scope, source/target identity, environment, fixture dependencies, and unmet acceptance criteria. Match each material claim to a direct witness: fewer requests or fields alone do not prove less downstream storage or processing work. If an environment or fixture defect affects a witness, invalidate the affected conclusions and recheck them after correction. Reuse unaffected valid evidence.
 
 Keep tests readable and focused. If no safe witness is available or current witnesses conflict, leave the boundary unresolved. Name the next check, responsible unit, and required cases; local tests do not close it.

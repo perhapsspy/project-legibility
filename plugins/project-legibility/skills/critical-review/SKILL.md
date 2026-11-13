@@ -15,7 +15,7 @@ Compare the original request, latest corrections and adopted decisions, authorit
 
 Read enough of the path from user or consumer intent to outcome to assess the change, beyond the edited fragments.
 
-- For code, connect callers and implementations where contracts, state, units, names, or boundaries affect the result. If consumers need lengthy examples or internal knowledge, examine the interface and responsibility before recommending more documentation. Trace a visible symptom to its data contract when needed.
+- For code, connect callers and implementations where contracts, state, units, names, or boundaries affect the result. If consumers need lengthy examples or internal knowledge, examine the interface and responsibility before recommending more documentation. Trace a visible symptom to its data contract when needed. Judge observable behavior and responsibility placement separately: follow who makes decisions, changes state, performs effects, and declares completion. Passing tests or shorter files do not settle the latter judgment.
 - For plans and designs, connect what and why to the actual user flow, responsibilities, and changes a next worker can execute without prior conversation. For UI, examine hierarchy, placement, and interaction in the existing design. Inspect the final rendering when visual claims depend on it; extra explanatory copy does not resolve a broken flow.
 
 Keep depth proportional to the decision. Apply specialist guidance when a concrete structural, source-of-truth, or documentation problem calls for it; do not duplicate its full workflow.
@@ -28,7 +28,7 @@ Tie a proposed procedure, endpoint, script, abstraction, guard, or document to a
 
 ## Obtain evidence that can change the conclusion
 
-Choose the smallest relevant experiment, measurement, or rendered inspection. Check actual external connections and side effects before an experiment; environment names alone do not establish safety. Compare performance under the same environment, inputs, and workload. Reuse checks still valid for the current revision and scope, while independently evaluating their interpretation. Avoid redundant checks and tests that do not establish the claimed contract.
+Choose the smallest relevant experiment, measurement, or rendered inspection. Check actual external connections and side effects before an experiment; environment names alone do not establish safety. Compare performance under the same environment, inputs, and workload. If a fixture or environment defect contaminates evidence, withdraw affected conclusions and recheck after correction; retain evidence outside its impact. Reuse checks still valid for the current revision and scope, while independently evaluating their interpretation. Avoid redundant checks and tests that do not establish the claimed contract.
 
 Separate source facts, observed execution, inference, and unverified claims. Reproducing a defect does not establish an incident's root cause. A successful registration, scheduled job, write, or test does not prove the user outcome or complete requirement. For a requested independent pass, provide the original request and minimum raw artifacts and evidence without steering it toward the author's conclusion. Honor the requested method without making a model, role scheme, or fixed parallel count mandatory.
 

@@ -18,7 +18,7 @@ A **Primary Flow** is the top-down readable main path for imperative orchestrati
 
 Compare local clarification with structural change only when both are credible. Inspect the complete path through helpers, wrappers, context objects, configuration, state, error channels, and lifecycle. Change structure only when it removes complexity or usefully isolates it behind an independent responsibility.
 
-Keep composition discoverable at its natural owner and unrelated decisions and lifecycles with their own owners. Make effect ownership and failure meaning visible. Isolate an effect only when the boundary materially improves reasoning, verification, retry, or replacement.
+Keep composition discoverable at its natural owner and unrelated decisions and lifecycles with their own owners. Make effect ownership and failure meaning visible. Isolate an effect only when the boundary materially improves reasoning, verification, retry, or replacement. An extraction must give its unit a coherent responsibility and the inputs needed for it; forwarding the same large mutable object through helpers or retaining duplicate decisions does not achieve that. Preserve a shared transaction, lock, or state owner when it enforces one invariant. Separate values with independent lifetimes, such as immutable operation data and per-attempt cursors, without splitting their required coordination.
 
 ## Ownership Rules
 
@@ -26,5 +26,5 @@ Keep composition discoverable at its natural owner and unrelated decisions and l
 - Give every policy, decision, calculation, priority, and key-generation rule a non-competing resolution path: one owner, explicit composition order, or a coordination/conflict protocol.
 - When one settled domain meaning crosses representations and drift is a material risk, keep its interpretation with the owning unit. Other units may transport, project, or apply an explicitly scoped compatibility translation, but must not independently infer or reinterpret it.
 - Make externally visible write ownership discoverable. Multiple writers are valid only when their coordination has an explicit, discoverable owner or protocol. Do not centralize intentional writers automatically.
-- At async boundaries, give freshness and completion an explicit owner or resolution protocol. Do not mirror upstream boundary state into local mutable state without explicit ownership and reset semantics. Do not create self-feedback through the same input/update path.
+- At async boundaries, give freshness and completion an explicit owner or resolution protocol. Trace who retains worker handles, stops input acceptance, and joins or drains accepted work; shared cancellation alone does not establish completion. Do not mirror upstream boundary state into local mutable state without explicit ownership and reset semantics. Do not create self-feedback through the same input/update path.
 - Remove code made unused by the change. When rule ownership moves or an equivalent execution path appears, remove or disable the old path in the same change when possible. Otherwise provide a staged migration owner and exit condition.

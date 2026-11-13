@@ -4,6 +4,14 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.18.1] - 2026-11-13
+
+### Fixed
+
+- `structure-first` traces actual callers to decision, state, effect, and completion owners before implementation, and rechecks placement as branches, helpers, or lifecycles grow. Large files prompt investigation; transactions and locks enforcing one invariant stay together.
+- Verification and review assess behavior and responsibility placement separately. Checks cover general extension cases, completion identities across inputs and effects, worker join/drain, normal and injected-fault controls for automated actions, and direct evidence. Conclusions affected by environment or fixture defects are rechecked after correction.
+- `project-context` clarifies shared checkout, index, and commit ownership, isolation or serialization, and one integration owner for changes entering the same product release candidate.
+
 ## [0.18.0] - 2026-10-29
 
 ### Added

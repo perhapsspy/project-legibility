@@ -4,6 +4,14 @@ Project Legibility의 사용자에게 보이는 주요 변경을 기록합니다
 
 ## [Unreleased]
 
+## [0.18.1] - 2026-11-13
+
+### Fixed
+
+- `structure-first`는 구현 전 실제 호출 경로에서 판단·상태·부작용·완료의 owner를 확인하고, 구현 중 분기·helper·수명주기가 늘 때 책임 배치를 다시 확인합니다. 큰 파일은 조사 신호로 삼으며 동일 불변식의 transaction·lock은 보존합니다.
+- 동작과 책임 배치를 따로 검증·리뷰합니다. 일반 확장 사례, 입력·부작용 전체의 완료 identity, worker join·drain, 자동 조치의 정상 대조·장애 주입과 직접 증거를 확인하고, 환경·fixture 결함의 영향받은 결론은 교정 뒤 재검증합니다.
+- `project-context`는 공유 checkout·index·commit 소유권과 격리 또는 직렬화, 같은 제품 릴리즈 후보의 통합 owner를 명시합니다.
+
 ## [0.18.0] - 2026-10-29
 
 ### Added

@@ -32,14 +32,14 @@
     {
       "id": "critical-review",
       "repository": "https://github.com/perhapsspy/critical-review.git",
-      "commit": "7d6076c7c044138c3ae90cf17980b5f1de3f6961",
+      "commit": "26211dd9e7840fabcb166bfa4cd90ea61377bf43",
       "license": "MIT",
       "skills": [
         {
           "id": "critical-review",
           "sourcePath": "skills/critical-review",
           "targetPath": "skills/critical-review",
-          "integrity": "sha256:b819d4da314fe0dedd8a4257628aace1e8efad1c71f7e1a9f6f2489ce9b774ef"
+          "integrity": "sha256:fbeb1b9b42348d849c135ba527f0d1681c8589c7d45bb624ba3c2f42d3a6684f"
         }
       ]
     },
@@ -60,14 +60,14 @@
     {
       "id": "project-context",
       "repository": "https://github.com/perhapsspy/project-context.git",
-      "commit": "fc4244ab505615c104cd2af3372d2cb0c14ca5e7",
+      "commit": "736748981e595154557e56bdd3bf6f43ed2c99ca",
       "license": "MIT",
       "skills": [
         {
           "id": "project-context",
           "sourcePath": "skills/project-context",
           "targetPath": "skills/project-context",
-          "integrity": "sha256:913af4f5c43f370b781ee26c4014b18fe9ab815046477e275313693a79d9089a"
+          "integrity": "sha256:d5de3bec42a39191421d10264f6698d44ca38d734bcae934ae1e14a81a6e01ab"
         },
         {
           "id": "project-context-migration",
@@ -108,14 +108,14 @@
     {
       "id": "structure-first",
       "repository": "https://github.com/perhapsspy/structure-first.git",
-      "commit": "e77bee1a09ce2328536d3f2e426732bb249ec43c",
+      "commit": "ff9314c08f4b96f58969dddf1c0646195dd6936a",
       "license": "MIT",
       "skills": [
         {
           "id": "structure-first",
           "sourcePath": "skills/structure-first",
           "targetPath": "skills/structure-first",
-          "integrity": "sha256:4a27bda89f0b610a132418b623ef2698447a36592e84e5616289a1e56b75f4a6"
+          "integrity": "sha256:71a70c4abef51d65ccfea0c0142ad093ab5830211dd772d9075ba6250b3329a0"
         }
       ]
     },
