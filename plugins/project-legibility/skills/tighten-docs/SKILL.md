@@ -1,6 +1,6 @@
 ---
 name: tighten-docs
-description: Use by default whenever creating, revising, reviewing, or finalizing human-authored documentation whose source meaning is settled, including documentation changed within another task. Apply from first draft through final review to keep one direct current state, clear reader routes and ownership, and remove rejected decisions that survive as negation or defensive prose. Skip prose-free mechanical edits, unresolved meaning, append-only history, generated artifacts, pure translation or localization, and always-read instruction design.
+description: Default for drafting, editing, or reviewing human-authored documentation once its meaning is settled, including first drafts, small prose edits, and documents delivered within another task. Keep the current state, reader actions, and ownership clear. Skip prose-free mechanical edits, unresolved meaning, append-only history, generated artifacts, pure translation or localization, and always-read instruction design.
 ---
 
 # Tighten Docs

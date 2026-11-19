@@ -87,7 +87,7 @@ Two core practices are joined by purpose-first direction setting, specialists fo
 
 ### Purpose-first direction
 
-- [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): When product meaning or implementation-planning direction remains materially open, choose early direction for a new feature, reuse choice, temporary implementation, or another consequential product or implementation-planning choice from purpose and locked boundaries, then reduce scope and commitments introduced by the answer.
+- [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): Choose a materially open product or implementation direction, or reassess whether an existing direction still serves its purpose. Preserve locked boundaries and reduce unnecessary scope or commitments introduced by the answer.
 
 ### Outcome review
 

@@ -87,7 +87,7 @@ Claude Code가 기존 `CLAUDE.md`를 읽고 있다면 그 파일에서 `@AGENTS.
 
 ### 목적 우선 방향 결정
 
-- [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): 제품 의미나 구현 계획의 방향이 실질적으로 열려 있을 때 새 기능·재사용 선택·임시 구현 등 중대한 선택의 초기 방향을 목적과 확정된 경계에서 정하고, 답변이 만든 불필요한 범위와 약속을 줄입니다.
+- [`purpose-first-design`](https://github.com/perhapsspy/purpose-first-design): 제품이나 구현 계획에서 중요한 방향을 정하거나 기존 방향이 목적에 맞는지 점검합니다. 확정된 경계는 지키고, 답변이 만든 불필요한 범위와 약속은 줄입니다.
 
 ### 결과 수용성 검토
 

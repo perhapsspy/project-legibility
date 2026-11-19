@@ -80,14 +80,14 @@
     {
       "id": "purpose-first-design",
       "repository": "https://github.com/perhapsspy/purpose-first-design.git",
-      "commit": "e86f73f70bb767d55059037bcc96a92d4200a3be",
+      "commit": "6fe694f3e446d07070e21eadeec528021603d239",
       "license": "MIT",
       "skills": [
         {
           "id": "purpose-first-design",
           "sourcePath": "skills/purpose-first-design",
           "targetPath": "skills/purpose-first-design",
-          "integrity": "sha256:c934086275b39151b7e40507f03f015cb8c83c3a96ed898d8d464c9a73db84be"
+          "integrity": "sha256:82de063188aa06a9689286247595cc0df811b2fd18c06303589c4be6d1629443"
         }
       ]
     },
@@ -122,14 +122,14 @@
     {
       "id": "tighten-docs",
       "repository": "https://github.com/perhapsspy/tighten-docs.git",
-      "commit": "3f19881a4779ec0c2be49077396899ac989f361f",
+      "commit": "11736895d2ac4bc68b42ef81f752f2241e0968b5",
       "license": "MIT",
       "skills": [
         {
           "id": "tighten-docs",
           "sourcePath": "skills/tighten-docs",
           "targetPath": "skills/tighten-docs",
-          "integrity": "sha256:6543655582e63202de8830959ad2dbe7d4dd276d94a89b7c5677038a42dcbdac"
+          "integrity": "sha256:10072160f3e75c19ee835a1ca9d713dcb2a931d3769123cc851d973fd07c05bc"
         }
       ]
     }

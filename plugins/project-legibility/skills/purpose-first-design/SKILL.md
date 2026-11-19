@@ -1,15 +1,15 @@
 ---
 name: purpose-first-design
-description: Use when product meaning or implementation-planning direction is materially open before solution structure is settled, including early direction for a new feature, reuse choices, temporary implementations, or another materially consequential product or implementation-planning choice. Choose a bounded provisional direction from user/domain purpose, locked decisions, explicit constraints, authority, current evidence, and observable success. Do not use for settled code structure, implementation execution, source discovery, or document editing.
+description: Use to choose a materially open product or implementation direction, or to reassess whether an existing or proposed direction still serves its purpose. Ground the decision in observable success, current evidence, and locked boundaries. Do not use for checking conformance to a settled direction, implementation execution, source discovery, or document editing.
 ---
 
 # Purpose-First Design
 
 ## Job and Exit
 
-Choose the smallest defensible direction for a materially open product or implementation-planning decision before solution structure is fixed. Purpose defines what success means; locked user decisions, authority, and required security, rollback, ownership, and operational boundaries bind the answer and are never alternatives.
+Choose the smallest defensible direction for a materially open product or implementation-planning decision, or assess whether an existing direction still serves its purpose. Purpose defines success; locked user decisions, authority, and required security, rollback, ownership, and operational boundaries bind the answer and are never alternatives.
 
-Resolve this decision with a provisional direction, the smallest check that could change an actually open choice, or one blocking question. If no material direction remains open, move on without inventing alternatives. Continue the user's already approved task after this stage; a blocking question pauses only the dependent work.
+Keep a direction that still serves its purpose. If a premise no longer holds, identify the evidence and the smallest consequential choice it affects. If that choice is locked, flag what warrants reconsideration for the decision owner without reopening it. For an open choice, give a provisional direction, the smallest decisive check, or one blocking question. Continue already approved work; pause only what depends on that answer.
 
 ## Decision Contract
 
