@@ -4,6 +4,18 @@ Notable user-visible changes to Project Legibility are recorded here.
 
 ## [Unreleased]
 
+## [0.19.0] - 2026-11-24
+
+### Changed
+
+- `purpose-first-design` applies when choosing a consequential direction or assessing whether an existing or proposed direction still serves its purpose.
+- `tighten-docs` explicitly covers first drafts, small prose edits, and documentation delivered within another task once the meaning is settled.
+
+### Fixed
+
+- `agent-cost-efficiency` checks progress at completion, on a new signal, or when the next decision needs fresh evidence. It uses incremental reads when supported and preserves timely decisions, independent QA, and required reporting.
+- Cost comparisons use equally accepted and verified outcomes. They count unique calls across the main agent and its children and distinguish uncached input, output, retries, and rework.
+
 ## [0.18.1] - 2026-11-13
 
 ### Fixed

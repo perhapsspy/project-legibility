@@ -27,9 +27,13 @@ Skip the ritual for small edits, direct answers, and simple commands.
 
 Use prior results to choose the next bounded execution or observation, grounded in a relevant condition change or a concrete reason to repeat unchanged. Normal progress cut short by a budget, outstanding required verification, or a specific transient/nondeterministic hypothesis may justify the choice. A completed deterministic failure calls for addressing its cause before repeating the same check.
 
-Prefer an available progress observation to further waiting when it can inform a known, time-sensitive decision. Reuse still-valid evidence; these choices require no separate report or log.
+Observe at completion, on a new signal, or when the next decision needs fresh evidence. If a decision has a deadline, check in time even without a completion signal. Use a cursor or delta when the tool provides one. Otherwise, limit the read to the relevant scope and the next decision. Reuse still-valid evidence.
 
-Use existing tools or the current executor for routine status collection and comparison where supported. Preserve required progress reports; updates do not transfer execution ownership to the parent. Surface completion, unresolved blockers, and changes requiring a decision about scope, acceptance, authority, or risk. Add a separate observer only when it has an independently useful responsibility.
+Keep one owner for routine status collection, normally the current executor. Preserve independent QA and required reporting, including user-requested updates. Updates do not transfer execution ownership. Surface completion, unresolved blockers, and changes requiring a decision about scope, acceptance, authority, or risk.
+
+## Comparing Work Cost
+
+Compare costs for equally accepted and verified outcomes, accounting for when action was taken, what was missed, and what had to be resumed. Count each actual call across the main agent and its children once. Deduplicate records only by the same call ID or confirmed mirroring. Equal token counts alone do not establish duplication. Distinguish uncached input, output, calls, retries, and rework. Use evidence about completion and actual cost to decide whether a new session, context summary, or lower-cost model would help. Cached or total input alone does not justify those changes.
 
 ## Preflight Output Contract
 

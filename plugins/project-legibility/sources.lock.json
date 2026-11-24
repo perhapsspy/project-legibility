@@ -18,14 +18,14 @@
     {
       "id": "agent-cost-efficiency",
       "repository": "https://github.com/perhapsspy/agent-cost-efficiency.git",
-      "commit": "42157089eea8e488e8c0d739e9120637b3bbfcff",
+      "commit": "4c2c7639dcda4b2008276a2aa71b33d4d19ce76d",
       "license": "MIT",
       "skills": [
         {
           "id": "agent-cost-efficiency",
           "sourcePath": "skills/agent-cost-efficiency",
           "targetPath": "skills/agent-cost-efficiency",
-          "integrity": "sha256:f9ec298ff9aa6e7324b413bdef46b8bcdbc3733c1f24f487d83701bd1a4bce1a"
+          "integrity": "sha256:f145742b2be83361d3a48c99b2a314eceb562487412ca21ed66b633823a9cba1"
         }
       ]
     },

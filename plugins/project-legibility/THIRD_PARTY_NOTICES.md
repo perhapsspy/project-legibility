@@ -8,7 +8,7 @@ All listed sources use the MIT License; the license text is included in `LICENSE
 | Canonical source | Commit | Bundled skills | License |
 |---|---|---|---|
 | [agents-md-editor](https://github.com/perhapsspy/agents-md-editor) | [`dcbacdd551b9`](https://github.com/perhapsspy/agents-md-editor/commit/dcbacdd551b9b5efba935094436f2e68e0ddc111) | `agents-md-editor` | MIT |
-| [agent-cost-efficiency](https://github.com/perhapsspy/agent-cost-efficiency) | [`42157089eea8`](https://github.com/perhapsspy/agent-cost-efficiency/commit/42157089eea8e488e8c0d739e9120637b3bbfcff) | `agent-cost-efficiency` | MIT |
+| [agent-cost-efficiency](https://github.com/perhapsspy/agent-cost-efficiency) | [`4c2c7639dcda`](https://github.com/perhapsspy/agent-cost-efficiency/commit/4c2c7639dcda4b2008276a2aa71b33d4d19ce76d) | `agent-cost-efficiency` | MIT |
 | [critical-review](https://github.com/perhapsspy/critical-review) | [`26211dd9e784`](https://github.com/perhapsspy/critical-review/commit/26211dd9e7840fabcb166bfa4cd90ea61377bf43) | `critical-review` | MIT |
 | [interactive-state-flow](https://github.com/perhapsspy/interactive-state-flow) | [`c5cf6f916d23`](https://github.com/perhapsspy/interactive-state-flow/commit/c5cf6f916d23b890139df5ec79b54c232eba72d7) | `interactive-state-flow` | MIT |
 | [project-context](https://github.com/perhapsspy/project-context) | [`736748981e59`](https://github.com/perhapsspy/project-context/commit/736748981e595154557e56bdd3bf6f43ed2c99ca) | `project-context`, `project-context-migration` | MIT |
